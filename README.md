@@ -4,11 +4,11 @@ cleanslate-toolkit: cpass-toolkit
 A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much more).
 
 **Dependencies necessary to work with this theme:** 
-	* [Ruby](http://rubyinstaller.org/)
-	* [Ruby Gem - Bundler](http://bundler.io/)
-	* [NodeJS and NPM](http://nodejs.org/)
-	* [Gulp](http://gulpjs.com/)
-	* [Bower](http://bower.io/)
+  * [Ruby](http://rubyinstaller.org/)
+  * [Ruby Gem - Bundler](http://bundler.io/)
+  * [NodeJS and NPM](http://nodejs.org/)
+  * [Gulp](http://gulpjs.com/)
+  * [Bower](http://bower.io/)
 
 
 
