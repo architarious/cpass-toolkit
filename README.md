@@ -59,7 +59,7 @@ A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much m
    * domready: https://github.com/ded/domready
    * north: https://github.com/north/north
 
-***Misc SASS references/resources:***  
+**Misc SASS references/resources:**
    * SASS Basics: http://sass-lang.com/guide
    * SASS Style guide:  http://css-tricks.com/sass-style-guide/
    * The SASS Way: http://thesassway.com/
