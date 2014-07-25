@@ -17,9 +17,9 @@ A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much m
 
 
 
-**Other notes, comments, or reminders:**
-
-*Need some help?** [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
+Other notes, comments, or reminders:
+===
+*Need some help?* [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
 
 ***Install these first***
    * Ruby Gems (preinstalled on mac, need to install for windows: http://rubyinstaller.org/)
