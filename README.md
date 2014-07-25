@@ -67,4 +67,4 @@ NodeJS (use installer at link above)
    * BEM Syntax: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
    * List of twitter bootstrap variables: http://getbootstrap.com/customize/#less-variables 
 
-**Coming soon: Bower & Gulp integration**
+
