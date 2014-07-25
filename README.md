@@ -17,15 +17,15 @@ A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much m
 
 
 
-**Other notes, comments, or reminders:**
+***Other notes, comments, or reminders:***
 
 *Need some help?* [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
 
-***Install these first***
+**Install These First:**
    * Ruby Gems (preinstalled on mac, need to install for windows: http://rubyinstaller.org/)
    * NodeJS (http://nodejs.org/)
 
-***Getting Started***   
+**Getting Started:**
    1. Open prompt/shell 
    2. Navigate to this repository
    3. install compass: gem install compass
@@ -36,7 +36,7 @@ A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much m
    8. install gulp and modules: npm install gulp gulp-jshit jshint-stylish compass-options browser-sync gulp-shell
    9. run browsersync and compile sass: gulp server
 
-***Starting compass watch (outside of gulp):***
+**Starting Compass Watch (outside of gulp):**
    1. Open prompt/shell 
    2. Navigate to this repository
    3. bundler exec compass watch
