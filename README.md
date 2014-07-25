@@ -40,7 +40,7 @@ NodeJS (use installer at link above)
    2. Navigate to this repository
    3. bundler exec compass watch
 
-**SASSY goodness/dependencies included:**
+**Included Goodness:**
    * compass: http://compass-style.org/
    * compass-normalize: https://github.com/JohnAlbin/normalize-scss
    * compass-recipes: https://github.com/MoOx/compass-recipes   
