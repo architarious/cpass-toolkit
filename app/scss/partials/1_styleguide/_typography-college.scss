@@ -1,0 +1,482 @@
+
+///////////////////////////////////////////////
+//Paragraph Styles
+//
+///////////////////////////////////////////////
+
+
+p {
+    @include adjust-font-size-to($font-size-med);
+    @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
+
+    max-width: 50em;
+    font-family: $font-paragraph;
+    font-weight: normal;
+    color:$black;
+}
+p.kicker{
+    @include adjust-font-size-to($font-size-large);
+    @include rhythm($ms-2,0, 0, $ms-1, $font-size-large);
+
+    max-width: 40em;
+    color:$vb-Charcoal;
+    font-family: $Roman, "helvetica", Arial, verdana, Sans-serif;
+    font-weight: normal;
+    padding-left:$pad;
+}
+
+p.font-secondary, p.font-secondary em, p.font-secondary strong{
+    font-family: $font-secondary;
+}
+em, i, cite, q{
+    font-family: $Obl;
+    font-style: normal;
+}
+
+strong, b, p strong{
+    font-family: $Bd;
+}
+
+
+a{
+    color: $tertiary;
+    text-decoration: none;
+    @include standard-transition();
+}
+a:visited {
+    color: shade($tertiary, 20);
+    text-decoration: none !important;
+}
+a:active {
+    color: $tertiary;
+    text-decoration: none;
+}
+a:hover {
+    color: tint($tertiary, 20);
+    text-decoration: none;
+}
+
+p{
+     em, i, cite, q{
+      font-family: $font-paragraph;
+      font-style: italic;
+    }
+    strong, b, p strong{
+      font-family: $font-paragraph;
+      font-weight: 700;
+    }
+
+    a, a:visited, a:active{
+        color:$black;
+        padding: 1px 4px;
+        text-decoration: none;
+        background-color:transparent;
+        border-bottom-style:solid;
+        border-bottom-color:tint($tertiary, 20);
+        @include trailing-border(1px, $ms-7n/2);
+    
+        @include standard-transition(background-color);
+        @include standard-transition(border);
+        &:hover{
+            color:$black;
+            background-color:tint($secondary, 20);
+            border-top: 2px solid tint($tertiary, 20);
+            border-bottom: 0;
+        }
+    }
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, blockquote {
+    vertical-align: baseline;
+}
+/////////////////////////////////////////////
+//HEADERS
+//
+////////////////////////////////////////////
+
+h1 {
+    color: tint($primary, 20);
+    text-align:center;
+    max-width: 20em;
+    text-transform: uppercase;
+    font-family:$BdCn;
+    font-weight: normal;
+    @include adjust-font-size-to($font-size-xlarge);
+    @include rhythm($ms-2n, 0, 0, $ms-3n, $font-size-xlarge);
+}
+
+header h1 a{
+    max-width: 100%;
+    @include adjust-font-size-to($font-size-large);
+    @include rhythm(2.6180340, 1.618, 0, 2.0225425, $font-size-large);
+    
+}
+h2 {
+    border-bottom-color:$SecLightGold;    
+    border-bottom-style:solid;    
+    font-family:$LtCn;
+    font-weight: normal;
+    color: $primary;
+    border-top:0;
+    @include adjust-font-size-to($font-size-large);
+    @include rhythm($ms-4, 0, $ms-5n, $ms-1n, $font-size-large);
+    @include trailing-border(2px, $ms-4n);
+    border-image:url(../img/patternBar.jpg) 1 0;
+    max-width: 20em;
+    a{
+        color: shade($primary, 20);
+        &:link , &:active{ color: shade($primary, 10); text-decoration:none; }
+    }
+}
+h3 {
+    color: $DarkOrange;
+    text-transform: uppercase;
+    font-family: $Bd;
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-med-2);
+    a{
+        color: tint($DarkOrange,20);
+        &:link , &:active{ color: tint($DarkOrange,20); }
+        &:hover {color: lighten($DarkOrange, 10);}
+    }
+}
+h4 {
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-3, 0, 0, $ms-3n, $font-size-med-2);
+    font-family: $BlkCn;
+}
+h5 {
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-2, 0, 0, $ms-3n, $font-size-med-2);
+    font-family: $LtCn;
+    //text-transform: uppercase;
+}
+h6 {
+    @include adjust-font-size-to($font-size-med);
+    @include rhythm($ms-1, 0, 0, $ms-5n, $font-size-med);
+    color:tint($primary, 25);
+    font-family: $Bd;
+    text-transform: uppercase;
+}
+h4, h5 {
+    color: $vb-Charcoal;
+    a{
+        color: tint($black,20);
+        &:link , &:active{ color: tint($black,20); }
+    }
+}
+
+/////////////////////////////////////////////
+//TABLES
+//
+////////////////////////////////////////////
+table{
+    width:100%;
+    color:$vb-Charcoal;
+    caption{
+        @include adjust-font-size-to($font-size-large);
+        @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-large);
+        font-family: $Lt;
+    }
+    tbody, thead{
+        tr{ 
+            &:nth-child(even){ background:tint($secondary, 60);}
+            th{
+                
+                font-family:$BdCn;
+                color:darken($secondary,2);
+                background:url(../img/noise.png) tint(lighten($primary,3),16);
+                @include text-shadow(shade($primary,40) 0 1px 0px);
+                @include box-shadow(set-alpha($black, 0.5) 0 3px 2px, set-alpha($white, 0.2) 0 1px 4px inset);
+                text-transform:uppercase;
+                border: 1px solid darken($primary, 20);
+                border-top: 1px solid tint(lighten($primary, 1), 50);
+                border-bottom: 2px solid shade(darken($primary, 5), 10);
+                text-align:center;
+                padding:ms(0);
+                @include adjust-font-size-to($font-size-med);
+                @include rhythm($ms-1, $ms-0, $ms-1n, $ms-3n, $font-size-med);
+                &:first-child{
+                  border-left: 1px solid darken($primary, 10);
+                }
+                &:last-child{
+                  border-right: 1px solid darken($primary, 10);
+                }
+
+            }
+            td{
+                padding:ms(0);
+                @include adjust-font-size-to($font-size-small-2);
+                @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-small-2);
+                border-left: 1px shade($secondary, 10) dashed;
+                &:first-child{
+                  border-left: 0;
+                }
+            }
+            
+        }
+    }
+}
+/////////////////////////////////////////////
+//LISTS
+//
+////////////////////////////////////////////
+
+article{
+ul, ol, dl {
+    @include adjust-font-size-to($font-size-med);
+    @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
+}
+ul {
+    list-style-type: disc;
+
+    li{
+        @include rhythm($ms-4n, 0, 0, $ms-4n, $font-size-med);
+    }
+    
+    ul {
+      list-style-type: circle;
+      margin-top:0;
+      margin-bottom: 0;
+      padding-top:0;
+      padding-bottom:0;
+      @include rhythm($ms-3n, 0, 0, $ms-1n, $font-size-med);
+    }
+}//end ul
+
+ol {
+    list-style-type: decimal;
+    li {
+      @include rhythm($ms-4n, 0, 0, $ms-4n, $font-size-med);
+    }
+    ol {
+      list-style-type: lower-alpha;
+      margin-bottom: 0;
+      @include rhythm($ms-3n, 0, 0, $ms-1n, $font-size-med);
+    }
+}//end ol
+dl{
+ dt{
+    font-family:$BdCn;
+    color:darken($primary,15);
+    background:url(../img/noise.png) tint(lighten($primary,3),16);
+    padding: 0 ms(-2);
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-1, $ms-5n, $ms-6n, $ms-3n, $font-size-med-2);
+    @include letterpress(0.3);
+    @include standard-box-shadow();
+    border: 1px solid tint($primary, 20);
+    border-top: 1px solid tint(lighten($primary, 10), 10);
+    border-bottom: 1px solid shade(darken($primary, 10), 10);
+    max-width:ms(16);
+
+
+  } 
+  dd{
+     @include adjust-font-size-to($font-size-med);
+     @include rhythm($ms-1, $ms-5n, $ms-6n, $ms-3n, $font-size-med-2);
+    padding:ms(-2); 
+    border-color:tint($quadrary, 20); 
+    border-style:dashed; 
+    border-width:1px;
+    border-left: ms(-2) $quadrary solid;
+    max-width:ms(15);
+    color:$black;
+    &:nth-child(odd){}
+  }
+  dl dt{ 
+    @include rhythm(1, 0.618, 0.477, 0.7725, $font-size-small-2);
+    background-color: tint($primary, 60); 
+    @include box-shadow(set-alpha($black, 0.1) 0 1px 1px, set-alpha($white, 0.2) 0 1px 1px inset);
+    border-top: 1px solid tint($primary, 10);
+    border-bottom: 1px solid shade(darken($primary, 20), 10);
+    @include rem-selector(text-indent, 1);
+    }
+  dl dd{
+    @include rhythm(1, 0.618, 0.477, 0.7725, $font-size-small-2);
+    color:$vb-Charcoal;
+
+  }
+}//end dl
+}//end article
+
+
+
+
+
+/////////////////////////////////////////////
+//MISC Typography Elements
+//
+////////////////////////////////////////////
+
+form {
+    margin-bottom: 18px;
+}
+
+blockquote {
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm(1.25, 0.772, 0.618, 1, $font-size-med-2);
+    color: $gray-dark;
+    font-family: $font-secondary;
+    max-width: 50em;
+    border-left: ms(-2) solid $quadrary;
+    //@include rem-selector(padding, 2);
+    padding-left: ms(1); 
+    padding-right:0;
+    
+    em, i{ font-family:$font-secondary;}
+    strong, b{font-family: $font-secondary;}
+
+    p{
+        color: $gray-dark;
+        font-family: $font-secondary;
+        @include adjust-font-size-to($font-size-med-2);
+        em, i{ font-family:$font-secondary;}
+        strong, b{font-family: $font-secondary;}
+    }
+    
+}//end blockquote
+
+acronym, abbr {
+    font-variant: small-caps;
+}
+ins {
+    text-decoration: underline;
+}
+
+
+audio, canvas, video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+[hidden] {
+    display: none;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+a:active, a:hover {
+    outline: 0 none;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b, strong {
+    font-weight: 700;
+}
+cite{
+    color:$gray;
+}
+dfn {
+    font-family:$Lt;
+    background-color:tint($secondary, 20);
+    padding: 0 $font-size-small;
+}
+time{
+    border-bottom:1px dotted shade($secondary,20);
+}
+var{
+    font-family:$font-secondary;
+    font-size:$font-size-large;
+}
+samp{
+    color:$valid;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    height: 0;
+}
+img, object, iframe, embed {
+    max-width: 100%;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: $vb-Charcoal -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-right: 0 none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    display: block;
+    height: 1px;
+    @include rhythm(1.25, 0.772, 0.618, 1, $font-size-med);
+    margin-left:0; margin-right:0;
+    padding: 0;
+}
+mark{
+    background-color:lighten($SecLightGold, 15);
+}
+
+img {
+    vertical-align: middle;
+}
+fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    resize: vertical;
+}
+abbr {
+    cursor: help;
+}
+
+///////////////////////////////////////////////////////////////////////////
+/////////////MISC SITE STUFF
+////////////////////////////////////////////////////////////////////////////
+
+#breadcrumbs {
+    color: $tertiary;
+    @include adjust-font-size-to($font-size-small);
+    @include rhythm(1.25, 0.772, 0.618, 1, $font-size-small);
+
+}
+#breadcrumbs a.current-page {
+    background-color: rgba(0, 0, 0, 0);
+    color: #5C6F7B;
+}
+
+
+
+#share-and-print {
+    font-size: 10px;
+    margin-bottom: 18px;
+}
+
+
+
+.ir {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0 none;
+    overflow: hidden;
+}
+.ir:before {
+    content: "";
+    display: block;
+    height: 150%;
+    width: 0;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.invisible {
+    visibility: hidden;
+}
+
+.sidebar, .sidebar p, aside, aside p{
+    @include adjust-font-size-to($font-size-small);
+    @include rhythm(1.25, 0.772, 0.618, 1, $font-size-small);
+}
+ul li, .sidebar li, aside li {
+    line-height: 18px;
+}

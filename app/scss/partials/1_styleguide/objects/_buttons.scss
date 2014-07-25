@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+.btn {
+	@include btn();
+
+}
+
+.btn--small {
+	@include btn();
+	padding-top: $pad-quarter/2;
+	padding-bottom: $pad-quarter/2;
+}
+
+.btn--large {
+	@include btn();
+	font-size:$font-size-xlarge;
+	padding-right:50px;
+
+	&:before,
+	{
+		background-color: shade($tertiary, 25);
+		top:42%;
+		width:34px;
+		height:34px;
+	}
+}
+
+
+p a.btn_text {
+	letter-spacing:0;
+	text-decoration:none;
+	border:none;
+	border-bottom:2px solid tint($tertiary, 20);
+	color:$black;
+	padding:2px 10px;
+	padding-right:34px;
+	font-family:$font-paragraph;
+	position:relative;
+	background-color:$white;
+
+	@include standard-transition(background-color);
+	@include standard-transition(border);
+	&:hover{
+		background-color:tint($secondary, 20);
+		border-top: 2px solid tint($tertiary, 20);
+		border-bottom: 0;
+	}
+
+	&:before{
+    background-color: tint($tertiary, 10);
+    background-image: url(../img/right_arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: "";
+    width:20px;
+	height:20px;
+    position: absolute;
+    right: 8px;
+    top: 42%;
+    margin-top: -9px;
+    @include border-radius(50%);
+    @include box-shadow(darken($tertiary, 10) 0 2px 0 inset, lighten($secondary, 20) 0 1px 0);
+    @include standard-transition(background);
+    @include standard-transition(box-shadow);
+    }//end before
+
+    &:hover:before, &:focus:before{
+      background-color:shade($tertiary, 10);
+      @include box-shadow(darken($tertiary, 60) 0 5px 0 inset, lighten($secondary, 20) 0 1px 0);
+    }
+
+    &:active:before{
+      background-color:lighten($tertiary, 15);
+      @include box-shadow(darken($tertiary, 60) 0 1px 0 inset, lighten($secondary, 20) 0 3px 0);
+    }
+}//end btn_text
+
+p a.action{
+	@extend .btn--large;
+	@include adjust-font-size-to($font-size-large);
+	@include rhythm(0.0618, 0.618, 0.618, 0.0618, $font-size-large);
+	
+	&:hover{
+		@include adjust-font-size-to($font-size-large);
+		@include rhythm(0.0618, 0.618, 0.618, 0.0618, $font-size-large);
+	}
+}

@@ -1,0 +1,158 @@
+header{
+	.site-logo{
+		display:none;
+		@include breakpoint($bp-tablet){
+			//display:block;
+		}
+	}
+}
+
+/**************************************
+//////////////////////////////////////
+////BOOTSTRAP MOBILE NAV OPTION///////
+//////////////////////////////////////
+///More variables at 0_styleguide/bootstrap-variables.scss (line 327)//
+**************************************/
+
+nav{
+
+	&.navbar-default{
+		background:none;
+		color:$black;
+		border:0;
+		box-shadow:none;
+		border-raidus: 0;
+		//@include standard-box-shadow();
+		//@include standard-border-radius();
+		.navbar-brand{
+		@include breakpoint($bp-tablet){
+			//display:none;
+		 }//end breakpoint
+		}//end .nave_site-logo
+	}
+	&.navbar{}
+	.navbar-header{
+		float:left;
+		width:100%;
+
+	  .navbar-toggle{
+		border:0;
+		@include standard-transition;
+		max-width:4.95em;
+		@include rhythm($ms-3n, $ms-1n, $ms-1n, $ms-3n, $font-size-med);
+		background:tint($WVUGold, 10);
+		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset;
+		color:$WVUBlue;
+
+		&:hover, &:focus{
+			background:url(../img/noise.png) lighten($WVUGold, 15) repeat;
+		}
+		.navbar-toggle_title{
+			float:right;
+			margin-top:-0.24em;
+			font-family:$BdCn;
+		}
+		.icon-bar{
+			float:left;
+			background-color:$WVUBlue;
+			max-width:1em;
+		}
+
+	  }//end .navbar-toggle
+
+	  .navbar-brand{
+	  	background:none;
+	  	color:$tertiary;
+	  	@include letterpress();
+	  	@include adjust-font-size-to($font-size-med);
+		@include rhythm($ms-3n, $ms-2n, $ms-2n, $ms-3n, $font-size-med);
+		font-family:$BdCn;
+		text-transform:uppercase;
+		&:hover{
+			color:$primary;
+		}
+		//@include vertical-align();
+	  }
+
+	}//end .navbar-header
+
+	#nav-primary{
+		border-bottom:shade($white, 5) solid;
+		@include trailing-border(2px, $ms-5n);
+		ul.navbar-nav{
+			width:100%;
+			//border-top:shade($white, 10) 1px solid;
+			li{
+				width:100%;
+				float:left;
+				border-bottom:shade($white, 4) solid;
+				@include trailing-border(1px, $ms-7n);
+				&:last-child{
+					border-bottom:0;
+					margin-bottom:0;
+				}
+				a{	
+					background:none;
+					@include standard-transition();
+					@include adjust-font-size-to($font-size-med);
+					@include rhythm($ms-4n, $ms-5n, $ms-6n, $ms-4n, $font-size-med);
+					width:100%;
+					&:active{
+						background:$secondary url(../img/noise.png) repeat;
+					}
+					font-weight:bold;
+
+				}
+			}
+
+		@include breakpoint($bp-tablet){
+			@include navigation-list;
+			li{
+				width: auto;
+			}
+		}
+		}//end ul
+
+	}// end #nav-primary
+}
+
+/**************************************
+//////////////////////////////////////
+////NON-BOOTSTRAP MOBILE NAV OPTION///
+//////////////////////////////////////
+
+#hamburger{
+	
+	@include transition-property(border-bottom, border-top);
+ 	@include transition-duration(0.2s);
+  	@include transition-timing-function(ease-in);
+  	&:after{
+  		//@extend .icon-th-list;
+  		background: transparent; 
+		border-bottom: 19px double shade($primary, 60); 
+		border-top: 6px solid shade($primary, 60);
+		height: 32px;
+		max-width:$space-quad;
+		}
+	&:hover{
+			border-bottom: 19px double shade($white, 10); 
+			border-top: 6px solid shade($white, 10);
+		}
+	&.active{
+			border-bottom: 19px double shade($secondary, 10); 
+			border-top: 6px solid shade($secondary, 10);
+	}
+
+	@include breakpoint($bp-tablet){
+		display:none;
+	}	
+				
+}//end hamburger
+
+#navWrapper{
+	display:none;
+	@include breakpoint($bp-tablet){
+		display:block;
+	}
+}//end #navWrapper
+*/

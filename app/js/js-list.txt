@@ -1,0 +1,22 @@
+Jquery: jquery-1.11.1.min.js
+Fallback(not included):  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+
+Bootstrap modules and their order:
+//= require bootstrap/affix
+//= require bootstrap/alert
+//= require bootstrap/button
+//= require bootstrap/carousel
+//= require bootstrap/collapse
+//= require bootstrap/dropdown
+//= require bootstrap/tab
+//= require bootstrap/transition
+//= require bootstrap/scrollspy
+//= require bootstrap/modal
+//= require bootstrap/tooltip
+//= require bootstrap/popover
+
+More info on bootstrap-sass:  
+https://github.com/twbs/bootstrap-sass
+
+Bootstrap JS documentation: 
+http://getbootstrap.com/javascript/#transitions

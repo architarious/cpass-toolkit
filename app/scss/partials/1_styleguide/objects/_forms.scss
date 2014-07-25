@@ -1,0 +1,61 @@
+form{
+	fieldset{
+		@include adjust-font-size-to($font-size-med);
+		@include rhythm(0.0618, 0.477, 0.477, 0.7725, $font-size-small-2);
+		abbr{color:$acc-red;}
+		ul{
+			@include adjust-font-size-to($font-size-med);
+			@include rhythm(0.0618, 0.0477, 0.0477, 0.0618, $font-size-small-2);
+			list-style-type:none;
+			li{
+				@include adjust-font-size-to($font-size-med);
+				@include rhythm(0.0618, 0.0477, 0.0477, 0.0618, $font-size-small-2);
+			}
+		}
+	}
+	legend{}
+	input, textarea, .form-control{
+		@include adjust-font-size-to($font-size-med);
+		@include rhythm(0.0618, 0.477, 0.477, 0.7725, $font-size-small-2);
+		display:inline;
+		color: $gray-dark;
+		background-color: tint($white,40);
+		background-image: url(../img/noise.png);
+		border: 1px solid $gray-light-3;
+		border-radius: 4px;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		@include standard-transition(box-shadow);
+		@include standard-transition(border-color);
+		@include box-emboss();
+
+		&.btn, &.button, &.submit{
+			@include btn();
+			padding-right: 16px; 
+		}
+
+		&.checkbox, &.radio, &[type="checkbox"], &[type="radio"]{
+			@include box-emboss(0,0);
+		}
+	}
+	label{
+		@include adjust-font-size-to($font-size-med-2);
+		@include rhythm(0.0618, 0.477, 0.477, 0.7725, $font-size-small-2);
+		@include letterpress-dark;
+		font-family:$Bd;
+		abbr{color:$acc-red;}
+	}
+	em{
+		@include adjust-font-size-to($font-size-small-2);
+		color:$gray;
+		@include rhythm(1, 0.618, 0.477, 0.7725, $font-size-small-2);
+
+	}
+
+	.submit{
+		input, button{
+			@include btn();
+			padding-right: 16px; 
+		}
+	}//end .submit
+
+}

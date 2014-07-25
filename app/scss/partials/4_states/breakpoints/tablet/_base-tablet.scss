@@ -1,0 +1,97 @@
+@include breakpoint($bp-tablet){
+  $grids: 8;
+  $gutters: 1/3;
+  //@include background-grid;
+
+  body{
+  	.container, .wvu-masthead-container{
+  		max-width:$bp-desktop1;
+  	}
+	.wvu-masthead{
+		.wvu-masthead-container{
+
+		}
+	}//end /wvu-masthead
+
+	header{
+		#college-masthead{
+			.container{
+
+			}//end #college-masthead.container
+		}//end #college-masthead
+
+		.container{
+			a.site-logo{}
+			nav.nav.primary{}
+		}//end header.container
+	}//end header
+
+	section#prefix{
+		.container{
+
+		}//end section#prefix.container
+	}//end section#prefix
+
+	section#core{
+		.container{
+			#main{
+				article{
+					h1{
+						text-align:left;
+        				@include adjust-font-size-to($font-size-xlarge-2);
+        				@include rhythm($ms-2, 0, 0, $ms-1n, $font-size-xlarge-2);
+					}
+					h2{
+						@include adjust-font-size-to($font-size-large-2);
+    					@include rhythm($ms-6, 0, $ms-7n, $ms-1n, $font-size-large-2);
+					}
+					h3{
+						@include adjust-font-size-to($font-size-med-2);
+    					@include rhythm($ms-5, 0, 0, $ms-1n, $font-size-med-2);
+					}
+					h4{
+						@include adjust-font-size-to($font-size-med-2);
+    					@include rhythm($ms-4, 0, 0, $ms-1n, $font-size-med-2);
+					}
+					h5 {
+					    @include adjust-font-size-to($font-size-med-2);
+					    @include rhythm($ms-3, 0, 0, $ms-1n,$font-size-med-2);
+					}
+					h6 {
+					    @include adjust-font-size-to($font-size-med);
+					    @include rhythm($ms-2, 0, 0, $ms-1n, $font-size-med);
+					}
+				}//end #main article
+			}//end #main
+			aside.sidebar{
+
+			}//end aside.sidebar
+		}//end section#core.container
+	}//end section#core	
+
+	section#postfix{
+		.container{
+
+		}//end section#postfix .container
+	}//end section#postfix
+
+	footer{
+		#college.footer{
+			.container{
+				#footer_contact{}//end #footer_contact
+				#footer_feature{}//end #footer_feature
+			}//end #college.footer .container
+		}//end #colllege.footer
+
+		#wvu.footer{
+			.container{
+				.wvu-credits{}//end .wvu-credits
+				.wvu-icons{}//end .wvu-icons
+
+			}//end #wvu.footer .container
+		}//end #wvu.footer
+		
+	}//end footer.footer
+}//end body
+
+}

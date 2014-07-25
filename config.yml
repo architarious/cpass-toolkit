@@ -1,0 +1,18 @@
+    
+name: Theme Name
+description: This is the Theme Name theme built using the Radius template language for CleanSlate. Originally authored by May Day.
+
+# CSS
+css: 
+  
+  # Turn CSS compression/minification on/off.
+  compress: true
+  
+# JavaScript options
+js:
+  
+  # Turn JavaScript compression/minification on/off
+  compress: true
+  
+  # Turn JavaScript mangling on/off.
+  mangle: true

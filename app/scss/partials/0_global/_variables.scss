@@ -1,0 +1,157 @@
+////////////////////////
+// Variables Partials
+//
+// All of your variables should go in this file.
+////////////////////////
+
+/////////////////////////
+///Modular Scale
+/******************************
+ ms(-7) = 0.182em
+ ms(-6) = 0.236em 
+ ms(-5) = 0.295em 
+ ms(-4) = 0.382em
+ ms(-3) = 0.4774575074em
+ ms(-2) = 0.6180339845em 
+ ms(-1) = 0.7725424806em
+ ms(0) = 1em 
+ ms(1) = 1.25em 
+ ms(2) = 1.618034em 
+ ms(3) = 2.0225425em 
+ ms(4) = 2.6180340252em 
+ ms(5) = 3.2725425314em 
+ ms(6) = 4.2360680659em 
+ ms(7) = 5.2950850823em 
+ ms(8) = 6.8541021569em 
+ ms(9) = 8.5676276961em 
+ ms(10) = 11.0901703293em
+ ms(11) = 13.8627129116em 
+ ms(12) = 17.9442726586em 
+ ms(13) = 22.4303408232em 
+ ms(14) = 29.0344432669em 
+ ms(15) = 36.2930540836em 
+ ms(16) = 46.9787163769em 
+ ms(17) = 58.7233954711em 
+ ms(18) = 76.0131603741em 
+ ms(19) = 95.0164504677em 
+ ms(20) = 122.9918779328em
+*//////////////////////////
+
+
+$ms-base: 16px 20px;
+$ms-ratio: $golden;
+//@debug ms-list( -4 , 3, $ms-base, $ms-ratio);
+$rhythm-unit: "rem";
+ 
+ $ms-7n: 0.182;
+ $ms-6n: 0.236;
+ $ms-5n: 0.295;
+ $ms-4n: 0.382;
+ $ms-3n: 0.4774575074;
+ $ms-2n: 0.6180339845; 
+ $ms-1n: 0.7725424806;
+ $ms-0: 1; 
+ $ms-1: 1.25; 
+ $ms-2: 1.618034; 
+ $ms-3: 2.0225425; 
+ $ms-4: 2.6180340252; 
+ $ms-5: 3.2725425314; 
+ $ms-6: 4.2360680659; 
+ $ms-7: 5.2950850823; 
+ $ms-8: 6.8541021569; 
+ $ms-9: 8.5676276961; 
+ $ms-10: 11.0901703293;
+ $ms-11: 13.8627129116; 
+ $ms-12: 17.9442726586; 
+ $ms-13: 22.4303408232; 
+ $ms-14: 29.0344432669; 
+ $ms-15: 36.2930540836; 
+ $ms-16: 46.9787163769; 
+ $ms-17: 58.7233954711; 
+ $ms-18: 76.0131603741; 
+ $ms-19: 95.0164504677; 
+ $ms-20: 122.9918779328;
+////////////////////////
+//Font Sizes
+//
+////////////////////////
+$root-font-size: 16;
+$root-line-height: 26;
+$gRatio: 1.618;
+$modRatio: 0.618;
+
+$font-size-small : ms(-2);
+$font-size-small-2 : ms(-1);
+$font-size-med : ms(0);
+$font-size-med-2: ms(1);
+$font-size-large : ms(2);
+$font-size-large-2 : ms(3);
+$font-size-xlarge: ms(4);
+$font-size-xlarge-2: ms(5);
+$font-size-xxlarge: ms(6);
+$font-size-xxlarge-2: ms(7);
+$font-size-xxxlarge: ms(8);
+$font-size-xxxlarge-2: ms(9);
+
+
+$lh-size-small : ms(0);
+$lh-size-small-2 : ms(1);
+$lh-size-med : ms(2);
+$lh-size-med-2: ms(3);
+$lh-size-large : ms(4);
+$lh-size-large-2 : ms(5);
+$lh-size-xlarge: ms(6);
+$lh-size-xlarge-2: ms(7);
+$lh-size-xxlarge: ms(8);
+$lh-size-xxlarge-2: ms(9);
+$lh-size-xxxlarge: ms(10);
+$lh-size-xxxlarge-2: ms(11);
+
+
+////////////////////////////
+///BaseLine
+//
+///////////////////////////
+$base-font-size: 16px;
+$base-line-height: 20.022px;
+$default-rhythm-border-style: solid;
+$relative-font-sizing: true;
+$round-to-nearest-half-line: true;
+$min-line-padding: 2px;
+
+/////////////////////////
+///Media QUERIES
+//
+/////////////////////////
+
+$bp-mobile2: 30rem;
+$bp-tablet: 48rem;
+$bp-desktop1: 60rem;
+$bp-desktop2: 78rem;
+//$breakpoint-no-query-fallbacks: true;
+$no-queries: 1024px, 'no-query' true;
+
+
+/////////////////////////
+///Space and padding defaults
+//
+////////////////////////
+$space : 1em;
+$pad : 1.618em;
+
+
+$space-quarter: $space*0.25;
+$space-half: $space*0.5;
+//$space : 1em;
+$space-and-half : $space*1.5;
+$space-double : $space*2;
+$space-quad : $space*4;
+$space-half : $space/2;
+
+$pad-quarter: $pad*0.25;
+$pad-half:$pad*0.5;
+//$pad : 1.618rem;
+$pad-and-half : $pad*1.5;
+$pad-double : $pad*2;
+$pad-half : $pad/2;
+$pad-quarter :$pad/4;

@@ -1,0 +1,544 @@
+////////////////////////
+// Mixins Partials
+//
+// All of your mixins should go in this file.
+//
+//Many mixins inspired from the following:
+//Sacha Grief:  http://sachagreif.com/useful-sass-mixins/
+//ZeroSixThree: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+////////////////////////
+
+
+///////////////////////////////////
+///REM conversion mixins
+//
+//USAGE: $include rem-selector(font-size, 12); 
+//USAGE: $include px2rem-selector(max-width, 600);
+//Dependencies: Set variable for $root-font-size
+///////////////////////////////////
+
+@mixin rem-selector($selector,$target, $context:$root-font-size) {
+      #{$selector} : rem($target) + px;
+      #{$selector} : ($target) + rem;
+  }
+
+
+@mixin px2rem-selector($selector,$target, $context:$root-font-size) {
+     #{$selector} : ($target) + px;
+     #{$selector} : remcalc($target) + rem;
+ }
+
+
+
+
+
+///////////////////////////////////
+///SVG Backgrounds with PNG and Retina Fallback mixin
+//
+//USAGE: @include background-image('brandpattern');
+//Dependancies:  
+// - images need to be saved in /img directory.
+// - files must be named similiarly.  Example:  brandpattern.svg, brandpattern.png, brandpatternRet.png
+// - for information on when/how to design for retina: http://isthisretina.com/ 
+///////////////////////////////////
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: 'Ret';
+
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+
+
+
+///////////////////////////////////
+///BASE Animations and Keyframe Mixins
+//
+//Description: allows you to create name custom keyframes and then easily apply them with browser prefixes
+//USAGE: 
+//@include keyframes(slide-down) {
+//  0% { opacity: 1; }
+//  90% { opacity: 0; }
+//}
+//
+//.element {
+//  width: 100px;
+//  height: 100px;
+//  background: black;
+//  @include animation('slide-down 5s 3');
+//}
+//References: http://www.w3schools.com/cssref/css3_pr_animation.asp 
+//animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+///////////////////////////////////
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }  
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+///////////////////////////////////
+///Standard Transition
+//
+//DESCRIPTION: Used to apply consistent transitions, while reducing code needed to be written
+//DEFAULT: applies ease-in color transition of 0.2s by default. 
+//USAGE: @include standard-transition(); OR @include standard-transition(box-shadow, 0.3s, ease-out); 
+///////////////////////////////////
+@mixin standard-transition($property:color, $duration:0.2s, $function:ease-in){
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $function;
+
+  //@include transition-property(background, box-shadow);
+  //@include transition-duration(0.2s);
+  //@include transition-timing-function(ease-in);
+}
+
+///////////////////////////////////
+///Standard Box-Shadow
+//
+//DESCRIPTION: Used to apply consistent box-shadows throughout site
+//DEFAULT: same settings as buttons throughout site
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+///////////////////////////////////
+@mixin standard-box-shadow($shadow:tint($black,15), $h:0, $v:2px, $blur:1px, $spread:0){
+  box-shadow: $shadow $h $v $blur $spread;
+}
+
+///////////////////////////////////
+///Standard Box-Shadow
+//
+//DESCRIPTION: Used to apply consistent box-shadows throughout site
+//DEFAULT: same settings as buttons throughout site
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+///////////////////////////////////
+@mixin standard-border-radius($radius: 1.618){
+  border-radius: 0.618em;
+}
+
+///////////////////////////////////
+///Emboss Mixin
+//
+//DESCRIPTION: For whenever you want a box to look embossed
+//USAGE: @include box-emboss(); or @include box-emboss(0.9, 0.01);
+//DEPENDENCIES: notta
+///////////////////////////////////
+
+@mixin box-emboss($opacity:0.867, $opacity2:0.4774){
+    box-shadow:set-alpha($white, $opacity) 0 1px 0, inset set-alpha($black, $opacity2) 0 1px 0;
+}
+
+///////////////////////////////////
+///Letterpress Mixins
+//
+//DESCRIPTION: For whenever you want text to look like it was letterpressed
+//USAGE: @include letterpress();, @include letterpress-dark(); or @include letterpress(0.9)
+//DEPENDENCIES: set variables for $white and $black
+///////////////////////////////////
+
+@mixin letterpress($opacity:0.68541){
+  text-shadow:0 1px 0 set-alpha($white, $opacity) ;
+}
+
+@mixin letterpress-dark($opacity:0.1618){
+  text-shadow:0 1px 0 set-alpha($black, $opacity) ;
+}
+
+
+///////////////////////////////////
+///Button Mixin
+//
+//USAGE: @include btn();  or @include btn($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
+//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
+///////////////////////////////////
+@mixin btn($bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white){
+    font-family: $BlkCn;
+    letter-spacing:1px;
+    position:relative;
+    text-transform: uppercase;
+
+    @include sassy-button( "flat", 3px, 16px, $bg-color, shade($bg-color, 20), $tx-color, inset);
+    background-image:url(../img/noise.png);
+    padding: 8px 16px;
+    padding-right: 40px;
+    @include standard-box-shadow($shadow);
+    @include standard-transition(background-color);
+    @include standard-transition(box-shadow);
+
+    &:hover, &:focus{
+      @include box-shadow(tint($shadow,10) 0 2px 4px);
+      color:shade($white,10);
+    }
+
+    &:active{
+      background:lighten($bg-color, 20);
+      @include box-shadow(tint($shadow,40) 0 4px 6px);
+    }
+
+    &:visited{
+      color:lighten($quadrary, 5);
+      @include letterpress();
+      text-decoration:none;
+    }
+
+    &.disabled {
+    background: $gray-light-2;
+    color: $gray;
+     &:hover, &:focus, &:active{
+      background: $gray-light-2;
+     }
+     &:before{
+        background: $gray-light-3;
+         &:hover:before, &:focus:before, &:active:before{
+           background: $gray-light-3;
+         }
+     } 
+    }//end .disabled
+
+
+  &:before{
+    background-color: shade($bg-color, 10);
+    background-image: url(../img/right_arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 8px;
+    top: 42%;
+    margin-top: -9px;
+    @include border-radius(50%);
+    @include box-shadow(darken($bg-color, 20) 0 2px 0 inset, lighten($bg-color, 20) 0 1px 0);
+    @include standard-transition(background);
+    @include standard-transition(box-shadow);
+    }//end before
+
+    &:hover:before, &:focus:before{
+      background-color:shade($bg-color, 40);
+      @include box-shadow(darken($bg-color, 60) 0 5px 0 inset, lighten($bg-color, 20) 0 1px 0);
+    }
+
+    &:active:before{
+      background-color:lighten($bg-color, 15);
+      @include box-shadow(darken($bg-color, 60) 0 1px 0 inset, lighten($bg-color, 20) 0 3px 0);
+    }
+
+
+
+  }//end btn
+
+
+
+
+///////////////////////////////////
+///Hide-Text Mixin
+//
+//DESCRIPTION: For whenever you want some text to disappear
+//USAGE: @include hide-text();
+//DEPENDENCIES: notta
+///////////////////////////////////
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9000px;
+  display:block;
+}
+
+
+///////////////////////////////////
+///Visually Hidden Mixin and class
+//
+//DESCRIPTION: For whenever you want an entire block to disappear, but still be read by screen readers
+//USAGE: @include visually-hidden(); or <a class="visually-hidden">Accessability 4evah</a>
+//DEPENDENCIES: notta
+///////////////////////////////////
+@mixin visually-hidden{
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+
+  &.focusable:active, &.focusable:focus{
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+.visually-hidden{
+  @include visually-hidden();
+}
+
+
+///////////////////////////////////
+///Navigation-list
+//
+//DESCRIPTION: For whenever you want a horizontal list without all the hassle
+//USAGE: @include navigation-list();
+//DEPENDENCIES: notta
+///////////////////////////////////
+@mixin navigation-list {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    > li{
+        display:block;
+        float:left;
+        &:last-child{
+            margin-right:0px;
+        }
+    }
+}
+
+
+///////////////////////////////////
+///Cover-all
+//
+//DESCRIPTION: Overlays and covers the entire screen
+//USAGE: @include cover-all();
+//DEPENDENCIES: notta
+///////////////////////////////////
+@mixin cover-all {
+  position: absolute;
+  z-index:1000000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+///////////////////////////////////
+///Center-block
+//
+//DESCRIPTION: Overlays a box that's in the exact center of the screen
+//USAGE: @include center-block();
+//DEPENDENCIES: notta
+///////////////////////////////////
+@mixin center-box {
+  position: absolute;
+  z-index:1000001;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+///////////////////////////////////
+///Wrap Around Ribbon
+//
+//DESCRIPTION: Creates a triangle on bottom of block to create the appareans of a wrap-around ribbon
+//USAGE: (for a left ribbon) @include ribbon( $primary, $padding-left, 0);
+//SOURCE:  http://codepen.io/ricardozea/pen/sdlvu 
+///////////////////////////////////
+@mixin ribbon( $ribbon-color:black, $size-left:1em, $size-right:1em) {
+  position:relative;
+  &:before,
+  &:after { content:""; position:absolute; }
+  &:before { border-top:$size-left solid $ribbon-color;
+    bottom:-$size-left;
+    border-left:$size-left solid transparent;
+    left:0;
+  }
+  &:after {
+    border-top:$size-right solid $ribbon-color;
+    bottom:-$size-right;
+    border-right:$size-right solid transparent;
+    right:0;
+  }
+}
+
+///////////////////////////////////
+///Vertical Align Center
+//
+//DESCRIPTION: Vertical aligns one element inside of another element
+//USAGE: @include vertical-align();
+//SOURCE:  http://codepen.io/hced/pen/FbdqC
+///////////////////////////////////
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+///////////////////////////////////
+///Accessable Text-Contrast checker
+//
+//DESCRIPTION: That calculates if text needs to be light or dark depending on the background color passed.
+//             Color brightness is determined by the following formula: 
+//             ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+//USAGE: set background-color, then @include text-contrast(#002820);
+//SOURCE:  http://codepen.io/davidhalford/pen/wlDxL
+///////////////////////////////////
+@mixin text-contrast($n) {
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+  
+  @if abs($color-brightness) < ($light-color/2){
+    color: white;
+  }
+
+  @else {
+    color: black;
+  }
+}
+
+
+///////////////////////////////////
+///Arrow for tooltip boxes
+//
+//DESCRIPTION: Creates an arrow for a box
+//USAGE: .class-name:after{ @include arrow(right, 1em, 0.5em, $black); }
+//SOURCE:  http://codepen.io/blustemy/pen/kAocv
+///////////////////////////////////
+@mixin arrow($dir, $base-width, $length, $color) {
+  width: 0; height: 0;
+  border: ($base-width / 2) solid transparent;
+  
+  @if $dir == top {
+    
+    border-top: none;
+    border-bottom-width: $length;
+    border-bottom-color: $color;
+  
+  } @else if $dir == right {
+    
+    border-right: none;
+    border-left-width: $length;
+    border-left-color: $color;
+  
+  } @else if $dir == bottom {
+    
+    border-top-width: $length;
+    border-bottom: none;
+    border-top-color: $color;
+  
+  } @else if $dir == left {
+  
+    border-right-width: $length;
+    border-left: none;
+    border-right-color: $color;
+  
+  }
+}
+
+///////////////////////////////////
+///Page Curl
+//
+//DESCRIPTION: Creates a page curl affect on given class
+//USAGE: @include page-curl(12px);  (can be extended by declaring a longer box-shadow beforehand)
+//SOURCE:  http://codepen.io/jnicholes/pen/jzBdp
+///////////////////////////////////
+@mixin page-curl($size:6px) {
+  &:before,
+  &:after {
+    position: absolute;
+    width: 40%;
+    height: 10px;
+    content: '';
+    left: 12px;
+    bottom: 12px;
+    background: transparent;
+    @include transform(skew(-5deg) rotate(-5deg));
+    @include box-shadow(0 $size 12px rgba(0,0,0,0.3));
+    z-index: -1;
+  }
+  &:after {
+    left: auto;
+    right: 12px;
+    @include transform(skew(5deg) rotate(5deg));
+  }
+}
+
+
+///////////////////////////////////
+///Parallax Mixins
+//
+//DESCRIPTION: Creates a parallax affect for nth-child objects in a container
+//USAGE: @include parallax-init; at the top of scss file
+//       @include parallax(.2); in the class that you want to scroll differently
+//SOURCE:  http://codepen.io/scottkellum/pen/bHEcA
+///////////////////////////////////
+$parallax-perspective : 1 !default;
+$parallax-element     : "body" !default;
+$parallax-ios         : true !default;
+
+@mixin parallax-init(
+  $perspective  : $parallax-perspective,
+  $element      : $parallax-element,
+  $parallax-ios : $parallax-ios
+  ) {
+  @if $element == "body" {
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+  #{$element} {
+    overflow: auto;
+    @include perspective($perspective * 1px);
+    @include transform-style(preserve-3d);
+    // Allows for smooth scrolling but disables parallax effects.
+    @if $parallax-ios == false {
+      -webkit-overflow-scrolling: touch;
+    }
+    // Preserve 3D
+    &, * {
+      @include transform-style(preserve-3d);
+    }
+  }
+}
+
+@mixin parallax(
+  $distance    : 0,
+  $perspective : $parallax-perspective
+  ) {
+  @include transform(
+    translateZ($distance * $perspective * 1px)
+    scale(abs($distance - 1))
+  );
+  z-index: $distance * 1000;
+}

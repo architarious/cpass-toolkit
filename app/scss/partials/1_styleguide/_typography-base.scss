@@ -1,0 +1,69 @@
+/////////////////////////////////////////
+//IMPORTED FONTS
+//
+////////////////////////////////////////
+@font-face{
+    font-family: HelvNu-BlkCn;
+    src: url(fonts/HelveticaNeueLTStd-BlkCn.otf);
+}
+
+@font-face{
+    font-family: HelvNu-BdCn;
+    src: url(fonts/HelveticaNeueLTStd-BdCn.otf);
+}
+
+@font-face{
+    font-family: HelvNu-Bd;
+    src: url(fonts/HelveticaNeueLTStd-Bd.otf);
+}
+
+@font-face{
+    font-family: HelvNu-Roman;
+    src: url(fonts/HelveticaNeueLTStd-Roman.otf);
+}
+@font-face{
+    font-family: HelvNu-Obl;
+    src: url(fonts/HelveticaLTStd-Obl.otf);
+}
+
+@font-face{
+    font-family: HelvNu-LtCn;
+    src: url(fonts/HelveticaNeueLTStd-LtCn.otf);
+}
+
+@font-face{
+    font-family: HelvNu-Lt;
+    src: url(fonts/HelveticaNeueLTStd-Lt.otf)
+}
+
+
+$font-paragraph: Arial, verdana, Sans-serif;
+
+$BlkCn: "HelvNu-BlkCn", $font-paragraph;
+$BdCn: "HelvNu-BdCn", $font-paragraph;
+$Bd: "HelvNu-Bd", $font-paragraph;
+$Roman: "HelvNu-Roman", $font-paragraph;
+$Obl: "HelvNu-Obl", $font-paragraph;
+$LtCn: "HelvNu-LtCn", $font-paragraph;
+$Lt: "HelvNu-Lt", $font-paragraph;
+
+$font-primary: $Roman, Helvetica, arial, verdana, sans-serif;
+$font-secondary: "Garamond", Georgia, "Times New Roman", Serif;
+$font-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+html{
+    @include establish-baseline;
+    //@include adjust-leading-to(18);
+    font-family: $font-paragraph;
+    color:$black;
+    background:transparent;
+}
+body{
+    @include establish-baseline;
+    //@include adjust-leading-to(18);
+    font-family: $font-paragraph;
+    font-size: $root-font-size+px;
+}
+
+

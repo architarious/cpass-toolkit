@@ -1,0 +1,62 @@
+div.message{
+    &.notification{
+        border:1px solid $gray-light;
+        border-radius:10px;
+        @include standard-box-shadow();
+        padding:$pad-and-half;
+
+        .close{margin-top: -13.862px;}
+    }
+
+    &.warning{
+        background:shade($DarkOrange,10) url(../img/noise.png);
+        @include rem-selector(padding, 2);
+        color:$white;
+        font-family:$BlkCn;
+        border:2px dashed lighten($WVUGold, 10);
+        letter-spacing: 2px;
+        @include adjust-font-size-to($font-size-med);
+        @include rhythm(2.0225, 0.772, 0.618, 1, $font-size-med);
+        @include text-shadow(shade($DarkOrange, 60) 0 -1px 1px, tint($DarkOrange, 20) 0 1px 1px  );
+        @include box-shadow(set-alpha($quadrary,0.50) 0 1px 25px inset, set-alpha($black, 0.4) 0 2px 5px);
+
+        &:before{
+            content:"WARNING!";
+            color:shade($DarkOrange, 50);
+            width:30%;
+            float:left;
+            font-family:$BdCn;
+            @include adjust-font-size-to($font-size-med);
+            @include rhythm(-2.618, 0.772, 0.618, 1, $font-size-med);
+            position:absolute;
+        }
+    }//end .warning
+
+    &.notice{
+        background:set-alpha(darken($SecLightGold,10), 0.5) url(../img/noise.png);
+        @include rem-selector(padding, 2);
+        color:$gray;
+        font-family:$BlkCn;
+        border:2px solid lighten($vb-Gold, 10);
+        letter-spacing: 2px;
+        @include adjust-font-size-to($font-size-med);
+        @include rhythm(2.0225, 0.772, 0.618, 1, $font-size-med);
+        //@include text-shadow(set-alpha(shade($SecLightGold, 60),0.5) 0 -1px 1px, tint($SecLightGold, 20) 0 1px 1px  );
+        @include box-shadow(set-alpha($white,0.50) 0 1px 25px inset, set-alpha($black, 0.4) 0 2px 5px);
+
+        &:before{
+            content:"NOTICE:";
+            font-family:$BdCn;
+            color:set-alpha(darken($black, 20), 0.20);
+            width:30%;
+            float:left;
+            @include adjust-font-size-to($font-size-med);
+            @include rhythm(-2.618, 0.772, 0.618, 1, $font-size-med);
+            position:absolute;
+        }
+    }//end .notice
+
+    .close{
+        margin-top:-41.618px;
+    }
+}//end .message

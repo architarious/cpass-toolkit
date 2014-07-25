@@ -1,0 +1,44 @@
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layouts, modules, and states partials.
+////////////////////////
+
+//////////////////////////////
+// Legacy Support Setup
+//////////////////////////////
+ 
+
+////////////////////////
+// Base Import
+////////////////////////
+@import 'partials/0_global/base';
+
+////////////////////////
+// Import Style Guide
+////////////////////////
+@import 'partials/1_styleguide/base-style-guide';
+
+////////////////////////
+// Import Modules
+////////////////////////
+@import 'partials/2_modules/base-modules';
+
+////////////////////////
+// Import Layouts
+////////////////////////
+@import 'partials/3_layouts/base-layouts';
+
+
+////////////////////////
+// Import States
+////////////////////////
+@import 'partials/4_states/base-states';
+
+
+////////////////////////
+// Import your shame  (hotfixes that you haven't had time to organize yet)
+////////////////////////
+@import 'partials/5_shame/shame';
+
+

@@ -1,0 +1,79 @@
+ $grids: 4;
+ $gutters: 1/4;
+ $output: 'isolation';
+ //@include background-grid;
+
+ body{
+ 	.container, .wvu-masthead-container{
+  		margin:0 auto;
+
+  	}
+	.wvu-masthead{
+		padding:0 1.25%;
+		.wvu-masthead-container{
+
+		}
+	}//end /wvu-masthead
+
+	header{
+		padding:0 1.25%;
+		#college-masthead{
+			.container{
+
+			}//end #college-masthead.container
+		}//end #college-masthead
+
+		.container{
+			a.site-logo{}
+			nav.nav.primary{}
+		}//end header.container
+	}//end header
+
+	section#prefix{
+		padding:0 1.25%;
+		.container{
+
+		}//end section#prefix.container
+	}//end section#prefix
+
+	section#core{
+		padding:0 1.25%;
+		.container{
+			#main{
+				article{
+					
+				}//end #main article
+			}//end #main
+			aside.sidebar{
+
+			}//end aside.sidebar
+		}//end section#core.container
+	}//end section#core	
+
+	section#postfix{
+
+		padding:0 1.25%;
+		.container{
+
+		}//end section#postfix .container
+	}//end section#postfix
+
+	footer{
+		padding:0 1.25%;
+		#college.footer{
+			.container{
+				#footer_contact{}//end #footer_contact
+				#footer_feature{}//end #footer_feature
+			}//end #college.footer .container
+		}//end #colllege.footer
+
+		#wvu.footer{
+			.container{
+				.wvu-credits{}//end .wvu-credits
+				.wvu-icons{}//end .wvu-icons
+
+			}//end #wvu.footer .container
+		}//end #wvu.footer
+		
+	}//end footer.footer
+}//end body

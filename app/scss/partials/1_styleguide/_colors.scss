@@ -1,0 +1,71 @@
+	//PRIMARY PALLETTE
+		$WVUBlue: #00447c;
+		$WVUGold: #eeb111;
+		$white:  #fffefb;
+		$black: desaturate(shade($WVUBlue, 40),  80); //#1e262c
+	
+	//SECONDARY PALLETTE
+		$SecLightGold: #ffe894;
+		$SecMiddleBlue: #0079c1;
+        $SecLightBlue: #a0c4da;
+        $Purple: #27318b;
+        $DarkOrange: #d9531e;
+		$Orange: #f47b20;
+        $DarkGrey: #455560;
+        $MidGrey: #5c6f7c;
+
+    //ACCESSABILITY PALLETTE
+        $acc-red: #bb471a;
+        $acc-coolgrey:#abc;
+        $acc-LightGrey:#e0e0e0;
+        $acc-BrightBlue:#39f;
+        $acc-FlatBlue:#369;
+        $acc-Purple:#60c;
+
+
+    //CPASS colors
+    	$cpass-Gold:#f1d17a;
+    	$cpass-Tan:#c4ad8b;
+    	$cpass-LightBlue:#99ccff;
+    	$cpass-Blue:#005b92;
+    	$cpass-DarkBlue:#274152;
+
+    //Discover Viewbook Colors    
+    	$vb-DarkGrey: #333e48;
+    	$vb-RichNavy:#00447c;
+    	$vb-Charcoal: #545456;
+    	$vb-Gold: #ffd839;
+    	$vb-LightBlue: #4dbbe7;  // #2eb0e3 - wasn't contrasty enough on vb-DarkGrey
+    	$vb-FlatNavy: #19468d;
+
+    $gray : tint($black, 20);
+	$gray-light : #f9f9f9;
+	$gray-light-2 : #eee;
+	$gray-light-3 : #ddd;
+	$gray-med : #666;
+	$gray-dark : #333;
+	$gray-dark-2 : #131313;
+	$dim : rgba(0,0,0,0.5);
+	$error : #f00;
+	$valid : #089e00;
+	$warning : red; 
+	$information : #000db5;
+  
+ 
+$cs-primary: $vb-FlatNavy;  
+//$cs-secondary: $WVUBlue;
+$cs-scheme: complement;
+$cs-hue-offset: 70;
+$cs-brightness-offest: 30;
+$cs-colorblind:deuteranopia;
+
+
+$primary: cs-primary(); //#19468d
+$pre-secondary: cs-secondary(); $secondary: tint($pre-secondary, 85) ; // too light, darkening this up a bit. //#ede7dc
+$tertiary: cs-tertiary(); //#0063ff
+$quadrary: tint(lighten(cs-quadrary(),10), 20); //#ffc25b
+
+//@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());
+
+//@include cs-test($primary $secondary $tertiary $quadrary);
+
