@@ -1,12 +1,19 @@
-cleanslate-toolkit: SASSY_SMACSS
+cleanslate-toolkit: cpass-toolkit
 ==================
 
+A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much more).
+
 **Dependencies necessary to work with this theme:** 
-  [http://rubyinstaller.org/](Ruby)
-  [http://bundler.io/](Ruby Gem - Bundler)
+	[Ruby](http://rubyinstaller.org/)
+	[Ruby Gem - Bundler](http://bundler.io/)
+	[NodeJS and NPM](http://nodejs.org/)
+	[Gulp](http://gulpjs.com/)
+	[Bower](http://bower.io/)
 
 
-**Stash repository URL:** [https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse](https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse)
+
+**Stash repository URL:** 
+	[https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse](https://stash.development.wvu.edu/projects/CST/repos/cleanslate-toolkit/browse)
 
 
 
@@ -15,6 +22,7 @@ cleanslate-toolkit: SASSY_SMACSS
 Need some help? [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
 =======
 Ruby Gems (preinstalled on mac, need to install for windows: http://rubyinstaller.org/)
+NodeJS (use installer at link above)
 
 ***Getting Started***   
    1. Open prompt/shell 
@@ -22,8 +30,12 @@ Ruby Gems (preinstalled on mac, need to install for windows: http://rubyinstalle
    3. install compass: gem install compass
    4. install bundler:  gem install bundler
    5. install bundled gems in gemfile:  bundle install
+   6. install bower: npm install bower
+   7. install bower components: bower install
+   8. install gulp and modules: npm install gulp gulp-jshit jshint-stylish compass-options browser-sync gulp-shell
+   9. run browsersync and compile sass: gulp server
 
-***Starting compass watch:***
+***Starting compass watch (outside of gulp):***
    1. Open prompt/shell 
    2. Navigate to this repository
    3. bundler exec compass watch
@@ -40,6 +52,11 @@ Ruby Gems (preinstalled on mac, need to install for windows: http://rubyinstalle
    * sassy-buttons: http://jaredhardy.com/sassy-buttons/
    * autoprefixer: https://github.com/ai/autoprefixer
    * bootstrap 3: https://github.com/twbs/bootstrap-sass
+   * jshint: http://www.jshint.com/
+   * borealis: https://github.com/snugug/borealis
+   * eq.js element queries: https://github.com/Snugug/eq.js
+   * domready: https://github.com/ded/domready
+   * north: https://github.com/north/north
 
 ***Misc SASS references/resources:***  
    * SASS Basics: http://sass-lang.com/guide
