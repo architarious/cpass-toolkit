@@ -62,7 +62,7 @@ $cs-colorblind:deuteranopia;
 
 $primary: cs-primary(); //#19468d
 $pre-secondary: cs-secondary(); $secondary: tint($pre-secondary, 85) ; // too light, darkening this up a bit. //#ede7dc
-$tertiary: cs-tertiary(); //#0063ff
+$tertiary: #0079c1; //cs-tertiary(); //#0063ff got denied by UR
 $quadrary: tint(lighten(cs-quadrary(),10), 20); //#ffc25b
 
 //@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());

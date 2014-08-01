@@ -40,6 +40,12 @@
 				article{
 				  p{
         			color:tint($black, 5);
+
+        			&.kicker{
+        				@include adjust-font-size-to($font-size-large);
+    					@include rhythm($ms-2,0, 0, $ms-1, $font-size-large);
+    					color:$vb-Charcoal;
+        			}
 				  }
 				  h1{
 				  	@include adjust-font-size-to($font-size-xxlarge);

@@ -8807,7 +8807,7 @@ strong, b, p strong {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\0000341}}
 a {
-  color: #0063ff;
+  color: #0079c1;
   text-decoration: none;
   -webkit-transition-property: color;
           transition-property: color;
@@ -8819,19 +8819,19 @@ a {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\0000346}}
 a:visited {
-  color: #004fcc;
+  color: #00609a;
   text-decoration: none !important;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\0000350}}
 a:active {
-  color: #0063ff;
+  color: #0079c1;
   text-decoration: none;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\0000354}}
 a:hover {
-  color: #3382ff;
+  color: #3393cd;
   text-decoration: none;
 }
 
@@ -8852,7 +8852,7 @@ p a, p a:visited, p a:active {
   text-decoration: none;
   background-color: transparent;
   border-bottom-style: solid;
-  border-bottom-color: #3382ff;
+  border-bottom-color: #3393cd;
   border-bottom-style: solid;
   border-bottom-width: 0.0625em;
   padding-bottom: 0.051375125em;
@@ -8873,7 +8873,7 @@ p a, p a:visited, p a:active {
 p a:hover, p a:visited:hover, p a:active:hover {
   color: #1e262c;
   background-color: #f0ebe3;
-  border-top: 2px solid #3382ff;
+  border-top: 2px solid #3393cd;
   border-bottom: 0;
 }
 
@@ -9369,7 +9369,7 @@ abbr {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\00003437}}
 #breadcrumbs {
-  color: #0063ff;
+  color: #0079c1;
   font-size: 0.6180339845em;
   line-height: 2.0247672968em;
   margin-top: 2.5309591209em;
@@ -9616,11 +9616,11 @@ ul li, .sidebar li, aside li {
   cursor: pointer;
   -o-border-radius: 3px;
   border-radius: 3px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0063FF', endColorstr='#FF003B99');
-  background-color: #0063ff;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0079C1', endColorstr='#FF00395B');
+  background-color: #0079c1;
   border: 0;
   color: #fffefb;
-  text-shadow: #003180 0 -1px 0;
+  text-shadow: #002942 0 -1px 0;
   background-image: url(../img/noise.png);
   padding: 8px 16px;
   padding-right: 40px;
@@ -9645,11 +9645,11 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000342}}
 .btn:hover {
-  background-color: #0059e6;
+  background-color: #0069a8;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000344}}
 .btn:active {
-  background-color: #0053d6;
+  background-color: #005f98;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\000036}}
 .btn.disabled, .btn[disabled] {
@@ -9673,7 +9673,7 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003203}}
 .btn:active {
-  background: #66a1ff;
+  background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
@@ -9702,7 +9702,7 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003229}}
 .btn:before {
-  background-color: #0059e5;
+  background-color: #006cad;
   background-image: url(../img/right_arrow.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -9715,8 +9715,8 @@ ul li, .sidebar li, aside li {
   margin-top: -9px;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
+  -webkit-box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
+  box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
   -webkit-transition-property: background;
           transition-property: background;
   -webkit-transition-duration: 0.2s;
@@ -9732,15 +9732,15 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003247}}
 .btn:hover:before, .btn:focus:before {
-  background-color: #003b99;
-  -webkit-box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
+  background-color: #004873;
+  -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
+  box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 .btn:active:before {
-  background-color: #4d92ff;
-  -webkit-box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
-  box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
+  background-color: #0fa5ff;
+  -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
+  box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_buttons\.scss}line{font-family:\000039}}
@@ -9755,11 +9755,11 @@ ul li, .sidebar li, aside li {
   cursor: pointer;
   -o-border-radius: 3px;
   border-radius: 3px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0063FF', endColorstr='#FF003B99');
-  background-color: #0063ff;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0079C1', endColorstr='#FF00395B');
+  background-color: #0079c1;
   border: 0;
   color: #fffefb;
-  text-shadow: #003180 0 -1px 0;
+  text-shadow: #002942 0 -1px 0;
   background-image: url(../img/noise.png);
   padding: 8px 16px;
   padding-right: 40px;
@@ -9786,11 +9786,11 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000342}}
 .btn--small:hover {
-  background-color: #0059e6;
+  background-color: #0069a8;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000344}}
 .btn--small:active {
-  background-color: #0053d6;
+  background-color: #005f98;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\000036}}
 .btn--small.disabled, .btn--small[disabled] {
@@ -9814,7 +9814,7 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003203}}
 .btn--small:active {
-  background: #66a1ff;
+  background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
@@ -9843,7 +9843,7 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003229}}
 .btn--small:before {
-  background-color: #0059e5;
+  background-color: #006cad;
   background-image: url(../img/right_arrow.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -9856,8 +9856,8 @@ ul li, .sidebar li, aside li {
   margin-top: -9px;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
+  -webkit-box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
+  box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
   -webkit-transition-property: background;
           transition-property: background;
   -webkit-transition-duration: 0.2s;
@@ -9873,15 +9873,15 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003247}}
 .btn--small:hover:before, .btn--small:focus:before {
-  background-color: #003b99;
-  -webkit-box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
+  background-color: #004873;
+  -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
+  box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 .btn--small:active:before {
-  background-color: #4d92ff;
-  -webkit-box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
-  box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
+  background-color: #0fa5ff;
+  -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
+  box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_buttons\.scss}line{font-family:\0000315}}
@@ -9896,11 +9896,11 @@ ul li, .sidebar li, aside li {
   cursor: pointer;
   -o-border-radius: 3px;
   border-radius: 3px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0063FF', endColorstr='#FF003B99');
-  background-color: #0063ff;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0079C1', endColorstr='#FF00395B');
+  background-color: #0079c1;
   border: 0;
   color: #fffefb;
-  text-shadow: #003180 0 -1px 0;
+  text-shadow: #002942 0 -1px 0;
   background-image: url(../img/noise.png);
   padding: 8px 16px;
   padding-right: 40px;
@@ -9927,11 +9927,11 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000342}}
 .btn--large:hover, p a.action:hover {
-  background-color: #0059e6;
+  background-color: #0069a8;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000344}}
 .btn--large:active, p a.action:active {
-  background-color: #0053d6;
+  background-color: #005f98;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\000036}}
 .btn--large.disabled, p a.disabled.action, .btn--large[disabled], p a[disabled].action {
@@ -9955,7 +9955,7 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003203}}
 .btn--large:active, p a.action:active {
-  background: #66a1ff;
+  background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
@@ -9984,7 +9984,7 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003229}}
 .btn--large:before, p a.action:before {
-  background-color: #0059e5;
+  background-color: #006cad;
   background-image: url(../img/right_arrow.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -9997,8 +9997,8 @@ ul li, .sidebar li, aside li {
   margin-top: -9px;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
+  -webkit-box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
+  box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
   -webkit-transition-property: background;
           transition-property: background;
   -webkit-transition-duration: 0.2s;
@@ -10014,19 +10014,19 @@ ul li, .sidebar li, aside li {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003247}}
 .btn--large:hover:before, p a.action:hover:before, .btn--large:focus:before, p a.action:focus:before {
-  background-color: #003b99;
-  -webkit-box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
+  background-color: #004873;
+  -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
+  box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 .btn--large:active:before, p a.action:active:before {
-  background-color: #4d92ff;
-  -webkit-box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
-  box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
+  background-color: #0fa5ff;
+  -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
+  box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_buttons\.scss}line{font-family:\0000321}}
 .btn--large:before, p a.action:before {
-  background-color: #004abf;
+  background-color: #005a90;
   top: 42%;
   width: 34px;
   height: 34px;
@@ -10037,7 +10037,7 @@ p a.btn_text {
   letter-spacing: 0;
   text-decoration: none;
   border: none;
-  border-bottom: 2px solid #3382ff;
+  border-bottom: 2px solid #3393cd;
   color: #1e262c;
   padding: 2px 10px;
   padding-right: 34px;
@@ -10060,12 +10060,12 @@ p a.btn_text {
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_buttons\.scss}line{font-family:\0000344}}
 p a.btn_text:hover {
   background-color: #f0ebe3;
-  border-top: 2px solid #3382ff;
+  border-top: 2px solid #3393cd;
   border-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_buttons\.scss}line{font-family:\0000350}}
 p a.btn_text:before {
-  background-color: #1972ff;
+  background-color: #1986c7;
   background-image: url(../img/right_arrow.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -10078,8 +10078,8 @@ p a.btn_text:before {
   margin-top: -9px;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: #004fcc 0 2px 0 inset, white 0 1px 0;
-  box-shadow: #004fcc 0 2px 0 inset, white 0 1px 0;
+  -webkit-box-shadow: #00598e 0 2px 0 inset, white 0 1px 0;
+  box-shadow: #00598e 0 2px 0 inset, white 0 1px 0;
   -webkit-transition-property: background;
           transition-property: background;
   -webkit-transition-duration: 0.2s;
@@ -10095,13 +10095,13 @@ p a.btn_text:before {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_buttons\.scss}line{font-family:\0000368}}
 p a.btn_text:hover:before, p a.btn_text:focus:before {
-  background-color: #0059e5;
+  background-color: #006cad;
   -webkit-box-shadow: black 0 5px 0 inset, white 0 1px 0;
   box-shadow: black 0 5px 0 inset, white 0 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_buttons\.scss}line{font-family:\0000373}}
 p a.btn_text:active:before {
-  background-color: #4d92ff;
+  background-color: #0fa5ff;
   -webkit-box-shadow: black 0 1px 0 inset, white 0 3px 0;
   box-shadow: black 0 1px 0 inset, white 0 3px 0;
 }
@@ -10605,11 +10605,11 @@ form input.btn, form input.button, form input.submit, form textarea.btn, form te
   cursor: pointer;
   -o-border-radius: 3px;
   border-radius: 3px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0063FF', endColorstr='#FF003B99');
-  background-color: #0063ff;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0079C1', endColorstr='#FF00395B');
+  background-color: #0079c1;
   border: 0;
   color: #fffefb;
-  text-shadow: #003180 0 -1px 0;
+  text-shadow: #002942 0 -1px 0;
   background-image: url(../img/noise.png);
   padding: 8px 16px;
   padding-right: 40px;
@@ -10635,11 +10635,11 @@ form input.btn:hover, form input.button:hover, form input.submit:hover, form tex
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000342}}
 form input.btn:hover, form input.button:hover, form input.submit:hover, form textarea.btn:hover, form textarea.button:hover, form textarea.submit:hover, form .form-control.btn:hover, form .form-control.button:hover, form .form-control.submit:hover {
-  background-color: #0059e6;
+  background-color: #0069a8;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000344}}
 form input.btn:active, form input.button:active, form input.submit:active, form textarea.btn:active, form textarea.button:active, form textarea.submit:active, form .form-control.btn:active, form .form-control.button:active, form .form-control.submit:active {
-  background-color: #0053d6;
+  background-color: #005f98;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\000036}}
 form input.btn.disabled, form input.btn[disabled], form input.button.disabled, form input.button[disabled], form input.submit.disabled, form input.submit[disabled], form textarea.btn.disabled, form textarea.btn[disabled], form textarea.button.disabled, form textarea.button[disabled], form textarea.submit.disabled, form textarea.submit[disabled], form .form-control.btn.disabled, form .form-control.btn[disabled], form .form-control.button.disabled, form .form-control.button[disabled], form .form-control.submit.disabled, form .form-control.submit[disabled] {
@@ -10663,7 +10663,7 @@ form input.btn:hover, form input.btn:focus, form input.button:hover, form input.
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003203}}
 form input.btn:active, form input.button:active, form input.submit:active, form textarea.btn:active, form textarea.button:active, form textarea.submit:active, form .form-control.btn:active, form .form-control.button:active, form .form-control.submit:active {
-  background: #66a1ff;
+  background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
@@ -10692,7 +10692,7 @@ form input.btn.disabled:before:hover:before, form input.btn.disabled:before:focu
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003229}}
 form input.btn:before, form input.button:before, form input.submit:before, form textarea.btn:before, form textarea.button:before, form textarea.submit:before, form .form-control.btn:before, form .form-control.button:before, form .form-control.submit:before {
-  background-color: #0059e5;
+  background-color: #006cad;
   background-image: url(../img/right_arrow.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -10705,8 +10705,8 @@ form input.btn:before, form input.button:before, form input.submit:before, form 
   margin-top: -9px;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
+  -webkit-box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
+  box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
   -webkit-transition-property: background;
           transition-property: background;
   -webkit-transition-duration: 0.2s;
@@ -10722,15 +10722,15 @@ form input.btn:before, form input.button:before, form input.submit:before, form 
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003247}}
 form input.btn:hover:before, form input.btn:focus:before, form input.button:hover:before, form input.button:focus:before, form input.submit:hover:before, form input.submit:focus:before, form textarea.btn:hover:before, form textarea.btn:focus:before, form textarea.button:hover:before, form textarea.button:focus:before, form textarea.submit:hover:before, form textarea.submit:focus:before, form .form-control.btn:hover:before, form .form-control.btn:focus:before, form .form-control.button:hover:before, form .form-control.button:focus:before, form .form-control.submit:hover:before, form .form-control.submit:focus:before {
-  background-color: #003b99;
-  -webkit-box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
+  background-color: #004873;
+  -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
+  box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 form input.btn:active:before, form input.button:active:before, form input.submit:active:before, form textarea.btn:active:before, form textarea.button:active:before, form textarea.submit:active:before, form .form-control.btn:active:before, form .form-control.button:active:before, form .form-control.submit:active:before {
-  background-color: #4d92ff;
-  -webkit-box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
-  box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
+  background-color: #0fa5ff;
+  -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
+  box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_forms\.scss}line{font-family:\0000336}}
 form input.checkbox, form input.radio, form input[type="checkbox"], form input[type="radio"], form textarea.checkbox, form textarea.radio, form textarea[type="checkbox"], form textarea[type="radio"], form .form-control.checkbox, form .form-control.radio, form .form-control[type="checkbox"], form .form-control[type="radio"] {
@@ -10774,11 +10774,11 @@ form .submit input, form .submit button {
   cursor: pointer;
   -o-border-radius: 3px;
   border-radius: 3px;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0063FF', endColorstr='#FF003B99');
-  background-color: #0063ff;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0079C1', endColorstr='#FF00395B');
+  background-color: #0079c1;
   border: 0;
   color: #fffefb;
-  text-shadow: #003180 0 -1px 0;
+  text-shadow: #002942 0 -1px 0;
   background-image: url(../img/noise.png);
   padding: 8px 16px;
   padding-right: 40px;
@@ -10804,11 +10804,11 @@ form .submit input:hover, form .submit button:hover {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000342}}
 form .submit input:hover, form .submit button:hover {
-  background-color: #0059e6;
+  background-color: #0069a8;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\0000344}}
 form .submit input:active, form .submit button:active {
-  background-color: #0053d6;
+  background-color: #005f98;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby200-x64\/lib\/ruby\/gems\/2\.0\.0\/gems\/sassy-buttons-0\.2\.6\/stylesheets\/sassy-buttons\/_sassy-button-pseudo-states\.sass}line{font-family:\000036}}
 form .submit input.disabled, form .submit input[disabled], form .submit button.disabled, form .submit button[disabled] {
@@ -10832,7 +10832,7 @@ form .submit input:hover, form .submit input:focus, form .submit button:hover, f
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003203}}
 form .submit input:active, form .submit button:active {
-  background: #66a1ff;
+  background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
@@ -10861,7 +10861,7 @@ form .submit input.disabled:before:hover:before, form .submit input.disabled:bef
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003229}}
 form .submit input:before, form .submit button:before {
-  background-color: #0059e5;
+  background-color: #006cad;
   background-image: url(../img/right_arrow.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -10874,8 +10874,8 @@ form .submit input:before, form .submit button:before {
   margin-top: -9px;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: #003b99 0 2px 0 inset, #66a1ff 0 1px 0;
+  -webkit-box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
+  box-shadow: #00395b 0 2px 0 inset, #28afff 0 1px 0;
   -webkit-transition-property: background;
           transition-property: background;
   -webkit-transition-duration: 0.2s;
@@ -10891,15 +10891,15 @@ form .submit input:before, form .submit button:before {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003247}}
 form .submit input:hover:before, form .submit input:focus:before, form .submit button:hover:before, form .submit button:focus:before {
-  background-color: #003b99;
-  -webkit-box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
-  box-shadow: black 0 5px 0 inset, #66a1ff 0 1px 0;
+  background-color: #004873;
+  -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
+  box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 form .submit input:active:before, form .submit button:active:before {
-  background-color: #4d92ff;
-  -webkit-box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
-  box-shadow: black 0 1px 0 inset, #66a1ff 0 3px 0;
+  background-color: #0fa5ff;
+  -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
+  box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_messages\.scss}line{font-family:\000032}}
@@ -11043,7 +11043,7 @@ nav .navbar-header .navbar-toggle .icon-bar {
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000363}}
 nav .navbar-header .navbar-brand {
   background: none;
-  color: #0063ff;
+  color: #0079c1;
   text-shadow: 0 1px 0 rgba(255, 254, 251, 0.68541);
   font-size: 1em;
   line-height: 1.251375em;
@@ -11481,6 +11481,16 @@ body footer {
     color: #293036;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000344}}
+  body section#core .container #main article p.kicker {
+    font-size: 1.618034em;
+    line-height: 1.1600884159em;
+    margin-top: 1.251375em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-bottom: 0.9667403466em;
+    color: #545456;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000350}}
   body section#core .container #main article h1 {
     font-size: 4.2360680659em;
     line-height: 1.1816382367em;
@@ -11489,7 +11499,7 @@ body footer {
     padding-bottom: 0em;
     margin-bottom: 0.5974783884em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000354}}
   body section#core .container #main article h2 {
     font-size: 2.6180340252em;
     line-height: 1.1949567767em;
@@ -11498,7 +11508,7 @@ body footer {
     padding-bottom: 0.1410048997em;
     margin-bottom: 0.369261949em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000358}}
   body section#core .container #main article h3 {
     font-size: 1.618034em;
     line-height: 1.1600884159em;
@@ -11507,7 +11517,7 @@ body footer {
     padding-bottom: 0em;
     margin-bottom: 0.5974783884em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000362}}
   body section#core .container #main article h4 {
     font-size: 1.618034em;
     line-height: 1.1600884159em;
@@ -11516,7 +11526,7 @@ body footer {
     padding-bottom: 0em;
     margin-bottom: 0.5974783884em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000366}}
   body section#core .container #main article h5 {
     font-size: 1.618034em;
     line-height: 1.1600884159em;
@@ -11525,7 +11535,7 @@ body footer {
     padding-bottom: 0em;
     margin-bottom: 0.5974783884em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000370}}
   body section#core .container #main article h6 {
     font-size: 1.25em;
     line-height: 1.50165em;
@@ -11534,7 +11544,7 @@ body footer {
     padding-bottom: 0em;
     margin-bottom: 0.7733922773em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\0000377}}
   body section#core .container aside.sidebar {
     width: 23.8095238095%;
     float: right;
