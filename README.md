@@ -4,11 +4,11 @@ cleanslate-toolkit: cpass-toolkit
 A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much more).
 
 **Dependencies necessary to work with this theme:** 
-	[Ruby](http://rubyinstaller.org/)
-	[Ruby Gem - Bundler](http://bundler.io/)
-	[NodeJS and NPM](http://nodejs.org/)
-	[Gulp](http://gulpjs.com/)
-	[Bower](http://bower.io/)
+  * [Ruby](http://rubyinstaller.org/)
+  * [Ruby Gem - Bundler](http://bundler.io/)
+  * [NodeJS and NPM](http://nodejs.org/)
+  * [Gulp](http://gulpjs.com/)
+  * [Bower](http://bower.io/)
 
 
 
@@ -17,14 +17,15 @@ A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much m
 
 
 
-**Other notes, comments, or reminders:**
+***Other notes, comments, or reminders:***
 
-Need some help? [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
-=======
-Ruby Gems (preinstalled on mac, need to install for windows: http://rubyinstaller.org/)
-NodeJS (use installer at link above)
+*Need some help?* [Read the CleanSlate documentation](https://github.com/wvuweb/cleanslate-toolkit/wiki).
 
-***Getting Started***   
+**Install These First:**
+   * Ruby Gems (preinstalled on mac, need to install for windows: http://rubyinstaller.org/)
+   * NodeJS (http://nodejs.org/)
+
+**Getting Started:**
    1. Open prompt/shell 
    2. Navigate to this repository
    3. install compass: gem install compass
@@ -35,12 +36,12 @@ NodeJS (use installer at link above)
    8. install gulp and modules: npm install gulp gulp-jshit jshint-stylish compass-options browser-sync gulp-shell
    9. run browsersync and compile sass: gulp server
 
-***Starting compass watch (outside of gulp):***
+**Starting Compass Watch (outside of gulp):**
    1. Open prompt/shell 
    2. Navigate to this repository
    3. bundler exec compass watch
 
-**SASSY goodness/dependencies included:**
+**Included Goodness:**
    * compass: http://compass-style.org/
    * compass-normalize: https://github.com/JohnAlbin/normalize-scss
    * compass-recipes: https://github.com/MoOx/compass-recipes   
@@ -58,7 +59,7 @@ NodeJS (use installer at link above)
    * domready: https://github.com/ded/domready
    * north: https://github.com/north/north
 
-***Misc SASS references/resources:***  
+**Misc SASS references/resources:**
    * SASS Basics: http://sass-lang.com/guide
    * SASS Style guide:  http://css-tricks.com/sass-style-guide/
    * The SASS Way: http://thesassway.com/
@@ -67,4 +68,4 @@ NodeJS (use installer at link above)
    * BEM Syntax: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
    * List of twitter bootstrap variables: http://getbootstrap.com/customize/#less-variables 
 
-**Coming soon: Bower & Gulp integration**
+
