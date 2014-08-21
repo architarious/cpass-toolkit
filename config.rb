@@ -14,11 +14,11 @@ require 'bootstrap-sass'
 
 # Set this to the root of your project when deployed:
 http_path = "./"
-css_dir = "app/css"
+css_dir = "app/stylesheets"
 sass_dir = "app/scss"
-images_dir = "app/img"
-javascripts_dir = "app/js"
-fonts_dir = "app/css/fonts"
+images_dir = "app/images"
+javascripts_dir = "app/javascripts"
+fonts_dir = "app/stylesheets/fonts"
 
 
 on_stylesheet_saved do |file|

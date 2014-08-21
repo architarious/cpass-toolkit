@@ -2,50 +2,19 @@
 //IMPORTED FONTS
 //
 ////////////////////////////////////////
-@font-face{
-    font-family: HelvNu-BlkCn;
-    src: url(fonts/HelveticaNeueLTStd-BlkCn.otf);
-}
-
-@font-face{
-    font-family: HelvNu-BdCn;
-    src: url(fonts/HelveticaNeueLTStd-BdCn.otf);
-}
-
-@font-face{
-    font-family: HelvNu-Bd;
-    src: url(fonts/HelveticaNeueLTStd-Bd.otf);
-}
-
-@font-face{
-    font-family: HelvNu-Roman;
-    src: url(fonts/HelveticaNeueLTStd-Roman.otf);
-}
-@font-face{
-    font-family: HelvNu-Obl;
-    src: url(fonts/HelveticaLTStd-Obl.otf);
-}
-
-@font-face{
-    font-family: HelvNu-LtCn;
-    src: url(fonts/HelveticaNeueLTStd-LtCn.otf);
-}
-
-@font-face{
-    font-family: HelvNu-Lt;
-    src: url(fonts/HelveticaNeueLTStd-Lt.otf)
-}
 
 
-$font-paragraph: Arial, verdana, Sans-serif;
+$font-lowres: Arial, verdana, sans-serif;
+$font-paragraph: 'Neue Helvetica W02', $font-lowres;
 
-$BlkCn: "HelvNu-BlkCn", $font-paragraph;
-$BdCn: "HelvNu-BdCn", $font-paragraph;
-$Bd: "HelvNu-Bd", $font-paragraph;
-$Roman: "HelvNu-Roman", $font-paragraph;
-$Obl: "HelvNu-Obl", $font-paragraph;
-$LtCn: "HelvNu-LtCn", $font-paragraph;
-$Lt: "HelvNu-Lt", $font-paragraph;
+
+$BlkCn: 'Neue Helvetica W02', $font-lowres; //font-weight: 900;
+$BdCn: 'Neue Helvetica W01', $font-lowres; //font-weight: 800;
+$Bd: 'Neue Helvetica W02', $font-lowres; //font-weight: 500;
+$Roman: 'Neue Helvetica W02', $font-lowres; //font-weight: 400;
+$Obl: 'Neue Helvetica W02', $font-lowres; //font-weight: 400;
+$LtCn: 'Neue Helvetica W01', $font-lowres; //font-weight: 200;
+$Lt: 'Neue Helvetica W02', $font-lowres; //font-weight: 300;
 
 $font-primary: $Roman, Helvetica, arial, verdana, sans-serif;
 $font-secondary: "Garamond", Georgia, "Times New Roman", Serif;

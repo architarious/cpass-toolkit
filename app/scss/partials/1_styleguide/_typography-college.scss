@@ -11,7 +11,7 @@ p {
 
     max-width: 50em;
     font-family: $font-paragraph;
-    font-weight: normal;
+    font-weight: 400;
     color:$black;
 }
 p.kicker{
@@ -21,7 +21,7 @@ p.kicker{
     max-width: 40em;
     color:$vb-Charcoal;
     font-family: $Roman, "helvetica", Arial, verdana, Sans-serif;
-    font-weight: normal;
+    font-weight: 400;
     padding-left:$pad;
 }
 
@@ -30,11 +30,13 @@ p.font-secondary, p.font-secondary em, p.font-secondary strong{
 }
 em, i, cite, q{
     font-family: $Obl;
-    font-style: normal;
+    font-style: italic;
+    font-weight:400;
 }
 
 strong, b, p strong{
     font-family: $Bd;
+    font-weight: 500;
 }
 
 
@@ -63,7 +65,7 @@ p{
     }
     strong, b, p strong{
       font-family: $font-paragraph;
-      font-weight: 700;
+      font-weight: 400;
     }
 
     a, a:visited, a:active{
@@ -100,7 +102,7 @@ h1 {
     max-width: 20em;
     text-transform: uppercase;
     font-family:$BdCn;
-    font-weight: normal;
+    font-weight: 800;
     @include adjust-font-size-to($font-size-xlarge);
     @include rhythm($ms-2n, 0, 0, $ms-3n, $font-size-xlarge);
 }
@@ -115,13 +117,13 @@ h2 {
     border-bottom-color:$SecLightGold;    
     border-bottom-style:solid;    
     font-family:$LtCn;
-    font-weight: normal;
+    font-weight: 200;
     color: $primary;
     border-top:0;
     @include adjust-font-size-to($font-size-large);
     @include rhythm($ms-4, 0, $ms-5n, $ms-1n, $font-size-large);
     @include trailing-border(2px, $ms-4n);
-    border-image:url(../img/patternBar.jpg) 1 0;
+    border-image:url(../images/patternBar.jpg) 1 0;
     max-width: 20em;
     a{
         color: shade($primary, 20);
@@ -132,6 +134,7 @@ h3 {
     color: $DarkOrange;
     text-transform: uppercase;
     font-family: $Bd;
+    font-weight:500;
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-med-2);
     a{
@@ -144,11 +147,13 @@ h4 {
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-3, 0, 0, $ms-3n, $font-size-med-2);
     font-family: $BlkCn;
+    font-weight: 900;
 }
 h5 {
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-2, 0, 0, $ms-3n, $font-size-med-2);
     font-family: $LtCn;
+    font-weight:200;
     //text-transform: uppercase;
 }
 h6 {
@@ -156,6 +161,7 @@ h6 {
     @include rhythm($ms-1, 0, 0, $ms-5n, $font-size-med);
     color:tint($primary, 25);
     font-family: $Bd;
+    font-weight:500;
     text-transform: uppercase;
 }
 h4, h5 {
@@ -177,6 +183,7 @@ table{
         @include adjust-font-size-to($font-size-large);
         @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-large);
         font-family: $Lt;
+        font-weight: 300;
     }
     tbody, thead{
         tr{ 
@@ -184,8 +191,9 @@ table{
             th{
                 
                 font-family:$BdCn;
+                font-weight:800;
                 color:darken($secondary,2);
-                background:url(../img/noise.png) tint(lighten($primary,3),16);
+                background:url(../images/noise.png) tint(lighten($primary,3),16);
                 @include text-shadow(shade($primary,40) 0 1px 0px);
                 @include box-shadow(set-alpha($black, 0.5) 0 3px 2px, set-alpha($white, 0.2) 0 1px 4px inset);
                 text-transform:uppercase;
@@ -258,8 +266,9 @@ ol {
 dl{
  dt{
     font-family:$BdCn;
+    font-weight:800;
     color:darken($primary,15);
-    background:url(../img/noise.png) tint(lighten($primary,3),16);
+    background:url(../images/noise.png) tint(lighten($primary,3),16);
     padding: 0 ms(-2);
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-1, $ms-5n, $ms-6n, $ms-3n, $font-size-med-2);
@@ -374,6 +383,7 @@ cite{
 }
 dfn {
     font-family:$Lt;
+    font-weight: 300;
     background-color:tint($secondary, 20);
     padding: 0 $font-size-small;
 }

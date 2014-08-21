@@ -37,27 +37,27 @@
 //
 //USAGE: @include background-image('brandpattern');
 //Dependancies:  
-// - images need to be saved in /img directory.
+// - images need to be saved in /images directory.
 // - files must be named similiarly.  Example:  brandpattern.svg, brandpattern.png, brandpatternRet.png
 // - for information on when/how to design for retina: http://isthisretina.com/ 
 ///////////////////////////////////
-$image-path: '../img' !default;
-$fallback-extension: 'png' !default;
-$retina-suffix: 'Ret';
+//$image-path: '../images' !default;
+//$fallback-extension: 'png' !default;
+//$retina-suffix: 'Ret';
 
-@mixin background-image($name, $size:false){
-    background-image: url(#{$image-path}/#{$name}.svg);
-    @if($size){
-        background-size: $size;
-    }
-    .no-svg &{
-        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+//@mixin background-image($name, $size:false){
+//    background-image: url(#{$image-path}/#{$name}.svg);
+//    @if($size){
+//        background-size: $size;
+//    }
+//    .no-svg &{
+//        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
 
-        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
-        }
-    }
-}
+//        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+//          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+//        }
+//    }
+//}
 
 
 
@@ -159,6 +159,18 @@ $retina-suffix: 'Ret';
 }
 
 ///////////////////////////////////
+///Standard Text-Shadow
+//
+//DESCRIPTION: Used to apply consistent box-shadows throughout site
+//DEFAULT: same settings as buttons throughout site
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+///////////////////////////////////
+@mixin standard-text-shadow($shadow:tint($black,15), $h:0, $v:2px, $blur:1px, $spread:0){
+  text-shadow: $h $v $blur $shadow ;
+}
+
+
+///////////////////////////////////
 ///Letterpress Mixins
 //
 //DESCRIPTION: For whenever you want text to look like it was letterpressed
@@ -183,12 +195,13 @@ $retina-suffix: 'Ret';
 ///////////////////////////////////
 @mixin btn($bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white){
     font-family: $BlkCn;
+    font-weight:900;
     letter-spacing:1px;
     position:relative;
     text-transform: uppercase;
 
     @include sassy-button( "flat", 3px, 16px, $bg-color, shade($bg-color, 20), $tx-color, inset);
-    background-image:url(../img/noise.png);
+    background-image:url(../images/noise.png);
     padding: 8px 16px;
     padding-right: 40px;
     @include standard-box-shadow($shadow);
@@ -228,7 +241,7 @@ $retina-suffix: 'Ret';
 
   &:before{
     background-color: shade($bg-color, 10);
-    background-image: url(../img/right_arrow.png);
+    background-image: url(../images/right_arrow.png);
     background-repeat: no-repeat;
     background-position: center center;
     content: "";
@@ -259,7 +272,56 @@ $retina-suffix: 'Ret';
   }//end btn
 
 
+///////////////////////////////////
+///Button-noArrow Mixin
+//
+//USAGE: @include btn_noArrow();  or @include btn_noArrow($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
+//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
+///////////////////////////////////
+@mixin btn_noArrow($bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white){
+    font-family: $BlkCn;
+    font-weight:900;
+    letter-spacing:1px;
+    position:relative;
+    text-transform: uppercase;
 
+    @include sassy-button( "flat", 3px, 16px, $bg-color, shade($bg-color, 20), $tx-color, inset);
+    background-image:url(../images/noise.png);
+    padding: 8px 16px;
+    @include standard-box-shadow($shadow);
+    @include standard-transition(background-color);
+    @include standard-transition(box-shadow);
+
+    &:hover, &:focus{
+      @include box-shadow(tint($shadow,10) 0 2px 4px);
+      color:shade($white,10);
+    }
+
+    &:active{
+      background:lighten($bg-color, 20);
+      @include box-shadow(tint($shadow,40) 0 4px 6px);
+    }
+
+    &:visited{
+      color:lighten($quadrary, 5);
+      @include letterpress();
+      text-decoration:none;
+    }
+
+    &.disabled {
+    background: $gray-light-2;
+    color: $gray;
+     &:hover, &:focus, &:active{
+      background: $gray-light-2;
+     }
+     &:before{
+        background: $gray-light-3;
+         &:hover:before, &:focus:before, &:active:before{
+           background: $gray-light-3;
+         }
+     } 
+    }//end .disabled
+}//end btn_noArrow
 
 ///////////////////////////////////
 ///Hide-Text Mixin

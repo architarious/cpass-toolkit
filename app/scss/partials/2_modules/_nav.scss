@@ -51,6 +51,7 @@ nav{
 			float:right;
 			margin-top:-0.24em;
 			font-family:$BdCn;
+			font-weight:800;
 		}
 		.icon-bar{
 			float:left;
@@ -67,6 +68,7 @@ nav{
 	  	@include adjust-font-size-to($font-size-med);
 		@include rhythm($ms-3n, $ms-2n, $ms-2n, $ms-3n, $font-size-med);
 		font-family:$BdCn;
+		font-weight:800;
 		text-transform:uppercase;
 		&:hover{
 			color:$primary;
@@ -98,7 +100,7 @@ nav{
 					@include rhythm($ms-4n, $ms-5n, $ms-6n, $ms-4n, $font-size-med);
 					width:100%;
 					&:active{
-						background:$secondary url(../img/noise.png) repeat;
+						background:$secondary url(../images/noise.png) repeat;
 					}
 					font-weight:bold;
 
