@@ -28,13 +28,11 @@ A cleanslate workflow built around SASS, GULP, Bower and BrowserSync (and much m
 **Getting Started:**
    1. Open prompt/shell 
    2. Navigate to this repository
-   3. install compass: gem install compass
    4. install bundler:  gem install bundler
-   5. install bundled gems in gemfile:  bundle install
-   6. install bower: npm install bower
-   7. install bower components: bower install
-   8. install gulp and modules: npm install gulp gulp-jshit jshint-stylish compass-options browser-sync gulp-shell
-   9. run browsersync and compile sass: gulp server
+   5. install bundled gems (gemfile):  bundle install
+   6. install npm modules (package.json): npm install
+   7. install bower components (bower.json): bower install
+   8. run browsersync and compile sass: gulp server
 
 **Starting Compass Watch (outside of gulp):**
    1. Open prompt/shell 

@@ -1,6 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
+var bower = require('bower');
+var concat = require('gulp-concat');
+var mainBowerFiles = require('main-bower-files');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var paths = require('compass-options').paths();
@@ -17,6 +20,15 @@ gulp.task('lint', function () {
     ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
+});
+
+//////////////////////////////
+// Load stuff from bower
+//////////////////////////////
+gulp.task("libs", function(){
+    bower_files()
+    .pipe(concat('./libs.js'))
+    .pipe(gulp.dest("/"));
 });
 
 //////////////////////////////
