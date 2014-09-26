@@ -10,7 +10,9 @@
   ],
   "dependencies": {
     "eq.js": "~1.4.1",
-    "borealis": "~1.0.1"
+    "borealis": "~1.0.1",
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.15"
   },
   "devDependencies": {
     "north": "~0.2.0"
