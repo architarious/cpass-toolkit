@@ -17,7 +17,8 @@
 
   </head>
   <body class="template-<r:page:template:name /> page-<r:page:id />">
-
+      
+    
     <r:partial name="layouts/masthead--v1" theme="Code" />
 
     <div class="container">
@@ -41,6 +42,10 @@
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src='//157.182.158.39:3000/socket.io/socket.io.js'></script>
+    <script>var ___socket___ = io.connect('http://157.182.158.39:3000');</script>
+    <script src='//157.182.158.39:3001/client/browser-sync-client.0.7.7.js'></script>
 
   </body>
 </html>

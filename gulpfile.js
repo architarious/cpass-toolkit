@@ -41,6 +41,8 @@ gulp.task('compass', function () {
     ]));
 });
 
+
+
 //////////////////////////////
 // Watch
 //////////////////////////////
@@ -53,19 +55,21 @@ gulp.task('watch', function () {
 //////////////////////////////
 gulp.task('browserSync', function () {
   browserSync.init([
-    paths.css +  '/**/*.css',
-    paths.js + '/**/*.js',
-    paths.img + '/**/*',
-    paths.fonts + '/**/*',
+    paths.css +  'stylesheets/*.css',
+    paths.js + 'javascripts/*.js',
+    paths.img + 'images/*',
+    paths.fonts + 'stylesheets/fonts/*',
     paths.html + '/**/*.html',],{
 
-    server: {
-      baseDir:"./app/"
-    }
+    proxy: {
+        host: "localhost",
+        port: 2000
+      }
+
+    
   });
-
-
 });
+
 
 //////////////////////////////
 // Server Tasks
