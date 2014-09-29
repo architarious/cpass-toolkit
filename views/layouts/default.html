@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="//code.wvu.edu/stylesheets/global-stylesheet/4.0/stylesheets/global.css" rel="stylesheet">
-    <r:include_stylesheet name="styles" />  
+    <r:include_stylesheet name="styles.min" /> 
+    <r:include_stylesheet name="print.min" />  
 
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -46,6 +47,12 @@
     <script src='//157.182.158.39:3000/socket.io/socket.io.js'></script>
     <script>var ___socket___ = io.connect('http://157.182.158.39:3000');</script>
     <script src='//157.182.158.39:3001/client/browser-sync-client.0.7.7.js'></script>
+
+  
+    <r:include_javascript name="lib/eq.min" />
+
+    <script data-main="../javascripts/main" src="../javascripts/require.min.js"></script>
+
 
   </body>
 </html>
