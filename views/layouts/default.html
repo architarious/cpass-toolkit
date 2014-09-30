@@ -51,7 +51,13 @@
   
     <r:include_javascript name="lib/eq.min" />
 
-    <script data-main="../javascripts/main" src="../javascripts/require.min.js"></script>
+    <script data-main="../javascripts/app" src="../javascripts/lib/require.min.js"></script>
+    <script>
+    require(['app'], function(){
+      // Load up this pages script, once the app script has loaded
+      require(['page/default']);
+    });
+    </script>
 
 
   </body>
