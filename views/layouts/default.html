@@ -5,9 +5,11 @@
     <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
     <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
     <meta name="description" content="<r:page:meta_description />" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/e64c1663-a4f6-4eb4-af95-a29c7c6098b1.js"></script>
 
     <link href="//code.wvu.edu/stylesheets/global-stylesheet/4.0/stylesheets/global.css" rel="stylesheet">
+
     <r:include_stylesheet name="styles.min" /> 
 
     <!--[if lt IE 9]>
@@ -17,82 +19,20 @@
 
   </head>
   <body class="template-<r:page:template:name /> page-<r:page:id />">
-      
+    <div class="cs-injection"></div>  
+    <div id="page-wrap">    
     
     <r:partial name="layouts/masthead--v1" theme="Code" />
-
-    <section><h1 class="title">Does this resize</h2></section>
-
- <div id="carousel-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <style>
-    ol.carousel-indicators li{ background:black;}
-    .carousel-control {background:blue;}
-  </style>
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-generic" data-slide-to="3"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="http://lorempixel.com/output/food-q-c-640-480-1.jpg" alt="food">
-      <div class="carousel-caption">
-        A beautiful food stir fry
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://lorempixel.com/output/nature-q-c-640-480-5.jpg" alt="beach">
-      <div class="carousel-caption">
-        A beautiful sunset
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://lorempixel.com/output/food-q-c-640-480-1.jpg" alt="food">
-      <div class="carousel-caption">
-        A beautiful food stir fry 2
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://lorempixel.com/output/nature-q-c-640-480-5.jpg" alt="beach">
-      <div class="carousel-caption">
-        A beautiful sunset 2
-      </div>
-    </div>
-  </div>
-<!-- Controls -->
-  <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
-    <span class="icon-prev"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
-    <span class="icon-next"></span>
-  </a>
- 
-</div>
-
-
-
-
- 
-
-
-    <div class="container">
-
-      <r:partial name="header" />
-
-      <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/DFAsPv --></r:comment>
-      <r:yield />
-
-      <footer class="footer">
-        <r:partial name="layouts/footer__contact--v1" theme="Code" />
-        <r:partial name="layouts/footer__credits--v1" theme="Code" />
-        <r:partial name="layouts/footer__icons--v1" theme="Code" />
-      </footer> <!-- /.footer -->
+    <r:partial name="cpass-masthead" />
+    <r:partial name="header" />
     
-    </div> <!-- /.container -->
+
+
+    <r:yield />
+
+
+
+    <r:partial name="footer"/>
 
     <r:partial name="layouts/browser-update-org--v1" theme="Code" />
 
@@ -107,7 +47,6 @@
 
   
     <r:include_javascript name="lib/eq.min" />
-
     <script data-main="../javascripts/main" src="../javascripts/lib/require.min.js"></script>
     <!--<script>
     require(['main'], function(){
@@ -117,6 +56,6 @@
     });
     </script>-->
 
-
+    </div> <!--end #page-wrap-->
   </body>
 </html>

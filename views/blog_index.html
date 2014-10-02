@@ -4,10 +4,12 @@ layout: default
 <r:comment><!-- NOTE: Set how many blog posts you'd like to show per page. Eg: default="10" --></r:comment>
 <r:set_var name="limit" value="{$limit}" default="10"/>
 
-<main class="main ten columns" role="main">
-  <r:breadcrumbs ul_class="breadcrumbs" />
-  <h1><r:page:name /></h1>
+<r:partial name="prefix-bp"/>
 
+<section id="core">
+ <div class="container">
+  <main class="main ten columns" role="main">
+ 
   <r:blog:articles limit="{$limit}" page="{$page}" tags="{$tags}" tags_op="{$tags_op}" year="{$year}" month="{$month}" day="{$day}">
     <r:set_var name="article_count" value="{count}" />
     
@@ -48,3 +50,8 @@ layout: default
 <aside class="sidebar six columns">
   <a href="<r:page:url format="rss" />">Articles RSS Feed</a>
 </aside>
+
+</div> <!--/.container-->
+</section> <!--/#core-->
+
+<r:partial name="postfix-default"/>

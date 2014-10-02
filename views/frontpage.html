@@ -1,12 +1,22 @@
 ---
 layout: default
 --- 
+<r:partial name="prefix-home"/>
 
-    
-<main class="main sixteen columns" role="main">
-  <r:editable_region name="main" />
-</main><!-- /.main -->
 
-<aside class="sidebar six columns" role="complementary">
-  <r:editable_region name="sidebar" />
-</aside> <!-- /.sidebar -->  
+<section id="core">    
+  <div class="container">
+    <main class="main" role="main">
+      <article>
+        <r:editable_region name="main" />
+      </article>
+    </main><!-- /.main -->
+
+    <aside class="sidebar" role="complementary">
+      <r:editable_region name="sidebar" />
+    </aside> <!-- /.sidebar -->  
+  </div><!--end container-->
+</section><!--end #core-->
+
+
+<r:partial name="postfix-default"/>

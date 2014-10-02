@@ -4,9 +4,12 @@ layout: default
 
 <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
 
+<r:partial name="prefix-bp"/>
+
+<section id="core">
+ <div class="container">
+
 <article class="article ten columns" role="article" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <r:breadcrumbs ul_class="breadcrumbs" />
-  <h1 itemprop="headline"><r:page:name /></h1>  
   <p>
     <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <span class="article__author" itemprop="name">
@@ -34,3 +37,8 @@ layout: default
 </aside> <!-- /.sidebar -->
 
 <r:comment><!-- Need comments for Blog Articles? See http://disqus.com --></r:comment>
+
+</div> <!--/.container-->
+</section> <!--/#core-->
+
+<r:partial name="postfix-default"/>

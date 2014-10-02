@@ -1,7 +1,32 @@
-<header class="header sixteen columns">
-  <a class="site-logo" href="/"><r:site_name /></a>
+<header id="header" class="header">
+ <div class="container">
+  <div id="navWrapper">
+    <nav class="nav navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+    	<a class="site-logo" href="/"><r:site_name /></a>
+    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-primary">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggle_title">MENU</span>
+        </button>
+      </div><!--end navbar-header-->
 
-  <nav class="nav" role="navigation">
-    <r:site_menu />
-  </nav> <!-- /.nav -->
+      <div class="collapsed navbar-collapse in" id="nav-primary">
+      
+      <ul class="nav navbar-nav">
+        <r:site_menu />
+      </ul><!--end navbar-nav-->
+
+      <div class="social navbar-social">
+        <ul>
+          <li><a href="#" class="fb">Follow us on facebook</a></li>
+          <li><a href="#" class="tw">Follow us on twitter</a></li>
+          <li><a href="#" class="li">Follow us on linkedin</a></li>
+          <li><a href="#" class="rss">Follow our blog</a></li>
+        </ul>
+       </div><!--end .navbar-social-->
+       
+      </div><!--/#nav-primary-->
+    </nav> <!-- /.nav -->
+  </div>
+  </div>
 </header><!-- /.header -->
