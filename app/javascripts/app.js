@@ -18,12 +18,14 @@ requirejs.config({
         'bootstrap/scrollspy':  { deps: ['jquery'], exports: '$.fn.scrollspy' },
         'bootstrap/tab':        { deps: ['jquery'], exports: '$.fn.tab'        },
         'bootstrap/tooltip':    { deps: ['jquery'], exports: '$.fn.tooltip' },
-        'bootstrap/transition': { deps: ['jquery'], exports: '$.fn.transition' }
+        'bootstrap/transition': { deps: ['jquery'], exports: '$.fn.transition' },
+        'bigText': { deps: ['jquery'], exports: '$.fn.bigText' }
     },
 
     paths: {
         // path to folder with individual bootstrap files 
         'bootstrap': 'lib/bootstrap',
+        'bigText' : 'app/bigText',
 
         'jquery' :[
             '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
