@@ -9,7 +9,7 @@ div.message{
     }
 
     &.warning{
-        background:shade($DarkOrange,10) url(../img/noise.png);
+        background:shade($DarkOrange,10) url(../images/noise.png);
         @include rem-selector(padding, 2);
         color:$white;
         font-family:$BlkCn;
@@ -33,7 +33,7 @@ div.message{
     }//end .warning
 
     &.notice{
-        background:set-alpha(darken($SecLightGold,10), 0.5) url(../img/noise.png);
+        background:set-alpha(darken($SecLightGold,10), 0.5) url(../images/noise.png);
         @include rem-selector(padding, 2);
         color:$gray;
         font-family:$BlkCn;

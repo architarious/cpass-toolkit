@@ -24,27 +24,31 @@
 
 
     //CPASS colors
-    	$cpass-Gold:#f1d17a;
-    	$cpass-Tan:#c4ad8b;
-    	$cpass-LightBlue:#99ccff;
+    	$cpass-Vanillin:#f0e5ca;
+    	$cpass-Macadamia:#cbbb9c;
+        $cpass-Tan: #c88a3d;
+    	$cpass-Cosmos:#93a6c4;
     	$cpass-Blue:#005b92;
     	$cpass-DarkBlue:#274152;
 
     //Discover Viewbook Colors    
-    	$vb-DarkGrey: #333e48;
+    	$vb-DarkNavy: #333e48;
     	$vb-RichNavy:#00447c;
+        $vb-FlatNavy: #19468d;
     	$vb-Charcoal: #545456;
-    	$vb-Gold: #ffd839;
-    	$vb-LightBlue: #4dbbe7;  // #2eb0e3 - wasn't contrasty enough on vb-DarkGrey
-    	$vb-FlatNavy: #19468d;
+    	$vb-Gold: #ffd635;
+    	$vb-LightBlue: #2eb0e3;  // #2eb0e3 - wasn't contrasty enough on vb-DarkGrey
+        $vb-LightGrey: #8a8c8e;
+        $vb-PaleGrey: #f7f7f7;
 
-    $gray : tint($black, 20);  
-	$gray-light : #f9f9f9;
-	$gray-light-2 : #eee;
-	$gray-light-3 : #ddd;
-	$gray-med : #666;
-	$gray-dark : #333;
-	$gray-dark-2 : #131313;
+
+    $grey : lighten($black, 40);  
+	$grey-light : darken($white, 5);
+	$grey-light-2 : darken($white, 10);
+	$grey-light-3 : darken($white, 15);
+	$grey-med : lighten($black, 30);
+	$grey-dark : lighten($black, 20);
+	$grey-dark-2 : lighten($black, 10);
 	$dim : rgba(0,0,0,0.5);
 	$error : #f00;
 	$valid : #089e00;
@@ -60,10 +64,10 @@ $cs-brightness-offest: 30;
 $cs-colorblind:deuteranopia;
 
 
-$primary: cs-primary(); //#19468d
-$pre-secondary: cs-secondary(); $secondary: tint($pre-secondary, 85) ; // too light, darkening this up a bit. //#ede7dc
+$primary: #1e428a; //cs-primary(); //#19468d
+$secondary: #ede7dc; //cs-secondary(); $secondary: tint($pre-secondary, 85) ; // too light, darkening this up a bit. //#ede7dc
 $tertiary: #0079c1; //cs-tertiary(); //#0063ff got denied by UR
-$quadrary: tint(lighten(cs-quadrary(),10), 20); //#ffc25b
+$quadrary: #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25b
 
 //@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());
 

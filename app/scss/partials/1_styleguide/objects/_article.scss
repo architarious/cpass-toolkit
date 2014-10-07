@@ -22,13 +22,13 @@
 	}
 
 	a {
-		background: $gray-dark;
+		background: $grey-dark;
 		color: $white;
 		display: block;
 		padding: $pad-half;
 
 		&:hover {
-			background: $gray;
+			background: $grey;
 		}
 	}
 }

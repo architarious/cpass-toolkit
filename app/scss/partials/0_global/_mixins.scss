@@ -225,15 +225,15 @@
     }
 
     &.disabled {
-    background: $gray-light-2;
-    color: $gray;
+    background: $grey-light-2;
+    color: $grey;
      &:hover, &:focus, &:active{
-      background: $gray-light-2;
+      background: $grey-light-2;
      }
      &:before{
-        background: $gray-light-3;
+        background: $grey-light-3;
          &:hover:before, &:focus:before, &:active:before{
-           background: $gray-light-3;
+           background: $grey-light-3;
          }
      } 
     }//end .disabled
@@ -309,15 +309,15 @@
     }
 
     &.disabled {
-    background: $gray-light-2;
-    color: $gray;
+    background: $grey-light-2;
+    color: $grey;
      &:hover, &:focus, &:active{
-      background: $gray-light-2;
+      background: $grey-light-2;
      }
      &:before{
-        background: $gray-light-3;
+        background: $grey-light-3;
          &:hover:before, &:focus:before, &:active:before{
-           background: $gray-light-3;
+           background: $grey-light-3;
          }
      } 
     }//end .disabled

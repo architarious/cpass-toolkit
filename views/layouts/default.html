@@ -6,6 +6,10 @@
     <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
     <meta name="description" content="<r:page:meta_description />" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+
+   
+
     <script type="text/javascript" src="http://fast.fonts.net/jsapi/e64c1663-a4f6-4eb4-af95-a29c7c6098b1.js"></script>
 
     <link href="//code.wvu.edu/stylesheets/global-stylesheet/4.0/stylesheets/global.css" rel="stylesheet">
@@ -41,20 +45,16 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src='//157.182.158.39:3000/socket.io/socket.io.js'></script>
-    <script>var ___socket___ = io.connect('http://157.182.158.39:3000');</script>
-    <script src='//157.182.158.39:3001/client/browser-sync-client.0.7.7.js'></script>
-
+    
   
     <r:include_javascript name="lib/eq.min" />
     <script data-main="../javascripts/main" src="../javascripts/lib/require.min.js"></script>
-    <!--<script>
-    require(['main'], function(){
-      // Load up this pages script, once the app script has loaded
-      require(['bigText']);
-      require(['page/default']);
-    });
-    </script>-->
+   
+
+     <script src='//157.182.158.39:3000/socket.io/socket.io.js'></script>
+    <script>var ___socket___ = io.connect('http://157.182.158.39:3000');</script>
+    <script src='//157.182.158.39:3001/client/browser-sync-client.0.7.7.js'></script>
+
 
     </div> <!--end #page-wrap-->
   </body>

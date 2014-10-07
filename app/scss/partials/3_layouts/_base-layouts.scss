@@ -16,15 +16,14 @@ body{
 
 		}
 	}//end /wvu-masthead
-
+	#masthead-cpass{
+		width:100%;
+		float:left;
+		.container{
+			
+		}//end #college-masthead.container
+	}//end #college-masthead
 	header{
-		#college-masthead{
-			width:100%;
-			float:left;
-			.container{
-
-			}//end #college-masthead.container
-		}//end #college-masthead
 
 		.container{
 			a.site-logo{}

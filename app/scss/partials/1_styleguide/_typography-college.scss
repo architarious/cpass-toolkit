@@ -81,7 +81,7 @@ p{
         @include standard-transition(border);
         &:hover{
             color:$black;
-            background-color:tint($secondary, 20);
+            background-color:tint($secondary, 20); 
             border-top: 2px solid tint($tertiary, 20);
             border-bottom: 0;
         }
