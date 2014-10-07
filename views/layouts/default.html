@@ -51,10 +51,11 @@
     <script data-main="../javascripts/main" src="../javascripts/lib/require.min.js"></script>
    
 
-     <script src='//157.182.158.39:3000/socket.io/socket.io.js'></script>
-    <script>var ___socket___ = io.connect('http://157.182.158.39:3000');</script>
-    <script src='//157.182.158.39:3001/client/browser-sync-client.0.7.7.js'></script>
-
+<script>
+var string = "/HOST:3000/whatever.js";
+string.replace(/HOST/g, location.hostname);
+console.log(string);
+</script>
 
     </div> <!--end #page-wrap-->
   </body>
