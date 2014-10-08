@@ -1,0 +1,62 @@
+#masthead_cpass{
+	@include adjust-font-size-to($font-size-med);
+    @include rhythm(0, $ms-1n, $ms-1n, 0, $font-size-med);
+    box-shadow: 0 ms(-8)  ms(-10) 0 $black inset;
+    //@include standard-box-shadow();
+	background:url(../images/noise.png) darken($vb-DarkNavy,10);
+	min-height:1em;
+	width:100%;
+	float:left;
+	position: relative;
+	z-index:1;
+	a.logo-cpass{
+		font-family:$Roman;
+		font-weight:400;
+		color:$white;
+		text-align:center;
+		width:100%;
+		float:left;
+		@include adjust-font-size-to($font-size-med);
+		&:hover, &:focus{color: shade($white, 10);}
+		&:visited, &:active{color:$white;}
+		span{
+			display: block;
+		}
+		@include breakpoint(380px){
+			@include adjust-font-size-to($font-size-med-2);
+		}
+
+	}
+
+	#social-cpass{
+		display:none;
+	}
+
+	#nav-cpass{
+		@include rhythm($ms-3n,0 , 0, 0, $font-size-small-2);
+		border-top: ms(-8) solid $vb-DarkNavy;
+		border-bottom: ms(-8) solid $vb-DarkNavy;
+		float:left;
+		width:100%;
+
+		ul{margin-bottom:0;}
+		li{ 
+		  width:100%; 
+		  float:left;
+		  &:last-child{ margin-bottom:0;}
+
+		}
+		a{
+			@include adjust-font-size-to($font-size-small-2);
+			@include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-small-2);
+			background:tint($vb-Charcoal, 10);
+			width:100%;
+			float:left;
+			&:hover{
+				color:$quadrary;
+				background:tint($vb-Charcoal, 20);
+			}
+
+		}
+	}
+}

@@ -9406,6 +9406,29 @@ ul li, .sidebar li, aside li {
   line-height: 18px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\000031}}
+#social-cpass a {
+  float: left;
+  height: 34px;
+  width: 34px;
+  overflow: hidden;
+  text-indent: -300000px;
+  background: url(../images/social.png) -13px -12px no-repeat;
+  padding: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\000039}}
+#social-cpass a.facebook {
+  background-position: -13px -12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000312}}
+#social-cpass a.twitter {
+  background-position: -13px -285px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000315}}
+#social-cpass a.rss {
+  background-position: -13px -353px;
+}
+
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
@@ -10966,7 +10989,106 @@ div.message .close {
   margin-top: -41.618px;
 }
 
-@impot 'masthead-wvu';
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-wvu\.scss}line{font-family:\000031}}
+.wvu-masthead {
+  margin-bottom: 0;
+  float: left;
+  min-height: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\000031}}
+#masthead_cpass {
+  font-size: 1em;
+  line-height: 1.251375em;
+  margin-top: 0em;
+  padding-top: 0.9667403467em;
+  padding-bottom: 0.9667403467em;
+  margin-bottom: 0em;
+  -webkit-box-shadow: 0 2.3343684751px 1.4427190498px 0 #1e262c inset;
+          box-shadow: 0 2.3343684751px 1.4427190498px 0 #1e262c inset;
+  background: url(../images/noise.png) #1e242a;
+  min-height: 1em;
+  width: 100%;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000312}}
+#masthead_cpass a.logo-cpass {
+  font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
+  font-weight: 400;
+  color: #fffefb;
+  text-align: center;
+  width: 100%;
+  float: left;
+  font-size: 1em;
+  line-height: 1.251375em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000320}}
+#masthead_cpass a.logo-cpass:hover, #masthead_cpass a.logo-cpass:focus {
+  color: #e5e4e1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000321}}
+#masthead_cpass a.logo-cpass:visited, #masthead_cpass a.logo-cpass:active {
+  color: #fffefb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000322}}
+#masthead_cpass a.logo-cpass span {
+  display: block;
+}
+@media (min-width: 380px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000312}}
+  #masthead_cpass a.logo-cpass {
+    font-size: 1.25em;
+    line-height: 1.50165em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000331}}
+#masthead_cpass #social-cpass {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000335}}
+#masthead_cpass #nav-cpass {
+  margin-top: 0.7733922773em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  border-top: 2.3343684751px solid #333e48;
+  border-bottom: 2.3343684751px solid #333e48;
+  float: left;
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000342}}
+#masthead_cpass #nav-cpass ul {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000343}}
+#masthead_cpass #nav-cpass li {
+  width: 100%;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000346}}
+#masthead_cpass #nav-cpass li:last-child {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000349}}
+#masthead_cpass #nav-cpass a {
+  font-size: 0.7725424806em;
+  line-height: 1.6198138374em;
+  margin-top: 0em;
+  padding-top: 0.7733922773em;
+  padding-bottom: 0.7733922773em;
+  margin-bottom: 0em;
+  background: #656566;
+  width: 100%;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\0000355}}
+#masthead_cpass #nav-cpass a:hover {
+  color: #ffc656;
+  background: #767677;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\000032}}
 header .site-logo {
   display: none;
@@ -11252,6 +11374,17 @@ body footer {
     margin-bottom: 0.369155625em;
   }
 }
+@media (min-width: 30rem) {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_masthead-cpass\.scss}line{font-family:\000037}}
+  #masthead_cpass a.logo-cpass {
+    font-size: 1em;
+    line-height: 1.251375em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_masthead-cpass\.scss}line{font-family:\000038}}
+  #masthead_cpass a.logo-cpass span {
+    display: inline;
+  }
+}
 @media (min-width: 48rem) {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\000037}}
   body .container, body .wvu-masthead-container {
@@ -11311,6 +11444,87 @@ body footer {
     padding-top: 0em;
     padding-bottom: 0em;
     margin-bottom: 0.9667403467em;
+  }
+}
+@media (min-width: 48rem) {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\000036}}
+  #masthead_cpass {
+    padding-bottom: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\000038}}
+  #masthead_cpass a.logo-cpass {
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.251375em;
+    margin-top: 0em;
+    padding-top: 0.2953245em;
+    padding-bottom: 0.5974783883em;
+    margin-bottom: 0em;
+    width: 74.1935483871%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\000039}}
+  #masthead_cpass a.logo-cpass span {
+    display: inline;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\0000317}}
+  #masthead_cpass #social-cpass {
+    display: block;
+    width: 22.5806451613%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\0000318}}
+  #masthead_cpass #social-cpass a {
+    float: right;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\0000322}}
+  #masthead_cpass #nav-cpass {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: both;
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\0000329}}
+  #masthead_cpass #nav-cpass ul {
+    width: 100%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\0000332}}
+  #masthead_cpass #nav-cpass li {
+    width: 19%;
+    margin-bottom: 0;
+    display: table-cell;
+    margin-right: 1%;
+    display: inline;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\0000339}}
+  #masthead_cpass #nav-cpass li:last-child {
+    margin-right: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_masthead-cpass\.scss}line{font-family:\0000343}}
+  #masthead_cpass #nav-cpass a {
+    text-align: center;
+    font-size: 0.7725424806em;
+    line-height: 1.6198138374em;
+    margin-top: 0em;
+    padding-top: 0.7733922773em;
+    padding-bottom: 0.6187688859em;
+    margin-bottom: 0em;
+    float: left;
+    vertical-align: text-bottom;
+    font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
+    font-weight: 800;
   }
 }
 @media (min-width: 60rem) {

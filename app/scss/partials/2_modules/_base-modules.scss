@@ -5,7 +5,7 @@
 // Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
 ////////////////////////
 
-@impot 'masthead-wvu';
+@import 'masthead-wvu';
 @import 'masthead-cpass';
 @import 'header';
 @import 'nav';

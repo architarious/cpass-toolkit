@@ -1,0 +1,18 @@
+#social-cpass a{
+  float: left;
+  height: 34px;
+  width: 34px;
+  overflow: hidden;
+  text-indent: -300000px;
+  background: url(../images/social.png) -13px -12px no-repeat;
+  padding: 4px;
+  &.facebook{
+  	background-position: -13px -12px;
+  }
+  &.twitter{
+  	background-position: -13px -285px;
+  }
+  &.rss{
+  	background-position: -13px -353px;
+  }
+}
