@@ -18,7 +18,7 @@ css_dir = "app/stylesheets"
 sass_dir = "app/scss"
 images_dir = "app/images"
 javascripts_dir = "app/javascripts"
-fonts_dir = "app/stylesheets/fonts"
+fonts_dir = "public/fonts"
 
 
 on_stylesheet_saved do |file|

@@ -653,8 +653,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../../public/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../../public/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../public/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../public/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby21-x64\/lib\/ruby\/gems\/2\.1\.0\/gems\/bootstrap-sass-3\.1\.1\.1\/vendor\/assets\/stylesheets\/bootstrap\/_glyphicons\.scss}line{font-family:\0000325}}
@@ -9432,171 +9432,1116 @@ ul li, .sidebar li, aside li {
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-/* Icon Font */
 @font-face {
-  font-family: 'icons';
-  src: url("fonts/icons.eot");
-  src: url("fonts/icons.eot?#iefix") format("embedded-opentype"), url("fonts/icons.woff") format("woff"), url("fonts/icons.ttf") format("truetype"), url("fonts/icons.svg#icons") format("svg");
+  font-family: 'icomoon';
+  src: url("../public/fonts/icomoon.eot?-ssp9yv");
+  src: url("../public/fonts/icomoon.eot?#iefix-ssp9yv") format("embedded-opentype"), url("../public/fonts/icomoon.woff?-ssp9yv") format("woff"), url("../public/fonts/icomoon.ttf?-ssp9yv") format("truetype"), url("../public/fonts/icomoon.svg?-ssp9yv#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000315}}
-[data-icon]:before {
-  font-family: 'icons';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000324}}
-.icon-twitter:before, .icon-stumbleupon:before, .icon-pinterest:before, .icon-linkedin:before, .icon-google-plus:before, .icon-search:before, .icon-play:before, .icon-menu:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-bubble:before, .icon-facebook:before, .icon-feed:before, .icon-youtube:before, .icon-tag:before, .icon-tumblr:before, .icon-instagram, .icon-podcast, .icon-apple, .icon-android, .icon-arrow:after, .icon-envelope:before {
-  font-family: 'icons';
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000312}}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000334}}
-.icon-twitter:before {
-  content: "\74";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000326}}
+.icon-rss:before {
+  content: "\e600";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000337}}
-.icon-stumbleupon:before {
-  content: "\75";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000329}}
+.icon-twit:before {
+  content: "\e601";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000340}}
-.icon-pinterest:before {
-  content: "\70";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000332}}
+.icon-pin:before {
+  content: "\e602";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000343}}
-.icon-linkedin:before {
-  content: "\69";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000346}}
-.icon-google-plus:before {
-  content: "\67";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000349}}
-.icon-search:before {
-  content: "\73";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000352}}
-.icon-play:before {
-  content: "\61";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000355}}
-.icon-menu:before {
-  content: "\21";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000358}}
-.icon-arrow-left:before {
-  content: "\23";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000361}}
-.icon-arrow-right:before {
-  content: "\24";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000364}}
-.icon-bubble:before {
-  content: "\25";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000367}}
-.icon-facebook:before {
-  content: "\66";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000370}}
-.icon-feed:before {
-  content: "\27";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000335}}
 .icon-youtube:before {
-  content: "\79";
+  content: "\e603";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000376}}
-.icon-tag:before {
-  content: "\28";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000338}}
+.icon-linkdin:before {
+  content: "\e604";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000379}}
-.icon-tumblr:before {
-  content: "\6d";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000341}}
+.icon-fb:before {
+  content: "\e605";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000382}}
-.icon-instagram:before {
-  content: "\22";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000344}}
+.icon-home:before {
+  content: "\e606";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000385}}
-.icon-podcast:before {
-  content: "\26";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000347}}
+.icon-pencil:before {
+  content: "\e607";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000388}}
-.icon-android:before {
-  content: "\29";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000350}}
+.icon-pencil2:before {
+  content: "\e64a";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000391}}
-.icon-apple:before {
-  content: "\2a";
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000353}}
+.icon-image:before {
+  content: "\e608";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000394}}
-.icon-envelope:before {
-  content: "\2b";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000399}}
-.icon-arrow:after {
-  content: "\61";
-  display: inline-block;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000356}}
 .icon-play:before {
-  font-size: 0.7rem;
-  padding-left: 0.2em;
+  content: "\e609";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003114}}
-.icon-play-box {
-  display: block;
-  margin-left: 3.236em;
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000359}}
+.icon-camera:before {
+  content: "\e64b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000362}}
+.icon-bullhorn:before {
+  content: "\e60a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000365}}
+.icon-tag:before {
+  content: "\e64c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000368}}
+.icon-phone:before {
+  content: "\e60b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000371}}
+.icon-address-book:before {
+  content: "\e60c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000374}}
+.icon-notebook:before {
+  content: "\e60d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000377}}
+.icon-envelope:before {
+  content: "\e60e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000380}}
+.icon-location:before {
+  content: "\e60f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000383}}
+.icon-compass:before {
+  content: "\e610";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000386}}
+.icon-alarm:before {
+  content: "\e64d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000389}}
+.icon-bell:before {
+  content: "\e64e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000392}}
+.icon-print:before {
+  content: "\e611";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000395}}
+.icon-download:before {
+  content: "\e612";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000398}}
+.icon-upload:before {
+  content: "\e613";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003101}}
+.icon-bubbles:before {
+  content: "\e64f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003104}}
+.icon-bubble:before {
+  content: "\e650";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003107}}
+.icon-user:before {
+  content: "\e614";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003110}}
+.icon-users:before {
+  content: "\e651";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003113}}
+.icon-quotes-left:before {
+  content: "\e652";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003116}}
+.icon-busy:before {
+  content: "\e653";
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003119}}
-.icon-play-box:before {
-  padding: 0.4045em;
-  background: #748da2;
-  color: #fffefb;
-  margin-left: -1.7rem;
-  margin-right: 0.809em;
+.icon-search:before {
+  content: "\e615";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003122}}
+.icon-settings:before {
+  content: "\e654";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003125}}
+.icon-equalizer:before {
+  content: "\e655";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003128}}
+.icon-cog:before {
+  content: "\e656";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003131}}
+.icon-pie:before {
+  content: "\e657";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003134}}
+.icon-stats:before {
+  content: "\e658";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003137}}
+.icon-bars:before {
+  content: "\e659";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003140}}
+.icon-bars2:before {
+  content: "\e65a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003143}}
+.icon-fire:before {
+  content: "\e65b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003146}}
+.icon-briefcase:before {
+  content: "\e616";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003149}}
+.icon-list:before {
+  content: "\e617";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003152}}
+.icon-list2:before {
+  content: "\e65c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003155}}
+.icon-numbered-list:before {
+  content: "\e65d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003158}}
+.icon-menu:before {
+  content: "\e65e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003161}}
+.icon-menu2:before {
+  content: "\e618";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003164}}
+.icon-earth:before {
+  content: "\e65f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003167}}
+.icon-link:before {
+  content: "\e619";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003170}}
+.icon-flag:before {
+  content: "\e660";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003173}}
+.icon-attachment:before {
+  content: "\e661";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003176}}
+.icon-bookmarks:before {
+  content: "\e662";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003179}}
+.icon-star:before {
+  content: "\e61a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003182}}
+.icon-star2:before {
+  content: "\e663";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003185}}
+.icon-star3:before {
+  content: "\e664";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003188}}
+.icon-thumbs-up:before {
+  content: "\e665";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003191}}
+.icon-thumbs-up2:before {
+  content: "\e666";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003194}}
+.icon-point-up:before {
+  content: "\e61b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003197}}
+.icon-point-right:before {
+  content: "\e61c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003200}}
+.icon-point-down:before {
+  content: "\e61d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003203}}
+.icon-point-left:before {
+  content: "\e61e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003206}}
+.icon-close:before {
+  content: "\e667";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003209}}
+.icon-checkmark:before {
+  content: "\e668";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003212}}
+.icon-checkmark2:before {
+  content: "\e669";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003215}}
+.icon-arrow-up-left:before {
+  content: "\e61f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003218}}
+.icon-arrow-up:before {
+  content: "\e620";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003221}}
+.icon-arrow-up-right:before {
+  content: "\e621";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003224}}
+.icon-arrow-right:before {
+  content: "\e622";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003227}}
+.icon-arrow-down-right:before {
+  content: "\e623";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003230}}
+.icon-arrow-down:before {
+  content: "\e624";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003233}}
+.icon-arrow-down-left:before {
+  content: "\e625";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003236}}
+.icon-arrow-left:before {
+  content: "\e626";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003239}}
+.icon-arrow-up-left2:before {
+  content: "\e627";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003242}}
+.icon-arrow-up2:before {
+  content: "\e628";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003245}}
+.icon-arrow-up-right2:before {
+  content: "\e629";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003248}}
+.icon-arrow-right2:before {
+  content: "\e62a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003251}}
+.icon-arrow-down-right2:before {
+  content: "\e62b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003254}}
+.icon-arrow-down2:before {
+  content: "\e62c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003257}}
+.icon-arrow-down-left2:before {
+  content: "\e62d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003260}}
+.icon-arrow-left2:before {
+  content: "\e62e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003263}}
+.icon-arrow-up-left3:before {
+  content: "\e62f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003266}}
+.icon-arrow-up3:before {
+  content: "\e630";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003269}}
+.icon-arrow-up-right3:before {
+  content: "\e631";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003272}}
+.icon-arrow-right3:before {
+  content: "\e632";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003275}}
+.icon-arrow-down-right3:before {
+  content: "\e633";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003278}}
+.icon-arrow-down3:before {
+  content: "\e634";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003281}}
+.icon-arrow-down-left3:before {
+  content: "\e635";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003284}}
+.icon-arrow-left3:before {
+  content: "\e636";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003287}}
+.icon-newtab:before {
+  content: "\e66a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003290}}
+.icon-share:before {
+  content: "\e66b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003293}}
+.icon-mail:before {
+  content: "\e66c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003296}}
+.icon-mail2:before {
+  content: "\e66d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003299}}
+.icon-googleplus:before {
+  content: "\e66e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003302}}
+.icon-googleplus2:before {
+  content: "\e66f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003305}}
+.icon-facebook:before {
+  content: "\e670";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003308}}
+.icon-facebook2:before {
+  content: "\e637";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003311}}
+.icon-instagram:before {
+  content: "\e671";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003314}}
+.icon-twitter:before {
+  content: "\e638";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003317}}
+.icon-twitter2:before {
+  content: "\e672";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003320}}
+.icon-feed:before {
+  content: "\e673";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003323}}
+.icon-feed2:before {
+  content: "\e674";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003326}}
+.icon-youtube2:before {
+  content: "\e675";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003329}}
+.icon-youtube3:before {
+  content: "\e676";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003332}}
+.icon-skype:before {
+  content: "\e677";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003335}}
+.icon-linkedin:before {
+  content: "\e678";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003338}}
+.icon-pinterest:before {
+  content: "\e679";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003341}}
+.icon-pinterest2:before {
+  content: "\e67a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003344}}
+.icon-foursquare:before {
+  content: "\e67b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003347}}
+.icon-foursquare2:before {
+  content: "\e67c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003350}}
+.icon-libreoffice:before {
+  content: "\e639";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003353}}
+.icon-file-pdf:before {
+  content: "\e63a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003356}}
+.icon-file-openoffice:before {
+  content: "\e63b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003359}}
+.icon-file-word:before {
+  content: "\e63c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003362}}
+.icon-file-excel:before {
+  content: "\e63d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003365}}
+.icon-file-zip:before {
+  content: "\e63e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003368}}
+.icon-file-powerpoint:before {
+  content: "\e63f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003371}}
+.icon-file-xml:before {
+  content: "\e640";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003374}}
+.icon-file-css:before {
+  content: "\e641";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003377}}
+.icon-chrome:before {
+  content: "\e67d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003380}}
+.icon-firefox:before {
+  content: "\e67e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003383}}
+.icon-IE:before {
+  content: "\e67f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003386}}
+.icon-opera:before {
+  content: "\e680";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003389}}
+.icon-bulb:before {
+  content: "\e681";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003392}}
+.icon-t-shirt:before {
+  content: "\e682";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003395}}
+.icon-mobile:before {
+  content: "\e683";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003398}}
+.icon-reply:before {
+  content: "\e684";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003401}}
+.icon-reply-all:before {
+  content: "\e685";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003404}}
+.icon-forward:before {
+  content: "\e686";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003407}}
+.icon-export:before {
+  content: "\e687";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003410}}
+.icon-share2:before {
+  content: "\e688";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003413}}
+.icon-sharable:before {
+  content: "\e689";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003416}}
+.icon-chat:before {
+  content: "\e68a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003419}}
+.icon-comment:before {
+  content: "\e68b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003422}}
+.icon-quote:before {
+  content: "\e68c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003425}}
+.icon-house:before {
+  content: "\e68d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003428}}
+.icon-popup:before {
+  content: "\e68e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003431}}
+.icon-search2:before {
+  content: "\e68f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003434}}
+.icon-printer:before {
+  content: "\e690";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003437}}
+.icon-megaphone:before {
+  content: "\e691";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003440}}
+.icon-graduation:before {
+  content: "\e692";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003443}}
+.icon-book:before {
+  content: "\e693";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003446}}
+.icon-droplet:before {
+  content: "\e694";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003449}}
+.icon-briefcase2:before {
+  content: "\e695";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003452}}
+.icon-suitcase:before {
+  content: "\e696";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003455}}
+.icon-cone:before {
+  content: "\e697";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003458}}
+.icon-earth2:before {
+  content: "\e698";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003461}}
+.icon-clipboard:before {
+  content: "\e699";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003464}}
+.icon-rss2:before {
+  content: "\e69a";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003467}}
+.icon-signal:before {
+  content: "\e69b";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003470}}
+.icon-logout:before {
+  content: "\e69c";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003473}}
+.icon-login:before {
+  content: "\e69d";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003476}}
+.icon-checkmark3:before {
+  content: "\e69e";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003479}}
+.icon-cross:before {
+  content: "\e69f";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003482}}
+.icon-minus:before {
+  content: "\e6a0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003485}}
+.icon-plus:before {
+  content: "\e6a1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003488}}
+.icon-cross2:before {
+  content: "\e6a2";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003491}}
+.icon-minus2:before {
+  content: "\e6a3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003494}}
+.icon-plus2:before {
+  content: "\e6a4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003497}}
+.icon-cross3:before {
+  content: "\e6a5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003500}}
+.icon-minus3:before {
+  content: "\e6a6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003503}}
+.icon-plus3:before {
+  content: "\e6a7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003506}}
+.icon-erase:before {
+  content: "\e6a8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003509}}
+.icon-blocked:before {
+  content: "\e6a9";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003512}}
+.icon-info:before {
+  content: "\e6aa";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003515}}
+.icon-info2:before {
+  content: "\e6ab";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003518}}
+.icon-question:before {
+  content: "\e6ac";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003521}}
+.icon-help:before {
+  content: "\e6ad";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003524}}
+.icon-warning:before {
+  content: "\e6ae";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003527}}
+.icon-list3:before {
+  content: "\e6af";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003530}}
+.icon-add-to-list:before {
+  content: "\e6b0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003533}}
+.icon-layout:before {
+  content: "\e6b1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003536}}
+.icon-list4:before {
+  content: "\e6b2";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003539}}
+.icon-disk:before {
+  content: "\e6b3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003542}}
+.icon-bookmark:before {
+  content: "\e6b4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003545}}
+.icon-bookmarks2:before {
+  content: "\e6b5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003548}}
+.icon-arrow-left4:before {
+  content: "\e6b6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003551}}
+.icon-arrow-down4:before {
+  content: "\e6b7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003554}}
+.icon-arrow-up-upload:before {
+  content: "\e6b8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003557}}
+.icon-arrow-right4:before {
+  content: "\e6b9";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003560}}
+.icon-arrow-left5:before {
+  content: "\e6ba";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003563}}
+.icon-arrow-down5:before {
+  content: "\e6bb";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003566}}
+.icon-arrow-up4:before {
+  content: "\e6bc";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003569}}
+.icon-arrow-right5:before {
+  content: "\e6bd";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003572}}
+.icon-arrow-left6:before {
+  content: "\e6be";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003575}}
+.icon-arrow-down6:before {
+  content: "\e6bf";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003578}}
+.icon-arrow-up5:before {
+  content: "\e6c0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003581}}
+.icon-arrow-right6:before {
+  content: "\e6c1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003584}}
+.icon-arrow-left42:before {
+  content: "\e642";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003587}}
+.icon-arrow-down42:before {
+  content: "\e643";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003590}}
+.icon-arrow-up42:before {
+  content: "\e644";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003593}}
+.icon-arrow-right42:before {
+  content: "\e645";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003596}}
+.icon-arrow-left52:before {
+  content: "\e646";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003599}}
+.icon-arrow-down52:before {
+  content: "\e647";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003602}}
+.icon-arrow-up52:before {
+  content: "\e648";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003605}}
+.icon-arrow-right52:before {
+  content: "\e649";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003608}}
+.icon-arrow-left7:before {
+  content: "\e6c2";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003611}}
+.icon-arrow-down7:before {
+  content: "\e6c3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003614}}
+.icon-arrow-up6:before {
+  content: "\e6c4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003617}}
+.icon-arrow-right7:before {
+  content: "\e6c5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003620}}
+.icon-arrow-left8:before {
+  content: "\e6c6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003623}}
+.icon-arrow-down8:before {
+  content: "\e6c7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003626}}
+.icon-arrow-up7:before {
+  content: "\e6c8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003629}}
+.icon-uniE6C9:before {
+  content: "\e6c9";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003632}}
+.icon-menu3:before {
+  content: "\e6ca";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003635}}
+.icon-ellipsis:before {
+  content: "\e6cb";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003638}}
+.icon-dots:before {
+  content: "\e6cc";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003641}}
+.icon-dot:before {
+  content: "\e6cd";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003644}}
+.icon-twitter3:before {
+  content: "\e6ce";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003647}}
+.icon-twitter4:before {
+  content: "\e6cf";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003650}}
+.icon-facebook3:before {
+  content: "\e6d0";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003653}}
+.icon-facebook4:before {
+  content: "\e6d1";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003656}}
+.icon-linkedin2:before {
+  content: "\e6d2";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003659}}
+.icon-linkedin3:before {
+  content: "\e6d3";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003662}}
+.icon-spotify:before {
+  content: "\e6d4";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003665}}
+.icon-spotify2:before {
+  content: "\e6d5";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003668}}
+.icon-instagram2:before {
+  content: "\e6d6";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003671}}
+.icon-dropbox:before {
+  content: "\e6d7";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003674}}
+.icon-skype2:before {
+  content: "\e6d8";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003677}}
+.icon-skype3:before {
+  content: "\e6d9";
 }
 
 /*------------------------------------*\
