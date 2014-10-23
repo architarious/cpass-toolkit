@@ -128,10 +128,33 @@ $min-line-padding: 2px;
 //
 /////////////////////////
 
-$bp-mobile2: 30rem;
-$bp-tablet: 48rem;
-$bp-desktop1: 60rem;
-$bp-desktop2: 78rem;
+$bp-mobile1-1: 0;
+$bp-mobile1-2: 20rem;
+$bp-mobile1-3: 25rem;
+
+$bp-mobile2-1: 30rem;
+$bp-mobile2-2: 35rem;
+$bp-mobile2-2-608: 38rem;
+$bp-mobile2-3: 40rem;
+$bp-mobile2-4: 45rem;
+
+$bp-tablet-1: 48rem;
+$bp-tablet-2: 55rem;
+
+$bp-desktop1-1: 60rem;
+$bp-desktop1-2: 65rem;
+$bp-desktop1-3: 70rem;
+$bp-desktop1-4: 75rem;
+
+$bp-desktop2-1: 78rem;
+$bp-desktop2-2: 85rem;
+$bp-desktop2-3: 90rem;
+$bp-desktop2-4: 95rem;
+$bp-desktop2-5: 100rem;
+$bp-desktop2-6: 110rem;
+$bp-desktop2-7: 120rem;
+$bp-desktop2-8: 130rem;
+
 //$breakpoint-no-query-fallbacks: true;
 $no-queries: 1024px, 'no-query' true;
 

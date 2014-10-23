@@ -28,15 +28,15 @@
 		margin-top: 0;
 	}
 
-	@media all and (min-width: $bp-mobile2) {
+	@media all and (min-width: $bp-mobile2-1) {
 		width: 22em;
 	}
 
-	@media all and (min-width: $bp-tablet) {
+	@media all and (min-width: $bp-tablet-1) {
 		width: 27em;
 	}
 
-	@media all and (min-width: $bp-desktop1) {
+	@media all and (min-width: $bp-desktop1-1) {
 		width: 30em;
 	}
 }

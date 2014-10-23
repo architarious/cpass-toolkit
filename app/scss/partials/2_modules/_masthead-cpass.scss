@@ -1,35 +1,129 @@
 #masthead_cpass{
-	@include adjust-font-size-to($font-size-med);
-    @include rhythm(0, $ms-1n, $ms-1n, 0, $font-size-med);
-    box-shadow: 0 ms(-8)  ms(-10) 0 $black inset;
-    //@include standard-box-shadow();
-	background:url(../images/noise.png) darken($vb-DarkNavy,10);
+	@include adjust-font-size-to($font-size-small-2);
+    @include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-small-2);
 	min-height:1em;
 	width:100%;
 	float:left;
-	position: relative;
-	z-index:1;
-	a.logo-cpass{
+
+
+	.logo-container{
+		a.logo-cpass{
 		font-family:$Roman;
+		text-transform: uppercase;
 		font-weight:400;
 		color:$white;
+		&:hover{
+			color:$quadrary;
+			text-decoration:underline;
+		}
 		text-align:center;
 		width:100%;
 		float:left;
+		@include rhythm(0, 0, $ms-1n, 0, $font-size-med);
 		@include adjust-font-size-to($font-size-med);
 		&:hover, &:focus{color: shade($white, 10);}
 		&:visited, &:active{color:$white;}
 		span{
 			display: block;
-		}
-		@include breakpoint(380px){
+		  }
+		@include breakpoint($bp-mobile1-3){
 			@include adjust-font-size-to($font-size-med-2);
+		  }
+		@include breakpoint($bp-mobile2-2-608){
+			text-align:left;
+			float:left;
+		  }
+	    }//.logo-cpass
+	}//.logo-container
+	.short-menu-container{
+		display:none;
+		
+		ul.cpass-short{
+			li{
+				border-right: ms(-10) solid darken($vb-DarkNavy, 12);
+				//box-shadow: 1px 0 0px darken($vb-DarkNavy, 6 );
+				&:last-child{ border:none;}
+			}
+			a{
+				font-family:$LtCn;
+				font-weight: 200;
+				color:lighten($vb-Charcoal,40);
+				background:none;
+				text-decoration: underline;
+				@include adjust-font-size-to($font-size-med);
+		  		padding: ms(-1);
+		  		@include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med);
+		  		&:hover{
+		  			color:$quadrary;
+		  		}
+
+		  		
+
+			}
 		}
 
+		nav a.more, nav a.more:visited {
+		  background: url(../images/noise.png) darken($vb-Charcoal, 5);
+		  box-shadow: inset 0 2px 10px 0 tint($vb-Charcoal, 10), 0 2px 3px 0 darken($vb-DarkNavy, 18);
+		  text-shadow: 0 2px 3px darken($vb-Charcoal, 10);
+		  border: ms(-11) solid darken($vb-Charcoal, 20);
+		  border-top-color:tint($vb-Charcoal, 13);
+		  text-transform: uppercase;
+		  font-family:$BdCn;
+		  font-weight:800;
+		  border-radius: ms(-5);
+		  @include adjust-font-size-to($font-size-med);
+		  padding: ms(-4);
+		  @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
+
+		  &:hover, &:focus{
+		  	background-color:tint($vb-Charcoal, 10);
+		  	text-shadow:0 3px 4px  darken($vb-DarkNavy, 14);
+		  	&::after{
+
+		  	}
+		  }
+		  &:active, &.active{
+		  	background-color:$quadrary;
+		  	box-shadow: inset 0 2px 10px 0 lighten($quadrary, 10);
+		  	color:$vb-DarkNavy;
+		  	border: ms(-11) solid darken($quadrary, 20);
+		  	border-top-color:tint($quadrary, 13);
+		  	text-shadow: 0 2px 3px darken($quadrary, 10);
+		  	&::after{
+		  		content:"\e6a3";
+		  	}
+		  }
+
+  		  &::after{
+		    font-family: 'icomoon';
+	        speak: none;
+	        font-style: normal;
+	        font-weight: normal;
+	        font-variant: normal;
+	        text-transform: none;
+	        line-height: 1;
+			content:"\e6a4";
+			margin-left:ms(-4);
+			@include adjust-font-size-to($font-size-med-2);
+			line-height:14px;
+			@include rhythm(0, $ms-9n, $ms-9n, 0, $font-size-med-2);
+			float:right;
+		  }// end after
+		}//end nav a.more
 	}
 
-	#social-cpass{
+	.social-cpass{
 		display:none;
+
+		a{
+			&:hover{
+				color:$quadrary;
+			}
+		}
+		@include breakpoint($bp-mobile2-2-608){
+		  display:block;
+		}
 	}
 
 	#nav-cpass{
@@ -58,5 +152,9 @@
 			}
 
 		}
+	}//end #nav-CPASS
+
+	.long-menu{
+		display:none;
 	}
 }

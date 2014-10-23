@@ -9,7 +9,6 @@
 
   	}
 	.wvu-masthead{
-		padding:0 1.25%;
 		.wvu-masthead-container{
 
 		}
@@ -67,8 +66,9 @@
 			}//end #college.footer .container
 		}//end #colllege.footer
 
-		#wvu.footer{
+		#wvu-footer.footer{
 			.container{
+				width:100%;
 				.wvu-credits{}//end .wvu-credits
 				.wvu-icons{}//end .wvu-icons
 

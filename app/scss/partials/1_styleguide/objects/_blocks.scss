@@ -30,7 +30,7 @@
 		}
 	}
 
-	@media all and (min-width: $bp-desktop2) {
+	@media all and (min-width: $bp-desktop2-1) {
 		position: relative;
 
 		.b-text {
@@ -58,7 +58,7 @@
 	}
 
 	.b-thumb {
-		@media all and (min-width: $bp-mobile2) {
+		@media all and (min-width: $bp-mobile2-1) {
 			display: table-cell;
 			vertical-align: top;	
 	  		width: 30%;
@@ -73,7 +73,7 @@
 	}
 
 	.b-text {
-		@media all and (min-width: $bp-mobile2) {
+		@media all and (min-width: $bp-mobile2-1) {
 			display: table-cell;
 			width: 70%;
 			padding: 0 $pad;

@@ -1,13 +1,18 @@
-#social-cpass a{
-  float: left;
-  height: 34px;
-  width: 34px;
+.social-cpass a{
+  float: right;
+  height: ms(3);
+  width: ms(3);
   overflow: hidden;
-  text-indent: -300000px;
-  background: url(../images/social.png) -13px -12px no-repeat;
+  color:$white;
   padding: 4px;
+  @include rhythm(0, 0, $ms-1n, 0, $font-size-large);
+  @include adjust-font-size-to($font-size-large);
+  span{ visibility: hidden;}
+  text-shadow: 0 8px 11px darken($vb-DarkNavy, 18);
+  &::before{
+  }
   &.facebook{
-  	background-position: -13px -12px;
+  	@extend .icon-fb;
   }
   &.twitter{
   	background-position: -13px -285px;

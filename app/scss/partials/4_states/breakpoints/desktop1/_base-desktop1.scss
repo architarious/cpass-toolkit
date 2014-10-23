@@ -1,21 +1,49 @@
-@include breakpoint($bp-desktop1){
+@include breakpoint($bp-desktop1-1){
   
   $grids: 12;
   $gutters: 1/3;
   body{
   	.container, .wvu-masthead-container{
-  		max-width:$bp-desktop2;
+  		max-width:$bp-desktop2-1;
+  		width: ms(17);
+  		@include breakpoint($bp-desktop1-2){
+  			max-width:$bp-desktop2-2;
+  		}
+  		@include breakpoint($bp-desktop1-3){
+  			max-width:$bp-desktop2-3;
+  		}
+  		@include breakpoint($bp-desktop1-4){
+  			max-width:$bp-desktop2-4;
+  		}
+
   		
   	}
-	.wvu-masthead{
+  	.wvu-masthead-wrapper{
+  		
+	  .wvu-masthead{
 		.wvu-masthead-container{
+		  
 
 		}
-	}//end /wvu-masthead
+	  }//end /wvu-masthead
+	}
 
 	header{
-		#college-masthead{
+		&#masthead_cpass{
 			.container{
+			  @include breakpoint($bp-desktop1-3){
+			  	.logo-short-wrapper{
+			  	  @include grid-span(10,1);
+			  	}
+  		        .short-menu-container{
+  		          ul{
+  		            display:block;
+  		   	      }
+  		   	    }//end .short-menu-container
+  		   	    .social-cpass{
+  		   	      @include grid-span(2,11);
+  		   	    }	  
+  		  	  }//end breakpoint
 
 			}//end #college-masthead.container
 		}//end #college-masthead
@@ -113,15 +141,27 @@
 				#footer_feature{}//end #footer_feature
 			}//end #college.footer .container
 		}//end #colllege.footer
-
-		#wvu.footer{
+		.wvu-footer-wrapper
+		#wvu-footer{
 			.container{
+				max-width:$bp-desktop2-1;
+  				width: ms(17);
+  				@include breakpoint($bp-desktop1-2){
+  					max-width:$bp-desktop2-2;
+  				}
+  				@include breakpoint($bp-desktop1-3){
+  					max-width:$bp-desktop2-3;
+  				}
+  				@include breakpoint($bp-desktop1-4){
+  					max-width:$bp-desktop2-4;
+  				}
 				.wvu-credits{}//end .wvu-credits
 				.wvu-icons{}//end .wvu-icons
 
 			}//end #wvu.footer .container
 		}//end #wvu.footer
 		
+
 	}//end footer.footer
 }//end body
 }//end breakpoint

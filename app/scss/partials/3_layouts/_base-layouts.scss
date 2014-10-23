@@ -7,15 +7,29 @@
  
 
 
-body{     
-	
-	.wvu-masthead{
+body{    
+
+
+   background:url(../images/bg-3.jpg) #333e48 repeat; 
+
+	#page-wrap{
+		background: radial-gradient(at top,rgba(255,254,251, 0.08), rgba(51,62,72,0));
+		float:left;
+		width:100%;
+	}
+	.wvu-masthead-wrapper{
+		width:100%;
+		padding:0;
+		float:left;
+	  .wvu-masthead{
 		width:100%;
 		float:left;
+
 		.wvu-masthead-container{
 
 		}
-	}//end /wvu-masthead
+	  }//end /wvu-masthead
+	}//end .wvu-masthead-wrapper
 	#masthead-cpass{
 		width:100%;
 		float:left;
@@ -24,7 +38,8 @@ body{
 		}//end #college-masthead.container
 	}//end #college-masthead
 	header{
-
+		float:left;
+		width:100%;
 		.container{
 			a.site-logo{}
 			nav.nav.primary{}
@@ -77,7 +92,7 @@ body{
 			}//end #college.footer .container
 		}//end #colllege.footer
 
-		#wvu.footer{
+		#wvu-footer{
 			width:100%;
 			float:left;
 			.container{

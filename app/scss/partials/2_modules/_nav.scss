@@ -1,7 +1,7 @@
 header{
 	.site-logo{
 		display:none;
-		@include breakpoint($bp-tablet){
+		@include breakpoint($bp-tablet-1){
 			//display:block;
 		}
 	}
@@ -25,7 +25,7 @@ nav{
 		//@include standard-box-shadow();
 		//@include standard-border-radius();
 		.navbar-brand{
-		@include breakpoint($bp-tablet){
+		@include breakpoint($bp-tablet-1){
 			//display:none;
 		 }//end breakpoint
 		}//end .nave_site-logo
@@ -107,7 +107,7 @@ nav{
 				}
 			}
 
-		@include breakpoint($bp-tablet){
+		@include breakpoint($bp-tablet-1){
 			@include navigation-list;
 			li{
 				width: auto;

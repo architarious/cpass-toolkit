@@ -22,7 +22,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.icon-flyingWV:before {
+	content: "\e6da";
+}
 .icon-rss:before {
 	content: "\e600";
 }

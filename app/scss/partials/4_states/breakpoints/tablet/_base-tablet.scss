@@ -1,21 +1,67 @@
-@include breakpoint($bp-tablet){
+@include breakpoint($bp-tablet-1){
   $grids: 8;
   $gutters: 1/3;
   //@include background-grid;
 
   body{
+  	font-size:16px;
   	.container, .wvu-masthead-container{
-  		max-width:$bp-desktop1;
-  	}
-	.wvu-masthead{
-		.wvu-masthead-container{
+  		max-width:$bp-desktop1-1;
+  		width: ms(16);
+  		@include breakpoint($bp-tablet-2){
+  			max-width:860px;
+  		}
 
+  	}
+  	.wvu-masthead-wrapper{
+  		
+  		
+	  .wvu-masthead{
+	  	
+		.wvu-masthead-container{
+			ul{display:block;}
+			border-bottom-left-radius: ms(3);
+			border-bottom-right-radius: ms(3);
 		}
-	}//end /wvu-masthead
+	  }//end /wvu-masthead
+	}//end .wvu-masthead-wrapper
 
 	header{
-		#college-masthead{
+		&#masthead_cpass{
 			.container{
+				.logo-short-wrapper{
+					@include grid-span(6,1);
+				}
+				.logo-container{
+				  float:left;
+				  @include breakpoint($bp-tablet-2){
+				  	border-right: ms(-7) solid darken($vb-DarkNavy, 12);
+				  	box-shadow: 1px 0 0px darken($vb-DarkNavy,2 );
+			        padding-right: ms(-2);
+			        margin-right: ms(-2);
+				  }
+				  .logo-cpass{
+				    @include rhythm(0, $ms-3n, $ms-1n, 0, $font-size-med);
+				    @include adjust-font-size-to($font-size-med);
+				    span{display:inline;}
+				  }
+				}//end logo-container
+				.social-cpass{
+				  @include grid-span(3,6);
+				  @include breakpoint($bp-tablet-2){
+				    @include grid-span(2,7);
+				  }
+				  //@include rhythm(0, 0, $ms-1n, 0, $font-size-med);
+				  //@include adjust-font-size-to($font-size-med);	
+				}
+
+				.short-menu-container{
+				  @include breakpoint($bp-tablet-2){
+				    display:block;
+				    ul{ display:none;}
+				    float:left;
+				  }
+				}
 
 			}//end #college-masthead.container
 		}//end #college-masthead
@@ -76,6 +122,9 @@
 	}//end section#postfix
 
 	footer{
+		.footer{
+			padding:0;
+		}
 		#college.footer{
 			.container{
 				#footer_contact{}//end #footer_contact
@@ -83,13 +132,27 @@
 			}//end #college.footer .container
 		}//end #colllege.footer
 
-		#wvu.footer{
+		.wvu-footer-wrapper{
+
+		#wvu-footer{
 			.container{
+				margin:0 auto;
+				border-top-left-radius: ms(3) ;
+			    border-top-right-radius: ms(3);
+			    max-width:$bp-desktop1-1;
+  				width: ms(16);
+  				@include breakpoint($bp-tablet-2){
+  					max-width:860px;
+  				}
+
+				.wvu-credits{}//end .wvu-credits
 				.wvu-credits{}//end .wvu-credits
 				.wvu-icons{}//end .wvu-icons
 
 			}//end #wvu.footer .container
 		}//end #wvu.footer
+
+	}
 		
 	}//end footer.footer
 }//end body
