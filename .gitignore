@@ -3,6 +3,11 @@
 # We've included a list of the most common files we don't want to version track here.
 # Much credit goes to: https://github.com/github/gitignore
 
+# ignore dev folders
+.sass-cache
+bower_components
+node_modules
+
 # Ignore annoying OSX Files
 .DS_Store
 .AppleDouble
@@ -31,6 +36,8 @@ Desktop.ini
 
 ## Recycle Bin used on file shares
 $RECYCLE.BIN/
+
+
 
 
 # Sass stuffs
