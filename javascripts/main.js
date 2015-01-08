@@ -23,6 +23,7 @@ requirejs.config({
 
         'bigTitles' : '../app/bigTitles', 
         'smoothScroll' : '../app/smoothScroll', 
+        'dropdown' : '../app/dropdown.js',
 
 
         'eq' : 'lib/eq.min',

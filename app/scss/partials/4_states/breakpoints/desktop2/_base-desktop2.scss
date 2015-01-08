@@ -141,5 +141,28 @@
 		}
 		
 	}//end footer.footer
+
+	.long-menu{
+		//@include breakpoint($bp-tablet-2){
+		font-size:16px;
+		  .wrapper{
+		  	top: ms(8);
+		  	//max-height:67em;
+		  	nav{
+		  	  column-count:4;
+		  	  column-gap:ms(-1);
+		  	}
+		  	section{
+		  		border-bottom:0;
+		  		
+		  	}
+		  	.searchbar{
+		  		//@include grid-span(16,1);
+		  		//clear:both;
+		  	}
+
+		  }//end .wrapper
+		//}//end breakpoint
+	}//end .long-menu
 }//end body
 }//end breakpoint

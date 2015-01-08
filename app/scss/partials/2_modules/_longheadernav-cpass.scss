@@ -1,0 +1,66 @@
+.long-menu{
+	display:none;
+
+	.wrapper{
+		position:absolute;
+		top: ms(8);
+		left:0;
+		z-index:200;
+		width:100%;
+		background:url(../images/noise.png) repeat darken($vb-DarkNavy,10);
+		float:left;
+		margin:0;
+		padding:0;
+		border-bottom:$quadrary ms(-3) solid;
+		box-shadow: 0 ms(-8) ms(-8) 0 set-alpha($black, 0.5);
+	}
+	.search-wrapper{
+		width:100%;
+		float:left;
+		background:url(../images/noise.png) repeat darken($vb-Charcoal,13);
+		border-bottom:$vb-DarkNavy 1px solid;
+		border-top:$vb-Charcoal 1px solid;
+	}
+
+	#nav-cpass-full section{
+		h1{
+			font-family:$LtCn;
+			font-weight:200;
+			color:$white;
+			text-shadow: 0 2px 1px darken($vb-Charcoal, 20); 
+			@include adjust-font-size-to($font-size-large);
+		    @include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-large);
+		    text-align:left;			    
+		}
+		a{	
+		  background:none;
+		  color:lighten($quadrary, 5); 
+		  @include adjust-font-size-to($font-size-small-2);
+		  @include rhythm(0, $ms-6n, $ms-6n, 0, $font-size-small-2);
+		  text-decoration:underline;
+		  &:hover{
+		  	color:lighten($quadrary, 20); 
+		  }
+		}
+
+		h2{
+		 @include adjust-font-size-to($font-size-med);
+		 @include rhythm(0, $ms-6n, $ms-6n, 0, $font-size-med);
+		 border:0;
+		 a{
+		 	color:$white;
+		 	@include adjust-font-size-to($font-size-med);
+		    @include rhythm(0, $ms-6n, $ms-6n, 0, $font-size-med);
+		 }
+		}
+
+		ul li{
+			display:inline-block;
+			float:left;
+			width:100%;
+			@include rhythm(0, 0, $ms-8n, 0, $font-size-small-2);
+			padding-left:ms(-2);
+		}
+		
+    }//end section
+}//end .long-menu

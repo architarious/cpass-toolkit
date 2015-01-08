@@ -163,5 +163,26 @@
 		
 
 	}//end footer.footer
+	.long-menu{
+		//@include breakpoint($bp-tablet-2){
+		  
+		  .wrapper{
+		  	
+		  	//max-height:67em;
+		  	nav{
+		  	  column-count:3;
+		  	  column-gap:ms(-1);
+		  	}
+		  	section{
+		  		
+		  	}
+		  	.searchbar{
+		  		//@include grid-span(8,1);
+		  		//clear:both;
+		  	}
+
+		  }//end .wrapper
+		//}//end breakpoint
+	}//end .long-menu
 }//end body
 }//end breakpoint

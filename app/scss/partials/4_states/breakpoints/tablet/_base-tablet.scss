@@ -63,7 +63,10 @@
 				  }
 				}
 
+
+
 			}//end #college-masthead.container
+
 		}//end #college-masthead
 
 		.container{
@@ -155,6 +158,32 @@
 	}
 		
 	}//end footer.footer
+
+	.long-menu{
+		@include breakpoint($bp-tablet-2){
+		  display:block;
+		  .wrapper{
+		  	top:99px;
+		  	//max-height:79em;
+		  	nav{
+		  	  column-count:2;
+		  	  column-gap:ms(-1);
+		  	}
+		  	section{
+		  		display:inline-block;
+		  		width:100%;
+		  		//float:right;
+		  		border-bottom: ms(-3) solid darken($vb-Charcoal, 5);
+		  		
+		  	}
+		  	.searchbar{
+		  		@include grid-span(8,1);
+		  		clear:both;
+		  	}
+
+		  }//end .wrapper
+		}//end breakpoint
+	}//end .long-menu
 }//end body
 
 }

@@ -12184,9 +12184,94 @@ div.message .close {
   color: #ffc656;
   background: #767677;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-cpass\.scss}line{font-family:\00003157}}
-#masthead_cpass .long-menu {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\000031}}
+.long-menu {
   display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\000034}}
+.long-menu .wrapper {
+  position: absolute;
+  top: 109.66563451px;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  background: url(../images/noise.png) repeat #1e242a;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border-bottom: #ffc656 7.6393201188px solid;
+  -webkit-box-shadow: 0 2.3343684751px 2.3343684751px 0 rgba(30, 38, 44, 0.5);
+          box-shadow: 0 2.3343684751px 2.3343684751px 0 rgba(30, 38, 44, 0.5);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\0000317}}
+.long-menu .search-wrapper {
+  width: 100%;
+  float: left;
+  background: url(../images/noise.png) repeat #333334;
+  border-bottom: #333e48 1px solid;
+  border-top: #545456 1px solid;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\0000326}}
+.long-menu #nav-cpass-full section h1 {
+  font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
+  font-weight: 200;
+  color: #fffefb;
+  text-shadow: 0 2px 1px #222222;
+  font-size: 1.618034em;
+  line-height: 1.1600884159em;
+  margin-top: 0em;
+  padding-top: 0.369261949em;
+  padding-bottom: 0.369261949em;
+  margin-bottom: 0em;
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\0000335}}
+.long-menu #nav-cpass-full section a {
+  background: none;
+  color: #ffcf70;
+  font-size: 0.7725424806em;
+  line-height: 1.6198138374em;
+  margin-top: 0em;
+  padding-top: 0.3822760656em;
+  padding-bottom: 0.3822760656em;
+  margin-bottom: 0em;
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\0000341}}
+.long-menu #nav-cpass-full section a:hover {
+  color: #ffe8bc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\0000346}}
+.long-menu #nav-cpass-full section h2 {
+  font-size: 1em;
+  line-height: 1.251375em;
+  margin-top: 0em;
+  padding-top: 0.2953245em;
+  padding-bottom: 0.2953245em;
+  margin-bottom: 0em;
+  border: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\0000350}}
+.long-menu #nav-cpass-full section h2 a {
+  color: #fffefb;
+  font-size: 1em;
+  line-height: 1.251375em;
+  margin-top: 0em;
+  padding-top: 0.2953245em;
+  padding-bottom: 0.2953245em;
+  margin-bottom: 0em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_longheadernav-cpass\.scss}line{font-family:\0000357}}
+.long-menu #nav-cpass-full section ul li {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0.2364928203em;
+  margin-bottom: 0em;
+  padding-left: 9.8885437512px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\000032}}
@@ -12641,7 +12726,7 @@ body footer #wvu-footer.footer .container {
     margin-right: 0;
     clear: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\0000388}}
   body section#core .container #main article h1 {
     text-align: left;
     font-size: 3.2725425314em;
@@ -12651,7 +12736,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.2954095592em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\0000393}}
   body section#core .container #main article h2 {
     font-size: 2.0225425em;
     line-height: 1.2374276437em;
@@ -12660,7 +12745,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0.1126059156em;
     margin-bottom: 0.4779827107em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\0000397}}
   body section#core .container #main article h3 {
     font-size: 1.25em;
     line-height: 1.50165em;
@@ -12669,7 +12754,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.7733922773em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003101}}
   body section#core .container #main article h4 {
     font-size: 1.25em;
     line-height: 1.50165em;
@@ -12678,7 +12763,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.7733922773em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003105}}
   body section#core .container #main article h5 {
     font-size: 1.25em;
     line-height: 1.50165em;
@@ -12687,7 +12772,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.7733922773em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003109}}
   body section#core .container #main article h6 {
     font-size: 1em;
     line-height: 1.251375em;
@@ -12696,11 +12781,11 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.9667403467em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003128}}
   body footer .footer {
     padding: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003141}}
   body footer .wvu-footer-wrapper #wvu-footer .container {
     margin: 0 auto;
     border-top-left-radius: 32.36068px;
@@ -12747,9 +12832,43 @@ body footer #wvu-footer.footer .container {
   }
 }
 @media (min-width: 48rem) and (min-width: 55rem) {
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003141}}
   body footer .wvu-footer-wrapper #wvu-footer .container {
     max-width: 860px;
+  }
+}
+@media (min-width: 48rem) and (min-width: 55rem) {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003162}}
+  body .long-menu {
+    display: block;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003165}}
+  body .long-menu .wrapper {
+    top: 99px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003168}}
+  body .long-menu .wrapper nav {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 12.3606796891px;
+       -moz-column-gap: 12.3606796891px;
+            column-gap: 12.3606796891px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003172}}
+  body .long-menu .wrapper section {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 7.6393201188px solid #474749;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003179}}
+  body .long-menu .wrapper .searchbar {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: both;
   }
 }
 
@@ -12972,6 +13091,15 @@ body footer #wvu-footer.footer .container {
     max-width: 78rem;
     width: 939.5743275374px;
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop1\/_base-desktop1\.scss}line{font-family:\00003172}}
+  body .long-menu .wrapper nav {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 12.3606796891px;
+       -moz-column-gap: 12.3606796891px;
+            column-gap: 12.3606796891px;
+  }
 }
 @media (min-width: 60rem) and (min-width: 65rem) {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop1\/_base-desktop1\.scss}line{font-family:\000036}}
@@ -13034,7 +13162,6 @@ body footer #wvu-footer.footer .container {
     max-width: 95rem;
   }
 }
-
 @media (min-width: 78rem) {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\000036}}
   body {
@@ -13138,6 +13265,27 @@ body footer #wvu-footer.footer .container {
   body footer .wvu-footer-wrapper #wvu-footer .container {
     max-width: 2000px;
     width: 1170px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\00003145}}
+  body .long-menu {
+    font-size: 16px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\00003148}}
+  body .long-menu .wrapper {
+    top: 109.66563451px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\00003151}}
+  body .long-menu .wrapper nav {
+    -webkit-column-count: 4;
+       -moz-column-count: 4;
+            column-count: 4;
+    -webkit-column-gap: 12.3606796891px;
+       -moz-column-gap: 12.3606796891px;
+            column-gap: 12.3606796891px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/desktop2\/_base-desktop2\.scss}line{font-family:\00003155}}
+  body .long-menu .wrapper section {
+    border-bottom: 0;
   }
 }
 @media (min-width: 78rem) and (min-width: 90rem) {
