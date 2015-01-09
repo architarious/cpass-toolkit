@@ -5,8 +5,8 @@
 
 # ignore dev folders
 .sass-cache
-bower_components
-node_modules
+bower_components/
+node_modules/
 app/mockup/*.psd
 
 # Ignore annoying OSX Files
