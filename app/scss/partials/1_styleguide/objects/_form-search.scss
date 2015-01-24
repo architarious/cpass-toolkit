@@ -1,0 +1,59 @@
+.form-search__wrapper{
+	float:left;
+	width:100%;
+	min-height:1em;	
+
+}
+.form-search{
+	//@include sassy-button( "flat", 3px, 16px, $tertiary, shade($tertiary, 20), $white, inset);
+	border-radius:3px;
+	font-size:$font-size-med;
+	background-color:$tertiary;
+    background-image:url(../images/noise.png) repeat;
+    padding:ms(-4);
+    @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
+    @include standard-box-shadow(tint($black, 15));
+    @include standard-transition(background-color);
+    @include standard-transition(box-shadow);
+    color:$white;
+    label{
+    	margin:0; padding:0;
+    	width:80%;
+    }
+}
+.form-search__submit{
+  color:$white;
+  float:left;
+  background:none;
+  margin-right: 5%;
+  width: 15%;	
+  border:0;
+  margin:0;
+  padding:0;
+  box-shadow:none;
+  min-height:ms(3);
+  &::before{
+	  font-family: 'icomoon';
+  	  content:"\e68f";
+  	  @include adjust-font-size-to($font-size-large);
+  	  @include standard-text-shadow($WVUBlue);
+  }
+}
+
+
+.form-search__field{
+	color:$white;
+	min-height:ms(3);
+	background:none;
+	width:100%;
+	margin:0;
+	border:0;
+	border-bottom:1px solid $vb-PaleGrey;
+	padding:0;
+	@include adjust-font-size-to($font-size-med);
+	font-family:$LtCn;
+	font-weight:300;
+	border-radius:0;
+	box-shadow:none;
+
+}

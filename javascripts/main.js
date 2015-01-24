@@ -23,9 +23,8 @@ requirejs.config({
 
         'bigTitles' : '../app/bigTitles', 
         'smoothScroll' : '../app/smoothScroll', 
-        'dropdown' : '../app/dropdown.js',
-
-
+        'dropdown' : '../app/dropdown',
+        'utils' : '../app/utils',
         'eq' : 'lib/eq.min',
     },
       shim: {
@@ -41,9 +40,10 @@ requirejs.config({
         'bootstrap/tab':        { deps: ['jquery'], exports: '$.fn.tab'        },
         'bootstrap/tooltip':    { deps: ['jquery'], exports: '$.fn.tooltip' },
         'bootstrap/transition': { deps: ['jquery'], exports: '$.fn.transition' },
-        'bigTitles' : { deps: ['jquery'], exports: '$.fn.bigTitles'},
-        'smoothScroll' : { deps: ['jquery'], exports: '$.fn.smoothScroll'},
-        'default' : { deps: ['jquery', 'bigTitles', 'smoothScroll', 'bootstrap/carousel', 'bootstrap/dropdown']}
+        'bigTitles' :           { deps: ['jquery'], exports: '$.fn.bigTitles'},
+        'smoothScroll' :        { deps: ['jquery'], exports: '$.fn.smoothScroll'},
+        'utils' :               { deps: ['jquery'], exports: '$.fn.utils'},
+        'default' :             { deps: ['jquery', 'bigTitles', 'smoothScroll', 'utils', 'bootstrap/carousel', 'bootstrap/dropdown']}
     },
 });
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
   <head>
     <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
     <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
@@ -23,6 +24,16 @@
 
   </head>
   <body class="template-<r:page:template:name /> page-<r:page:id />">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  
     <div class="cs-injection"></div>  
     <div id="page-wrap">    
     

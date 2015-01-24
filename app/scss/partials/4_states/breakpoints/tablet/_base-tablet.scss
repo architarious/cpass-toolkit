@@ -161,7 +161,7 @@
 
 	.long-menu{
 		@include breakpoint($bp-tablet-2){
-		  display:block;
+		  display:none;
 		  .wrapper{
 		  	top:99px;
 		  	//max-height:79em;

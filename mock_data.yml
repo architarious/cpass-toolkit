@@ -41,11 +41,11 @@ if_page_depth_gt: 1
 
 site_menu: |
   <ul>
-    <li class="active"><a href="#">Hello</a></li>
-    <li><a href="#">World</a></li>
-    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
-    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
-    <li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>
+    <li><a href="#">Future Students</a></li>
+    <li class="active" ><a href="#">Current Students</a></li>
+    <li><a href="#">Alumni & Development</a></li>
+    <li class="apply"><a href="#">Apply Now</a></li>
+    <!--<li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>-->
   </ul>
 
 sub_menu: |

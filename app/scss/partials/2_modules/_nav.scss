@@ -36,22 +36,43 @@ nav{
 		width:100%;
 
 	  .navbar-toggle{
-		border:0;
+		border:0; margin:0;
 		@include standard-transition;
-		max-width:4.95em;
-		@include rhythm($ms-3n, $ms-1n, $ms-1n, $ms-3n, $font-size-med);
-		background:tint($WVUGold, 10);
-		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset;
-		color:$WVUBlue;
+		width:100%;		
+		background:$vb-Gold url(../images/noise.png) repeat;
+		box-shadow: tint($vb-Gold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
+		color:shade($vb-Gold, 58);
+
 
 		&:hover, &:focus{
+			background:url(../images/noise.png) lighten($vb-Gold, 15) repeat;
+		}
+		&:active{
 			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
 		}
+		&.collapsed{
+			box-shadow: tint($vb-Gold, 20) 0 ms(-8) ms(-6) 0 inset, shade($black,30) 0 ms(-5) ms(-3) 0;
+		}
 		.navbar-toggle_title{
-			float:right;
+			text-align:left;
 			margin-top:-0.24em;
 			font-family:$BdCn;
 			font-weight:800;
+			@include adjust-font-size-to($font-size-med);
+			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
+			@include standard-text-shadow(tint($vb-Gold, 20));
+			letter-spacing:ms(-10);
+			float:left;	
+
+			&::before{
+				font-family: 'icomoon';
+				content:"\e618";
+				font-weight:100;
+				line-height:1.2em;
+				margin-top:-1px;
+				float:left;
+				color:shade($vb-Gold,30);
+			}
 		}
 		.icon-bar{
 			float:left;
@@ -78,20 +99,37 @@ nav{
 
 	}//end .navbar-header
 
-	#nav-primary{
-		border-bottom:shade($white, 5) solid;
+	#nav-primary.collapse{
+		padding:0;
+	
+	}
+
+	#nav-primary.collapse.in{
+		
+		@extend .white-noise;
+		background-color:$white;
+		border-bottom:$vb-Gold solid;
+		border-top:0;
+		float:left;
+		margin-top:-5px;
 		@include trailing-border(2px, $ms-5n);
+		padding-bottom:0;
+		box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
+
 		ul.navbar-nav{
+			border:0;
 			width:100%;
-			//border-top:shade($white, 10) 1px solid;
 			li{
 				width:100%;
 				float:left;
-				border-bottom:shade($white, 4) solid;
+				border-bottom:shade($white, ms(-2)) solid;
 				@include trailing-border(1px, $ms-7n);
 				&:last-child{
 					border-bottom:0;
 					margin-bottom:0;
+				}
+				&:first-child{
+					padding-top: 5px;
 				}
 				a{	
 					background:none;
@@ -99,10 +137,21 @@ nav{
 					@include adjust-font-size-to($font-size-med);
 					@include rhythm($ms-4n, $ms-5n, $ms-6n, $ms-4n, $font-size-med);
 					width:100%;
-					&:active{
-						background:$secondary url(../images/noise.png) repeat;
+
+					color:$tertiary;
+					font-family: $BdCn;
+					font-weight:800;
+					letter-spacing:ms(-10);
+
+					&:hover, &:focus{
+						color:tint($tertiary, 10);
+						@include standard-text-shadow(shade($white, 14));
 					}
-					font-weight:bold;
+					&:active{
+						color:$primary;
+					}
+
+					
 
 				}
 			}
@@ -115,7 +164,39 @@ nav{
 		}
 		}//end ul
 
+	  .navbar--more a{
+		width:100%;
+		float:left;
+		@extend .white-noise;
+		background-color:$secondary;
+		color:$primary;
+		text-align:center;
+		text-transform:uppercase;
+
+		font-family:$BdCn;
+		font-weight:800;
+		letter-spacing:ms(-10);
+
+		@include adjust-font-size-to($font-size-med);
+		@include rhythm($ms-3n, $ms-7n, $ms-7n, 0, $font-size-med);
+		@include standard-text-shadow(tint($secondary, 20));
+
+		&:hover, &:focus{
+			color:$tertiary;
+		}
+
+		&::after{
+			font-family:'icomoon';
+			content:'\e6c3';
+			color:shade($secondary, 10);
+			@include standard-text-shadow(tint($secondary, 40));
+		}
+
+	  }//end navbar--more
+
 	}// end #nav-primary
+
+
 }
 
 /**************************************

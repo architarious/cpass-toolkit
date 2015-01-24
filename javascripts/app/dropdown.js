@@ -1,6 +1,5 @@
 function dropdown(){
-  
-
+alert("does this work");
   $(".more").click( function(event){
      
     //determine if this element or other elements have been selected yet, 

@@ -125,6 +125,16 @@
 }
 
 ///////////////////////////////////
+///Add Noise
+//
+//DESCRIPTION: Used to apply white-noise bg
+//DEFAULT: same settings as buttons throughout site
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+///////////////////////////////////
+@mixin add-noise(){
+  background-image:url("../images/noise.png") repeat;
+}
+///////////////////////////////////
 ///Standard Box-Shadow
 //
 //DESCRIPTION: Used to apply consistent box-shadows throughout site

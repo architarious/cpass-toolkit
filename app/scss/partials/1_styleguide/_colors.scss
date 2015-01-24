@@ -6,6 +6,7 @@
 	
 	//SECONDARY PALLETTE
 		$SecLightGold: #ffe894 ;
+        $SecBlue:#005daa;
 		$SecMiddleBlue: #0079c1;
         $SecLightBlue: #a0c4da;
         $Purple: #27318b;
@@ -56,7 +57,7 @@
 	$information : #000db5;
   
  
-$cs-primary: $vb-FlatNavy;  
+$cs-primary: $WVUBlue;  
 //$cs-secondary: $WVUBlue;
 $cs-scheme: complement;
 $cs-hue-offset: 70;
@@ -64,7 +65,7 @@ $cs-brightness-offest: 30;
 $cs-colorblind:deuteranopia;
 
 
-$primary: #1e428a; //cs-primary(); //#19468d
+$primary: #00447c; //cs-primary(); //#19468d
 $secondary: #ede7dc; //cs-secondary(); $secondary: tint($pre-secondary, 85) ; // too light, darkening this up a bit. //#ede7dc
 $tertiary: #0079c1; //cs-tertiary(); //#0063ff got denied by UR
 $quadrary: #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25b

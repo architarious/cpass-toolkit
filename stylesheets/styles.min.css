@@ -8663,7 +8663,7 @@ button.close {
  ms(19) = 95.0164504677em 
  ms(20) = 122.9918779328em
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003376}}
 .visually-hidden {
   margin: -1px;
   padding: 0;
@@ -8674,7 +8674,7 @@ button.close {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003367}}
 .visually-hidden.focusable:active, .visually-hidden.focusable:focus {
   clip: auto;
   height: auto;
@@ -8692,6 +8692,11 @@ button.close {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_extendables\.scss}line{font-family:\0000319}}
 .clearfix:after {
   clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_extendables\.scss}line{font-family:\0000325}}
+.white-noise, nav #nav-primary.collapse.in, nav #nav-primary.collapse.in .navbar--more a, .footer--return {
+  background-image: url("../images/noise.png");
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-base\.scss}line{font-family:\0000324}}
@@ -8851,7 +8856,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, blockq
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\0000399}}
 h1 {
-  color: #4b67a1;
+  color: #336996;
   text-align: center;
   max-width: 20em;
   text-transform: uppercase;
@@ -8882,7 +8887,7 @@ h2 {
   border-bottom-style: solid;
   font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
   font-weight: 200;
-  color: #1e428a;
+  color: #00447c;
   border-top: 0;
   font-size: 1.618034em;
   line-height: 1.1600884159em;
@@ -8899,11 +8904,11 @@ h2 {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\00003128}}
 h2 a {
-  color: #18346e;
+  color: #003663;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\00003130}}
 h2 a:link, h2 a:active {
-  color: #1b3b7c;
+  color: #003d6f;
   text-decoration: none;
 }
 
@@ -8965,7 +8970,7 @@ h6 {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0.369155625em;
-  color: #5671a7;
+  color: #3f729c;
   font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -9009,14 +9014,14 @@ table tbody tr th, table thead tr th {
   font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
   font-weight: 800;
   color: #eae2d5;
-  background: url(../images/noise.png) #4465a7;
-  text-shadow: #122752 0 1px 0px;
+  background: url(../images/noise.png) #28689d;
+  text-shadow: #00284a 0 1px 0px;
   -webkit-box-shadow: rgba(30, 38, 44, 0.5) 0 3px 2px, rgba(255, 254, 251, 0.2) 0 1px 4px inset;
   box-shadow: rgba(30, 38, 44, 0.5) 0 3px 2px, rgba(255, 254, 251, 0.2) 0 1px 4px inset;
   text-transform: uppercase;
-  border: 1px solid #0c1a36;
-  border-top: 1px solid #8fa1c6;
-  border-bottom: 2px solid #163269;
+  border: 1px solid #000c16;
+  border-top: 1px solid #7fa3c0;
+  border-bottom: 2px solid #003058;
   text-align: center;
   padding: 16px;
   font-size: 1em;
@@ -9028,11 +9033,11 @@ table tbody tr th, table thead tr th {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\00003207}}
 table tbody tr th:first-child, table thead tr th:first-child {
-  border-left: 1px solid #152e60;
+  border-left: 1px solid #002849;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\00003210}}
 table tbody tr th:last-child, table thead tr th:last-child {
-  border-right: 1px solid #152e60;
+  border-right: 1px solid #002849;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\00003215}}
 table tbody tr td, table thead tr td {
@@ -9106,8 +9111,8 @@ article ol ol {
 article dl dt {
   font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
   font-weight: 800;
-  color: #10244b;
-  background: url(../images/noise.png) #4465a7;
+  color: #001a2f;
+  background: url(../images/noise.png) #28689d;
   padding: 0 9.8885437512px;
   font-size: 1.25em;
   line-height: 1.50165em;
@@ -9118,9 +9123,9 @@ article dl dt {
   text-shadow: 0 1px 0 rgba(255, 254, 251, 0.3);
   -webkit-box-shadow: #3f464b 0 2px 1px 0;
           box-shadow: #3f464b 0 2px 1px 0;
-  border: 1px solid #4b67a1;
-  border-top: 1px solid #3c66bb;
-  border-bottom: 1px solid #122956;
+  border: 1px solid #336996;
+  border-top: 1px solid #196fb7;
+  border-bottom: 1px solid #002441;
   max-width: 751.65946203px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_typography-college\.scss}line{font-family:\00003284}}
@@ -9145,11 +9150,11 @@ article dl dl dt {
   padding-top: 1.0010449515em;
   padding-bottom: 0.7726512004em;
   margin-bottom: 1.2513061894em;
-  background-color: #a5b3d0;
+  background-color: #99b4ca;
   -webkit-box-shadow: rgba(30, 38, 44, 0.1) 0 1px 1px, rgba(255, 254, 251, 0.2) 0 1px 1px inset;
   box-shadow: rgba(30, 38, 44, 0.1) 0 1px 1px, rgba(255, 254, 251, 0.2) 0 1px 1px inset;
-  border-top: 1px solid #345495;
-  border-bottom: 1px solid #0a1730;
+  border-top: 1px solid #195689;
+  border-bottom: 1px solid #000a13;
   text-indent: 16px;
   text-indent: 1rem;
 }
@@ -10620,42 +10625,42 @@ ul li, .sidebar li, aside li {
   padding: 0 !important;
   margin: -1px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
 .btn:hover, .btn:focus {
   -webkit-box-shadow: #52585d 0 2px 4px;
   box-shadow: #52585d 0 2px 4px;
   color: #e5e4e1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003226}}
 .btn:active {
   background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003231}}
 .btn:visited {
   color: #ffcf70;
   text-shadow: 0 1px 0 rgba(255, 254, 251, 0.68541);
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003237}}
 .btn.disabled {
   background: #fff1c8;
   color: #748da2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003240}}
 .btn.disabled:hover, .btn.disabled:focus, .btn.disabled:active {
   background: #fff1c8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003243}}
 .btn.disabled:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003245}}
 .btn.disabled:before:hover:before, .btn.disabled:before:focus:before, .btn.disabled:before:active:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 .btn:before {
   background-color: #006cad;
   background-image: url(../images/right_arrow.png);
@@ -10685,13 +10690,13 @@ ul li, .sidebar li, aside li {
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003270}}
 .btn:hover:before, .btn:focus:before {
   background-color: #004873;
   -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
   box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003275}}
 .btn:active:before {
   background-color: #0fa5ff;
   -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
@@ -10762,42 +10767,42 @@ ul li, .sidebar li, aside li {
   padding: 0 !important;
   margin: -1px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
 .btn--small:hover, .btn--small:focus {
   -webkit-box-shadow: #52585d 0 2px 4px;
   box-shadow: #52585d 0 2px 4px;
   color: #e5e4e1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003226}}
 .btn--small:active {
   background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003231}}
 .btn--small:visited {
   color: #ffcf70;
   text-shadow: 0 1px 0 rgba(255, 254, 251, 0.68541);
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003237}}
 .btn--small.disabled {
   background: #fff1c8;
   color: #748da2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003240}}
 .btn--small.disabled:hover, .btn--small.disabled:focus, .btn--small.disabled:active {
   background: #fff1c8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003243}}
 .btn--small.disabled:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003245}}
 .btn--small.disabled:before:hover:before, .btn--small.disabled:before:focus:before, .btn--small.disabled:before:active:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 .btn--small:before {
   background-color: #006cad;
   background-image: url(../images/right_arrow.png);
@@ -10827,13 +10832,13 @@ ul li, .sidebar li, aside li {
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003270}}
 .btn--small:hover:before, .btn--small:focus:before {
   background-color: #004873;
   -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
   box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003275}}
 .btn--small:active:before {
   background-color: #0fa5ff;
   -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
@@ -10904,42 +10909,42 @@ ul li, .sidebar li, aside li {
   padding: 0 !important;
   margin: -1px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
 .btn--large:hover, p a.action:hover, .btn--large:focus, p a.action:focus {
   -webkit-box-shadow: #52585d 0 2px 4px;
   box-shadow: #52585d 0 2px 4px;
   color: #e5e4e1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003226}}
 .btn--large:active, p a.action:active {
   background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003231}}
 .btn--large:visited, p a.action:visited {
   color: #ffcf70;
   text-shadow: 0 1px 0 rgba(255, 254, 251, 0.68541);
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003237}}
 .btn--large.disabled, p a.disabled.action {
   background: #fff1c8;
   color: #748da2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003240}}
 .btn--large.disabled:hover, p a.disabled.action:hover, .btn--large.disabled:focus, p a.disabled.action:focus, .btn--large.disabled:active, p a.disabled.action:active {
   background: #fff1c8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003243}}
 .btn--large.disabled:before, p a.disabled.action:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003245}}
 .btn--large.disabled:before:hover:before, p a.disabled.action:before:hover:before, .btn--large.disabled:before:focus:before, p a.disabled.action:before:focus:before, .btn--large.disabled:before:active:before, p a.disabled.action:before:active:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 .btn--large:before, p a.action:before {
   background-color: #006cad;
   background-image: url(../images/right_arrow.png);
@@ -10969,13 +10974,13 @@ ul li, .sidebar li, aside li {
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003270}}
 .btn--large:hover:before, p a.action:hover:before, .btn--large:focus:before, p a.action:focus:before {
   background-color: #004873;
   -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
   box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003275}}
 .btn--large:active:before, p a.action:active:before {
   background-color: #0fa5ff;
   -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
@@ -11613,42 +11618,42 @@ form input.btn::-moz-focus-inner, form input.button::-moz-focus-inner, form inpu
   padding: 0 !important;
   margin: -1px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
 form input.btn:hover, form input.btn:focus, form input.button:hover, form input.button:focus, form input.submit:hover, form input.submit:focus, form textarea.btn:hover, form textarea.btn:focus, form textarea.button:hover, form textarea.button:focus, form textarea.submit:hover, form textarea.submit:focus, form .form-control.btn:hover, form .form-control.btn:focus, form .form-control.button:hover, form .form-control.button:focus, form .form-control.submit:hover, form .form-control.submit:focus {
   -webkit-box-shadow: #52585d 0 2px 4px;
   box-shadow: #52585d 0 2px 4px;
   color: #e5e4e1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003226}}
 form input.btn:active, form input.button:active, form input.submit:active, form textarea.btn:active, form textarea.button:active, form textarea.submit:active, form .form-control.btn:active, form .form-control.button:active, form .form-control.submit:active {
   background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003231}}
 form input.btn:visited, form input.button:visited, form input.submit:visited, form textarea.btn:visited, form textarea.button:visited, form textarea.submit:visited, form .form-control.btn:visited, form .form-control.button:visited, form .form-control.submit:visited {
   color: #ffcf70;
   text-shadow: 0 1px 0 rgba(255, 254, 251, 0.68541);
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003237}}
 form input.btn.disabled, form input.button.disabled, form input.submit.disabled, form textarea.btn.disabled, form textarea.button.disabled, form textarea.submit.disabled, form .form-control.btn.disabled, form .form-control.button.disabled, form .form-control.submit.disabled {
   background: #fff1c8;
   color: #748da2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003240}}
 form input.btn.disabled:hover, form input.btn.disabled:focus, form input.btn.disabled:active, form input.button.disabled:hover, form input.button.disabled:focus, form input.button.disabled:active, form input.submit.disabled:hover, form input.submit.disabled:focus, form input.submit.disabled:active, form textarea.btn.disabled:hover, form textarea.btn.disabled:focus, form textarea.btn.disabled:active, form textarea.button.disabled:hover, form textarea.button.disabled:focus, form textarea.button.disabled:active, form textarea.submit.disabled:hover, form textarea.submit.disabled:focus, form textarea.submit.disabled:active, form .form-control.btn.disabled:hover, form .form-control.btn.disabled:focus, form .form-control.btn.disabled:active, form .form-control.button.disabled:hover, form .form-control.button.disabled:focus, form .form-control.button.disabled:active, form .form-control.submit.disabled:hover, form .form-control.submit.disabled:focus, form .form-control.submit.disabled:active {
   background: #fff1c8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003243}}
 form input.btn.disabled:before, form input.button.disabled:before, form input.submit.disabled:before, form textarea.btn.disabled:before, form textarea.button.disabled:before, form textarea.submit.disabled:before, form .form-control.btn.disabled:before, form .form-control.button.disabled:before, form .form-control.submit.disabled:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003245}}
 form input.btn.disabled:before:hover:before, form input.btn.disabled:before:focus:before, form input.btn.disabled:before:active:before, form input.button.disabled:before:hover:before, form input.button.disabled:before:focus:before, form input.button.disabled:before:active:before, form input.submit.disabled:before:hover:before, form input.submit.disabled:before:focus:before, form input.submit.disabled:before:active:before, form textarea.btn.disabled:before:hover:before, form textarea.btn.disabled:before:focus:before, form textarea.btn.disabled:before:active:before, form textarea.button.disabled:before:hover:before, form textarea.button.disabled:before:focus:before, form textarea.button.disabled:before:active:before, form textarea.submit.disabled:before:hover:before, form textarea.submit.disabled:before:focus:before, form textarea.submit.disabled:before:active:before, form .form-control.btn.disabled:before:hover:before, form .form-control.btn.disabled:before:focus:before, form .form-control.btn.disabled:before:active:before, form .form-control.button.disabled:before:hover:before, form .form-control.button.disabled:before:focus:before, form .form-control.button.disabled:before:active:before, form .form-control.submit.disabled:before:hover:before, form .form-control.submit.disabled:before:focus:before, form .form-control.submit.disabled:before:active:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 form input.btn:before, form input.button:before, form input.submit:before, form textarea.btn:before, form textarea.button:before, form textarea.submit:before, form .form-control.btn:before, form .form-control.button:before, form .form-control.submit:before {
   background-color: #006cad;
   background-image: url(../images/right_arrow.png);
@@ -11678,13 +11683,13 @@ form input.btn:before, form input.button:before, form input.submit:before, form 
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003270}}
 form input.btn:hover:before, form input.btn:focus:before, form input.button:hover:before, form input.button:focus:before, form input.submit:hover:before, form input.submit:focus:before, form textarea.btn:hover:before, form textarea.btn:focus:before, form textarea.button:hover:before, form textarea.button:focus:before, form textarea.submit:hover:before, form textarea.submit:focus:before, form .form-control.btn:hover:before, form .form-control.btn:focus:before, form .form-control.button:hover:before, form .form-control.button:focus:before, form .form-control.submit:hover:before, form .form-control.submit:focus:before {
   background-color: #004873;
   -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
   box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003275}}
 form input.btn:active:before, form input.button:active:before, form input.submit:active:before, form textarea.btn:active:before, form textarea.button:active:before, form textarea.submit:active:before, form .form-control.btn:active:before, form .form-control.button:active:before, form .form-control.submit:active:before {
   background-color: #0fa5ff;
   -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
@@ -11783,42 +11788,42 @@ form .submit input::-moz-focus-inner, form .submit button::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
 form .submit input:hover, form .submit input:focus, form .submit button:hover, form .submit button:focus {
   -webkit-box-shadow: #52585d 0 2px 4px;
   box-shadow: #52585d 0 2px 4px;
   color: #e5e4e1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003226}}
 form .submit input:active, form .submit button:active {
   background: #28afff;
   -webkit-box-shadow: #8b9093 0 4px 6px;
   box-shadow: #8b9093 0 4px 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003231}}
 form .submit input:visited, form .submit button:visited {
   color: #ffcf70;
   text-shadow: 0 1px 0 rgba(255, 254, 251, 0.68541);
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003237}}
 form .submit input.disabled, form .submit button.disabled {
   background: #fff1c8;
   color: #748da2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003240}}
 form .submit input.disabled:hover, form .submit input.disabled:focus, form .submit input.disabled:active, form .submit button.disabled:hover, form .submit button.disabled:focus, form .submit button.disabled:active {
   background: #fff1c8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003243}}
 form .submit input.disabled:before, form .submit button.disabled:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003245}}
 form .submit input.disabled:before:hover:before, form .submit input.disabled:before:focus:before, form .submit input.disabled:before:active:before, form .submit button.disabled:before:hover:before, form .submit button.disabled:before:focus:before, form .submit button.disabled:before:active:before {
   background: #ffebaf;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003252}}
 form .submit input:before, form .submit button:before {
   background-color: #006cad;
   background-image: url(../images/right_arrow.png);
@@ -11848,13 +11853,13 @@ form .submit input:before, form .submit button:before {
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003270}}
 form .submit input:hover:before, form .submit input:focus:before, form .submit button:hover:before, form .submit button:focus:before {
   background-color: #004873;
   -webkit-box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
   box-shadow: black 0 5px 0 inset, #28afff 0 1px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003275}}
 form .submit input:active:before, form .submit button:active:before {
   background-color: #0fa5ff;
   -webkit-box-shadow: black 0 1px 0 inset, #28afff 0 3px 0;
@@ -11943,6 +11948,89 @@ div.message.notice:before {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_messages\.scss}line{font-family:\0000359}}
 div.message .close {
   margin-top: -41.618px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_form-search\.scss}line{font-family:\000031}}
+.form-search__wrapper {
+  float: left;
+  width: 100%;
+  min-height: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_form-search\.scss}line{font-family:\000037}}
+.form-search {
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: #0079c1;
+  background-image: url(../images/noise.png) repeat;
+  padding: 6.111456095px;
+  margin-top: 0em;
+  padding-top: 0.47802525em;
+  padding-bottom: 0.47802525em;
+  margin-bottom: 0em;
+  -webkit-box-shadow: #3f464b 0 2px 1px 0;
+          box-shadow: #3f464b 0 2px 1px 0;
+  -webkit-transition-property: background-color;
+          transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-property: -webkit-box-shadow;
+          transition-property: box-shadow;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  color: #fffefb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_form-search\.scss}line{font-family:\0000319}}
+.form-search label {
+  margin: 0;
+  padding: 0;
+  width: 80%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_form-search\.scss}line{font-family:\0000324}}
+.form-search__submit {
+  color: #fffefb;
+  float: left;
+  background: none;
+  margin-right: 5%;
+  width: 15%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  min-height: 32.36068px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_form-search\.scss}line{font-family:\0000335}}
+.form-search__submit::before {
+  font-family: 'icomoon';
+  content: "\e68f";
+  font-size: 1.618034em;
+  line-height: 1.1600884159em;
+  text-shadow: 0 2px 1px #00447c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_form-search\.scss}line{font-family:\0000344}}
+.form-search__field {
+  color: #fffefb;
+  min-height: 32.36068px;
+  background: none;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #f7f7f7;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.251375em;
+  font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
+  font-weight: 300;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-wvu\.scss}line{font-family:\000031}}
@@ -12296,40 +12384,65 @@ nav .navbar-header {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000338}}
 nav .navbar-header .navbar-toggle {
   border: 0;
+  margin: 0;
   -webkit-transition-property: color;
           transition-property: color;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
-  max-width: 4.95em;
-  margin-top: 0.5974783883em;
-  padding-top: 0.9667403467em;
-  padding-bottom: 0.9667403467em;
-  margin-bottom: 0.5974783883em;
-  background: #efb828;
-  -webkit-box-shadow: #f1c040 0 1px 3px 0 inset;
-          box-shadow: #f1c040 0 1px 3px 0 inset;
-  color: #00447c;
+  width: 100%;
+  background: #ffd635 url(../images/noise.png) repeat;
+  -webkit-box-shadow: #ffde5d 0 1px 3px 0 inset, #b2b1af 0 1.4427190498px 1.8033988123px 0;
+          box-shadow: #ffde5d 0 1px 3px 0 inset, #b2b1af 0 1.4427190498px 1.8033988123px 0;
+  color: #6b5916;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000347}}
 nav .navbar-header .navbar-toggle:hover, nav .navbar-header .navbar-toggle:focus {
-  background: url(../images/noise.png) #f3c858 repeat;
+  background: url(../images/noise.png) #ffe682 repeat;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000350}}
+nav .navbar-header .navbar-toggle:active {
+  background: url(../images/noise.png) #f3c858 repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000353}}
+nav .navbar-header .navbar-toggle.collapsed {
+  -webkit-box-shadow: #ffde5d 0 2.3343684751px 3.7770875612px 0 inset, #151a1e 0 4.7213594515px 7.6393201188px 0;
+          box-shadow: #ffde5d 0 2.3343684751px 3.7770875612px 0 inset, #151a1e 0 4.7213594515px 7.6393201188px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000356}}
 nav .navbar-header .navbar-toggle .navbar-toggle_title {
-  float: right;
+  text-align: left;
   margin-top: -0.24em;
   font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
   font-weight: 800;
+  font-size: 1em;
+  line-height: 1.251375em;
+  margin-top: 0.5974783883em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.5974783883em;
+  text-shadow: 0 2px 1px #ffde5d;
+  letter-spacing: 1.4427190498px;
+  float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000367}}
+nav .navbar-header .navbar-toggle .navbar-toggle_title::before {
+  font-family: 'icomoon';
+  content: "\e618";
+  font-weight: 100;
+  line-height: 1.2em;
+  margin-top: -1px;
+  float: left;
+  color: #b29525;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000377}}
 nav .navbar-header .navbar-toggle .icon-bar {
   float: left;
   background-color: #00447c;
   max-width: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000385}}
 nav .navbar-header .navbar-brand {
   background: none;
   color: #0079c1;
@@ -12344,37 +12457,53 @@ nav .navbar-header .navbar-brand {
   font-weight: 800;
   text-transform: uppercase;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000394}}
 nav .navbar-header .navbar-brand:hover {
-  color: #1e428a;
+  color: #00447c;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000381}}
-nav #nav-primary {
-  border-bottom: #f2f1ee solid;
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003102}}
+nav #nav-primary.collapse {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003107}}
+nav #nav-primary.collapse.in {
+  background-color: #fffefb;
+  border-bottom: #ffd635 solid;
+  border-top: 0;
+  float: left;
+  margin-top: -5px;
   border-bottom-style: solid;
   border-bottom-width: 0.125em;
   padding-bottom: 0.244155625em;
+  padding-bottom: 0;
+  -webkit-box-shadow: #151a1e 0 4.7213594515px 7.6393201188px 0;
+          box-shadow: #151a1e 0 4.7213594515px 7.6393201188px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000384}}
-nav #nav-primary ul.navbar-nav {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003119}}
+nav #nav-primary.collapse.in ul.navbar-nav {
+  border: 0;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000387}}
-nav #nav-primary ul.navbar-nav li {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003122}}
+nav #nav-primary.collapse.in ul.navbar-nav li {
   width: 100%;
   float: left;
-  border-bottom: #f4f3f0 solid;
+  border-bottom: #e5e4e2 solid;
   border-bottom-style: solid;
   border-bottom-width: 0.0625em;
   padding-bottom: 0.16525025em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000392}}
-nav #nav-primary ul.navbar-nav li:last-child {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003127}}
+nav #nav-primary.collapse.in ul.navbar-nav li:last-child {
   border-bottom: 0;
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000396}}
-nav #nav-primary ul.navbar-nav li a {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003131}}
+nav #nav-primary.collapse.in ul.navbar-nav li:first-child {
+  padding-top: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003134}}
+nav #nav-primary.collapse.in ul.navbar-nav li a {
   background: none;
   -webkit-transition-property: color;
           transition-property: color;
@@ -12389,33 +12518,71 @@ nav #nav-primary ul.navbar-nav li a {
   padding-bottom: 0.2953245em;
   margin-bottom: 0.47802525em;
   width: 100%;
-  font-weight: bold;
+  color: #0079c1;
+  font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.4427190498px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003102}}
-nav #nav-primary ul.navbar-nav li a:active {
-  background: #ede7dc url(../images/noise.png) repeat;
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003146}}
+nav #nav-primary.collapse.in ul.navbar-nav li a:hover, nav #nav-primary.collapse.in ul.navbar-nav li a:focus {
+  color: #1986c7;
+  text-shadow: 0 2px 1px #dbdad7;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003150}}
+nav #nav-primary.collapse.in ul.navbar-nav li a:active {
+  color: #00447c;
 }
 @media (min-width: 48rem) {
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\0000384}}
-  nav #nav-primary ul.navbar-nav {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003119}}
+  nav #nav-primary.collapse.in ul.navbar-nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
     overflow: hidden;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003383}}
-  nav #nav-primary ul.navbar-nav > li {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003393}}
+  nav #nav-primary.collapse.in ul.navbar-nav > li {
     display: block;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003386}}
-  nav #nav-primary ul.navbar-nav > li:last-child {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003396}}
+  nav #nav-primary.collapse.in ul.navbar-nav > li:last-child {
     margin-right: 0px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003112}}
-  nav #nav-primary ul.navbar-nav li {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003161}}
+  nav #nav-primary.collapse.in ul.navbar-nav li {
     width: auto;
   }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003167}}
+nav #nav-primary.collapse.in .navbar--more a {
+  width: 100%;
+  float: left;
+  background-color: #ede7dc;
+  color: #00447c;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.4427190498px;
+  font-size: 1em;
+  line-height: 1.251375em;
+  margin-top: 0.5974783883em;
+  padding-top: 0.22775025em;
+  padding-bottom: 0.22775025em;
+  margin-bottom: 0em;
+  text-shadow: 0 2px 1px #f0ebe3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003184}}
+nav #nav-primary.collapse.in .navbar--more a:hover, nav #nav-primary.collapse.in .navbar--more a:focus {
+  color: #0079c1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003188}}
+nav #nav-primary.collapse.in .navbar--more a::after {
+  font-family: 'icomoon';
+  content: '\e6c3';
+  color: #d5cfc6;
+  text-shadow: 0 2px 1px #f4f0ea;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_core\.scss}line{font-family:\000031}}
@@ -12426,43 +12593,83 @@ nav #nav-primary ul.navbar-nav li a:active {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\000031}}
 #footer {
   padding: 0;
+  float: left;
+  width: 100%;
+  font-size: 16px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\000038}}
+.footer--return {
+  width: 100%;
+  float: left;
+  color: #000;
+  text-shadow: 0 1px 0 rgba(30, 38, 44, 0.1618);
+  background-color: #1e262c;
+  text-transform: uppercase;
+  font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.4427190498px;
+  font-size: 1em;
+  line-height: 1.251375em;
+  margin-top: 0em;
+  padding-top: 0.7733922774em;
+  padding-bottom: 0.47802525em;
+  margin-bottom: 0em;
+  text-align: center;
+  -webkit-box-shadow: #1e262c 0 2px 3px inset;
+          box-shadow: #1e262c 0 2px 3px inset;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\0000324}}
+.footer--return:hover, .footer--return:focus {
+  color: #eeb111;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-cpass\.scss}line{font-family:\000031}}
+.cpass-footer-wrapper {
+  float: left;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\000031}}
+.wvu-footer-wrapper {
+  width: 100%;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\000036}}
 .wvu-footer-wrapper #wvu-footer .container {
   margin: 0;
   font-size: 16px;
-  background: url(../images/wvu-footer-bg.jpg) center top #0058a0;
+  background: url(../images/wvu-footer-bg.jpg) center top #005daa;
   border-color: #00598e;
   border-top-color: #0079c1;
-  -webkit-box-shadow: 0 8px 18px 0 #090b0c;
-          box-shadow: 0 8px 18px 0 #090b0c;
+  -webkit-box-shadow: 0 3px 1px #002849, 0 6px 9px #090c0e;
+          box-shadow: 0 3px 1px #002849, 0 6px 9px #090c0e;
   border-style: solid;
   border-width: 1.1145617535px 1.1145617535px 0 1.1145617535px;
   padding: 1rem 1.25%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000319}}
 .wvu-footer-wrapper #wvu-footer .container p {
   font-size: 0.6180339845em;
   line-height: 2.0247672968em;
   color: #fffefb;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000323}}
 .wvu-footer-wrapper #wvu-footer .container .wvu-links a, .wvu-footer-wrapper #wvu-footer .container .wvu-credits a {
   color: #ffc656;
   text-decoration: underline;
   font-size: 0.6180339845em;
   line-height: 2.0247672968em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000327}}
 .wvu-footer-wrapper #wvu-footer .container .wvu-links a:hover, .wvu-footer-wrapper #wvu-footer .container .wvu-credits a:hover {
   color: #ffd177;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000331}}
 .wvu-footer-wrapper #wvu-footer .container .wvu-links li::before, .wvu-footer-wrapper #wvu-footer .container .wvu-credits li::before {
   color: #005384;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000334}}
 .wvu-footer-wrapper #wvu-footer .container .wvu-links {
   padding-bottom: 0;
 }
@@ -12840,7 +13047,7 @@ body footer #wvu-footer.footer .container {
 @media (min-width: 48rem) and (min-width: 55rem) {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003162}}
   body .long-menu {
-    display: block;
+    display: none;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/tablet\/_base-tablet\.scss}line{font-family:\00003165}}
   body .long-menu .wrapper {

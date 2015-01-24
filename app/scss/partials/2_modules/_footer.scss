@@ -1,3 +1,27 @@
 #footer{
 	padding:0;
+	float:left;
+	width:100%;
+	font-size:$base-font-size;
 }
+
+.footer--return{
+  width:100%;
+  float:left;
+  color:#000;
+  @include letterpress-dark();
+  @extend .white-noise;
+  background-color:$black;
+  text-transform:uppercase;
+  font-family:$BdCn;
+  font-weight:800;
+  letter-spacing:ms(-10);
+  @include adjust-font-size-to($font-size-med);
+  @include rhythm(0, $ms-2n, $ms-4n, 0, $font-size-med);
+  text-align:center;
+  box-shadow: $black 0 2px 3px inset;
+
+  &:hover,&:focus{
+    color:$WVUGold;
+  }
+}//end .footer--return
