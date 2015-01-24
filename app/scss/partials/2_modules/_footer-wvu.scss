@@ -13,7 +13,7 @@
 	  box-shadow: 0 3px 1px darken($primary, 10), 0 6px 9px darken($black,10);
 	  border-style: solid;
 	  border-width: ms(-11) ms(-11) 0 ms(-11);
-	  padding: 1rem 1.25%;
+	  padding: 1rem 1.25% 0 1.25%;
 
 
 	  p{
@@ -30,9 +30,9 @@
 	  }
 	  .wvu-links li::before, .wvu-credits li::before{
 	  	color:darken($tertiary, 12);
-	  }
+	  } 
 	  .wvu-links{
-	  	padding-bottom:0;
+	  	padding-bottom:0 ;
 	  }
 
 	  

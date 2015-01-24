@@ -12646,7 +12646,7 @@ nav #nav-primary.collapse.in .navbar--more a::after {
           box-shadow: 0 3px 1px #002849, 0 6px 9px #090c0e;
   border-style: solid;
   border-width: 1.1145617535px 1.1145617535px 0 1.1145617535px;
-  padding: 1rem 1.25%;
+  padding: 1rem 1.25% 0 1.25%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer-wvu\.scss}line{font-family:\0000319}}
 .wvu-footer-wrapper #wvu-footer .container p {
