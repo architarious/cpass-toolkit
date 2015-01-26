@@ -28,6 +28,8 @@
 	  .wvu-masthead{
 
 		.wvu-masthead-container{
+			border-bottom-left-radius: ms(0);
+			border-bottom-right-radius: ms(0);
 
 			//@include grid-span(16);
 
@@ -119,6 +121,8 @@
 		.wvu-footer-wrapper{
 		#wvu-footer{
 			.container{
+				border-top-left-radius: ms(0) ;
+			    border-top-right-radius: ms(0);
   				max-width:2000px;
   				width: 1170px;
   				@include breakpoint($bp-desktop2-3){

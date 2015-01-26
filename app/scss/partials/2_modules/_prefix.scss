@@ -1,0 +1,88 @@
+#prefix{
+	 @include rhythm($ms-8n, 0, 0, $ms-2n, $font-size-small-2);
+
+ &.home{}//end #pefix.home
+ &.dark{
+ 	.breadcrumbs a{	color:$vb-Gold;	}
+ 	.util span{ color:shade($secondary,20); }
+ 	.btn{
+ 		@include standard-box-shadow(shade($black,10));
+ 		@include adjust-font-size-to($font-size-small-2);
+ 	}
+
+ }//end #prefix.dark
+ &.light{}//end #prefix.light
+
+}
+
+.breadcrumbs{
+	font-size:$base-font-size;	
+	text-align:center;
+	margin:0; padding:0;
+	a{
+	  @include adjust-font-size-to($font-size-small-2);
+	  @include rhythm(0, $ms-5n, $ms-5n, 0, $font-size-small-2);
+	}
+}
+
+.util{
+	span{
+	  text-transform: uppercase;
+	}
+	ul{
+	  padding:0; margin:0;
+	  li{
+		list-style:none;
+		display:inline;
+	  }//end li
+   }//end ul
+   .btn{
+   	  padding-left:ms(2.5);
+      padding-right:8px;
+
+      &::before{      	
+        left:5px;
+        right:0;
+        background:none;
+        font-family:icomoon;
+        border:0 none;
+        box-shadow:none;
+
+      }
+
+      &:visited{
+      	color:$white;
+      }
+   }//end .btn
+
+   .print{
+   	display:none;
+   	&::before{
+   	  content:"\e611";
+   	}
+   }//end .print
+   .bookmark{
+   	&::before{
+   	  content:"\e662";
+   	}
+   }//end .bookmark
+   .tweet{ 
+      &::before{
+        content:"\e638";
+      }
+    }//end .tweet
+   .fb__share{
+   	  &::before{
+        content:"\e637";
+      }
+   }//end .fb__share
+
+}//end .util
+
+
+.page-name{
+  font-family:$BlkCn;
+  font-weight:900;
+  @include adjust-font-size-to($font-size-xxlarge);
+  @include rhythm($ms-3, 0, 0, $ms-1, $font-size-xxlarge);
+}

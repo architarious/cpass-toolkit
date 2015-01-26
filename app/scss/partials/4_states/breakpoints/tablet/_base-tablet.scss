@@ -6,10 +6,10 @@
   body{
   	font-size:16px;
   	.container, .wvu-masthead-container{
-  		max-width:$bp-desktop1-1;
-  		width: ms(16);
+  		//max-width:$bp-desktop1-1;
+  		//width: ms(16);
   		@include breakpoint($bp-tablet-2){
-  			max-width:860px;
+  			//max-width:860px;
   		}
 
   	}
@@ -20,8 +20,7 @@
 	  	
 		.wvu-masthead-container{
 			ul{display:block;}
-			border-bottom-left-radius: ms(3);
-			border-bottom-right-radius: ms(3);
+			
 		}
 	  }//end /wvu-masthead
 	}//end .wvu-masthead-wrapper
@@ -140,12 +139,11 @@
 		#wvu-footer{
 			.container{
 				margin:0 auto;
-				border-top-left-radius: ms(3) ;
-			    border-top-right-radius: ms(3);
-			    max-width:$bp-desktop1-1;
-  				width: ms(16);
+				
+			    //max-width:$bp-desktop1-1;
+  				//width: ms(16);
   				@include breakpoint($bp-tablet-2){
-  					max-width:860px;
+  					//max-width:860px;
   				}
 
 				.wvu-credits{}//end .wvu-credits
