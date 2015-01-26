@@ -3,11 +3,20 @@
 
  &.home{}//end #pefix.home
  &.dark{
- 	.breadcrumbs a{	color:$vb-Gold;	}
+ 	.breadcrumbs a{	
+ 		color:$vb-Gold;	
+ 		&:hover{
+ 			color:tint($vb-Gold,30);
+ 		}
+ 	}
  	.util span{ color:shade($secondary,20); }
  	.btn{
  		@include standard-box-shadow(shade($black,10));
  		@include adjust-font-size-to($font-size-small-2);
+ 	}
+ 	.page-name{
+ 		color:$white;
+ 		text-shadow: $black, 0, ms(-5), ms(-8), 0;
  	}
 
  }//end #prefix.dark
@@ -17,17 +26,22 @@
 
 .breadcrumbs{
 	font-size:$base-font-size;	
-	text-align:center;
+	text-align:left;
 	margin:0; padding:0;
 	a{
 	  @include adjust-font-size-to($font-size-small-2);
 	  @include rhythm(0, $ms-5n, $ms-5n, 0, $font-size-small-2);
+	  text-decoration:underline;
 	}
 }
 
 .util{
 	span{
+	  
 	  text-transform: uppercase;
+	  @include adjust-font-size-to($font-size-small-2);
+	  @include rhythm(0, $ms-5n, $ms-5n, 0, $font-size-small-2);
+
 	}
 	ul{
 	  padding:0; margin:0;
@@ -39,7 +53,8 @@
    .btn{
    	  padding-left:ms(2.5);
       padding-right:8px;
-
+      font-family:$BdCn;
+      font-weight: 800;
       &::before{      	
         left:5px;
         right:0;
@@ -63,7 +78,7 @@
    }//end .print
    .bookmark{
    	&::before{
-   	  content:"\e662";
+   	  content:"\e61a";
    	}
    }//end .bookmark
    .tweet{ 

@@ -40,7 +40,30 @@
 
 	section#prefix{
 		.container{
-
+			@include breakpoint($bp-mobile2-2-608){
+			  .breadcrumbs{
+				@include grid-span(2,1);
+			  }//end .breadcrumbs
+			  .util{
+  				@include rhythm(-$ms-5n, -$ms-5n, $ms-5n, 0, $font-size-small-2);
+     		  	text-align:right;
+				@include grid-span(4,3);
+				span{
+					
+				}
+				.btn{
+					@include adjust-font-size-to($font-size-small);
+					padding:ms(-8);
+					padding-left: ms(2);
+					&::before{
+						left:3px;
+					}
+				}
+			  }// end .util
+			  .page-name{
+				clear:both;
+			  }//end .page-name
+            }//end breakpoint bp-mobile2-2-608
 		}//end section#prefix.container
 	}//end section#prefix
 

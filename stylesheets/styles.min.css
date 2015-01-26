@@ -12596,26 +12596,35 @@ nav #nav-primary.collapse.in .navbar--more a::after {
 #prefix.dark .breadcrumbs a {
   color: #ffd635;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\000038}}
+#prefix.dark .breadcrumbs a:hover {
+  color: #ffe271;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000312}}
 #prefix.dark .util span {
   color: #bdb8b0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000313}}
 #prefix.dark .btn {
   -webkit-box-shadow: #1b2227 0 2px 1px 0;
           box-shadow: #1b2227 0 2px 1px 0;
   font-size: 0.7725424806em;
   line-height: 1.6198138374em;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000317}}
+#prefix.dark .page-name {
+  color: #fffefb;
+  text-shadow: #1e262c, 0, 4.7213594515px, 2.3343684751px, 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000327}}
 .breadcrumbs {
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000331}}
 .breadcrumbs a {
   font-size: 0.7725424806em;
   line-height: 1.6198138374em;
@@ -12623,28 +12632,37 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   padding-top: 0.477845082em;
   padding-bottom: 0.477845082em;
   margin-bottom: 0em;
+  text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000339}}
 .util span {
   text-transform: uppercase;
+  font-size: 0.7725424806em;
+  line-height: 1.6198138374em;
+  margin-top: 0em;
+  padding-top: 0.477845082em;
+  padding-bottom: 0.477845082em;
+  margin-bottom: 0em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000346}}
 .util ul {
   padding: 0;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000348}}
 .util ul li {
   list-style: none;
   display: inline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000353}}
 .util .btn {
   padding-left: 25.888544px;
   padding-right: 8px;
+  font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
+  font-weight: 800;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000358}}
 .util .btn::before {
   left: 5px;
   right: 0;
@@ -12654,32 +12672,32 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000368}}
 .util .btn:visited {
   color: #fffefb;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000373}}
 .util .print {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000375}}
 .util .print::before {
   content: "\e611";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000380}}
 .util .bookmark::before {
-  content: "\e662";
+  content: "\e61a";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000385}}
 .util .tweet::before {
   content: "\e638";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000390}}
 .util .fb__share::before {
   content: "\e637";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_prefix\.scss}line{font-family:\0000398}}
 .page-name {
   font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
   font-weight: 900;
@@ -12884,7 +12902,7 @@ body footer #wvu-footer.footer .container {
 }
 
 @media (min-width: 30rem) {
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000374}}
   body section#core .container #main article h1 {
     font-size: 3.2725425314em;
     line-height: 1.1471585056em;
@@ -12893,7 +12911,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.2954095592em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000379}}
   body section#core .container #main article h2 {
     font-size: 2.0225425em;
     line-height: 1.2374276437em;
@@ -12902,7 +12920,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0.1126059156em;
     margin-bottom: 0.4779827107em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000383}}
   body section#core .container #main article h3 {
     font-size: 1.25em;
     line-height: 1.50165em;
@@ -12911,7 +12929,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.7733922773em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000387}}
   body section#core .container #main article h4 {
     font-size: 1.25em;
     line-height: 1.50165em;
@@ -12920,7 +12938,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.4779827107em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000391}}
   body section#core .container #main article h5 {
     font-size: 1.25em;
     line-height: 1.50165em;
@@ -12929,7 +12947,7 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.4779827107em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000395}}
   body section#core .container #main article h6 {
     font-size: 1em;
     line-height: 1.251375em;
@@ -12938,11 +12956,11 @@ body footer #wvu-footer.footer .container {
     padding-bottom: 0em;
     margin-bottom: 0.369155625em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\00003121}}
   body footer #wvu-footer.footer {
     width: 100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\00003123}}
   body footer #wvu-footer.footer .container {
     max-width: 100%;
   }
@@ -12965,6 +12983,44 @@ body footer #wvu-footer.footer .container {
     margin-left: 0;
     margin-right: 0;
     clear: none;
+  }
+}
+@media (min-width: 30rem) and (min-width: 38rem) {
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000344}}
+  body section#prefix .container .breadcrumbs {
+    width: 30.4347826087%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000347}}
+  body section#prefix .container .util {
+    margin-top: -0.477845082em;
+    padding-top: -0.477845082em;
+    padding-bottom: 0.477845082em;
+    margin-bottom: 0em;
+    text-align: right;
+    width: 65.2173913043%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000354}}
+  body section#prefix .container .util .btn {
+    font-size: 0.6180339845em;
+    line-height: 2.0247672968em;
+    padding: 2.3343684751px;
+    padding-left: 25.888544px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000358}}
+  body section#prefix .container .util .btn::before {
+    left: 3px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/4_states\/breakpoints\/mobile2\/_base-mobile2\.scss}line{font-family:\0000363}}
+  body section#prefix .container .page-name {
+    clear: both;
   }
 }
 @media (min-width: 30rem) {
