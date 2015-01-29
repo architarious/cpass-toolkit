@@ -2,21 +2,21 @@
   <div class="container">
   <!---###########################################################-->
   <!---###########################################################-->
-  <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+  <div id="mainCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <style>
     ol.carousel-indicators li{ background:black;}
     .carousel-control {background:blue;}
   </style>
   <ol class="carousel-indicators">
-    <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-generic" data-slide-to="3"></li>
+    <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#mainCarousel" data-slide-to="1"></li>
+    <li data-target="#mainCarousel" data-slide-to="2"></li>
+    <li data-target="#mainCarousel" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
-   <div class="carousel-inner">
+   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="http://lorempixel.com/output/food-q-c-640-480-1.jpg" alt="food">
       <div class="carousel-caption">
@@ -41,16 +41,17 @@
         A beautiful sunset 2
       </div>
     </div>
-   </div>
+   </div><!--end carousel-inner-->
+
    <!-- Controls -->
-     <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
-       <span class="icon-prev"></span>
-     </a>
-     <a class="right carousel-control" href="#carousel-generic" role="button" data-slide   ="next">
-       <span class="icon-next"></span>
-     </a>
+   <a class="carousel-control left " href="#mainCarousel" role="button" data-slide="prev" >
+     <span class="icon-prev"></span>
+   </a>
+   <a class="carousel-control right" href="#mainCarousel" role="button" data-slide   ="next" >
+     <span class="icon-next"></span>
+   </a>
  
-   </div>
+   </div><!--end #mainCarousel-->
   <!--################################################################-->
   <!--################################################################-->
   </div><!--end .container -->

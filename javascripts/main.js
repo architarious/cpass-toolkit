@@ -19,13 +19,14 @@ requirejs.config({
         ],
 
         // path to folder with individual bootstrap files 
-        'bootstrap': 'bootstrap',       
+        'bootstrap': 'bootstrap', 
 
         'bigTitles' : '../app/bigTitles', 
         'smoothScroll' : '../app/smoothScroll', 
         'dropdown' : '../app/dropdown',
         'utils' : '../app/utils',
-        'eq' : 'lib/eq.min',
+        'eq' : 'eq.min',
+        'jquery-mobile' : 'jquery-mobile/jquery.mobile.custom.min',
     },
       shim: {
         'bootstrap/affix':      { deps: ['jquery'], exports: '$.fn.affix' }, 
@@ -43,6 +44,7 @@ requirejs.config({
         'bigTitles' :           { deps: ['jquery'], exports: '$.fn.bigTitles'},
         'smoothScroll' :        { deps: ['jquery'], exports: '$.fn.smoothScroll'},
         'utils' :               { deps: ['jquery'], exports: '$.fn.utils'},
+        'jquery-mobile' :       { deps: ['jquery'], exports: '$.fn.utils'},
         'default' :             { deps: ['jquery', 'bigTitles', 'smoothScroll', 'utils', 'bootstrap/carousel', 'bootstrap/dropdown']}
     },
 });

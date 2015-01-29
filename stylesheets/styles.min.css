@@ -12480,12 +12480,12 @@ nav #nav-primary.collapse.in {
           box-shadow: #151a1e 0 4.7213594515px 7.6393201188px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003119}}
-nav #nav-primary.collapse.in ul.navbar-nav {
+nav #nav-primary.collapse.in .navbar-nav {
   border: 0;
   width: 100%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003122}}
-nav #nav-primary.collapse.in ul.navbar-nav li {
+nav #nav-primary.collapse.in .navbar-nav li {
   width: 100%;
   float: left;
   border-bottom: #e5e4e2 solid;
@@ -12494,16 +12494,16 @@ nav #nav-primary.collapse.in ul.navbar-nav li {
   padding-bottom: 0.16525025em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003127}}
-nav #nav-primary.collapse.in ul.navbar-nav li:last-child {
+nav #nav-primary.collapse.in .navbar-nav li:last-child {
   border-bottom: 0;
   margin-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003131}}
-nav #nav-primary.collapse.in ul.navbar-nav li:first-child {
+nav #nav-primary.collapse.in .navbar-nav li:first-child {
   padding-top: 5px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003134}}
-nav #nav-primary.collapse.in ul.navbar-nav li a {
+nav #nav-primary.collapse.in .navbar-nav li a {
   background: none;
   -webkit-transition-property: color;
           transition-property: color;
@@ -12524,33 +12524,33 @@ nav #nav-primary.collapse.in ul.navbar-nav li a {
   letter-spacing: 1.4427190498px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003146}}
-nav #nav-primary.collapse.in ul.navbar-nav li a:hover, nav #nav-primary.collapse.in ul.navbar-nav li a:focus {
+nav #nav-primary.collapse.in .navbar-nav li a:hover, nav #nav-primary.collapse.in .navbar-nav li a:focus {
   color: #1986c7;
   text-shadow: 0 2px 1px #dbdad7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003150}}
-nav #nav-primary.collapse.in ul.navbar-nav li a:active {
+nav #nav-primary.collapse.in .navbar-nav li a:active {
   color: #00447c;
 }
 @media (min-width: 48rem) {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003119}}
-  nav #nav-primary.collapse.in ul.navbar-nav {
+  nav #nav-primary.collapse.in .navbar-nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
     overflow: hidden;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003393}}
-  nav #nav-primary.collapse.in ul.navbar-nav > li {
+  nav #nav-primary.collapse.in .navbar-nav > li {
     display: block;
     float: left;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/0_global\/_mixins\.scss}line{font-family:\00003396}}
-  nav #nav-primary.collapse.in ul.navbar-nav > li:last-child {
+  nav #nav-primary.collapse.in .navbar-nav > li:last-child {
     margin-right: 0px;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_nav\.scss}line{font-family:\00003161}}
-  nav #nav-primary.collapse.in ul.navbar-nav li {
+  nav #nav-primary.collapse.in .navbar-nav li {
     width: auto;
   }
 }
