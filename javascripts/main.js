@@ -22,11 +22,12 @@ requirejs.config({
         'bootstrap': 'bootstrap', 
 
         'bigTitles' : '../app/bigTitles', 
-        'smoothScroll' : '../app/smoothScroll', 
         'dropdown' : '../app/dropdown',
-        'utils' : '../app/utils',
         'eq' : 'eq.min',
-        'jquery-mobile' : 'jquery-mobile/jquery.mobile.custom.min',
+        'jquery-smoothScroll': 'jquery.smooth-scroll.min',
+        //'smoothScroll' : '../app/smoothScroll', 
+        //'utils' : '../app/utils',
+        //'jquery-mobile' : 'jquery-mobile/jquery.mobile.custom.min',
     },
       shim: {
         'bootstrap/affix':      { deps: ['jquery'], exports: '$.fn.affix' }, 
@@ -42,10 +43,11 @@ requirejs.config({
         'bootstrap/tooltip':    { deps: ['jquery'], exports: '$.fn.tooltip' },
         'bootstrap/transition': { deps: ['jquery'], exports: '$.fn.transition' },
         'bigTitles' :           { deps: ['jquery'], exports: '$.fn.bigTitles'},
-        'smoothScroll' :        { deps: ['jquery'], exports: '$.fn.smoothScroll'},
-        'utils' :               { deps: ['jquery'], exports: '$.fn.utils'},
-        'jquery-mobile' :       { deps: ['jquery'], exports: '$.fn.utils'},
-        'default' :             { deps: ['jquery', 'bigTitles', 'smoothScroll', 'utils', 'bootstrap/carousel', 'bootstrap/dropdown']}
+        'jquery-smoothScroll':  { deps: ['jquery']},
+        //'smoothScroll' :        { deps: ['jquery'], exports: '$.fn.smoothScroll'},
+        //'utils' :               { deps: ['jquery'], exports: '$.fn.utils'},
+        //'jquery-mobile' :       { deps: ['jquery'], exports: '$.fn.utils'},
+        'default' :             { deps: ['jquery', 'bigTitles', 'bootstrap/carousel', 'bootstrap/dropdown']}
     },
 });
 

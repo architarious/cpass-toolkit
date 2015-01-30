@@ -1,0 +1,10 @@
+.breadcrumbs{
+	font-size:$base-font-size;	
+	text-align:left;
+	margin:0; padding:0;
+	a{
+	  @include adjust-font-size-to($font-size-small-2);
+	  @include rhythm(0, $ms-5n, $ms-5n, 0, $font-size-small-2);
+	  text-decoration:underline;
+	}
+}

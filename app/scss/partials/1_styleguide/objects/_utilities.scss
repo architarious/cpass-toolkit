@@ -1,0 +1,76 @@
+/*This functionality has been removed from the design and replaced with addthis,
+however, I have created this scss file to document it for future use in case we can't
+use addthis for some reason.
+
+Previous HTML inside of #prefix
+<div class="util">
+  <span>This page:</span>
+    <ul>
+      <li><a href="javascript:window.print()" class="btn print" title="Print this page">Print</a></li>
+      <li><a href="#" class="btn bookmark" title="Bookmark or favorite this page">Bookmark</a></li>
+
+      <li><a class="btn tweet popup" href="https://twitter.com/share">Tweet</a></li>
+
+      <li><a class="btn fb__share popup" href="https://www.facebook.com/sharer/sharer.php?">Share</a></li>
+    </ul>
+</div><!--end .util-->
+
+*/
+.util{
+	span{
+	  
+	  text-transform: uppercase;
+	  @include adjust-font-size-to($font-size-small-2);
+	  @include rhythm(0, $ms-5n, $ms-5n, 0, $font-size-small-2);
+
+	}
+	ul{
+	  padding:0; margin:0;
+	  li{
+		list-style:none;
+		display:inline;
+	  }//end li
+   }//end ul
+   .btn{
+   	  padding-left:ms(2.5);
+      padding-right:8px;
+      font-family:$BdCn;
+      font-weight: 800;
+      &::before{      	
+        left:5px;
+        right:0;
+        background:none;
+        font-family:icomoon;
+        border:0 none;
+        box-shadow:none;
+
+      }
+
+      &:visited{
+      	color:$white;
+      }
+   }//end .btn
+
+   .print{
+   	display:none;
+   	&::before{
+   	  content:"\e611";
+   	}
+   }//end .print
+   .bookmark{
+   	&::before{
+   	  content:"\e61a";
+   	}
+   }//end .bookmark
+   .tweet{ 
+      &::before{
+        content:"\e638";
+      }
+    }//end .tweet
+   .fb__share{
+   	  &::before{
+        content:"\e637";
+      }
+   }//end .fb__share
+
+}//end .util

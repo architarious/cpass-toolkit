@@ -1,0 +1,6 @@
+.page-name{
+  font-family:$BlkCn;
+  font-weight:900;
+  @include adjust-font-size-to($font-size-xxlarge);
+  @include rhythm($ms-3, 0, 0, $ms-1, $font-size-xxlarge);
+}
