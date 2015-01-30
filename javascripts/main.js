@@ -12,11 +12,14 @@ requirejs.config({
         'page' : '../page',
         'app' : '../app',
 
+        'overthrow-sidescroller' : 'overthrow-sidescroller.all',
+
         'jquery' :[
             '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
             //if the CDN location fails, load from:
             'jquery.min'
         ],
+
 
         // path to folder with individual bootstrap files 
         'bootstrap': 'bootstrap', 
@@ -30,6 +33,8 @@ requirejs.config({
         //'jquery-mobile' : 'jquery-mobile/jquery.mobile.custom.min',
     },
       shim: {
+
+        'overthrow-sidescroller': {},
         'bootstrap/affix':      { deps: ['jquery'], exports: '$.fn.affix' }, 
         'bootstrap/alert':      { deps: ['jquery'], exports: '$.fn.alert' },
         'bootstrap/button':     { deps: ['jquery'], exports: '$.fn.button' },

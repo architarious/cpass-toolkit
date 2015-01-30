@@ -1,0 +1,76 @@
+#postfix{
+	background:$secondary url(../images/noise.png) repeat;
+	box-shadow: darken($black,20) 0 ms(-6) ms(-3) 0, darken($secondary, 1) 0 ms(1) ms(-1) 0 inset;
+	float:left;
+	width:100%;
+	border-top:ms(-9) solid lighten($secondary, 3);
+	border-bottom:ms(-6) solid $vb-LightBlue;
+
+	.sidescroll-nextprev{
+	  .sidescroll-nextprev-links{
+	  	top:-10px;
+
+	    a{		
+		  height:160px;
+		  opacity:1;
+		  background:url(../images/postfix-arrows.png) no-repeat 2000px 2000px, $secondary url(../images/noise.png) repeat;
+		  color:$white;
+		  
+
+
+		  &.sidescroll-prev{ 
+		  	left:0;	
+		  	border-radius: 0 100% 100%  0;
+		  	background-position:2px -788px;
+		  	box-shadow: $black 5px 0px 9px -8px;
+		  	&:hover{ background-position:2px -365px;}
+		  	&.disabled{
+		  	opacity:1;
+		  	//@include standard-transition(margin);
+		  	background-position:2px 58px;
+		  	//margin-left:-20px;
+		    }
+		  }
+		  &.sidescroll-next{ 
+		  	right:0; 
+		  	background-position:-374px -788px;
+		  	border-radius: 100% 0 0 100%;
+		  	border-left:tint($secondary, 20) 1px solid;
+		  	box-shadow: $black -5px 0px 9px -8px;
+		  	&:hover{ background-position:-374px -365px;}
+		  	&.disabled{
+		  	opacity:1;
+		  	//@include standard-transition(margin);
+		  	background-position:-374px 58px;
+		  	//margin-left:-20px;
+		    }
+		  	
+		  }
+		}//a
+	  }//end .sidescroll-nextprev-links
+	}//end .sidescroll-nextprev
+
+
+}//end #postfix
+
+#feature-thumbs{
+	@include rhythm(1, 0, 0, 1, $font-size-med);
+
+	ul{
+
+	}
+	li{
+		list-style:none;
+		float:left;
+		display:inline;
+		padding:0 ms(-2) 0 ms(-2);
+		width: 221px;
+		img{
+			width:100%;
+			height:auto;
+		}
+	}	    
+}
+
+
+

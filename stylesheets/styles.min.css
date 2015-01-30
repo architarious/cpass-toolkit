@@ -12063,6 +12063,81 @@ div.message .close {
   text-decoration: underline;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\000031}}
+.overthrow-enabled .overthrow {
+  overflow: auto;
+  z-index: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\000037}}
+.overthrow-enabled .sidescroll ul,
+.overthrow-enabled .sidescroll li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000318}}
+.overthrow-enabled .sidescroll li {
+  width: 221px;
+}
+
+/* next prev arrows */
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000323}}
+.sidescroll-nextprev {
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000326}}
+.sidescroll-nextprev .sidescroll-nextprev-links {
+  bottom: auto;
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000333}}
+.sidescroll-nextprev .sidescroll-nextprev-links a {
+  position: absolute;
+  text-indent: -9999px;
+  width: 2em;
+  height: 2em;
+  background: #fff;
+  opacity: .8;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  z-index: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000345}}
+.sidescroll-nextprev .sidescroll-nextprev-links a.disabled {
+  opacity: .2;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000350}}
+.sidescroll-nextprev .sidescroll-nextprev-links a:hover,
+.sidescroll-nextprev .sidescroll-nextprev-links a:focus {
+  opacity: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000352}}
+.sidescroll-nextprev .sidescroll-nextprev-links a:hover.disabled,
+.sidescroll-nextprev .sidescroll-nextprev-links a:focus.disabled {
+  opacity: .2;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000356}}
+.sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next {
+  right: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_sidescroller\.scss}line{font-family:\0000360}}
+.sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev {
+  left: 1em;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_masthead-wvu\.scss}line{font-family:\000031}}
 .wvu-masthead-wrapper {
   float: left;
@@ -12652,6 +12727,84 @@ nav #nav-primary.collapse.in .navbar--more a::after {
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_core\.scss}line{font-family:\000031}}
 #core {
   background: url(../images/noise.png) repeat #fffefb;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\000031}}
+#postfix {
+  background: #ede7dc url(../images/noise.png) repeat;
+  -webkit-box-shadow: black 0 3.7770875612px 7.6393201188px 0, #ebe5d9 0 20px 12.3606796891px 0 inset;
+          box-shadow: black 0 3.7770875612px 7.6393201188px 0, #ebe5d9 0 20px 12.3606796891px 0 inset;
+  float: left;
+  width: 100%;
+  border-top: 1.8033988123px solid #f2eee6;
+  border-bottom: 3.7770875612px solid #2eb0e3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000310}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links {
+  top: -10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000313}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a {
+  height: 160px;
+  opacity: 1;
+  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, #ede7dc url(../images/noise.png) repeat;
+  color: #fffefb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000321}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev {
+  left: 0;
+  border-radius: 0 100% 100%  0;
+  background-position: 2px -788px;
+  -webkit-box-shadow: #1e262c 5px 0px 9px -8px;
+          box-shadow: #1e262c 5px 0px 9px -8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000326}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev:hover {
+  background-position: 2px -365px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000327}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev.disabled {
+  opacity: 1;
+  background-position: 2px 58px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000334}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next {
+  right: 0;
+  background-position: -374px -788px;
+  border-radius: 100% 0 0 100%;
+  border-left: #f0ebe3 1px solid;
+  -webkit-box-shadow: #1e262c -5px 0px 9px -8px;
+          box-shadow: #1e262c -5px 0px 9px -8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000340}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next:hover {
+  background-position: -374px -365px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000341}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next.disabled {
+  opacity: 1;
+  background-position: -374px 58px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000356}}
+#feature-thumbs {
+  margin-top: 1.251375em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.251375em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000362}}
+#feature-thumbs li {
+  list-style: none;
+  float: left;
+  display: inline;
+  padding: 0 9.8885437512px 0 9.8885437512px;
+  width: 221px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000368}}
+#feature-thumbs li img {
+  width: 100%;
+  height: auto;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\000031}}
