@@ -3,6 +3,11 @@
 	float:left;
 	width:100%;
 	font-size:$base-font-size;
+  color:$white;
+
+  a{
+    color:$SecLightGold;
+  }
 }
 
 .footer--return{

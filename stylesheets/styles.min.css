@@ -12813,9 +12813,14 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   float: left;
   width: 100%;
   font-size: 16px;
+  color: #fffefb;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\000038}}
+#footer a {
+  color: #ffe894;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\0000313}}
 .footer--return {
   width: 100%;
   float: left;
@@ -12836,7 +12841,7 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   -webkit-box-shadow: #1e262c 0 2px 3px inset;
           box-shadow: #1e262c 0 2px 3px inset;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_footer\.scss}line{font-family:\0000329}}
 .footer--return:hover, .footer--return:focus {
   color: #eeb111;
 }
