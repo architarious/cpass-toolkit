@@ -6,7 +6,7 @@
   color:$white;
 
   a{
-    color:$SecLightGold;
+    color:tint($SecLightGold,20);
   }
 }
 

@@ -118,6 +118,34 @@
 			}//end #college.footer .container
 		}//end #colllege.footer
 
+		#cpass-footer{
+			.academics{
+				@include grid-span(5, 1);
+			}
+			.students{
+				@include grid-span(3, 6);
+			}
+			.alumni{
+				@include grid-span(3, 9);
+			}
+			.community{
+				@include grid-span(4, 12);
+				$grids: 2;
+
+				.community--lap, .community--nysp{
+					@include grid-span(1,1);
+				}
+
+				.community--fit, .community--icpe{
+					@include grid-span(1,2);
+				}
+				.community--nysp{
+					clear:both;
+				}
+
+			}//end .community
+		}// end #cpass-footer
+
 		.wvu-footer-wrapper{
 		#wvu-footer{
 			.container{

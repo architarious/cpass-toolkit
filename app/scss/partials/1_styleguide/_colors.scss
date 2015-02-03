@@ -1,19 +1,30 @@
 	//PRIMARY PALLETTE
-		$WVUBlue: #00447c;
-		$WVUGold: #eeb111;
+		$WVUBlue: #002855;
+		$WVUGold: #eaaa00;
 		$white:  #fffefb;
-		$black: desaturate(shade($WVUBlue, 40),  80); //#1e262c
+		$black: #2c2a29; //desaturate(shade($WVUBlue, 40),  80); //#1e262c
+        $coolblack: desaturate(shade($WVUBlue, 40),  80); 
+
+    //NEUTRAL PALLETTE
+        $DarkGrey: #333f48;
+        $MidGrey: #adaaad;
+        $WarmGrey1: #6e6259;
+        $WarmGrey2: #968c83;
+        $WarmGrey3: #bfb8af;
 	
 	//SECONDARY PALLETTE
-		$SecLightGold: #ffe894 ;
-        $SecBlue:#005daa;
-		$SecMiddleBlue: #0079c1;
-        $SecLightBlue: #a0c4da;
-        $Purple: #27318b;
-        $DarkOrange: #d9531e;
-		$Orange: #f47b20;
-        $DarkGrey: #455560;
-        $MidGrey: #5c6f7c;
+		$SecBlue:#0033a0;
+		$SecMiddleBlue: #005eb8;
+        $SecLightBlue: #9bd3dd;
+        $SecLightGreen: #9abeaa;
+        $SecGreen: #708573;
+        $SecForest: #0d5257;
+        $SecLightGold: #fdda24;
+        $SecLightOrange: #ed8b00;        
+        $SecOrange: #e35205;
+        $SecDarkOrange: #e35205;        
+        $SecOlive: #9f7d23;
+        $SecBrown: #4d3d2a;
 
     //ACCESSABILITY PALLETTE
         $acc-red: #bb471a;
@@ -23,6 +34,8 @@
         $acc-FlatBlue:#369;
         $acc-Purple:#60c;
 
+    //DISCONTINUED
+        $Purple: #27318b;
 
     //CPASS colors
     	$cpass-Vanillin:#f0e5ca;
@@ -33,8 +46,8 @@
     	$cpass-DarkBlue:#274152;
 
     //Discover Viewbook Colors    
-    	$vb-DarkNavy: #333e48;
-    	$vb-RichNavy:#00447c;
+    	$vb-DarkNavy: $DarkGrey; //#333e48;
+    	$vb-RichNavy: #00447c;
         $vb-FlatNavy: #19468d;
     	$vb-Charcoal: #545456;
     	$vb-Gold: #ffd635;
@@ -65,9 +78,9 @@ $cs-brightness-offest: 30;
 $cs-colorblind:deuteranopia;
 
 
-$primary: #00447c; //cs-primary(); //#19468d
+$primary: $WVUBlue; //#00447c; //cs-primary(); //#19468d
 $secondary: #ede7dc; //cs-secondary(); $secondary: tint($pre-secondary, 85) ; // too light, darkening this up a bit. //#ede7dc
-$tertiary: #0079c1; //cs-tertiary(); //#0063ff got denied by UR
+$tertiary: $SecMiddleBlue; //#0079c1; //cs-tertiary(); //#0063ff got denied by UR
 $quadrary: #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25b
 
 //@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());

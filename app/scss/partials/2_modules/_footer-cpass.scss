@@ -1,5 +1,63 @@
 .cpass-footer-wrapper{
 	float:left;
 	width:100%;
+	box-shadow:shade($coolblack,15) 0 ms(-5) ms(-2) 0 inset;
+	background:url(../images/bg-3.jpg) repeat;
 }
 
+
+#cpass-footer{
+	ul{ padding:0; margin:0;}
+	li{ padding:0; margin:0; list-style:none;}
+	font-size:$base-font-size;
+  .cpass-cta{
+
+  	}//end .cpass-cta
+
+  .cpass-resources{
+  	h2{
+  		color:$WarmGrey3;
+  		border-bottom:0;
+  		text-transform:uppercase;  		
+  		font-family:$LtCn;
+  		font-weight:300;
+  	}
+  	h3{
+  		color:$secondary;
+  		text-transform:none;
+  		font-family:$LtCn;
+  		font-weight:300;
+  		a{
+  			color:$secondary;
+  			&:hover, &:focus{
+  				color:$SecLightGold;
+  			}
+  		}
+  	}
+
+  	.programs{
+  		background:transparent;
+  		color:$white;
+  		font-size:$base-font-size;
+
+  		tr{
+  			border-bottom: ms(-11) solid shade($black, 60);
+  			border-top: $vb-LightGrey ms(-12);
+  			&:last-child{ border-bottom:0;	}
+  		}
+  		tr:nth-child(even){
+  			background:transparent;
+  		}
+  		.programs__c2, .programs__c3, .programs__c4{
+  			text-align:center;
+  			a{
+  				font-family:$BlkCn;
+  				font-weight:900;
+  			}
+  		}
+
+  	}// end .programs
+
+
+  }//end .cpass-resources
+}//end #cpass-footer

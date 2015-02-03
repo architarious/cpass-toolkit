@@ -9,7 +9,7 @@ div.message{
     }
 
     &.warning{
-        background:shade($DarkOrange,10) url(../images/noise.png);
+        background:shade($SecDarkOrange,10) url(../images/noise.png);
         @include rem-selector(padding, 2);
         color:$white;
         font-family:$BlkCn;
@@ -17,12 +17,12 @@ div.message{
         letter-spacing: 2px;
         @include adjust-font-size-to($font-size-med);
         @include rhythm(2.0225, 0.772, 0.618, 1, $font-size-med);
-        @include text-shadow(shade($DarkOrange, 60) 0 -1px 1px, tint($DarkOrange, 20) 0 1px 1px  );
+        @include text-shadow(shade($SecDarkOrange, 60) 0 -1px 1px, tint($SecDarkOrange, 20) 0 1px 1px  );
         @include box-shadow(set-alpha($quadrary,0.50) 0 1px 25px inset, set-alpha($black, 0.4) 0 2px 5px);
 
         &:before{
             content:"WARNING!";
-            color:shade($DarkOrange, 50);
+            color:shade($SecDarkOrange, 50);
             width:30%;
             float:left;
             font-family:$BdCn;
