@@ -614,3 +614,30 @@ $parallax-ios         : true !default;
   );
   z-index: $distance * 1000;
 }
+
+
+///////////////////////////////////
+///scrollbar Mixin
+//WARNING: This mixin alone doesn't style scrollbars in all browsers, 
+//         it is intended to be used with jquery-custom-content-scroller.js: 
+//         http://manos.malihu.gr/jquery-custom-content-scroller 
+//
+//USAGE: @include scrollbar();  or @include scrollbar($sliderButtonColor, $sliderTrackColor, $margin-top, $height);
+//Dependencies: compass and set variables for $black, $secondary
+///////////////////////////////////
+
+@mixin scrollbarStyler( $foreground:$black, $background:shade($secondary,10), $Tmarg: ms(0), $size:ms(-3)){
+  margin-bottom:$Tmarg;
+
+  ::-webkit-scrollbar{
+    height:$size;
+  }
+  ::-webkit-scrollbar-thumb{
+    background:$foreground;
+  }
+  ::-webkit-scrollbar-track{
+    background:$background;
+  }
+  scrollbar-face-color:$foreground;
+  scrollbar-track-color:$background;
+}

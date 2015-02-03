@@ -3,15 +3,25 @@
 	box-shadow: darken($black,20) 0 ms(-6) ms(-3) 0, darken($secondary, 1) 0 ms(1) ms(-1) 0 inset;
 	float:left;
 	width:100%;
+	min-height:200px;
 	border-top:ms(-9) solid lighten($secondary, 3);
 	border-bottom:ms(-6) solid $vb-LightBlue;
+
+	.scroller-wrapper{
+		width:100%;
+		float:left;
+		min-height:162px;
+		position:relative;
+		@include rhythm($ms-1, 0, 0, 1, $font-size-med);
+	}
 
 	.sidescroll-nextprev{
 	  .sidescroll-nextprev-links{
 	  	top:-10px;
 
 	    a{		
-		  height:160px;
+		  height:ms(10);
+		  width:$ms-5+em;
 		  opacity:1;
 		  background:url(../images/postfix-arrows.png) no-repeat 2000px 2000px, $secondary url(../images/noise.png) repeat;
 		  color:$white;
@@ -19,29 +29,29 @@
 
 
 		  &.sidescroll-prev{ 
-		  	left:0;	
+		  	left:-(ms(3));	
 		  	border-radius: 0 100% 100%  0;
-		  	background-position:2px -788px;
+		  	background-position:12px -775px;
 		  	box-shadow: $black 5px 0px 9px -8px;
-		  	&:hover{ background-position:2px -365px;}
+		  	&:hover{ background-position:12px -352px;}
 		  	&.disabled{
 		  	opacity:1;
 		  	//@include standard-transition(margin);
-		  	background-position:2px 58px;
+		  	background-position:12px 72px;
 		  	//margin-left:-20px;
 		    }
 		  }
 		  &.sidescroll-next{ 
-		  	right:0; 
-		  	background-position:-374px -788px;
+		  	right:-(ms(3)); 
+		  	background-position:-371px -775px;
 		  	border-radius: 100% 0 0 100%;
 		  	border-left:tint($secondary, 20) 1px solid;
 		  	box-shadow: $black -5px 0px 9px -8px;
-		  	&:hover{ background-position:-374px -365px;}
+		  	&:hover{ background-position:-371px -352px;}
 		  	&.disabled{
 		  	opacity:1;
 		  	//@include standard-transition(margin);
-		  	background-position:-374px 58px;
+		  	background-position:-371px 72px;
 		  	//margin-left:-20px;
 		    }
 		  	
@@ -53,11 +63,16 @@
 
 }//end #postfix
 
-#feature-thumbs{
-	@include rhythm(1, 0, 0, 1, $font-size-med);
+#postfix--thumbs{
+	width:100%;
+	position:absolute;
+	overflow:hidden;
+	height:160px;
+
+	@include rhythm($ms-6n, 0, $ms-1n, 0, $font-size-med);
+
 
 	ul{
-
 	}
 	li{
 		list-style:none;
@@ -65,12 +80,38 @@
 		display:inline;
 		padding:0 ms(-2) 0 ms(-2);
 		width: 221px;
+
+		&:last-child{ }
 		img{
 			width:100%;
 			height:auto;
 		}
+	}
+
+	.ps-scrollbar-x-rail{
+		background:url(../images/noise.png) repeat darken($secondary, 7);
+		box-shadow: darken($secondary, 30) 0 ms(-10) ms(-9) 0 inset, tint($secondary, 50) 0 ms(-10) ms(-9) 0;
+		height:ms(-5);
+		bottom:ms(-1);
+		>.ps-scrollbar-x{
+			background:url(../images/noise.png) repeat lighten($black, 2);
+			height:ms(-3);
+			bottom:-(ms(-10));
+			box-shadow: lighten($black, 20) 0 ms(-8) ms(-9) 0 inset, darken($secondary, 60) 0 1px ms(-6) 0;
+
+		}
 	}	    
 }
 
+#postfix--scroller{
+  //@include scrollbarStyler;
+  @include rhythm(0, 0, 0, 0, $font-size-med);
+  //border: 1px solid gray;
+  width:100%;
+  height:152px;
+  position: absolute;
+  left:0;
 
+
+}
 

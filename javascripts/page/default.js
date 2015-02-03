@@ -1,6 +1,8 @@
-require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'overthrow-sidescroller'], function($, collapse, carousel, dropdown){
+require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'overthrow-sidescroller', 'jquery-perfect-scrollbar'], function($, collapse, carousel, dropdown){
 	$('.site-logo').css('display', 'block');
 	$('.site-logo').text('[changed by jQuery]');
+
+
 	
 
 	$('#mainCarousel').carousel({
@@ -21,6 +23,13 @@ require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdo
     	autoCoefficient: 6
     });
 
+
+    
+	$('#postfix--thumbs').perfectScrollbar({
+		suppressScrollY: true,
+		minScrollBarLength: 167
+
+	});
     
     overthrow.sidescroller(
       document.querySelectorAll( ".overthrow-enabled .sidescroll-nextprev" ), {disableNav: true, fixedItemWidth: true, snapScroll: true });
@@ -30,11 +39,14 @@ require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdo
         snapTolerance: 30
     });
 
-    overthrow.sidescroller( document.querySelectorAll( ".overthrow-enabled .snapscroll" ), { snapScroll: true });
-	
+    overthrow.sidescroller( document.querySelectorAll( ".overthrow-enabled .snapscroll" ), { snapScroll: false });
+
+
     
     resizeSegmentTitles("h1.title");
    	$('.collapse').collapse(); //bootstrap solution for navigation "navbar"$('.site-logo').bigText($('.site-logo'));
+
+   	
 
     
     /* these former utilities have been replaced by addthis
