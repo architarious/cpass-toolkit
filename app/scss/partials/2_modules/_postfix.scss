@@ -23,35 +23,43 @@
 		  height:ms(10);
 		  width:$ms-5+em;
 		  opacity:1;
-		  background:url(../images/postfix-arrows.png) no-repeat 2000px 2000px, $secondary url(../images/noise.png) repeat;
-		  color:$white;
+		  color:$white;		  
+		  @include standard-transition(box-shadow);
+		  transition-property: box-shadow, background-image;
+		  transition-duration:0.5s;
+		  transition-timing-function:ease-in;
 		  
 
 
 		  &.sidescroll-prev{ 
+		  	background:url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, $secondary linear-gradient(to right, set-alpha(lighten($secondary,7), 0.1), set-alpha(darken($secondary,3), 0.3), set-alpha(darken($secondary,10),0.0));
 		  	left:-(ms(3));	
-		  	border-radius: 0 100% 100%  0;
-		  	background-position:12px -775px;
-		  	box-shadow: $black 5px 0px 9px -8px;
+		  	background-position:12px -775px;	
+		  	border-radius: 0 70% 70%  0;
+		  	border-right: tint($secondary, 20) 1px solid;	  	
+		  	box-shadow: set-alpha($black,0.5) 10px 0px 7px -7px;
 		  	&:hover{ background-position:12px -352px;}
 		  	&.disabled{
 		  	opacity:1;
-		  	//@include standard-transition(margin);
-		  	background-position:12px 72px;
+		  	background:url(../images/postfix-arrows.png) no-repeat 12px 72px, $secondary url(../images/noise.png) repeat;
+		  	background-position:12px 72px;		  	
+		  	box-shadow: $black 6px 0px 9px -8px;
 		  	//margin-left:-20px;
 		    }
 		  }
 		  &.sidescroll-next{ 
+		  	background:url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, $secondary linear-gradient(to left, set-alpha(lighten($secondary,7), 0.1), set-alpha(darken($secondary,3), 0.3), set-alpha(darken($secondary,10),0.0));
 		  	right:-(ms(3)); 
 		  	background-position:-371px -775px;
-		  	border-radius: 100% 0 0 100%;
-		  	border-left:tint($secondary, 20) 1px solid;
-		  	box-shadow: $black -5px 0px 9px -8px;
+		  	border-radius: 70% 0 0 70%;
+		  	border-left:tint($secondary, 20) 1px solid;		  	
+		  	box-shadow: set-alpha($black,0.5) -10px 0px 7px -7px;
 		  	&:hover{ background-position:-371px -352px;}
 		  	&.disabled{
 		  	opacity:1;
-		  	//@include standard-transition(margin);
-		  	background-position:-371px 72px;
+		  	background:url(../images/postfix-arrows.png) no-repeat 12px 72px, $secondary url(../images/noise.png) repeat;
+		  	background-position:-371px 72px;		  	
+		  	box-shadow: $black -6px 0px 9px -8px;
 		  	//margin-left:-20px;
 		    }
 		  	

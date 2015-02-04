@@ -12842,46 +12842,70 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   height: 177.4427252687px;
   width: 3.2725425314em;
   opacity: 1;
-  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, #ede7dc url(../images/noise.png) repeat;
   color: #fffefb;
+  -webkit-transition-property: -webkit-box-shadow;
+          transition-property: box-shadow;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-property: -webkit-box-shadow, background-image;
+          transition-property: box-shadow, background-image;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000334}}
 #postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev {
+  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, #ede7dc -webkit-gradient(linear, left top, right top, from(rgba(249, 247, 244, 0.1)), color-stop(rgba(232, 224, 210, 0.3)), to(rgba(220, 208, 186, 0)));
+  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, #ede7dc -webkit-linear-gradient(left, rgba(249, 247, 244, 0.1), rgba(232, 224, 210, 0.3), rgba(220, 208, 186, 0));
+  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, #ede7dc linear-gradient(to right, rgba(249, 247, 244, 0.1), rgba(232, 224, 210, 0.3), rgba(220, 208, 186, 0));
   left: -32.36068px;
-  border-radius: 0 100% 100%  0;
   background-position: 12px -775px;
-  -webkit-box-shadow: #2c2a29 5px 0px 9px -8px;
-          box-shadow: #2c2a29 5px 0px 9px -8px;
+  border-radius: 0 70% 70%  0;
+  border-right: #f0ebe3 1px solid;
+  -webkit-box-shadow: rgba(44, 42, 41, 0.5) 10px 0px 7px -7px;
+          box-shadow: rgba(44, 42, 41, 0.5) 10px 0px 7px -7px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000341}}
 #postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev:hover {
   background-position: 12px -352px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000342}}
 #postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev.disabled {
   opacity: 1;
+  background: url(../images/postfix-arrows.png) no-repeat 12px 72px, #ede7dc url(../images/noise.png) repeat;
   background-position: 12px 72px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000344}}
-#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next {
-  right: -32.36068px;
-  background-position: -371px -775px;
-  border-radius: 100% 0 0 100%;
-  border-left: #f0ebe3 1px solid;
-  -webkit-box-shadow: #2c2a29 -5px 0px 9px -8px;
-          box-shadow: #2c2a29 -5px 0px 9px -8px;
+  -webkit-box-shadow: #2c2a29 6px 0px 9px -8px;
+          box-shadow: #2c2a29 6px 0px 9px -8px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000350}}
+#postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next {
+  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, #ede7dc -webkit-gradient(linear, right top, left top, from(rgba(249, 247, 244, 0.1)), color-stop(rgba(232, 224, 210, 0.3)), to(rgba(220, 208, 186, 0)));
+  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, #ede7dc -webkit-linear-gradient(right, rgba(249, 247, 244, 0.1), rgba(232, 224, 210, 0.3), rgba(220, 208, 186, 0));
+  background: url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, #ede7dc linear-gradient(to left, rgba(249, 247, 244, 0.1), rgba(232, 224, 210, 0.3), rgba(220, 208, 186, 0));
+  right: -32.36068px;
+  background-position: -371px -775px;
+  border-radius: 70% 0 0 70%;
+  border-left: #f0ebe3 1px solid;
+  -webkit-box-shadow: rgba(44, 42, 41, 0.5) -10px 0px 7px -7px;
+          box-shadow: rgba(44, 42, 41, 0.5) -10px 0px 7px -7px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000357}}
 #postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next:hover {
   background-position: -371px -352px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000358}}
 #postfix .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-next.disabled {
   opacity: 1;
+  background: url(../images/postfix-arrows.png) no-repeat 12px 72px, #ede7dc url(../images/noise.png) repeat;
   background-position: -371px 72px;
+  -webkit-box-shadow: #2c2a29 -6px 0px 9px -8px;
+          box-shadow: #2c2a29 -6px 0px 9px -8px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000374}}
 #postfix--thumbs {
   width: 100%;
   position: absolute;
@@ -12892,7 +12916,7 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   padding-bottom: 0.9667403467em;
   margin-bottom: 0em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000385}}
 #postfix--thumbs li {
   list-style: none;
   float: left;
@@ -12900,12 +12924,12 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   padding: 0 9.8885437512px 0 9.8885437512px;
   width: 221px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000393}}
 #postfix--thumbs li img {
   width: 100%;
   height: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000399}}
 #postfix--thumbs .ps-scrollbar-x-rail {
   background: url(../images/noise.png) repeat #e1d7c4;
   -webkit-box-shadow: #b9a277 0 1.4427190498px 1.8033988123px 0 inset, #f6f3ed 0 1.4427190498px 1.8033988123px 0;
@@ -12913,7 +12937,7 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   height: 4.7213594515px;
   bottom: 12.3606796891px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\00003104}}
 #postfix--thumbs .ps-scrollbar-x-rail > .ps-scrollbar-x {
   background: url(../images/noise.png) repeat #312f2e;
   height: 7.6393201188px;
@@ -12922,7 +12946,7 @@ nav #nav-primary.collapse.in .navbar--more a::after {
           box-shadow: #615c5a 0 2.3343684751px 1.8033988123px 0 inset, #645333 0 1px 3.7770875612px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/2_modules\/_postfix\.scss}line{font-family:\00003114}}
 #postfix--scroller {
   margin-top: 0em;
   padding-top: 0em;
