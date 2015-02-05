@@ -19,11 +19,10 @@ shared_themes:
 editable_region:
   main: This is content for the main editable region. Change what it says in the mock_data.yml file.
   sidebar: Sidebar stuff.
-  contact: | 
-    <p><a href="http://cpass.wvu.edu" class="title">College of Physical Activity and Sport Sciences</a><br/>
+  global_footer_contact: | 
+    <a href="http://cpass.wvu.edu" class="title">College of Physical Activity<br/> and Sport Sciences</a><br/>
     375 Birch St., Morgantown WV 26505 P.O. Box 6116<br/>
-    Phone: (304) 293-3295 | Fax: (304) 293-4641<br/>
-    <a href="mailto:CPASS-WVU@mail.wvu.edu">CPASS-WVU@mail.wvu.edu</a></p>
+    Phone: (304) 293-3295 | Fax: (304) 293-4641 <br/> Email: <a href="mailto:cpass-wvu@mail.wvu.edu">cpass-wvu@mail.wvu.edu</a>
 
 site_name: "CPASS toolkit"
 

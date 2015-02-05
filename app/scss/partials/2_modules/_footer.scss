@@ -1,14 +1,40 @@
 #footer{
-	padding:0;
-	float:left;
-	width:100%;
-	font-size:$base-font-size;
+  padding:0;
+  float:left;
+  width:100%;
+  font-size:$base-font-size;
   color:$white;
 
+  #site-footer,#cpass-footer:not(.footer--return){
+	
   a{
     color:tint($SecLightGold,30);
-  }
-}
+    border-bottom:0;
+    padding:0;
+    &:hover,&:focus{
+       background:none;
+       border:0;
+       color:tint($SecLightGold, 60);
+    }
+  }//end a
+
+  ul{
+   padding:0;margin:0;
+    li{
+      list-style:none;
+      padding:0;
+      margin:0;
+    a{
+      @include adjust-font-size-to($font-size-small-2);
+      @include rhythm(0, $ms-2n, $ms-4n, 0, $font-size-small-2);
+    }
+    }//end li
+  }//end ul
+
+  
+  }//end #site-footer, #cpass-footer
+
+}//#footer
 
 .footer--return{
   width:100%;
@@ -30,3 +56,53 @@
     color:$WVUGold;
   }
 }//end .footer--return
+
+#site-footer{
+    font-size:$base-font-size;
+
+    @include rhythm(1, 0, 0, 1, $font-size-med);
+
+
+  p{
+    color:$white;
+    @include adjust-font-size-to($font-size-med);
+    margin:0; padding:0;
+
+    a:first-child{
+      font-size:$font-size-med-2;
+    }//end a:first-child
+  }//end p
+
+  a{
+    color:tint($SecLightGold,30);
+    border-bottom:0;
+    padding:0;
+    &:hover,&:focus{
+       background:none;
+       border:0;
+    }
+
+    br{display:none;}
+  }//end a
+
+  #footer_contact-links{
+    ul li a{
+      @include rhythm($ms-6n, 0, 0, $ms-6n, $font-size-small-2);
+      &.contact{@include btn_icon($black, shade($coolblack, 30), $white, "\e60e"); }
+      &.request-info{@include btn_icon($black, shade($coolblack, 30), $white, "\e6aa");}
+      &.faculty{@include btn_icon($black, shade($coolblack, 30), $white, "\e651");}
+      &.feedback{@include btn_icon($black, shade($coolblack, 30), $white, "\e60a");}
+      &.btn-arrow{@include btn_icon($black, shade($coolblack, 30), $white);}
+
+      &.contact.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e60e", "false");}
+      &.request-info.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e6aa", "false");}
+      &.faculty.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e651","false");}
+      &.feedback.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e60a", "false");}
+      &.btn-arrow.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e6bd", "false");}
+
+      @include adjust-font-size-to($font-size-small);
+      min-width:100%;
+    }
+  }//end #footer_contact-links
+
+}//end #site-footer

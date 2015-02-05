@@ -4,12 +4,15 @@
   //@include background-grid;
 
   body{
-  	font-size:16px;
+  	#page-wrap{
+  		font-size:16px;
+  	}
+
   	.container, .wvu-masthead-container{
-  		//max-width:$bp-desktop1-1;
+  		max-width:$bp-tablet-2;
   		//width: ms(16);
   		@include breakpoint($bp-tablet-2){
-  			//max-width:860px;
+  			max-width:$bp-desktop1-1;
   		}
 
   	}

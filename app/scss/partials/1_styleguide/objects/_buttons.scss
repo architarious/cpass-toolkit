@@ -3,7 +3,9 @@
 \*------------------------------------*/
 .btn {
 	@include btn();
-
+}
+.btn.icon {
+	@include btn_icon();
 }
 
 .btn--small {

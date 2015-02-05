@@ -141,7 +141,7 @@
 //DEFAULT: same settings as buttons throughout site
 //USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
 ///////////////////////////////////
-@mixin standard-box-shadow($shadow:tint($black,15), $h:0, $v:2px, $blur:1px, $spread:0){
+@mixin standard-box-shadow($shadow:tint($black,15), $h:0, $v:$ms-8n+em, $blur:$ms-11n+em, $spread:0){
   box-shadow: $shadow $h $v $blur $spread;
 }
 
@@ -152,8 +152,8 @@
 //DEFAULT: same settings as buttons throughout site
 //USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
 ///////////////////////////////////
-@mixin standard-border-radius($radius: 1.618){
-  border-radius: 0.618em;
+@mixin standard-border-radius($radius: $ms-2+em){
+  border-radius: $radius;
 }
 
 ///////////////////////////////////
@@ -165,7 +165,7 @@
 ///////////////////////////////////
 
 @mixin box-emboss($opacity:0.867, $opacity2:0.4774){
-    box-shadow:set-alpha($white, $opacity) 0 1px 0, inset set-alpha($black, $opacity2) 0 1px 0;
+    box-shadow:set-alpha($white, $opacity) 0 $ms-11n+em 0, inset set-alpha($black, $opacity2) 0 $ms-11n+em 0;
 }
 
 ///////////////////////////////////
@@ -175,7 +175,7 @@
 //DEFAULT: same settings as buttons throughout site
 //USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
 ///////////////////////////////////
-@mixin standard-text-shadow($shadow:tint($black,15), $h:0, $v:2px, $blur:1px, $spread:0){
+@mixin standard-text-shadow($shadow:tint($black,15), $h:0, $v:$ms-8n+em, $blur: $ms-11n+em, $spread:0){
   text-shadow: $h $v $blur $shadow ;
 }
 
@@ -189,11 +189,11 @@
 ///////////////////////////////////
 
 @mixin letterpress($opacity:0.68541){
-  text-shadow:0 1px 0 set-alpha($white, $opacity) ;
+  text-shadow:0 $ms-11n+em 0 set-alpha($white, $opacity) ;
 }
 
 @mixin letterpress-dark($opacity:0.1618){
-  text-shadow:0 1px 0 set-alpha($black, $opacity) ;
+  text-shadow:0 $ms-11n+em 0 set-alpha($black, $opacity) ;
 }
 
 
@@ -204,112 +204,36 @@
 //Dependencies: set variables for $tertiary, $black, $white and $BlkCn
 ///////////////////////////////////
 @mixin btn($bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white){
-    font-family: $BlkCn;
-    font-weight:900;
-    letter-spacing:1px;
+    font-family: $BdCn;
+    font-weight:800;
+
+    @include breakpoint($bp-desktop1-1){
+      font-family: $BlkCn;
+      font-weight:900;
+    }
+
+    
+    letter-spacing:$ms-11n+em;
     position:relative;
     text-transform: uppercase;
 
-    @include sassy-button( "flat", 3px, 16px, $bg-color, shade($bg-color, 20), $tx-color, inset);
+    @include sassy-button( "flat", $ms-7n+em, 1em, $bg-color, shade($bg-color, 20), $tx-color, inset);
     background-image:url(../images/noise.png);
-    padding: 8px 16px;
-    padding-right: 40px;
+    padding: $ms-3n+em 1em;
+    border:$ms-11n+em solid lighten($bg-color, 5);
+    border-bottom:$ms-11n+em solid darken($bg-color, 10);
     @include standard-box-shadow($shadow);
     @include standard-transition(background-color);
     @include standard-transition(box-shadow);
 
     &:hover, &:focus{
-      @include box-shadow(tint($shadow,10) 0 2px 4px);
+      @include box-shadow(tint($shadow,10) 0 $ms-11n+em $ms-8n+em);
       color:shade($white,10);
     }
 
     &:active{
       background:lighten($bg-color, 20);
-      @include box-shadow(tint($shadow,40) 0 4px 6px);
-    }
-
-    &:visited{
-      color:lighten($quadrary, 5);
-      @include letterpress();
-      text-decoration:none;
-    }
-
-    &.disabled {
-    background: $grey-light-2;
-    color: $grey;
-     &:hover, &:focus, &:active{
-      background: $grey-light-2;
-     }
-     &:before{
-        background: $grey-light-3;
-         &:hover:before, &:focus:before, &:active:before{
-           background: $grey-light-3;
-         }
-     } 
-    }//end .disabled
-
-
-  &:before{
-    background-color: shade($bg-color, 10);
-    background-image: url(../images/right_arrow.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    content: "";
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    right: 8px;
-    top: 42%;
-    margin-top: -9px;
-    @include border-radius(50%);
-    @include box-shadow(darken($bg-color, 20) 0 2px 0 inset, lighten($bg-color, 20) 0 1px 0);
-    @include standard-transition(background);
-    @include standard-transition(box-shadow);
-    }//end before
-
-    &:hover:before, &:focus:before{
-      background-color:shade($bg-color, 40);
-      @include box-shadow(darken($bg-color, 60) 0 5px 0 inset, lighten($bg-color, 20) 0 1px 0);
-    }
-
-    &:active:before{
-      background-color:lighten($bg-color, 15);
-      @include box-shadow(darken($bg-color, 60) 0 1px 0 inset, lighten($bg-color, 20) 0 3px 0);
-    }
-
-
-
-  }//end btn
-
-
-///////////////////////////////////
-///Button-noArrow Mixin
-//
-//USAGE: @include btn_noArrow();  or @include btn_noArrow($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
-//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
-///////////////////////////////////
-@mixin btn_noArrow($bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white){
-    font-family: $BlkCn;
-    font-weight:900;
-    letter-spacing:1px;
-    position:relative;
-    text-transform: uppercase;
-
-    @include sassy-button( "flat", 3px, 16px, $bg-color, shade($bg-color, 20), $tx-color, inset);
-    background-image:url(../images/noise.png);
-    padding: 8px 16px;
-    @include standard-box-shadow($shadow);
-    @include standard-transition(background-color);
-    @include standard-transition(box-shadow);
-
-    &:hover, &:focus{
-      @include box-shadow(tint($shadow,10) 0 2px 4px);
-      color:shade($white,10);
-    }
-
-    &:active{
-      background:lighten($bg-color, 20);
-      @include box-shadow(tint($shadow,40) 0 4px 6px);
+      //@include box-shadow(tint($shadow,40) 0 $ms-6n+em $ms-4n+em);
     }
 
     &:visited{
@@ -332,6 +256,100 @@
      } 
     }//end .disabled
 }//end btn_noArrow
+
+///////////////////////////////////
+///Button-icon Mixin_icon
+//
+//USAGE: @include btn_icon();  or @include btn($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
+//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
+///////////////////////////////////
+@mixin btn_icon( $bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white, $icon:"\e6bd", $withCircle: "true"){
+    
+  @include btn($bg-color, $shadow, $tx-color);
+
+  padding-right: $ms-4+em;
+
+ @if $withCircle == 'true'{  
+  &:before{
+    background-color: shade($bg-color, 2);
+    background-image: url(../images/noise.png);
+    background-repeat: repeat;
+
+    font-family:'icomoon';
+    color:$white;
+    content: $icon;
+    text-align:center;
+    @include standard-text-shadow(darken($bg-color, 20));
+    //text-shadow: darken($bg-color, 20) 0 $ms-8n+em 0;
+    font-weight:100;
+    line-height:$ms-2+$ms-8n+em;    
+    font-size:$ms-0+em;
+
+    width: $ms-2+$ms-8n+em;
+    height: $ms-2+$ms-8n+em;
+    position: absolute;
+    right: $ms-5n+em;
+    top: $ms-0+$ms-6n+em;
+    margin-top: -($ms-2n+em);
+
+    @include border-radius(50%);
+    @include box-shadow(darken($bg-color, 5) 0 $ms-8n+em 0 inset, lighten($bg-color, 5) 0 $ms-11n+em 0);
+    @include standard-transition(background);
+    @include standard-transition(box-shadow);
+    }//end before
+
+    &:hover:before, &:focus:before{
+      background-color:shade($bg-color, 40);
+      @include box-shadow(darken($bg-color, 60) 0 $ms-3n+em 0 inset, lighten($bg-color, 20) 0 $ms-11n+em 0);
+      text-shadow: darken($bg-color, 60) 0 $ms-7n+em $ms-7n+em;
+
+    }//end hover
+
+    &:active:before{
+      background-color:lighten($bg-color, 15);
+      @include box-shadow(darken($bg-color, 60) 0 $ms-11n+em 0 inset, lighten($bg-color, 20) 0 $ms-7n+em 0);
+      text-shadow: darken($bg-color, 60) 0 $ms-11n+em 0;
+    }//end :active
+
+    }@else{
+    
+    &:before{
+
+    font-family:'icomoon';
+    color:$white;
+    content: $icon;
+    text-align:center;
+    @include standard-text-shadow(darken($bg-color, 20));
+    //text-shadow: darken($bg-color, 20) 0 $ms-8n+em 0;
+    font-weight:100;
+    line-height:$ms-2+$ms-8n+em;    
+    font-size:$ms-0+em;
+
+    width: $ms-2+$ms-8n+em;
+    height: $ms-2+$ms-8n+em;
+    position: absolute;
+    right: $ms-5n+em;
+    top: $ms-0+$ms-6n+em;
+    margin-top: -($ms-2n+em);
+
+    @include standard-transition(background);
+    @include standard-transition(box-shadow);
+    }//end before
+
+    &:hover:before, &:focus:before{
+      text-shadow: darken($bg-color, 60) 0 $ms-7n+em $ms-7n+em;
+
+    }//end hover
+
+    &:active:before{
+      text-shadow: darken($bg-color, 60) 0 $ms-11n+em 0;
+    }//end :active
+
+  }//end if/else statement
+
+
+
+}//end btn
 
 ///////////////////////////////////
 ///Hide-Text Mixin
@@ -626,9 +644,7 @@ $parallax-ios         : true !default;
 //Dependencies: compass and set variables for $black, $secondary
 ///////////////////////////////////
 
-@mixin scrollbarStyler( $foreground:$black, $background:shade($secondary,10), $Tmarg: ms(0), $size:ms(-3)){
-  margin-bottom:$Tmarg;
-
+@mixin scrollbarStyler( $foreground:$black, $background:shade($secondary,10), $size:ms(-3)){
   ::-webkit-scrollbar{
     height:$size;
   }

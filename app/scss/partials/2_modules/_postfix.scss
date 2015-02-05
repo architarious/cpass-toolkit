@@ -49,7 +49,7 @@
 		  }
 		  &.sidescroll-next{ 
 		  	background:url(../images/postfix-arrows.png) no-repeat 2000px 2000px, url(../images/noise.png) repeat, $secondary linear-gradient(to left, set-alpha(lighten($secondary,7), 0.1), set-alpha(darken($secondary,3), 0.3), set-alpha(darken($secondary,10),0.0));
-		  	right:-(ms(3)); 
+		  	right:-23px; 
 		  	background-position:-371px -775px;
 		  	border-radius: 70% 0 0 70%;
 		  	border-left:tint($secondary, 20) 1px solid;		  	

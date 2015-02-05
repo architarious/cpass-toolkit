@@ -5,7 +5,18 @@
 
   body{
   	.container, .wvu-masthead-container{
-  		//max-width:$bp-tablet-1;
+  		max-width:$bp-mobile2-2;
+  		//width: ms(17);
+
+  		@include breakpoint($bp-mobile2-2){
+  			max-width:$bp-mobile2-3;
+  		}
+  		@include breakpoint($bp-mobile2-3){
+  			max-width:$bp-mobile2-4;
+  		} 
+  		@include breakpoint($bp-mobile2-4){
+  			max-width:$bp-tablet-1;
+  		} 	
   	}
 	.wvu-masthead{
 		.wvu-masthead-container{
@@ -111,6 +122,31 @@
 	}//end section#postfix
 
 	footer{
+		#site-footer{
+			#footer_contact{
+				@include grid-span(6,1);
+				clear:both;
+			}
+			#footer_contact-links{
+				@include grid-span(6,1);
+				clear:both;
+			}
+			#footer_feature{
+				@include grid-span(6,1);
+				clear:both;
+			}
+
+			@include breakpoint($bp-mobile2-2){
+				#footer_contact-links{
+					@include grid-span(3,1);
+					clear:both;
+				}
+				#footer_feature{
+					@include grid-span(3,4);
+				}
+
+			}//end $bp-mobile2-2-608 
+		}//end #site-footer
 		#college.footer{
 			.container{
 				#footer_contact{}//end #footer_contact

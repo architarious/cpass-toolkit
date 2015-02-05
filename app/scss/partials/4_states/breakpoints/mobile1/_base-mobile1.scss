@@ -3,10 +3,21 @@
  $output: 'isolation';
  //@include background-grid;
 
+ html{
+ 	font-size:16px;
+ }
+
  body{
  	.container, .wvu-masthead-container{
-  		margin:0 auto;
+  		max-width:$bp-mobile1-2;
+  		//width: ms(17);
 
+  		@include breakpoint($bp-mobile1-2){
+  			max-width:$bp-mobile1-3;
+  		}
+  		@include breakpoint($bp-mobile1-3){
+  			max-width:$bp-mobile2-1;
+  		} 
   	}
 	.wvu-masthead{
 		.wvu-masthead-container{
