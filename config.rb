@@ -44,8 +44,7 @@ environment = :development
 
 # In development, we can turn on the debug_info to use with FireSass or Chrome Web Inspector. Uncomment:
 debug = true
-
-sass_options = {:sourcemap => true}
+sourcemap = true
 
 
 ##############################

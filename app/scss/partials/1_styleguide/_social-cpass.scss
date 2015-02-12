@@ -1,23 +1,68 @@
 .social-cpass a{
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  transition-property: border-radius, border-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+
   float: right;
   height: ms(3);
   width: ms(3);
   overflow: hidden;
   color:$white;
-  padding: 4px;
-  @include rhythm(0, 0, $ms-1n, 0, $font-size-large);
-  @include adjust-font-size-to($font-size-large);
+  margin-right: ms(-4);
+  border-radius:100%;
+  border:ms(-8) solid $white;
+  @include adjust-font-size-to($font-size-med);
   span{ visibility: hidden;}
-  text-shadow: 0 8px 11px darken($vb-DarkNavy, 18);
+  text-shadow: 0 ms(-2) ms(-1) darken($vb-DarkNavy, 18);
+  box-shadow: 0 ms(-2) ms(-1) darken($vb-DarkNavy, 18);
+  &:hover, &:focus{
+    border-radius:10%;
+    border-color:$quadrary;
+    color:$quadrary;
+    &:before{
+      color:$quadrary;
+    }
+  }
+  &:active{
+    border-color:$vb-LightBlue;
+    color:$vb-LightBlue;
+    &:before{
+      color:$quadrary;
+    }
+  }
   &::before{
+    padding-left:ms(-3);
+    vertical-align:middle;
+    text-align:center;
+
+
   }
   &.facebook{
-  	@extend .icon-fb;
+  	@extend .icon-facebook;
   }
   &.twitter{
-  	background-position: -13px -285px;
+  	@extend .icon-twitter;
   }
   &.rss{
-  	background-position: -13px -353px;
+  	@extend .icon-feed;
+  }
+  &.instagram{
+    @extend .icon-instagram;
+  }
+  &.linkedin{
+    @extend .icon-linkedin2;
   }
 }

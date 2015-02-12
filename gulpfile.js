@@ -122,7 +122,7 @@ gulp.task('compass', function () {
 /////////////////////////////
 gulp.task('move-css', function(){
   gulp.src( paths.css + '/*.css')
-    .pipe(rename({ suffix: ".min" }))
+    //.pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest('./stylesheets/'))
 
 });

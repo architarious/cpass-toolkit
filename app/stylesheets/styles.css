@@ -9413,31 +9413,64 @@ ul li, .sidebar li, aside li {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\000031}}
 .social-cpass a {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-property: border-radius, border-color, color;
+          transition-property: border-radius, border-color, color;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   float: right;
   height: 32.36068px;
   width: 32.36068px;
   overflow: hidden;
   color: #fffefb;
-  padding: 4px;
-  margin-top: 0em;
-  padding-top: 0em;
-  padding-bottom: 0.5974783884em;
-  margin-bottom: 0em;
-  font-size: 1.618034em;
-  line-height: 1.1600884159em;
-  text-shadow: 0 8px 11px #0d1012;
+  margin-right: 6.111456095px;
+  border-radius: 100%;
+  border: 2.3343684751px solid #fffefb;
+  font-size: 1em;
+  line-height: 1.251375em;
+  text-shadow: 0 9.8885437512px 12.3606796891px #0d1012;
+  -webkit-box-shadow: 0 9.8885437512px 12.3606796891px #0d1012;
+          box-shadow: 0 9.8885437512px 12.3606796891px #0d1012;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000328}}
 .social-cpass a span {
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000317}}
-.social-cpass a.twitter {
-  background-position: -13px -285px;
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000331}}
+.social-cpass a:hover, .social-cpass a:focus {
+  border-radius: 10%;
+  border-color: #ffc656;
+  color: #ffc656;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000320}}
-.social-cpass a.rss {
-  background-position: -13px -353px;
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000335}}
+.social-cpass a:hover:before, .social-cpass a:focus:before {
+  color: #ffc656;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000339}}
+.social-cpass a:active {
+  border-color: #2eb0e3;
+  color: #2eb0e3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000342}}
+.social-cpass a:active:before {
+  color: #ffc656;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/_social-cpass\.scss}line{font-family:\0000346}}
+.social-cpass a::before {
+  padding-left: 7.6393201188px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 /*------------------------------------*\
@@ -9496,7 +9529,7 @@ ul li, .sidebar li, aside li {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\0000343}}
-.icon-fb:before, .social-cpass a.facebook:before {
+.icon-fb:before {
   content: "\e605";
 }
 
@@ -9936,7 +9969,7 @@ ul li, .sidebar li, aside li {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003307}}
-.icon-facebook:before {
+.icon-facebook:before, .social-cpass a.facebook:before {
   content: "\e670";
 }
 
@@ -9946,12 +9979,12 @@ ul li, .sidebar li, aside li {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003313}}
-.icon-instagram:before {
+.icon-instagram:before, .social-cpass a.instagram:before {
   content: "\e671";
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003316}}
-.icon-twitter:before {
+.icon-twitter:before, .social-cpass a.twitter:before {
   content: "\e638";
 }
 
@@ -9961,7 +9994,7 @@ ul li, .sidebar li, aside li {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003322}}
-.icon-feed:before {
+.icon-feed:before, .social-cpass a.rss:before {
   content: "\e673";
 }
 
@@ -10521,7 +10554,7 @@ ul li, .sidebar li, aside li {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/e\:\/cleanslate_themes\/cpass-toolkit\/app\/scss\/partials\/1_styleguide\/objects\/_icons\.scss}line{font-family:\00003658}}
-.icon-linkedin2:before {
+.icon-linkedin2:before, .social-cpass a.linkedin:before {
   content: "\e6d2";
 }
 
