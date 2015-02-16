@@ -18,8 +18,8 @@
 @import 'modular-scale';  
 @import 'compass';   
 @import 'color-schemer';
-@import "bootstrap";  
-@import "bootstrap/theme";
+@import 'bootstrap-compass';
+@import 'bootstrap'; 
 
 $legacy-support-for-ie: true;  
 $legacy-support-for-mozilla: false;    
