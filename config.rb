@@ -8,7 +8,7 @@ require 'color-schemer'
 
 require 'sassy-buttons'
 require 'autoprefixer-rails'
-require 'compass-recipes'
+#require 'compass-recipes'
 require 'compass-normalize'
 require 'bootstrap-sass'
 
@@ -32,14 +32,14 @@ fonts_dir = "public/fonts"
 # output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-#relative_assets = true
+relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 #line_comments = false
 
 # Change this to :production when ready to deploy the CSS to the live server.
 # Note: If you are using grunt.js, these variables will be overriden.
-#environment = :development
+environment = :development
 #environment = :production
 
 # In development, we can turn on the debug_info to use with FireSass or Chrome Web Inspector. Uncomment:
@@ -52,7 +52,7 @@ sourcemap = true
 ##############################
 
 # Disable cache busting on image assets
-#asset_cache_buster :none
+asset_cache_buster :none
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

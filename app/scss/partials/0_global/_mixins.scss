@@ -208,10 +208,10 @@
     font-weight:800;
 
     @include breakpoint($bp-desktop1-1){
-      font-family: $BlkCn;
-      font-weight:900;
-    }
-
+      font-family: $BlkCn;  
+      font-weight:900; 
+    } 
+ 
     
     letter-spacing:$ms-11n+em;
     position:relative;
@@ -221,7 +221,7 @@
     background-image:url(../images/noise.png);
     padding: $ms-3n+em 1em;
     border:$ms-11n+em solid lighten($bg-color, 5);
-    border-bottom:$ms-11n+em solid darken($bg-color, 10);
+    border-bottom:$ms-11n+em solid darken($bg-color, 10); 
     @include standard-box-shadow($shadow);
     @include standard-transition(background-color);
     @include standard-transition(box-shadow);

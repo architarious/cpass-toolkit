@@ -11,15 +11,17 @@
 ////////////////////////
 // Compass Extensions
 ////////////////////////
+@import 'compass';
+@import 'breakpoint';
 @import 'singularitygs';
 @import 'toolkit';
 @import 'sassy-buttons';
 @import 'normalize';   
-@import 'modular-scale';  
-@import 'compass';   
+@import 'modular-scale';     
 @import 'color-schemer';
-@import 'bootstrap-compass';
+@import 'bootstrap-compass'; 
 @import 'bootstrap'; 
+//@import 'recipes';
 
 $legacy-support-for-ie: true;  
 $legacy-support-for-mozilla: false;    

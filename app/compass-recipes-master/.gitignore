@@ -1,0 +1,6 @@
+.DS_Store
+.rvmrc
+*.lock
+.sass-cache
+compass-recipes-*.gem
+/build/

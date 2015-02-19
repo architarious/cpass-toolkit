@@ -6,7 +6,7 @@ gem 'sass', '~>3.4.12'
 
 gem 'compass-rails', '~>2.0.4'
 #gem 'compass-aurora', '~>3.0.9'
-gem 'compass-recipes', '~>0.3.0'
+#gem 'compass-recipes', '~>0.3.0'
 gem 'compass-normalize', '~>1.5.0'
 
 gem 'toolkit', '~>2.7.0'
