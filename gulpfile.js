@@ -166,7 +166,7 @@ gulp.task('browserSync', function () {
     'stylesheets/*.css',
     'javascripts/**/*.js',
     'images/**/*',
-    'stylesheets/fonts/**/*',
+    'public/fonts/**/*',
     paths.html + '/**/*.html',],{
 
     proxy: {

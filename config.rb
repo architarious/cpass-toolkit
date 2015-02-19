@@ -35,7 +35,7 @@ fonts_dir = "public/fonts"
 relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-#line_comments = false
+line_comments = false
 
 # Change this to :production when ready to deploy the CSS to the live server.
 # Note: If you are using grunt.js, these variables will be overriden.
