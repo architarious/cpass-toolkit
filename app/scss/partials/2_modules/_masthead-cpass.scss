@@ -37,7 +37,7 @@
 	}//.logo-container
 	.short-menu-container{
 		display:none;
-		
+
 		ul.cpass-short{
 			li{
 				border-right: ms(-10) solid darken($vb-DarkNavy, 12);
@@ -51,16 +51,17 @@
 				background:none;
 				text-decoration: underline;
 				@include adjust-font-size-to($font-size-med);
-		  		padding: ms(-1);
-		  		@include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med);
-		  		&:hover{
-		  			color:$quadrary;
-		  		}
+		  	padding: ms(-1);
+		  	@include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med);
+		  	&:hover{
+		  		color:$quadrary;
+		  	}
 
-		  		
+
 
 			}
 		}
+
 
 		nav a.more, nav a.more:visited {
 		  background: url(../images/noise.png) darken($vb-Charcoal, 5);
@@ -111,20 +112,19 @@
 			float:right;
 		  }// end after
 		}//end nav a.more
-	}
+	}//end .short-menu-container
 
 	.social-cpass{
 		display:none;
 
-		a{
-			&:hover{
-				color:$quadrary;
-			}
-		}
+
 		@include breakpoint($bp-mobile2-2-608){
-		  display:block;
+			display:block;
+			@include rhythm( $ms-3n, 0, 0, $ms-4n, $font-size-small-2);
 		}
 	}
+
+
 
 	#nav-cpass{
 		@include rhythm($ms-3n,0 , 0, 0, $font-size-small-2);
@@ -134,8 +134,8 @@
 		width:100%;
 
 		ul{margin-bottom:0;}
-		li{ 
-		  width:100%; 
+		li{
+		  width:100%;
 		  float:left;
 		  &:last-child{ margin-bottom:0;}
 

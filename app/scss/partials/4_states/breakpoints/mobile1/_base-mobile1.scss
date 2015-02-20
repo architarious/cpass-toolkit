@@ -1,6 +1,6 @@
- $grids: 4;
- $gutters: 1/4;
- $output: 'isolation';
+@include add-grid(4);
+@include add-gutter(1/4);
+@include sgs-change('output', 'isolation');
  //@include background-grid;
 
  html{
@@ -17,7 +17,7 @@
   		}
   		@include breakpoint($bp-mobile1-3){
   			max-width:$bp-mobile2-1;
-  		} 
+  		}
   	}
 	.wvu-masthead{
 		.wvu-masthead-container{
@@ -51,14 +51,14 @@
 		.container{
 			#main{
 				article{
-					
+
 				}//end #main article
 			}//end #main
 			aside.sidebar{
 
 			}//end aside.sidebar
 		}//end section#core.container
-	}//end section#core	
+	}//end section#core
 
 	section#postfix{
 
@@ -85,6 +85,6 @@
 
 			}//end #wvu.footer .container
 		}//end #wvu.footer
-		
+
 	}//end footer.footer
 }//end body

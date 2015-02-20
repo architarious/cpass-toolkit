@@ -24,7 +24,12 @@ fonts_dir = "public/fonts"
 #on_stylesheet_saved do |file|
 #  css = File.read(file)
 #  File.open(file, 'w') do |io|
-#    io << AutoprefixerRails.process(css, browsers: ["last 1 version", "> 1%", "Explorer 7", "BlackBerry 10", "Android 4"])
+#    io << AutoprefixerRails.process(
+#      css, browsers: ["last 1 version", "> 1%", "Explorer 7", "BlackBerry 10", "Android 4"],
+#      map:   File.read('styles.css.map'), #this could be removed
+#      from: 'styles.css', #this could be removed
+#      to: 'styles.out.css' #this could be removed
+#      )
 #  end
 #end
 

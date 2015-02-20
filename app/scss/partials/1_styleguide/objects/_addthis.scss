@@ -1,0 +1,64 @@
+.at4-share-outer-right{
+  #at4-share{
+    bottom:6.18%;
+    top:auto;
+    width:ms(3);
+    height:ms(11);
+    box-shadow: -(ms(-10)) ms(-11)  ms(-2) 0 set-alpha(shade($black, 20), 0.3);
+
+
+    &:hover, &:focus{
+      //height: ms(11) + (ms(4) - ms(3));
+    }
+
+    .at4-share-btn{
+      padding:0;margin:0;border:0;
+      width:auto;
+      height:auto;
+      max-width:ms(5);
+      max-height:ms(5);
+      box-shadow:0;
+
+      transition-property: box-shadow;
+      transition-duration: 0.1618s;
+      transition-timing-function: ease-in;
+      padding-bottom:3px;
+      padding-top:3px;
+
+      //@include rhythm(0, $ms-8n, $ms-8n, 0 , $font-size-med);
+
+      &:hover, &:focus{
+        box-shadow: -(ms(-10)) ms(-9)  ms(-2) 0 set-alpha(shade($black, 20), 0.5);
+      }
+
+      .at4-icon{
+        width:ms(3);
+        height:ms(3);
+        background-size:ms(3) !important;
+        line-height:ms(3);
+        //@include rhythm( $ms-8n, 0, 0, $ms-8n, $font-size-med);
+
+        transition-property: width, height, background-size, padding-right;
+        transition-duration: 0.1618s;
+        transition-timing-function: ease-in;
+
+
+        &:hover, &:focus{
+          width:ms(3) + ms(-4);
+          height:ms(3) + ms(-4);
+          background-size:ms(3) + ms(-4)!important;
+          padding-right:ms(3) + ms(-4);
+
+
+        }
+      }//end .at4-icon
+
+      &.at-svc-compact{
+        box-shadow: 0 ms(-9)  ms(-2) 0 set-alpha(shade($black, 20), 0.2);
+      }
+    }//end .at4-share-btn
+    #at4-scc{
+      display:none !important;
+    }
+  }//end #at4-share
+}//end .at4-share-outer-right

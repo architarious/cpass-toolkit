@@ -23,9 +23,9 @@
 //@include cs-test($primary $secondary $tertiary $quadrary $white $black);
 ////////////////////////////////
 @import 'colors';
-@import 'typography-base';   
+@import 'typography-base';
 @import 'typography-college';
-@import 'typography-program'; 
+@import 'typography-program';
 @import 'social-cpass';
 @import 'bootstrap-variables';
 
@@ -53,6 +53,7 @@
 @import "objects/breadcrumbs";
 @import "objects/sidescroller";
 @import "objects/perfectScrollbar";
+@import "objects/addthis";
 
 //////////////////////////////
 // CSS Resets

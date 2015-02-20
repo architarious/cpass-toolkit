@@ -1,14 +1,15 @@
 @include breakpoint($bp-desktop2-1){
-  $grids: 16;
-  $gutters: 1/3;
-  //@include background-grid;
+  @include add-grid(16);
+  @include add-gutter(1/3);
+
 
   body{
 
   	#page-wrap{
   		font-size:20px;
+
   	}
-  	
+
   	.container, .wvu-masthead-container{
   		padding:0 1.25%;
   		max-width:2000px;
@@ -27,7 +28,7 @@
   		}
   	}
 
-  	.wvu-masthead-wrapper{  	
+  	.wvu-masthead-wrapper{
   		padding: 0 2%;
 	  .wvu-masthead{
 
@@ -98,14 +99,14 @@
 				    @include adjust-font-size-to($font-size-med-2);
 				    @include rhythm($ms-2, 0, 0, $ms-1n, $font-size-med-2);
 				  }
-					
+
 				}//end #main article
 			}//end #main
 			aside.sidebar{
 				@include grid-span(4, 13)
 			}//end aside.sidebar
 		}//end section#core.container
-	}//end section#core	
+	}//end section#core
 
 	section#postfix{
 		.container{
@@ -114,9 +115,9 @@
 	}//end section#postfix
 
 	footer{
-
 		#site-footer{
             .container{
+
               #footer_contact{
               	@include grid-span(8,1);
               }
@@ -142,38 +143,54 @@
 
               @include breakpoint($bp-desktop2-6){
               	#footer_contact{
-              		@include grid-span(10,1);
+              		@include grid-span(7,1);
               	}
               	#footer_contact-links{
-              		@include grid-span(3,11);
+              		@include grid-span(3,8);
               	}
               	#footer_feature{
-              		@include grid-span(3,14);
+              		@include grid-span(6,11);
               	}
               }//end $bp-desktop2-5
             }//end .container
 		}//end #site-footer
 
 		#cpass-footer{
+
 			.academics{
-				@include grid-span(5, 1);
+				@include grid-span(4, 1);
 			}
 			.students{
-				@include grid-span(3, 6);
+				@include grid-span(4, 5);
+
+         .students--future{
+           @include grid-span(8,1);
+         }
+         .students--current{
+           @include grid-span(8,9);
+         }
 			}
 			.alumni{
-				@include grid-span(3, 9);
+				@include grid-span(4, 9);
+
+         .alumni--main{
+           @include grid-span(8, 1);
+         }
+
+         .alumni--giving{
+           @include grid-span(8, 9);
+
+         }
 			}
 			.community{
-				@include grid-span(4, 12);
-				$grids: 2;
+				@include grid-span(4, 13);
 
 				.community--lap, .community--nysp{
-					@include grid-span(1,1);
+					@include grid-span(8,1);
 				}
 
 				.community--fit, .community--icpe{
-					@include grid-span(1,2);
+					@include grid-span(8,9);
 				}
 				.community--nysp{
 					clear:both;
@@ -189,6 +206,7 @@
 			    border-top-right-radius: ms(0);
   				max-width:2000px;
   				width: 1170px;
+
   				@include breakpoint($bp-desktop2-3){
   					width:1300px;
   				}
@@ -199,7 +217,7 @@
   					width:1600px;
   				}
   				@include breakpoint($bp-desktop2-8){
-  					width:1700px;
+  					width: 1700px;
   				}
 				.wvu-credits{}//end .wvu-credits
 				.wvu-icons{}//end .wvu-icons
@@ -207,7 +225,7 @@
 			}//end #wvu.footer .container
 		}//end #wvu.footer
 		}
-		
+
 	}//end footer.footer
 
 	.long-menu{
@@ -222,7 +240,7 @@
 		  	}
 		  	section{
 		  		border-bottom:0;
-		  		
+
 		  	}
 		  	.searchbar{
 		  		//@include grid-span(16,1);

@@ -1,7 +1,5 @@
 @include breakpoint($bp-desktop1-1){
-  
-  $grids: 12;
-  $gutters: 1/3;
+  @include add-grid(12);
   body{
   	.container, .wvu-masthead-container{
   		max-width:$bp-desktop1-2;
@@ -15,14 +13,14 @@
   		}
   		@include breakpoint($bp-desktop1-4){
   			max-width:$bp-desktop2-1;
-  		}  		
+  		}
   	}//end .container
 
   	.wvu-masthead-wrapper{
-  		
+
 	  .wvu-masthead{
 		.wvu-masthead-container{
-		  
+
 
 		}
 	  }//end /wvu-masthead
@@ -31,19 +29,19 @@
 	header{
 		&#masthead_cpass{
 			.container{
-			  @include breakpoint($bp-desktop1-3){
+			  @include breakpoint($bp-desktop1-2){
 			  	.logo-short-wrapper{
-			  	  @include grid-span(10,1);
+			  	  @include grid-span(9,1);
 			  	}
-  		        .short-menu-container{
-  		          ul{
-  		            display:block;
-  		   	      }
-  		   	    }//end .short-menu-container
+  		    .short-menu-container{
+  		      ul{
+  		        display:block;
+  		   	    }
+  		   	}//end .short-menu-container
   		   	    .social-cpass{
-  		   	      @include grid-span(2,11);
-  		   	    }	  
-  		  	  }//end breakpoint
+  		   	      @include grid-span(3,10);
+  		   	    }
+  		  }//end breakpoint
 
 			}//end #college-masthead.container
 		}//end #college-masthead
@@ -120,13 +118,13 @@
 				  }//end ol
 
 				}//end #main article
-				
+
 			}//end #main
 			aside.sidebar{
 				 @include grid-span(3, 10);
 			}//end aside.sidebar
 		}//end section#core.container
-	}//end section#core	
+	}//end section#core
 
 	section#postfix{
 		.container{
@@ -183,21 +181,21 @@
 
 			}//end #wvu.footer .container
 		}//end #wvu.footer
-		
+
 
 	}//end footer.footer
 	.long-menu{
 		//@include breakpoint($bp-tablet-2){
-		  
+
 		  .wrapper{
-		  	
+
 		  	//max-height:67em;
 		  	nav{
 		  	  column-count:3;
 		  	  column-gap:ms(-1);
 		  	}
 		  	section{
-		  		
+
 		  	}
 		  	.searchbar{
 		  		//@include grid-span(8,1);
