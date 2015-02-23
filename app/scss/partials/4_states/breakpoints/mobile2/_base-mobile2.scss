@@ -155,12 +155,26 @@
 
 			}//end $bp-mobile2-2-608
 		}//end #site-footer
-		#college.footer{
-			.container{
-				#footer_contact{}//end #footer_contact
-				#footer_feature{}//end #footer_feature
-			}//end #college.footer .container
-		}//end #colllege.footer
+		#cpass-footer{
+			.cpass-cta{
+				section{
+					width:100%; 
+					@include rhythm($ms-0, 0, 0, $ms-0, $font-size-med);
+				}//end section
+				.about{
+					@include grid-span(3,1);
+				}
+				.events{
+					@include grid-span(3,4);
+
+				}
+				.news{
+					clear:both;
+
+				  .social-connect{}
+				}
+			}//end .cpass-cta
+		}//end #cpass-footer
 
 		#wvu-footer.footer{
 			width:100%;

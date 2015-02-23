@@ -1,6 +1,9 @@
 .wvu-footer-wrapper{
 	width:100%;
 	float:left;
+	background:set-alpha(darken($black, 5), 0.55);
+	margin-top:-3px;
+	
 
   #wvu-footer{
 	.container{

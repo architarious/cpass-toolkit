@@ -5,7 +5,25 @@
   font-size:$base-font-size;
   color:$white;
 
-  #site-footer,#cpass-footer:not(.footer--return){
+  a:not(.footer--return), a:not(.btn){
+    color:tint($SecLightGold,30);
+    
+  }//end a 
+
+  ul{
+   padding:0;margin:0;
+    li{
+      list-style:none;
+      padding:0;
+      margin:0;
+    a{
+      @include adjust-font-size-to($font-size-small-2);
+      @include rhythm(0, $ms-2n, $ms-4n, 0, $font-size-small-2);
+    }
+    }//end li
+  }//end ul
+
+  /*#site-footer,#cpass-footer:not(.footer--return){
 	
   a{
     color:tint($SecLightGold,30);
@@ -30,9 +48,9 @@
     }
     }//end li
   }//end ul
-
   
-  }//end #site-footer, #cpass-footer
+  }//end #site-footer, #cpass-footer*/
+
 
 }//#footer
 

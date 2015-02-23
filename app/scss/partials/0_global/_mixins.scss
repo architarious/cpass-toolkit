@@ -59,6 +59,23 @@
 //    }
 //}
 
+///////////////////////////////////
+///ghostVerticalAlign: 
+//
+//USAGE: $include ghostVerticalAlign; 
+//Dependencies: none
+///////////////////////////////////
+
+
+@mixin ghostVerticalAlign(){
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; width: .1px;
+  }
+}
+
 
 
 ///////////////////////////////////
@@ -132,7 +149,7 @@
 //USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
 ///////////////////////////////////
 @mixin add-noise(){
-  background-image:url("../images/noise.png") repeat;
+  background:url("../images/noise.png") repeat;
 }
 ///////////////////////////////////
 ///Standard Box-Shadow
@@ -216,6 +233,7 @@
     letter-spacing:$ms-11n+em;
     position:relative;
     text-transform: uppercase;
+    line-height:1.618em;
 
     @include sassy-button( "flat", $ms-7n+em, 1em, $bg-color, shade($bg-color, 20), $tx-color, inset);
     background-image:url(../images/noise.png);
@@ -270,7 +288,7 @@
   padding-right: $ms-4+em;
 
  @if $withCircle == 'true'{  
-  &:before{
+  &:after{
     background-color: shade($bg-color, 2);
     background-image: url(../images/noise.png);
     background-repeat: repeat;
@@ -285,11 +303,16 @@
     line-height:$ms-2+$ms-8n+em;    
     font-size:$ms-0+em;
 
-    width: $ms-2+$ms-8n+em;
-    height: $ms-2+$ms-8n+em;
-    position: absolute;
-    right: $ms-5n+em;
-    top: $ms-0+$ms-6n+em;
+    
+
+    min-width: $ms-2+$ms-8n+em;
+    min-height: $ms-2+$ms-8n+em;
+    position: absolute;    
+    top: 75%;
+    right:5%;
+    transform: translateY(-50%);
+    //right: $ms-5n+em;
+    //top: $ms-1n+em;
     margin-top: -($ms-2n+em);
 
     @include border-radius(50%);
@@ -298,22 +321,22 @@
     @include standard-transition(box-shadow);
     }//end before
 
-    &:hover:before, &:focus:before{
+    &:hover:after, &:focus:after{
       background-color:shade($bg-color, 40);
       @include box-shadow(darken($bg-color, 60) 0 $ms-3n+em 0 inset, lighten($bg-color, 20) 0 $ms-11n+em 0);
       text-shadow: darken($bg-color, 60) 0 $ms-7n+em $ms-7n+em;
 
     }//end hover
 
-    &:active:before{
+    &:active:after{
       background-color:lighten($bg-color, 15);
       @include box-shadow(darken($bg-color, 60) 0 $ms-11n+em 0 inset, lighten($bg-color, 20) 0 $ms-7n+em 0);
       text-shadow: darken($bg-color, 60) 0 $ms-11n+em 0;
     }//end :active
 
-    }@else{
+    }@else{  
     
-    &:before{
+    &:after{
 
     font-family:'icomoon';
     color:$white;
@@ -325,23 +348,24 @@
     line-height:$ms-2+$ms-8n+em;    
     font-size:$ms-0+em;
 
-    width: $ms-2+$ms-8n+em;
+    width: $ms-2+$ms-8n+em;    
     height: $ms-2+$ms-8n+em;
-    position: absolute;
-    right: $ms-5n+em;
-    top: $ms-0+$ms-6n+em;
+    position: absolute;    
+    top: 75%;
+    right:5%;
+    transform: translateY(-50%);
     margin-top: -($ms-2n+em);
 
     @include standard-transition(background);
     @include standard-transition(box-shadow);
     }//end before
 
-    &:hover:before, &:focus:before{
+    &:hover:after, &:focus:after{
       text-shadow: darken($bg-color, 60) 0 $ms-7n+em $ms-7n+em;
 
     }//end hover
 
-    &:active:before{
+    &:active:after{
       text-shadow: darken($bg-color, 60) 0 $ms-11n+em 0;
     }//end :active
 
@@ -483,13 +507,13 @@
 //SOURCE:  http://codepen.io/hced/pen/FbdqC
 ///////////////////////////////////
 
-@mixin vertical-align {
+/*@mixin vertical-align {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-}
+}*/
 
 ///////////////////////////////////
 ///Accessable Text-Contrast checker

@@ -2,17 +2,60 @@
 	float:left;
 	width:100%;
 	box-shadow:shade($coolblack,15) 0 ms(-5) ms(-2) 0 inset;
-	background:url(../images/bg-3.jpg) repeat;
+	background:set-alpha(darken($black, 5), 0.55);
+  padding-bottom:ms(0);
 }
 
 
-#cpass-footer{
+#footer #cpass-footer{
 	ul{ padding:0; margin:0;}
-	li{ padding:0; margin:0; list-style:none;}
-	font-size:$base-font-size;
-  .cpass-cta{
+	li{ padding:0; margin:0; list-style:none;}  
+  @include adjust-font-size-to($base-font-size);
+}//end #footer #cpass-footer
 
-  	}//end .cpass-cta
+  .cpass-cta{
+    .title{
+      color:$white;
+      font-family:$BdCn;
+      font-weight:800;
+      border-color:$WarmGrey1;
+
+      @include adjust-font-size-to($font-size-med-2);
+      @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
+      @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+
+    }
+    section{
+    }//end section
+    .about{
+      .nav-list li{ 
+        width: 100%;
+        float:left;
+
+
+        a{
+        width: 100%;
+        float:left;
+        padding:0 ms(0);
+        @include btn_icon( $black, darken($black,10), $white, "\e6bd",  "true");
+        //@include add-noise;
+        //background-color:$black;
+        @include adjust-font-size-to($font-size-small-2);
+        @include rhythm(0, $ms-1n, $ms-1n, 0, $font-size-small-2);
+        @include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
+       }//end a
+
+      }//end .nav-list li
+    }//end about
+    .events{
+    }//end .events
+    .news{
+      clear:both;
+
+      .social-connect{}
+    }//end .news
+
+  }//end .cpass-cta
 
   .cpass-resources{
   	h2{
@@ -60,4 +103,4 @@
 
 
   }//end .cpass-resources
-}//end #cpass-footer
+//}//end #cpass-footer

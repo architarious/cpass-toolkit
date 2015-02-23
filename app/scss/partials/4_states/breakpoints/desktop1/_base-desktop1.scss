@@ -144,14 +144,14 @@
 				}
 				#footer_contact-links{
 					@include grid-span(3,7);
-					@include adjust-font-size-to($font-size-small);
+					a{ @include adjust-font-size-to($font-size-small-2); }
 				}
 				#footer_feature{
 					@include grid-span(3,10);
 				}
 				@include breakpoint($bp-desktop1-3){
 					#footer_contact a br{ display:none;}
-					#footer_contact-links{@include adjust-font-size-to($font-size-small-2);}
+					
 				}
 
 			}//end .container
