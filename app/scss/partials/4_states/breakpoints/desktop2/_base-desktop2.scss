@@ -157,6 +157,69 @@
 		}//end #site-footer
 
 		#cpass-footer{
+		  .cpass-cta{
+		  	section{
+		    }//end section
+		    .about{
+		    }
+		    .events{
+
+		    }
+		    .news{
+		  	  .social-connect{}
+		    }		   
+		  }//end .cpass-cta
+
+		    @include breakpoint($bp-desktop2-2){
+			.cpass-cta{
+				section{
+				}//end section
+				.about{
+					@include grid-span( 4, 1);
+				}
+				.events{
+					@include grid-span( 4, 5);
+				}
+				.news{
+					@include grid-span( 8, 9);
+				  .social-connect{}
+				}
+			}//end .cpass-cta
+			}//end $bp-desktop2-2  
+
+			@include breakpoint($bp-desktop2-3){
+			.cpass-cta{
+				section{
+				}//end section
+				.about{
+					@include grid-span( 4, 1);
+				}
+				.events{
+					@include grid-span( 3, 5);
+				}
+				.news{
+					@include grid-span( 9, 8);
+				  .social-connect{}
+				}
+			}//end .cpass-cta
+			}//end $bp-desktop2-3  
+
+			@include breakpoint($bp-desktop2-6){
+			.cpass-cta{
+				section{
+				}//end section
+				.about{
+					@include grid-span( 3, 1);
+				}
+				.events{
+					@include grid-span( 3, 4);
+				}
+				.news{
+					@include grid-span( 10, 7);
+				  .social-connect{}
+				}
+			}//end .cpass-cta
+			}//end $bp-desktop2-3
 
 			.academics{
 				@include grid-span(4, 1);

@@ -27,6 +27,7 @@ html{
     font-family: $font-paragraph;
     color:$black;
     background:transparent;
+    font-size: $root-font-size+px;
 }
 body{
     @include establish-baseline;
@@ -34,5 +35,35 @@ body{
     font-family: $font-paragraph;
     font-size: $root-font-size+px;
 }
+
+.font-BlkCn{
+	font-family:$BlkCn;
+	font-weight:900;
+}
+.font-BdCn{
+	font-family:$BdCn;
+	font-weight:800;
+}
+.font-Bd{
+	font-family:$Bd;
+	font-weight:500;
+}
+.font-Roman{
+	font-family:$Roman;
+	font-weight:400;
+}
+.font-Obl{
+	font-family:$Obl;
+	font-weight:400;
+}
+.font-LtCn{
+	font-family:$LtCn;
+	font-weight:300;
+}
+.font-Lt{
+	font-family:$Lt;
+	font-weight:200;
+}
+
 
 

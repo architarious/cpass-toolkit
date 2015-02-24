@@ -246,7 +246,7 @@
 
     &:hover, &:focus{
       @include box-shadow(tint($shadow,10) 0 $ms-11n+em $ms-8n+em);
-      color:shade($white,10);
+      color:shade($tx-color,10);
     }
 
     &:active{

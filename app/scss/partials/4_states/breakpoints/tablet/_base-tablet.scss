@@ -144,12 +144,20 @@
 		.footer{
 			padding:0;
 		}
-		#college.footer{
-			.container{
-				#footer_contact{}//end #footer_contact
-				#footer_feature{}//end #footer_feature
-			}//end #college.footer .container
-		}//end #colllege.footer
+		#cpass-footer{
+			.cpass-cta{
+				section{
+				}//end section
+				.about{
+				}
+				.events{
+
+				}
+				.news{
+				  .social-connect{}
+				}
+			}//end .cpass-cta
+		}//end #cpass-footer
 
 		.wvu-footer-wrapper{
 

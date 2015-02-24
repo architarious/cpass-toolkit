@@ -5,17 +5,14 @@
   font-size:$base-font-size;
   color:$white;
 
-  a:not(.footer--return), a:not(.btn){
-    color:tint($SecLightGold,30);
-    
-  }//end a 
+  
 
   ul{
    padding:0;margin:0;
     li{
       list-style:none;
-      padding:0;
-      margin:0;
+      //padding:0;
+      //margin:0;
     a{
       @include adjust-font-size-to($font-size-small-2);
       @include rhythm(0, $ms-2n, $ms-4n, 0, $font-size-small-2);
@@ -77,8 +74,11 @@
 
 #site-footer{
     font-size:$base-font-size;
-
     @include rhythm(1, 0, 0, 1, $font-size-med);
+
+    ul li{
+      margin:0; padding:0;
+    }
 
 
   p{
@@ -104,6 +104,8 @@
   }//end a
 
   #footer_contact-links{
+
+
     ul li a{
       @include rhythm($ms-6n, 0, 0, $ms-6n, $font-size-small-2);
       &.contact{@include btn_icon($black, shade($coolblack, 30), $white, "\e60e"); }
