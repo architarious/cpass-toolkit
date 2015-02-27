@@ -1,0 +1,26 @@
+
+.main { 
+  @include mq($bp-medium) { @include span-columns(9.5); }
+}
+
+.wvu-sidebar {
+  @include mq($bp-medium) { @include span-columns(2.5); }
+}
+
+.wvu-landing-page-header__container {
+  @include outer-container();
+}
+
+.wvu-landing-page-header { 
+  h1 {
+    @include mq($bp-medium) { @include span-columns(6); } 
+  }
+}
+
+.wvu-landing-page-header__intro { 
+  @include mq($bp-medium) { @include span-columns(6); } 
+}
+
+.backpage-content {
+  padding: 100px 0;
+}

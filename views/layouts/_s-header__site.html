@@ -1,0 +1,46 @@
+<div id="navWrapper">
+  <nav class="nav navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+  	<!--<a class="site-logo" href="/"><r:site_name /></a>-->
+  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-primary">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="navbar-toggle_title">MENU</span>
+      </button>
+    </div><!--end navbar-header-->
+
+    <div class="collapse navbar-collapse in" id="nav-primary">
+
+     <div class="container">
+    
+      <div class="nav navbar-nav">
+        <r:site_menu />
+      </div><!--end navbar-nav-->
+
+      <div class="form-search__wrapper">
+         <form class="form-search" action="//search.wvu.edu/search" method="get" role="search">
+          <label for="q">
+            <input id="form-search__field" class="form-search__field" name="q" maxlength="256" placeholder="Search this site..." type="search" />
+          </label>
+          <button class="form-search__submit" name="btnG" type="submit" value="Search"/>
+          <input id="as_sitesearch" name="as_sitesearch" type="hidden" value="<r:site:domain />" />
+          <input id="sort" name="sort" type="hidden" value="date:D:L:d1" />
+          <input id="output" name="output" type="hidden" value="xml_no_dtd" />
+          <input id="ie" name="ie" type="hidden" value="UTF-8" />
+          <input id="oe" name="oe" type="hidden" value="UTF-8" />
+          <input id="proxystylesheet" name="proxystylesheet" type="hidden" value="default_frontend">
+          <input id="client" name="client" type="hidden" value="default_frontend" />
+        
+        </form>
+      </div><!--end form-search__wrapper-->
+
+      </div><!--end container-->
+      <div class="navbar--more">
+        <a href="#cpass-footer">More</a>
+      </div>
+
+     
+    </div><!--/#nav-primary-->
+
+    
+  </nav> <!-- /.nav -->
+</div>

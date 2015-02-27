@@ -1,0 +1,19 @@
+.wvu-container { @include outer-container(); padding: 0 1em; position: relative;
+  @include mq($bp-xlarge) { padding: 0; }
+}
+
+.wvu-hero__container { @include outer-container(); }
+
+.wvu-hero__copy {
+  @include mq($bp-medium) { @include span-columns(4); }
+  @include mq($bp-large) { @include span-columns(5); }
+}
+.wvu-hero__photo {
+  @include mq($bp-medium) { @include span-columns(8); }
+  @include mq($bp-large) { @include span-columns(7); }
+}
+
+.flex-caption { 
+  .caption-container { @include outer-container(); }
+}
+

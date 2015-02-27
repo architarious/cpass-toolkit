@@ -1,0 +1,13 @@
+.nav__container {
+  @include outer-container();
+}
+
+.wvu-breadcrumbs__container {
+  @include mq($bp-medium) {
+    @include outer-container();
+  }
+}
+
+.wvu-section {
+  padding: $wvu-section-padding;
+}

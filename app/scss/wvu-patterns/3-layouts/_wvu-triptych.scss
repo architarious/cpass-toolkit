@@ -1,0 +1,7 @@
+.wvu-triptych {
+  .wvu-spotlight {
+    @include mq($bp-medium) {
+      @include span-columns(4);
+    }
+  }
+}
