@@ -4,6 +4,17 @@
 // This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layouts, modules, and states partials.
 ////////////////////////
 
+//@import 'wvu-patterns/0-plugins/plugins-dir';
+//@import 'wvu-patterns/1-base/base-dir';
+//@import 'wvu-patterns/2-modules/modules-dir';
+//@import 'wvu-patterns/3-layouts/layouts-dir';
+
+@import 'wvu-patterns/1-base/wvu-masthead';
+@include wvu-masthead-is-two-line-lockup(true);
+@include wvu-masthead-has-signature(true);
+@include wvu-masthead-background(white);
+
+
 //////////////////////////////
 // Legacy Support Setup
 //////////////////////////////
@@ -40,5 +51,9 @@
 // Import your shame  (hotfixes that you haven't had time to organize yet)
 ////////////////////////
 @import 'partials/5_shame/shame';
+
+
+
+
 
 

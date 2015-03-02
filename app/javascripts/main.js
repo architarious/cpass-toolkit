@@ -12,23 +12,30 @@ requirejs.config({
         'page' : '../page',
         'app' : '../app',
 
+        'overthrow-sidescroller' : 'overthrow-sidescroller.all.min',
+
         'jquery' :[
             '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
             //if the CDN location fails, load from:
             'jquery.min'
         ],
 
+
         // path to folder with individual bootstrap files 
-        'bootstrap': 'bootstrap',       
+        'bootstrap': 'vendor/bootstrap', 
 
         'bigTitles' : '../app/bigTitles', 
-        'smoothScroll' : '../app/smoothScroll', 
-        'dropdown' : '../app/dropdown.js',
-
-
-        'eq' : 'lib/eq.min',
+        'dropdown' : '../app/dropdown',
+        'eq' : 'vendor/eq.min',
+        'jquery-smoothScroll': 'vendor/jquery.smooth-scroll.min',
+        'jquery-perfect-scrollbar': 'vendor/perfect-scrollbar.min',
+        //'smoothScroll' : '../app/smoothScroll', 
+        //'utils' : '../app/utils',
+        //'jquery-mobile' : 'jquery-mobile/jquery.mobile.custom.min',
     },
       shim: {
+
+        'overthrow-sidescroller': {},
         'bootstrap/affix':      { deps: ['jquery'], exports: '$.fn.affix' }, 
         'bootstrap/alert':      { deps: ['jquery'], exports: '$.fn.alert' },
         'bootstrap/button':     { deps: ['jquery'], exports: '$.fn.button' },
@@ -41,9 +48,13 @@ requirejs.config({
         'bootstrap/tab':        { deps: ['jquery'], exports: '$.fn.tab'        },
         'bootstrap/tooltip':    { deps: ['jquery'], exports: '$.fn.tooltip' },
         'bootstrap/transition': { deps: ['jquery'], exports: '$.fn.transition' },
-        'bigTitles' : { deps: ['jquery'], exports: '$.fn.bigTitles'},
-        'smoothScroll' : { deps: ['jquery'], exports: '$.fn.smoothScroll'},
-        'default' : { deps: ['jquery', 'bigTitles', 'smoothScroll', 'bootstrap/carousel', 'bootstrap/dropdown']}
+        'bigTitles' :           { deps: ['jquery'], exports: '$.fn.bigTitles'},
+        'jquery-smoothScroll':  { deps: ['jquery']},
+        'jquery-perfect-scrollbar':{deps: ['jquery']},
+        //'smoothScroll' :        { deps: ['jquery'], exports: '$.fn.smoothScroll'},
+        //'utils' :               { deps: ['jquery'], exports: '$.fn.utils'},
+        //'jquery-mobile' :       { deps: ['jquery'], exports: '$.fn.utils'},
+        'default' :             { deps: ['jquery', 'bigTitles', 'bootstrap/carousel', 'bootstrap/dropdown']}
     },
 });
 
@@ -51,7 +62,7 @@ requirejs(['page/default']);
    
 // Start the main app logic.
 //requirejs(['jquery.min','app/affix','app/alert','app/button','app/carousel','app/collapse','app/dropdown','app/tab','app/transition','app/scrollspy','app/tooltip','app/modal','app/popover' ],
-//function   ($,        affix,         alert,	     button,	  carousel,      collapse,      dropdown,      tab,      transition,      scrollspy,      tooltip,      modal,      popover) {
+//function   ($,        affix,         alert,        button,      carousel,      collapse,      dropdown,      tab,      transition,      scrollspy,      tooltip,      modal,      popover) {
     //jQuery, canvas and the app/sub module are all
     //loaded and can be used here now.
 
@@ -62,7 +73,3 @@ requirejs(['page/default']);
      
   
 //});
-
-  
-
-

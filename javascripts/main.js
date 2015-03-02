@@ -12,7 +12,7 @@ requirejs.config({
         'page' : '../page',
         'app' : '../app',
 
-        'overthrow-sidescroller' : 'overthrow-sidescroller.all',
+        'overthrow-sidescroller' : 'overthrow-sidescroller.all.min',
 
         'jquery' :[
             '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
@@ -22,13 +22,13 @@ requirejs.config({
 
 
         // path to folder with individual bootstrap files 
-        'bootstrap': 'bootstrap', 
+        'bootstrap': 'vendor/bootstrap', 
 
         'bigTitles' : '../app/bigTitles', 
         'dropdown' : '../app/dropdown',
-        'eq' : 'eq.min',
-        'jquery-smoothScroll': 'jquery.smooth-scroll.min',
-        'jquery-perfect-scrollbar': 'perfect-scrollbar.min',
+        'eq' : 'vendor/eq.min',
+        'jquery-smoothScroll': 'vendor/jquery.smooth-scroll.min',
+        'jquery-perfect-scrollbar': 'vendor/perfect-scrollbar.min',
         //'smoothScroll' : '../app/smoothScroll', 
         //'utils' : '../app/utils',
         //'jquery-mobile' : 'jquery-mobile/jquery.mobile.custom.min',
@@ -51,6 +51,7 @@ requirejs.config({
         'bigTitles' :           { deps: ['jquery'], exports: '$.fn.bigTitles'},
         'jquery-smoothScroll':  { deps: ['jquery']},
         'jquery-perfect-scrollbar':{deps: ['jquery']},
+        'eq' :                  { deps: ['jquery']},
         //'smoothScroll' :        { deps: ['jquery'], exports: '$.fn.smoothScroll'},
         //'utils' :               { deps: ['jquery'], exports: '$.fn.utils'},
         //'jquery-mobile' :       { deps: ['jquery'], exports: '$.fn.utils'},
@@ -62,7 +63,7 @@ requirejs(['page/default']);
    
 // Start the main app logic.
 //requirejs(['jquery.min','app/affix','app/alert','app/button','app/carousel','app/collapse','app/dropdown','app/tab','app/transition','app/scrollspy','app/tooltip','app/modal','app/popover' ],
-//function   ($,        affix,         alert,	     button,	  carousel,      collapse,      dropdown,      tab,      transition,      scrollspy,      tooltip,      modal,      popover) {
+//function   ($,        affix,         alert,        button,      carousel,      collapse,      dropdown,      tab,      transition,      scrollspy,      tooltip,      modal,      popover) {
     //jQuery, canvas and the app/sub module are all
     //loaded and can be used here now.
 
@@ -73,7 +74,3 @@ requirejs(['page/default']);
      
   
 //});
-
-  
-
-

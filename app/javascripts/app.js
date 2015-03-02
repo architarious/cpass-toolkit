@@ -1,3 +1,4 @@
+
 requirejs.config({
     //By default load any module IDs from js/lib
     baseUrl: '../javascripts',
@@ -38,7 +39,7 @@ requirejs.config({
    
 // Start the main app logic.
 //requirejs(['jquery.min','app/affix','app/alert','app/button','app/carousel','app/collapse','app/dropdown','app/tab','app/transition','app/scrollspy','app/tooltip','app/modal','app/popover' ],
-//function   ($,        affix,         alert,	     button,	  carousel,      collapse,      dropdown,      tab,      transition,      scrollspy,      tooltip,      modal,      popover) {
+//function   ($,        affix,         alert,        button,      carousel,      collapse,      dropdown,      tab,      transition,      scrollspy,      tooltip,      modal,      popover) {
     //jQuery, canvas and the app/sub module are all
     //loaded and can be used here now.
 
@@ -67,6 +68,3 @@ function hamburger(){
 
 
 }//end hamburger
-  
-
-

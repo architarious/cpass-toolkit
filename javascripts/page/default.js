@@ -1,4 +1,4 @@
-require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'overthrow-sidescroller', 'jquery-perfect-scrollbar'], function($, collapse, carousel, dropdown){
+require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'overthrow-sidescroller', 'jquery-perfect-scrollbar', 'eq'], function($, collapse, carousel, dropdown){
 	$('.site-logo').css('display', 'block');
 	$('.site-logo').text('[changed by jQuery]');
 
@@ -51,7 +51,6 @@ require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdo
     
     /* these former utilities have been replaced by addthis
        for reasons regarding it's simplicity and it's availability of analytics
-
     //bookmarker();
     //tweet();
     //facebook_share();
@@ -61,7 +60,6 @@ require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdo
 
     /* these jquery-mobile methods have been removed and replaced with
 	   overshot-js 
-
 	$('#mainCarousel').swiperight(function(){
 	  $(this).carousel('prev');
 	});
@@ -72,10 +70,7 @@ require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdo
 
 	/* this custom smoothscroll function has been replaced by jquery.smooth-scroll
 	   due to it's ability to target individual links
-
 	   smoothScroll();
 	*/
 
 });
-
-

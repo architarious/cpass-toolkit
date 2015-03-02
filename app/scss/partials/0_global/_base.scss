@@ -28,6 +28,14 @@ $legacy-support-for-mozilla: false;
      
 
 ////////////////////////
+// Vendor imports
+////////////////////////
+
+@import 'vendor/eq';
+@import 'vendor/bootstrap-variables';
+
+
+////////////////////////
 // Private Imports
 ////////////////////////
 
@@ -35,3 +43,6 @@ $legacy-support-for-mozilla: false;
 @import 'functions';
 @import 'mixins';
 @import 'extendables';
+
+
+

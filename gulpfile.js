@@ -151,7 +151,7 @@ gulp.task('move-img', function () {
 // watch
 //////////////////////////////
 gulp.task('watch', function () {
-  gulp.watch(paths.js + '/**/*.js', ['lint', 'move-js'])
+  //gulp.watch(paths.js + '/**/*.js', ['lint', 'move-js'])
   gulp.watch(paths.css + '/*.css')
   gulp.watch(paths.img + '*', ['move-img'])
 });

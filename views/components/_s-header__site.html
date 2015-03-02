@@ -17,20 +17,7 @@
       </div><!--end navbar-nav-->
 
       <div class="form-search__wrapper">
-         <form class="form-search" action="//search.wvu.edu/search" method="get" role="search">
-          <label for="q">
-            <input id="form-search__field" class="form-search__field" name="q" maxlength="256" placeholder="Search this site..." type="search" />
-          </label>
-          <button class="form-search__submit" name="btnG" type="submit" value="Search"/>
-          <input id="as_sitesearch" name="as_sitesearch" type="hidden" value="<r:site:domain />" />
-          <input id="sort" name="sort" type="hidden" value="date:D:L:d1" />
-          <input id="output" name="output" type="hidden" value="xml_no_dtd" />
-          <input id="ie" name="ie" type="hidden" value="UTF-8" />
-          <input id="oe" name="oe" type="hidden" value="UTF-8" />
-          <input id="proxystylesheet" name="proxystylesheet" type="hidden" value="default_frontend">
-          <input id="client" name="client" type="hidden" value="default_frontend" />
-        
-        </form>
+        <r:partial name="../patterns/wvu-masthead__search-bar" />
       </div><!--end form-search__wrapper-->
 
       </div><!--end container-->

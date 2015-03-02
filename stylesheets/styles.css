@@ -1,4 +1,252 @@
 @charset "UTF-8";
+/* 
+  Variable options for WVU Masthead Background:
+  gold
+  blue
+  white
+  blue-pattern
+  gold-pattern
+*/
+.wvu-masthead fieldset {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.wvu-masthead a {
+  text-decoration: none;
+}
+
+.wvu-masthead__logo:hover {
+  text-decoration: none;
+}
+
+.wvu-masthead__container {
+  padding: 0 1em 1em 1em;
+}
+@media (min-width: 48em) {
+  .wvu-masthead__container {
+    padding: 0 1em 0 1em;
+  }
+}
+@media (min-width: 75em) {
+  .wvu-masthead__container {
+    padding: 0;
+  }
+}
+
+.wvu-masthead__logo {
+  text-decoration: none;
+  position: relative;
+  padding: 1em 0 1.6em 2em;
+  font-size: 1.5em;
+  overflow: hidden;
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  background: url(../images/flying-wv.png) no-repeat top 1.2em left;
+  background-size: 1.8em;
+  float: left;
+  color: white;
+}
+.wvu-masthead__logo:hover {
+  color: #ddd;
+}
+@media (min-width: 48em) {
+  .wvu-masthead__logo {
+    font-size: 1.75em;
+  }
+}
+@media (min-width: 60em) {
+  .wvu-masthead__logo {
+    font-size: 2em;
+  }
+}
+
+.wvu-masthead__college {
+  position: absolute;
+  top: 1em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.wvu-masthead__university-name {
+  position: absolute;
+  top: 4.2em;
+  left: 3.3em;
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
+@media (min-width: 48em) {
+  .wvu-masthead__university-name {
+    top: 5.9em;
+    left: 5.1em;
+    font-size: 0.4em;
+  }
+}
+
+.wvu-masthead__logo:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+.form-search__field {
+  color: #2C2A29;
+}
+
+.wvu-masthead__search-bar {
+  padding-top: 2.1em;
+  font-size: 0.8em;
+}
+.wvu-masthead__search-bar input[type="checkbox"], .wvu-masthead__search-bar input[type="radio"] {
+  margin-right: 0;
+}
+
+.form-search__label {
+  width: 82.94039%;
+  margin-right: 2.35765%;
+  float: left;
+}
+
+input[type="submit"].form-search__submit {
+  width: 14.70196%;
+  margin-right: 0;
+  float: left;
+}
+
+.wvu-masthead__link {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  float: left;
+  margin-right: 0.5em;
+}
+@media (min-width: 48em) {
+  .wvu-masthead__link {
+    margin-bottom: 3px;
+  }
+}
+.wvu-masthead__link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.wvu-masthead__college-link {
+  font-size: 0.8em;
+  line-height: 1.08333333em;
+  padding: 0.4em 0.5em;
+  margin-bottom: -2em;
+}
+@media (min-width: 48em) {
+  .wvu-masthead__college-link {
+    position: absolute;
+  }
+}
+
+.wvu-masthead {
+  background-color: #002855;
+  color: white;
+}
+
+.wvu-masthead__logo {
+  color: white;
+}
+.wvu-masthead__logo:visited {
+  color: white;
+}
+
+.wvu-masthead__link {
+  color: white;
+}
+.wvu-masthead__link:visited {
+  color: white;
+}
+.wvu-masthead__link:hover {
+  color: white;
+}
+
+.wvu-masthead__college-link {
+  background: #EAAA00;
+  color: #002855;
+}
+.wvu-masthead__college-link:hover {
+  color: #002855;
+}
+.wvu-masthead__college-link:visited {
+  color: #002855;
+}
+
+.wvu-masthead__title {
+  font-size: 0.75em;
+  line-height: 1.08333333em;
+  float: left;
+  margin-top: 0.1em;
+}
+
+.wvu-masthead__university-name {
+  top: 7.1em;
+}
+
+.wvu-masthead__logo {
+  background-repeat: no-repeat;
+  background-position: top 1.2em left;
+  background-size: 300px;
+  padding-left: 54px;
+  padding-bottom: 1em;
+}
+
+.wvu-masthead__title {
+  padding-top: 46px;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.wvu-masthead__university-name {
+  position: absolute;
+  left: -99999em;
+}
+
+.wvu-masthead__logo {
+  background-image: url(../images/flying-wv-w-signature.png);
+}
+
+.wvu-masthead {
+  background-color: #002855;
+  color: white;
+}
+
+.wvu-masthead__logo {
+  color: white;
+}
+.wvu-masthead__logo:visited {
+  color: white;
+}
+
+.wvu-masthead__link {
+  color: white;
+}
+.wvu-masthead__link:visited {
+  color: white;
+}
+.wvu-masthead__link:hover {
+  color: white;
+}
+
+.wvu-masthead__college-link {
+  background: #EAAA00;
+  color: #002855;
+}
+.wvu-masthead__college-link:hover {
+  color: #002855;
+}
+.wvu-masthead__college-link:visited {
+  color: #002855;
+}
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
@@ -7447,7 +7695,7 @@ body html {
   font-weight: 500;
 }
 
-.font-Roman, .cpass-cta .about .nav-list li.dropdown .dropdown-menu .dropdown-header {
+.font-Roman, .wvu-masthead__logo, .cpass-cta .about .nav-list li.dropdown .dropdown-menu .dropdown-header {
   font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
   font-weight: 400;
 }
@@ -8203,6 +8451,10 @@ ul li, .sidebar li, aside li {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.251375rem;
   transition-property: border-radius, border-color, color;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
@@ -8214,10 +8466,6 @@ ul li, .sidebar li, aside li {
   margin-right: 6px;
   border-radius: 100%;
   border: 2px solid #fffefb;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 20px;
-  line-height: 1.251375rem;
   text-shadow: 0 10px 12px #0d1012;
   box-shadow: 0 10px 12px #0d1012;
 }
@@ -8244,9 +8492,27 @@ ul li, .sidebar li, aside li {
   vertical-align: middle;
   text-align: center;
 }
+.social-cpass[data-eq-state="small"] a {
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 20px;
+  line-height: 1.251375rem;
+}
+.social-cpass[data-eq-state="medium"] a {
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 20px;
+  line-height: 1.251375rem;
+}
+.social-cpass[data-eq-state="large"] a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.251375rem;
+}
 
 /*------------------------------------*\
-    $COMPONENTS
+    Objects
 \*------------------------------------*/
 @font-face {
   font-family: 'icomoon';

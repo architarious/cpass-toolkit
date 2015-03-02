@@ -1,4 +1,13 @@
-.social-cpass a{
+.component {
+  
+}
+
+
+.social-cpass {
+
+  a{
+ 
+
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -11,7 +20,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-
+  @include adjust-font-size-to($font-size-med); 
   transition-property: border-radius, border-color, color;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
@@ -24,7 +33,7 @@
   margin-right: ms(-4);
   border-radius:100%;
   border:ms(-8) solid $white;
-  @include adjust-font-size-to($font-size-med);
+  
   span{ visibility: hidden;}
   text-shadow: 0 ms(-2) ms(-1) darken($vb-DarkNavy, 18);
   box-shadow: 0 ms(-2) ms(-1) darken($vb-DarkNavy, 18);
@@ -64,5 +73,30 @@
   }
   &.linkedin{
     @extend .icon-linkedin2;
-  }
+  }  
+
+}//end a
+
+ &[data-eq-state="small"] a,
+    &[data-eq-state="medium"] a,
+    &[data-eq-state="large"] a{
+      
+    }
+
+    &[data-eq-state="small"] a{
+      @include adjust-font-size-to($font-size-small); 
+    }
+
+    &[data-eq-state="medium"] a{
+     @include adjust-font-size-to($font-size-small); 
+    }
+
+    &[data-eq-state="large"] a{
+      @include adjust-font-size-to($font-size-med); 
+    }
+
+
 }
+
+// ... at the end of the stylesheet
+
