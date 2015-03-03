@@ -129,32 +129,37 @@
 		}//end section#postfix .container
 	}//end section#postfix
 
-	footer{
-		#site-footer{
-			#footer_contact{
+	
+	#s-footer__site{
+	  .m-contact{
+				
+	  }
+			.b-contact__info{
+				@include grid-span(6,1);
+			}
+			.b-contact__links{
 				@include grid-span(6,1);
 				clear:both;
 			}
-			#footer_contact-links{
-				@include grid-span(6,1);
-				clear:both;
-			}
-			#footer_feature{
-				@include grid-span(6,1);
+			#b-footer__site_feature{
+				@include grid-span(3,1);
 				clear:both;
 			}
 
 			@include breakpoint($bp-mobile2-2){
-				#footer_contact-links{
+				.b-contact__info{
 					@include grid-span(3,1);
+				}
+				.b-contact__links{
+					@include grid-span(3,4);
 					clear:both;
 				}
-				#footer_feature{
+				#b-footer__site_feature{
 					@include grid-span(3,4);
 				}
 
-			}//end $bp-mobile2-2-608
-		}//end #site-footer
+	  		}//end $bp-mobile2-2-608
+	}//end #site-footer
 		#cpass-footer{
 			.cpass-cta{
 				section{
@@ -185,7 +190,7 @@
 			}//end #wvu.footer .container
 		}//end #wvu.footer
 
-	}//end footer.footer
+
 }//end body
 
 }//end breakpoint

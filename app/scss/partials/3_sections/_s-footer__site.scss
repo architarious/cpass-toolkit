@@ -1,0 +1,21 @@
+#footer__site{
+    font-size:$base-font-size;
+    @include rhythm(1, 0, 0, 1, $font-size-med);
+
+    ul li{
+      margin:0; padding:0;
+    }
+
+
+  p{
+    color:$white;
+    @include adjust-font-size-to($font-size-med);
+    margin:0; padding:0;
+
+    a:first-child{
+      font-size:$font-size-med-2;
+    }//end a:first-child
+  }//end p
+
+ 
+}//end #site-footer

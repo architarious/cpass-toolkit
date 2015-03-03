@@ -1,4 +1,4 @@
-require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'overthrow-sidescroller', 'jquery-perfect-scrollbar', 'eq'], function($, collapse, carousel, dropdown){
+require(['jquery', 'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'overthrow-sidescroller', 'jquery-perfect-scrollbar'], function($, collapse, carousel, dropdown){
 	$('.site-logo').css('display', 'block');
 	$('.site-logo').text('[changed by jQuery]');
 

@@ -5,6 +5,8 @@
 // Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
 ////////////////////////
  
+ @import "s-header";
+ @import "s-footer";
 
 
 body{    

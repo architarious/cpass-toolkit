@@ -1,0 +1,29 @@
+.s-footer__cpass--wrapper{
+	float:left;
+	width:100%;
+	box-shadow:shade($coolblack,15) 0 ms(-5) ms(-2) 0 inset;
+	background:set-alpha(darken($black, 5), 0.55);
+  padding-bottom:ms(0);
+}
+
+
+#s-footer__cpass{
+	ul{ padding:0; margin:0;}
+	//li{ padding:0; margin:0; list-style:none;}  
+  @include adjust-font-size-to($base-font-size);
+  ul.dropdown-menu{
+    padding:ms(-2);
+  }
+
+   .title{
+    border-color:$WarmGrey1;
+    border-image:none;
+    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);     
+
+  }
+}//end #footer #cpass-footer
+
+
+

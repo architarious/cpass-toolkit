@@ -1,0 +1,21 @@
+.b-links__academics{
+      background:transparent;
+      color:$white;
+      font-size:$base-font-size;
+
+      tr{
+        border-bottom: ms(-11) solid shade($black, 60);
+        border-top: $vb-LightGrey ms(-12);
+        &:last-child{ border-bottom:0;  }
+      }
+      tr:nth-child(even){
+        background:transparent;
+      }
+      .b-links__academics__programs__c2, .b-links__academics__programs__c3, .b-links__academics__programs__c4{
+        text-align:center;
+        a{
+          @extend .font-BdCn;
+        }
+      }
+
+    }// end .b-links__academics

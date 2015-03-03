@@ -1,0 +1,38 @@
+#footer{
+  padding:0;
+  float:left;
+  width:100%;
+  font-size:$base-font-size;
+  color:$white;
+
+ ul{
+   padding:0;margin:0;
+    li{
+      list-style:none;
+    a{
+    }
+    }//end li
+  }//end ul
+
+  .navlist li{
+    width:100%;
+    float:left;
+    padding:0 ms(0);
+    @include rhythm(0, 0, 0, $ms-10n, $font-size-small-2);
+    @include trailing-border(ms(-7), $ms-4n, $font-size-small-2, solid);
+    border-color:transparent;
+
+    a{
+      width:100%;
+      float:left;
+
+      @include adjust-font-size-to($font-size-small-2);
+      @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2);
+      text-transform: none;
+    }
+  }//end .navlist li
+
+
+}//#footer
+
+

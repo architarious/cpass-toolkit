@@ -1,0 +1,29 @@
+.m-links{
+  	.title{
+  		color:$WarmGrey3;
+  		border-bottom:0;
+  		text-transform:uppercase;  		
+  		@extend .font-LtCn;
+  	}
+  	h3{
+  		color:$secondary;
+  		text-transform:none;
+  		@extend .font-LtCn;
+  		a{
+  			color:$secondary;
+        background:none;
+        width:100%;
+        float:left;
+  			&:hover, &:focus{
+  				color:$SecLightGold;
+          background:none;
+  			}
+  		}
+  	}//end h3
+
+    .navlist li a{
+      @include btn_icon( darken($DarkGrey,18), darken($DarkGrey,19), $white, "\e6bd",  "true");
+      @include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
+      @extend .font-LtCn;
+    }
+}//end .cpass-resources

@@ -1,26 +1,10 @@
-	<div id="site-footer" class="footer">    
+	<div id="footer__site" class="footer">    
 	 <div class="container">
 
-	 <div id="footer_contact" class="wvu-contact"> 
+      <r:partial name="../components/m-contact" />
+	
 
-	   <p>
-         <r:editable_region name="global_footer_contact" scope="site" />
-       </p>
-
-	 </div><!-- /#footer_contact -->      
-
-	 <div id="footer_contact-links">
-	   <ul>
-	     <li><a class="contact" href="mailto:CPASS-WVU@mail.wvu.edu">Contact <span class="caps">CPASS</span></a></li>
-	     <li><a class="request-info" href="http://cpass.wvu.edu/info_request">Request Information</a></li>
-	     <li><a class="faculty" href="http://cpass.wvu.edu/faculty_staff">Faculty &#38; Staff</a> </li>
-	     <li><a class="feedback"href="mailto:CPASS-Webmaster@mail.wvu.edu">Website Feedback</a> </li>
-	  </ul>
-	 </div><!--/#footer_contact-links-->
-
-	 <div id="footer_feature">
-	    <a href="#"><img src="../images/stocks/misc4x3/bike.jpg" alt="biker"/></a>
-	 </div><!--/#footer_feature-->
+	  <r:partial name="../components/b-footer__site_feature" />
 
      </div><!--/.container-->
     </div><!--/#site-footer-->

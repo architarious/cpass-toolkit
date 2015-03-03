@@ -26,14 +26,13 @@
 @import 'typography-base';
 @import 'typography-college';
 @import 'typography-program';
-@import 'social-cpass';
 
 
 
 
 
 /*------------------------------------*\
-    Objects
+    Objects: generic items
 \*------------------------------------*/
 @import "objects/icons";
 @import "objects/buttons";
@@ -53,6 +52,26 @@
 @import "objects/sidescroller";
 @import "objects/perfectScrollbar";
 @import "objects/addthis";
+
+
+/*------------------------------------*\
+    Blocks: items that are specific to theme styles
+\*------------------------------------*/
+@import "blocks/b-social";
+@import "blocks/b-contact__info";
+@import "blocks/b-contact__links";
+@import "blocks/b-cta__about";
+@import "blocks/b-cta__events";
+@import "blocks/b-cta__news";
+@import "blocks/b-links__academics";
+@import "blocks/b-links__students";
+@import "blocks/b-links__alumni";
+@import "blocks/b-links__community";
+@import "blocks/b-footer__site_feature";
+@import "blocks/b-footer__return";
+
+
+
 
 //////////////////////////////
 // CSS Resets

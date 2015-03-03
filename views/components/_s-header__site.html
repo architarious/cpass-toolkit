@@ -1,33 +1,5 @@
-<div id="navWrapper">
-  <nav class="nav navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-  	<!--<a class="site-logo" href="/"><r:site_name /></a>-->
-  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-primary">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="navbar-toggle_title">MENU</span>
-      </button>
-    </div><!--end navbar-header-->
-
-    <div class="collapse navbar-collapse in" id="nav-primary">
-
-     <div class="container">
-    
-      <div class="nav navbar-nav">
-        <r:site_menu />
-      </div><!--end navbar-nav-->
-
-      <div class="form-search__wrapper">
-        <r:partial name="../patterns/wvu-masthead__search-bar" />
-      </div><!--end form-search__wrapper-->
-
-      </div><!--end container-->
-      <div class="navbar--more">
-        <a href="#cpass-footer">More</a>
-      </div>
-
-     
-    </div><!--/#nav-primary-->
-
-    
-  </nav> <!-- /.nav -->
+<div id="s-header__site">
+  <div class="container">
+   <r:partial name="../components/m-primaryNav" />
+  </div><!--.container-->
 </div>

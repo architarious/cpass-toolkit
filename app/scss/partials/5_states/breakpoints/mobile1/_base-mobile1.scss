@@ -27,11 +27,15 @@
 
 	header{
 		//padding:0 1.25%;
-		#college-masthead{
+		#s-header__cpass{
 			.container{
 
 			}//end #college-masthead.container
 		}//end #college-masthead
+
+		#s-header__site{
+			
+		}
 
 		.container{
 			a.site-logo{}
@@ -70,7 +74,11 @@
 
 	footer{
 		//padding:0 1.25%;
-		#cpass-footer{
+		#s-footer__site{
+
+		}
+
+		#s-footer__cpass{
 			.cpass-cta{
 				section{
 					width:100%; 
@@ -85,7 +93,7 @@
 			}//end .cpass-cta
 		}//end #cpass-footer
 
-		#wvu-footer.footer{
+		#s-footer__wvu{
 			.container{
 				width:100%;
 				.wvu-credits{}//end .wvu-credits
