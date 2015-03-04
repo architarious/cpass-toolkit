@@ -146,7 +146,7 @@ nav .b-social a{
   height:ms(5);
   background: $black;
   @include rhythm($ms-1n, $ms-3n, $ms-1n, $ms-1n, $font-size-med-2);
-  box-shadow: 0 ms(-8) ms(-4) 0 darken($black,20) inset, 0 ms(-8) ms(-10)  set-alpha(tint($coolblack,8), 0.75);
+  box-shadow: 0 ms(-8) ms(-4) 0 darken($black,20) inset, 0 ms(-8) ms(-5)  set-alpha(tint($coolblack,8), 0.65);
   border-top: ms(-10) solid shade($coolblack,5);
 
   .b-social:after{ 

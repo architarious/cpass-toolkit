@@ -17,18 +17,14 @@
   .nav-list li{
     width:100%;
     float:left;
-    @include rhythm(0, 0, 0, $ms-10n, $font-size-med);
-    @include trailing-border(ms(-7), $ms-4n, $font-size-med, solid);
+    @include rhythm(0, 0, 0, $ms-8n, $font-size-med);
     border-color:transparent;
 
 
     a{
       width:100%;
       float:left;
-      @extend .font-BdCn;
 
-      @include adjust-font-size-to($font-size-med);
-      @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
       text-transform: none;
     }
   }//end .navlist li

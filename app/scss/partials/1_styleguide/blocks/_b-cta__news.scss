@@ -1,3 +1,27 @@
 .b-cta__news{
-	
+	ul{
+		li{
+			width:100%;
+			float:left;
+			@include rhythm(0, 0, $ms-8n, $ms-4n, $font-size-small-2);
+			@include trailing-border(ms(-7), $ms-2n, $font-size-med, solid);
+			border-color:darken($black, 20);
+			box-shadow:0 ms(-10) 0 0 set-alpha($black,0.75);
+			&:last-child{border-bottom:0; box-shadow:none;}
+
+
+			a{
+				background:none;
+				width:100%;
+				@include adjust-font-size-to($font-size-med);  
+				@include rhythm(0, $ms-3, $ms-3n, 0, $font-size-med);
+				
+
+				&:hover,&:focus{
+					background:none;
+					color:$quadrary;
+				}
+			}
+		}
+	}
 }

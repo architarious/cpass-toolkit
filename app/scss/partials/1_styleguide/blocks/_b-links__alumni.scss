@@ -1,6 +1,9 @@
 .b-links__alumni{
   .nav-list li{
-  	a{}
+  	a{ 
+      @extend .font-Roman;
+      
+      }//end a
   }//end long-menu-navlist
   .b-alumni__main{
   	

@@ -4,22 +4,47 @@
       font-size:$base-font-size;
 
       tr{
-        border-bottom: ms(-11) solid shade($black, 60);
-        border-top: $vb-LightGrey ms(-12);
-        &:last-child{ border-bottom:0;  }
+        border-bottom-color: darken($black, 15);
+        @include rhythm($ms-2n, 0, 0, $ms-2n, $font-size-med);
+        @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+        height:ms(6);
+        &:last-child{ border-bottom-color:$WarmGrey2;  }
       }
       tr:nth-child(even){
         background:transparent;
       }
-      .b-links__academics__programs__c2, .b-links__academics__programs__c3, .b-links__academics__programs__c4{
+      .b-academics__programs__c2, .b-academics__programs__c3, .b-academics__programs__c4{
         text-align:center;
+        border-left-color:$black;
+        padding: 0 ms(-4);
+        width:10%;
         a{
+         @include btn( darken($coolblack,6), set-alpha(darken($coolblack, 20), 0.6)); 
           @extend .font-BdCn;
+          float:none;
+          margin:0 auto;
+          padding:ms(-2);
         }
       }
 
+      .b-academics__programs__c1{
+         @include adjust-font-size-to($font-size-small-2);
+        padding-left:0;
+        color:$white;
+        width:70%
+      }
+
+      .b-academics__key{
+        @include adjust-font-size-to($font-size-small-2);
+        @include rhythm($ms-3n, 0, 0, $ms-5n, $font-size-small-2);
+        color:$WarmGrey3;
+      }
+
       &[data-eq-state="large"]{
-        
+         .b-academics__programs__c1{
+           @include adjust-font-size-to($font-size-med);
+           
+          }
       }
 
     }// end .b-links__academics

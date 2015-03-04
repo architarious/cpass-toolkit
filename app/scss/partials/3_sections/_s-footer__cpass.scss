@@ -1,8 +1,8 @@
 .s-footer__cpass--wrapper{
 	float:left;
 	width:100%;
-	box-shadow:shade($coolblack,15) 0 ms(-5) ms(-2) 0 inset;
-	background:set-alpha(darken($black, 5), 0.55);
+	box-shadow:darken($coolblack,15) 0 ms(-5) ms(-2) 0 inset;
+	background:set-alpha(darken($black, 10), 0.65);
   padding-bottom:ms(0);
 }
 
@@ -32,10 +32,9 @@
   }//end .b-social
 
   .m-cta{
-
   }//end .m-cta
   .m-links{
-    .nav-list li a{ @include adjust-font-size-to($font-size-small-2);}
+    
   }
 
   //begin mobile styling
@@ -68,10 +67,13 @@
     @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
       @include grid-desktop1;
       .nav-list li a{ @include adjust-font-size-to($font-size-small-2);}
-      .b-cta__about{@include grid-span(3,1);}
+      .b-cta__about{
+        @include grid-span(3,1);
+        .dropdown-menu a{@include adjust-font-size-to($font-size-small-2); font-family:$BdCn; font-weight:800;}
+      }
       .b-cta__events{@include grid-span(3,4);}
       .b-cta__news{ @include grid-span(6,7);}
-      @include breakpoint($bp-desktop1-2){
+      @include breakpoint($bp-desktop1-3){
          .nav-list li a{ @include adjust-font-size-to($font-size-med);}
       }
     }//end $bp-desktop-1
@@ -91,6 +93,8 @@
       .b-cta__events{@include grid-span(6,4);}
       .b-cta__news{@include grid-span(7,10);}
       }//end $bp-desktop-2
+
+      @include breakpoint($bp-mobile1-1){.dropdown-menu a{@include adjust-font-size-to($font-size-small-2); font-family:$BdCn; font-weight:800;}}
   }//end .m-cta mobile styling
 
   .b-social{

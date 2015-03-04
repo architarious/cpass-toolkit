@@ -9,21 +9,42 @@
   		color:$secondary;
   		text-transform:none;
   		@extend .font-LtCn;
+      margin:0; padding:0;
   		a{
-  			color:$secondary;
-        background:none;
+        //@include add-noise;
+  			color:$white;
+        background-color: set-alpha($WVUBlue,0.3) ;
         width:100%;
         float:left;
+        @include adjust-font-size-to($font-size-med);  
+        @include rhythm($ms-5n, $ms-4n, $ms-4n, $ms-2n, $font-size-med);
+        @include trailing-border(ms(-9), $ms-4n, $font-size-med, solid);
+        border-color:set-alpha(lighten($WVUBlue,10),0.3);
   			&:hover, &:focus{
-  				color:$SecLightGold;
-          background:none;
+  				color:$WVUGold;
   			}
   		}
   	}//end h3
 
     .nav-list li a{
-      @include btn_icon( darken($DarkGrey,18), darken($DarkGrey,19), $white, "\e6bd",  "true");
-      @include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
-      @extend .font-LtCn;
+      @include btn( darken($coolblack,6), set-alpha(darken($coolblack, 20), 0.6));     
+      @include adjust-font-size-to($font-size-small-2);  
+      @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2);
+      @include trailing-border(ms(-7), $ms-4n, $font-size-small-2, solid);
+      @extend .font-Roman;
+
+      &:visited{
+        color:$white;
+      }
+      
+      &:after{
+        //color:$WarmGrey1;
+      }
+
+      @include breakpoint($bp-mobile1-1){
+        font-family:$LtCn;
+        font-weight:300;
+      } 
+
     }
 }//end .cpass-resources
