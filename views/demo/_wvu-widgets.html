@@ -1,0 +1,155 @@
+
+<h2 class="element-header">Features Triptych</h2>
+
+<r:partial name="demo/wvu-spotlights--triptych" />
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/frontpage.html)</div>
+<pre>
+  &lt;r:partial name="patterns/wvu-spotlights-index--auto" /&gt;
+  &lt;!-- This loops through a set of child pages and pulls appropriate elements --&gt;
+</pre>
+  <div class="code-label code-label--styles">SCSS (scss/2-modules/modules-dir.scss)</div>
+<pre>
+  @include 'wvu-triptych'
+</pre>
+  <div class="code-label code-label--styles">SCSS (scss/3-layouts/layouts-dir.scss)</div>
+<pre>
+  @include 'wvu-triptych'
+</pre>
+</div>
+
+<h2 class="element-header">Super Nav</h2>
+
+<r:partial name="demo/wvu-super-nav-example" />
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-super-nav" /&gt;</pre>
+  <div class="code-label code-label--styles">SCSS (scss/2-layouts/modules-dir.sass)</div>
+  <pre>
+  @import 'wvu-super-nav'</pre>
+  <div class="code-label code-label--styles">SCSS (scss/3-layouts/layouts-dir.sass)</div>
+  <pre>
+  @import 'wvu-quadtych'</pre>
+</div>
+
+<h2 class="element-header">Horizontal Widgets</h2>
+
+<div class="wvu-section u-full-width u-pms-432-c background">
+  <div class="wvu-container">
+    <r:partial name="demo/wvu-spotlights--diptych-combo" />
+  </div>
+</div>
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/patterns.html)</div>
+  <pre>
+  &lt;div class="wvu-section u-full-width u-pms-432-c background"&gt;
+    &lt;div class="wvu-container"&gt;
+      <span class="u-pms-166-c">&lt;r:partial name="patterns/wvu-diptych-combo" /&gt;</span>
+    &lt;/div&gt;
+  &lt;/div&gt;</pre>
+  <div class="code-label code-label--styles">SCSS (scss/2-modules/modules-dir.scss)</div>
+  <pre>
+  @import 'wvu-diptych-combo'</pre>
+  <div class="code-label code-label--js">JS (views/patterns.html)</div>
+  <pre>
+  &lt;r:include_javascript name="vendor/calendar-reformat" /&gt;</pre>
+</div>
+
+
+<r:partial name="demo/wvu-spotlights--diptych" />
+
+
+<h2 class="element-header">Events</h2>
+
+<div class="wvu-section u-full-width u-pms-432-c background">
+  <div class="wvu-container">    
+
+    <h2>
+      Events
+    </h2>
+
+    <r:partial name="demo/wvu-calendar--flex" />
+
+    <a class="button button--white">All Events</a>
+    
+  </div>
+</div>
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/patterns.html)</div>
+  <pre>
+  &lt;div class="wvu-section u-full-width u-pms-432-c background"&gt;
+    &lt;div class="wvu-container"&gt;
+      &lt;h2&gt;Events&lt;/h2&gt;
+      <span class="u-pms-166-c">&lt;r:partial name="demo/wvu-calendar" /&gt;</span>
+      &lt;a class="button button--white"&gt;All Events&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</pre>
+  <div class="code-label code-label--styles">SCSS (scss/2-modules/modules-dir.scss)</div>
+  <pre>
+  @import 'wvu-calendar--flex'</pre>
+  <div class="code-label code-label--js">JS (views/patterns.html)</div>
+  <pre>
+  &lt;r:include_javascript name="vendor/calendar-reformat" /&gt;</pre>
+</div>
+
+<h2 class="element-header">Quicklinks</h2>
+
+<div class="wvu-section u-full-width u-pms-432-c background">
+  <div class="wvu-container">
+    <h2>
+      Quicklinks
+    </h2>
+    <div class="wvu-quicklinks wvu-quicklinks--flex">
+      <ul>
+        <li><a href="">Study Abroad</a></li>
+        <li><a href="">Jobs</a></li>
+        <li><a href="">Off-campus Summer Program</a></li>
+        <li><a href="">Davis College Computing Overview</a></li>
+        <li><a href="">Safety</a></li>
+        <li><a href="">Fact Sheet</a></li>
+        <li><a href="">Research Facts</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/patterns.html)</div>
+  <pre>
+  &lt;div class="wvu-section u-full-width u-pms-432-c background"&gt;
+    &lt;div class="wvu-container"&gt;
+      &lt;h2&gt;Quicklinks&lt;/h2&gt;
+      <span class="u-pms-166-c">&lt;r:partial name="patterns/wvu-quicklinks" /&gt;</span>
+    &lt;/div&gt;
+  &lt;/div&gt;</pre>
+  <div class="code-label code-label--styles">SCSS (scss/2-modules/modules-dir.scss)</div>
+  <pre>
+  @import 'wvu-quicklinks--flex'</pre>
+</div>
+
+<h2 class="element-header">Social Media Links</h2>
+
+<div class="wvu-section u-full-width u-black background">
+  <div class="wvu-container">
+    <r:partial name="demo/wvu-social-media-icons" />
+  </div>
+</div>
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/patterns.html)</div>
+  <pre>
+  &lt;div class="wvu-section u-full-width u-black background"&gt;
+    &lt;div class="wvu-container"&gt;
+      <span class="u-pms-166-c">&lt;r:partial name="patterns/wvu-social-media-icons" /&gt;</span>
+    &lt;/div&gt;
+  &lt;/div&gt;</pre>
+  <div class="code-label code-label--styles">SCSS (scss/2-modules/modules-dir.scss)</div>
+  <pre>
+  @import 'wvu-social-media-icons'</pre>
+</div>
+

@@ -14,23 +14,59 @@
     }//end li
   }//end ul
 
-  .navlist li{
+  .nav-list li{
     width:100%;
     float:left;
-    padding:0 ms(0);
-    @include rhythm(0, 0, 0, $ms-10n, $font-size-small-2);
-    @include trailing-border(ms(-7), $ms-4n, $font-size-small-2, solid);
+    @include rhythm(0, 0, 0, $ms-10n, $font-size-med);
+    @include trailing-border(ms(-7), $ms-4n, $font-size-med, solid);
     border-color:transparent;
+
 
     a{
       width:100%;
       float:left;
+      @extend .font-BdCn;
 
-      @include adjust-font-size-to($font-size-small-2);
-      @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2);
+      @include adjust-font-size-to($font-size-med);
+      @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
       text-transform: none;
     }
   }//end .navlist li
+
+
+   //begin mobile styling
+    @include breakpoint($bp-mobile1-1 $bp-mobile2-1){
+      .nav-list li a{ }
+    }
+
+    @include breakpoint($bp-mobile2-2-608 $bp-tablet-1){
+      .nav-list li a{ }
+    }//end $bp-mobile-2
+
+    @include breakpoint($bp-tablet-1 $bp-desktop1-1){
+      .nav-list li{
+        
+        a{ 
+          @include adjust-font-size-to($font-size-small-2); 
+          }//end a
+      }//end li
+    }//end $bp-tablet
+
+    @include breakpoint($bp-desktop1-1 $bp-desktop1-4){
+      .nav-list li a{ }
+    }//end $bp-desktop-1
+
+    @include breakpoint($bp-desktop1-4 $bp-desktop2-1){
+      .nav-list li a{ }
+    }//end $bp-desktop-1
+
+    @include breakpoint($bp-desktop2-1 $bp-desktop2-6){
+      .nav-list li a{ }
+      }//end $bp-desktop-2
+
+    @include breakpoint($bp-desktop2-6){
+      .nav-list li a{ }
+      }//end $bp-desktop-2
 
 
 }//#footer

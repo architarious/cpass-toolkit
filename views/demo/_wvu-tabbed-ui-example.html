@@ -1,0 +1,36 @@
+<div class="wvu-tabs">
+
+  <div class="wvu-tabs__tabs">
+    <ul class="intro__tabs">
+      <r:get_page id="4851">
+        <li><h2><a href="#tabs-1"><r:page:first_non_blank_attr names="alternate_name,name" /></a></h2><p><r:page:meta_description /></p>
+        </li>
+      </r:get_page>
+      <r:get_page id="4852">
+        <li><h2><a href="#tabs-2"><r:page:first_non_blank_attr names="alternate_name,name" /></a></h2><p><r:page:meta_description /></p></li>
+      </r:get_page>
+      <r:get_page id="4853">
+        <li><h2><a href="#tabs-3"><r:page:first_non_blank_attr names="alternate_name,name" /></a></h2><p><r:page:meta_description /></p></li>
+      </r:get_page>
+    </ul>
+  </div>
+  
+  <div class="wvu-tabs__content">
+    <r:get_page id="4851">
+      <div id="tabs-1" class="u-embed-container wvu-spotlight wvu-spotlight--<r:page:slug />">
+        <a href="<r:page:url />"><r:page:content name="spotlight__image" /></a>
+      </div>
+    </r:get_page>
+    <r:get_page id="4852">
+      <div id="tabs-2" class="u-embed-container wvu-spotlight wvu-spotlight--<r:page:slug />">
+        <a href="<r:page:url />"><r:page:content name="spotlight__image" /></a>  
+      </div>
+    </r:get_page>
+    <r:get_page id="4853">
+      <div id="tabs-3" class="u-embed-container wvu-spotlight wvu-spotlight--<r:page:slug />">
+        <a href="<r:page:url />"><r:page:content name="spotlight__image" /></a>
+      </div>
+    </r:get_page>
+  </div>
+
+</div>

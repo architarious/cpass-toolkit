@@ -7,15 +7,66 @@
     }
 
 
-  p{
-    color:$white;
-    @include adjust-font-size-to($font-size-med);
-    margin:0; padding:0;
+    //begin mobile styling
+    @include breakpoint($bp-mobile1-1 $bp-mobile2-1){
+      @include grid-mobile1;
+      //.nav-list li a{ @include adjust-font-size-to($font-size-med);}
+      .b-contact{}
+      .b-contact__info{ text-align:center;}
+      .b-contact__links{}
+      #b-footer__site_feature{}
+    }
 
-    a:first-child{
-      font-size:$font-size-med-2;
-    }//end a:first-child
-  }//end p
+    @include breakpoint($bp-mobile2-2-608 $bp-tablet-1){
+      @include grid-mobile2;
+      .b-contact{}
+      .b-contact__info{ @include grid-span(3,1);}
+      .b-contact__links{ @include grid-span(3,4);}
+      #b-footer__site_feature{}
+    }//end $bp-mobile-2
 
+    @include breakpoint($bp-tablet-1 $bp-desktop1-1){
+      @include grid-tablet;
+      .b-contact{}
+      .b-contact__info{@include grid-span(3,1);}
+      .b-contact__links{@include grid-span(2,4);}
+      #b-footer__site_feature{@include grid-span(3,6);}
+    }//end $bp-tablet
+
+    @include breakpoint($bp-desktop1-1 $bp-desktop1-4){
+      @include grid-desktop1;
+      .b-contact{}
+      .b-contact__info{@include grid-span(4,1);}
+      .b-contact__links{@include grid-span(4,5);}
+      #b-footer__site_feature{@include grid-span(4,9);}
+    }//end $bp-desktop-1
+
+    @include breakpoint($bp-desktop1-4 $bp-desktop2-1){
+      @include grid-desktop1;
+      .b-contact{}
+      .b-contact__info{@include grid-span(5,1);}
+      .b-contact__links{@include grid-span(3,6);}
+      #b-footer__site_feature{@include grid-span(4,9);}
+    }//end $bp-desktop-1
+
+    @include breakpoint($bp-desktop2-1 $bp-desktop2-6){
+      @include grid-desktop2;
+      .b-contact{}
+      .b-contact__info{@include grid-span(7,1);}
+      .b-contact__links{@include grid-span(4,8);}
+      #b-footer__site_feature{@include grid-span(5,12);}
+      }//end $bp-desktop-2
+
+    @include breakpoint($bp-desktop2-6){
+      @include grid-desktop2;
+      .b-contact{}
+      .b-contact__info{@include grid-span(7,1);}
+      .b-contact__links{@include grid-span(3,11);}
+      #b-footer__site_feature{@include grid-span(3,14);}
+      }//end $bp-desktop-2
+
+
+
+ 
  
 }//end #site-footer

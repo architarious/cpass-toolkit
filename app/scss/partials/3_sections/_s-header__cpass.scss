@@ -1,4 +1,4 @@
-#masthead_cpass{
+#s-header__cpass{
 	@include adjust-font-size-to($font-size-small-2);
     @include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-small-2);
 	min-height:1em;

@@ -1,5 +1,5 @@
 .b-links__community{
-  .long-menu-navlist{
+  .nav-list{
   	a{}
   }//end navlist
   .b-community__lap{
@@ -14,4 +14,15 @@
   .b-community__icpe{
   	
   }//end .b-community__nysp		
+
+  &[data-eq-state="large"]{
+    div{
+      width:46%;
+      float:left;
+      margin-right:3%;
+      margin-left:3%;
+    }
+    .b-community__lap, .b-community__nysp{margin-left:1%;}
+    .b-community__fit, .b-community__icpe{margin-right:1%;}            
+  }
 }

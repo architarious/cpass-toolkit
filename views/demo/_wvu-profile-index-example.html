@@ -1,0 +1,21 @@
+<h2 class="element-header">Profile Index</h2>
+
+<div class="wvu-section">
+  <div class="wvu-container">
+    <r:get_page id="5102">
+      <r:partial name="patterns/wvu-spotlights-index" />
+    </r:get_page>
+  </div>
+</div>
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/profile-index.html)</div>
+  <pre>
+  &lt;r:get_page id="5102"&gt;
+    <span class="u-pms-166-c">&lt;r:partial name="patterns/wvu-spotlights-index--auto"&gt;</span>
+  &lt;/r:get_page&gt;
+  // this automatically loops through a set of child pages based on a page ID to populate a profile index. substitute your own page ID for the parent page of your profiles.</pre>
+  <div class="code-label code-label--styles">SCSS (scss/2-modules/modules-dir.scss)</div>
+  <pre>
+  @import 'wvu-profile-index';</pre>
+</div>

@@ -21,7 +21,7 @@
   		}
   	}//end h3
 
-    .navlist li a{
+    .nav-list li a{
       @include btn_icon( darken($DarkGrey,18), darken($DarkGrey,19), $white, "\e6bd",  "true");
       @include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
       @extend .font-LtCn;

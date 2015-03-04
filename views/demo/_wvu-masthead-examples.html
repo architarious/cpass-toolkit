@@ -1,0 +1,195 @@
+<h2 class="element-header">WVU Masthead Combo College</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead">
+  <div class="wvu-masthead__container">
+    <r:partial name="patterns/wvu-masthead__logo" />
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead" /&gt;
+  // note this is based on a root font size of 16 pixels. make sure the font-size of your parent element is set to 16px.</pre>
+</div>
+
+<h2 class="element-header">WVU Masthead Two-Line Lockup</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead wvu-masthead--two-line-lockup wvu-masthead--has-signature">
+  <div class="wvu-masthead__container">
+    <a class="wvu-masthead__logo" href="http://www.wvu.edu/"><span class="wvu-masthead__university-name">West Virginia University</span> <span class="wvu-masthead__title">College of Physical Activity<br>and Sport Sciences</span></a>
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead" /&gt;</pre>
+  
+  <div class="code-label code-label--styles">SCSS (scss/1-base/variables.scss)</div>
+  <pre>
+  $wvu-masthead-two-line-lockup: true;
+  $wvu-masthead-has-signature: true;</pre>
+</div>
+
+<h2 class="element-header">WVU Masthead for Department</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead">
+  <div class="wvu-masthead__container">
+    
+    <a class="wvu-masthead__logo" href="http://www.wvu.edu/"><span class="wvu-masthead__university-name">West Virginia University</span> <span class="wvu-masthead__title">Department of English</span></a>
+
+    <a href="" class="wvu-masthead__college-link">Eberly College of Arts and Sciences</a>
+    
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead--department" /&gt;</pre>
+</div>
+
+
+<h2 class="element-header">WVU Masthead Combo With Blue Pattern</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead wvu-masthead--blue-pattern">
+  <div class="wvu-masthead__container">
+    <a class="wvu-masthead__logo" href="http://www.wvu.edu/"><span class="wvu-masthead__university-name">West Virginia University</span> <span class="wvu-masthead__title">Reed College of Media</span></a>
+
+    <!-- If you are a department and want to link to your college or school, include the following line here: 
+      <a href="" class="wvu-masthead__college-link wvu-gold background">Eberly College of Arts and Sciences</a> 
+    -->
+    
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead" /&gt;</pre>
+  
+  <div class="code-label code-label--styles">SCSS (scss/1-base/variables.scss)</div>
+  <pre>
+  $wvu-masthead-background: 'blue-pattern'</pre>
+</div>
+
+
+<h2 class="element-header">WVU Masthead Combo Gold</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead wvu-masthead--gold">
+  <div class="wvu-masthead__container">
+    <a class="wvu-masthead__logo" href="http://www.wvu.edu/"><span class="wvu-masthead__university-name">West Virginia University</span> <span class="wvu-masthead__title">Center for Black Culture</span></a>
+
+    <!-- If you are a department and want to link to your college or school, include the following line here: 
+      <a href="" class="wvu-masthead__college-link wvu-gold background">Eberly College of Arts and Sciences</a> 
+    -->
+    
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead" /&gt;</pre>
+  
+  <div class="code-label code-label--styles">SCSS (scss/1-base/variables.scss)</div>
+  <pre>
+  $wvu-masthead-background: 'gold'</pre>
+</div>
+
+<h2 class="element-header">WVU Masthead Combo White</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead wvu-masthead--white">
+  <div class="wvu-masthead__container">
+    <a class="wvu-masthead__logo" href="http://www.wvu.edu/"><span class="wvu-masthead__university-name">West Virginia University</span> <span class="wvu-masthead__title">Experts Database</span></a>
+
+    <!-- If you are a department and want to link to your college or school, include the following line here: 
+      <a href="" class="wvu-masthead__college-link wvu-gold background">Eberly College of Arts and Sciences</a> 
+    -->
+    
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead" /&gt;</pre>
+  
+  <div class="code-label code-label--styles">SCSS (scss/1-base/variables.scss)</div>
+  <pre>
+  $wvu-masthead-background: 'white'</pre>
+</div>
+
+
+<h2 class="element-header">WVU Masthead Combo Gold</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead wvu-masthead--gold wvu-masthead--has-signature">
+  <div class="wvu-masthead__container">
+    <a class="wvu-masthead__logo" href="http://www.wvu.edu/"><span class="wvu-masthead__university-name">West Virginia University</span> <span class="wvu-masthead__title">Center for Black Culture</span></a>
+
+    <!-- If you are a department and want to link to your college or school, include the following line here: 
+      <a href="" class="wvu-masthead__college-link wvu-gold background">Eberly College of Arts and Sciences</a> 
+    -->
+    
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead" /&gt;</pre>
+  
+  <div class="code-label code-label--styles">SCSS (scss/1-base/variables.scss)</div>
+  <pre>
+  $wvu-masthead-background: 'gold'
+  $wvu-masthead-has-signature: true</pre>
+</div>
+
+<h2 class="element-header">WVU Masthead Combo White</h2>
+
+<!-- WVU Masthead - wvu-pattern-library/views/patterns/_wvu-masthead.html -->
+
+<div class="wvu-masthead wvu-masthead--white wvu-masthead--has-signature">
+  <div class="wvu-masthead__container">
+    <a class="wvu-masthead__logo" href="http://www.wvu.edu/"><span class="wvu-masthead__university-name">West Virginia University</span> <span class="wvu-masthead__title">Experts Database</span></a>
+
+    <!-- If you are a department and want to link to your college or school, include the following line here: 
+      <a href="" class="wvu-masthead__college-link wvu-gold background">Eberly College of Arts and Sciences</a> 
+    -->
+    
+    <r:partial name="patterns/wvu-masthead__search-bar" />
+  </div> <!-- /.wvu-masthead-container -->
+</div> <!-- /.wvu-masthead --> 
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/default.html)</div>
+  <pre>
+  &lt;r:partial name="patterns/wvu-masthead" /&gt;</pre>
+  
+  <div class="code-label code-label--styles">SCSS (scss/1-base/variables.scss)</div>
+  <pre>
+  $wvu-masthead-background: 'white'
+  $wvu-masthead-has-signature: true</pre>
+</div>

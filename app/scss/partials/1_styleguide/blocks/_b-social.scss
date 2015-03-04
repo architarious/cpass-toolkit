@@ -3,7 +3,18 @@
 }
 
 
-.social-cpass {
+.b-social{
+
+  &:after{
+    content:"Connect with CPASS:";
+    text-transform:uppercase;
+    float:right;
+    @extend .font-LtCn;
+    color:$WarmGrey3;
+    @include adjust-font-size-to($font-size-small-2);
+    @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2); 
+    padding-right:ms(-4);
+  }
 
   a{
  
@@ -53,12 +64,14 @@
     }
   }
   &::before{
-    padding-left:ms(-3);
+    padding-left:ms(-4);
     vertical-align:middle;
     text-align:center;
-
-
   }
+
+ 
+
+
   &.facebook{
   	@extend .icon-facebook;
   }
@@ -85,18 +98,71 @@
 
     &[data-eq-state="small"] a{
       @include adjust-font-size-to($font-size-small); 
+      height: ms(2);
+      width: ms(2);
+      &:before{padding-left:6px;}
+
     }
 
     &[data-eq-state="medium"] a{
-     @include adjust-font-size-to($font-size-small); 
+      padding-top:2px;
+     @include adjust-font-size-to($font-size-small-2); 
+     &:before{padding-left:8px; }
+
     }
 
     &[data-eq-state="large"] a{
       @include adjust-font-size-to($font-size-med); 
     }
 
+    &[data-eq-state="small"]:after, &[data-eq-state="medium"]:after{
+      display:none;
+    }
+
 
 }
 
-// ... at the end of the stylesheet
 
+nav .b-social a{
+
+  padding:0; 
+  margin:0;
+  height: ms(3);
+  width: ms(3);
+  text-align:center;
+  margin-right: ms(-4);
+  @include adjust-font-size-to($font-size-med); 
+  background:transparent;
+
+
+
+  &:hover{
+  background:transparent;
+  }
+}//end nav .b-social
+
+.b-social--wrapper{
+  width:100%;
+  height:ms(5);
+  background: $black;
+  @include rhythm($ms-1n, $ms-3n, $ms-1n, $ms-1n, $font-size-med-2);
+  box-shadow: 0 ms(-8) ms(-4) 0 darken($black,20) inset, 0 ms(-8) ms(-10)  set-alpha(tint($coolblack,8), 0.75);
+  border-top: ms(-10) solid shade($coolblack,5);
+
+  .b-social:after{ 
+   color:set-alpha($white, 0.30);
+   text-shadow:0 1px 0 shade($black, 20); 
+   float:left;
+   content:"Connect with CPASS";
+    }
+  .b-social a{
+    box-shadow: 0 ms(-6) ms(-4) set-alpha(darken($black,20), 0.6);
+    text-shadow: 0 ms(-6) ms(-4) set-alpha(darken($black,20), 0.6);
+    float:left;
+    color:set-alpha($white, 0.30);
+    border-color:set-alpha($white, 0.10);
+    &:hover,&:focus{
+      border-color:$quadrary;
+    }
+  }//end a
+}

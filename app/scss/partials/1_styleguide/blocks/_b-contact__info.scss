@@ -1,3 +1,27 @@
 .b-contact__info{
+	@include adjust-font-size-to($font-size-small-2);
+	@include rhythm(0, 0, 0, $ms-4n, $font-size-small-2);
+	p{ 
+	  @include adjust-font-size-to($font-size-small-2);
+	  color:$white;
+	  margin-top:0;
+	  a{
+	  	@include adjust-font-size-to($font-size-small-2);
+		color:$quadrary;
+		border-bottom:0;
+		&:hover, &:focus{
+			border-bottom:0;
+			border-top:0;
+			background:transparent;
+			color:$SecLightGold;
+		}
+
+		&:first-child{
+		  font-size:$font-size-med;
+		}//end a:first-child
+	  }//end a
+	}//end p
+
 	
-}
+
+}//end .b-contact__info

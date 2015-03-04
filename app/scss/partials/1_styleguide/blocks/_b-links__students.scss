@@ -8,4 +8,16 @@
   .b-students__current{
   	
   }//end .b-students__current
+
+
+  &[data-eq-state="large"]{
+    div{
+      width:46%;
+      float:left;
+      margin-right:3%;
+      margin-left:3%;
+    }
+    .b-students__future{margin-left:1%;}
+    .b-students__current{margin-right:1%;}            
+  }
 }//end .b-links__students

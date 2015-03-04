@@ -1,0 +1,26 @@
+
+<div class="wvu-landing-page-header">
+  <div class="wvu-container">
+  
+    <h1>Landing Page<br>Header</h1>
+    
+    <p class="wvu-landing-page-header__intro wvu-landing-page-header__intro--overlay">Perhaps our brand's most impactful first is its first impression. WVU's graphic language sets the tone for how people see us initially, and how they will recognize us moving forward. It consists of type, photos, graphic elements, and color. More importantly, it is the culmination of how all these pieces work together to strengthen our overall brand message. </p>
+  
+  </div>
+</div>
+
+<div class="wvu-container">
+  <div class="code-label code-label--html">HTML (views/landing-page.html)</div>
+<pre>
+  &lt;r:partial name="patterns/wvu-landing-page-header" /&gt;
+</pre>
+  <div class="code-label code-label--styles">SCSS (scss/1-base/variables.scss)</div>
+<pre>
+  $has-landing-page-intro-overaly: true;
+  // this enables a transparent background under your intro text in case the background photo renders the text illegible.
+</pre>
+  <div class="code-label code-label--styles">SCSS (scss/3-layouts/layouts-dir.scss)</div>
+<pre>
+  @include 'wvu-landing-page-header'
+</pre>
+</div>
