@@ -7,31 +7,18 @@ require 'modular-scale'
 require 'color-schemer'
 
 require 'sassy-buttons'
-require 'autoprefixer-rails'
-#require 'compass-recipes'
 require 'compass-normalize'
 require 'bootstrap-sass'
+
 
 # Set this to the root of your project when deployed:
 http_path = "./"
 css_dir = "stylesheets"
-sass_dir = "app/scss"
+sass_dir = "scss"
 images_dir = "images"
 javascripts_dir = "javascripts"
 fonts_dir = "public/fonts"
 
-
-#on_stylesheet_saved do |file|
-#  css = File.read(file)
-#  File.open(file, 'w') do |io|
-#    io << AutoprefixerRails.process(
-#      css, browsers: ["last 1 version", "> 1%", "Explorer 7", "BlackBerry 10", "Android 4"],
-#      map:   File.read('styles.css.map'), #this could be removed
-#      from: 'styles.css', #this could be removed
-#      to: 'styles.out.css' #this could be removed
-#      )
-#  end
-#end
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :compressed

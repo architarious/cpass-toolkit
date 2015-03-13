@@ -1,186 +1,115 @@
 'use strict';
 
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var bower = require('bower');
-var concat = require('gulp-concat');
-var bowerFiles = require('main-bower-files');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var paths = require('compass-options').paths();
-var browserSync = require('browser-sync');
-var shell = require('gulp-shell');
-var minifyCSS = require('gulp-minify-css');
-var gulpFilter = require('gulp-filter');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var flatten = require('gulp-flatten');
-var imagemin = require('gulp-imagemin');
-var pngcrush = require('imagemin-pngcrush');
-
-//////////////////////////////
-// Begin Gulp Tasks
-//////////////////////////////
-gulp.task('lint', function () {
-  return gulp.src([
-      './app/javascripts/app.js'
-    ])
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
-    .pipe(gulp.dest('./javascripts/'))
-});
-
-//////////////////////////////
-// Load stuff from bower
-//////////////////////////////
-gulp.task('bowerlibs', function() {
-
-  var jsFilter = gulpFilter('*.js')
-  var cssFilter = gulpFilter('*.css')
-  var fontFilter = gulpFilter(['*.eot', '*.woff', '*.svg', '*.ttf'])
-
-  return gulp.src(bowerFiles())
-
-  // grab vendor js files from bower_components, minify and push in /public
-  .pipe(jsFilter)
-  .pipe(gulp.dest( paths.js + '/lib'))
-  .pipe(uglify())
-  .pipe(rename({ suffix: ".min" }))
-  .pipe(gulp.dest(paths.js + '/lib'))
-  .pipe(jsFilter.restore())
-
-  // grab vendor css files from bower_components, minify and push in /public
-  .pipe(cssFilter)
-  .pipe(gulp.dest( paths.css))
-  .pipe(minifyCSS())
-  .pipe(rename({
-        suffix: ".min"
-    }))
-  .pipe(gulp.dest( paths.css))
-  .pipe(cssFilter.restore())
-
-  // grab vendor font files from bower_components and push in /public 
-  .pipe(fontFilter)
-  .pipe(flatten())
-  .pipe(gulp.dest(paths.fonts))
-
-});
-
-////////////////////////////
-// FILE COMPRESSION - minifycss
-/////////////////////////////
-gulp.task('minifycss', function(){
-  gulp.src( paths.css + '/*.css')
-  //  .pipe(minifyCSS({keepBreaks:true}))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest('./stylesheets/'))
-
-});
-
-////////////////////////////
-// FILE COMPRESSION - uglify
-/////////////////////////////
-gulp.task('uglify', function() {
-  gulp.src(paths.js + '/**/*.js')
-    //.pipe(uglify())
-    .pipe(gulp.dest('./javascripts/'))
-    
-});
-
-////////////////////////////
-// FILE COMPRESSION - imagemin
-/////////////////////////////
-gulp.task('imagemin', function () {
-    return gulp.src(paths.img + '/*')
-      //  .pipe(imagemin({
-      //      progressive: true,
-      //      svgoPlugins: [{removeViewBox: false}],
-      //      use: [pngcrush()]
-      //  }))
-        .pipe(gulp.dest('./images/'));
-});
-
-////////////////////////////
-// FILE COMPRESSION 
-/////////////////////////////
-
-gulp.task('compress', ['minifycss', 'uglify', 'imagemin']);
 
 
-//////////////////////////////
-// Compass Task
-//////////////////////////////
-gulp.task('compass', function () {
-  return gulp.src(paths.sass + '/**/*')
-    .pipe(shell([
-      'bundle exec compass watch --time'
-    ]));
-});
-
-////////////////////////////
-// move-css
-/////////////////////////////
-gulp.task('move-css', function(){
-  gulp.src( paths.css + '/*.css')
-    //.pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest('./stylesheets/'))
-
-});
-
-////////////////////////////
-// move-js
-/////////////////////////////
-gulp.task('move-js', function() {
-  gulp.src(paths.js + '/**/*.js')
-    .pipe(gulp.dest('./javascripts/'))
-    
-});
-
-////////////////////////////
-// move-img
-/////////////////////////////
-gulp.task('move-img', function () {
-    return gulp.src(paths.img + '/*')
-        .pipe(gulp.dest('./images/'));
-});
+var gulp          = require('gulp');
+var watch         = require('gulp-watch');
+var changed       = require('gulp-changed');
+var rename        = require('gulp-rename');
 
 
-
-
-//////////////////////////////
-// watch
-//////////////////////////////
-gulp.task('watch', function () {
-  //gulp.watch(paths.js + '/**/*.js', ['lint', 'move-js'])
-  gulp.watch(paths.css + '/*.css')
-  gulp.watch(paths.img + '*', ['move-img'])
-});
-
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//PRIMARY PROCESSES
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
 
 
 //////////////////////////////
 // BrowserSync Task
 //////////////////////////////
+var browserSync   = require('browser-sync');
+var bsReload      = browserSync.reload;
+
 gulp.task('browserSync', function () {
-  browserSync.init([
-    'stylesheets/*.css',
-    'javascripts/**/*.js',
-    'images/**/*',
-    'public/fonts/**/*',
-    paths.html + '/**/*.html',],{
-
-    proxy: {
-        host: "localhost",
-        port: 2000
-      }
-
-    
-  });
+  browserSync({
+   proxy: "localhost:2000",
+    open: false,
+    logConnections: true,
+    logSnippet: true
+  });  
 });
 
 
 //////////////////////////////
+// CSS Processing
+//////////////////////////////
+var paths       = require('compass-options').paths();
+
+var rootCSS     = paths.css,
+    rootSCSS    = paths.sass,
+    rootFonts   = paths.fonts,
+    rootImages  = paths.images,
+    rootJS      = paths.js;
+
+var tempCSS     = paths.css + '/temp';
+
+
+
+
+// Compass via-shell
+//////////////////////////////
+var shell       = require('gulp-shell');
+
+gulp.task('compass', shell.task([
+      'compass compile --time'
+]));
+
+
+// PostCSS
+//////////////////////////////
+
+
+gulp.task('postCSS', ['compass'], function () {
+  var postcss       = require('gulp-postcss');
+  var sourcemaps    = require('gulp-sourcemaps');
+
+
+  var autoprefixer  = require('autoprefixer-core');
+  var hex           = require('postcss-color-hex');
+
+  var processors    = [
+      autoprefixer({ browsers: ['last 3 versions', '> 1%', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 3',  'android 4', 'safari 5'],  cascade: false }),
+      require('postcss-opacity'),
+      hex({rgba: true})
+  ];
+
+   return gulp.src(rootCSS + '**/*.css')      
+        .pipe(changed(rootCSS, {extension: '.map'}))
+        .pipe(sourcemaps.init())
+        .pipe(postcss(processors))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./'))
+        .pipe(bsReload({stream: true})); 
+});
+
+gulp.task('styles', ['compass', 'postCSS']);
+
+//////////////////////////////
 // Server Tasks
 //////////////////////////////
-gulp.task('server', [ 'watch', 'compass', 'browserSync']);
+gulp.task('server', ['browserSync'], function(){
+  gulp.watch(rootSCSS + '/**/*.scss', [ 'postCSS']);
+  gulp.watch(paths.img + '*').on("change", bsReload);
+  gulp.watch("./views/*.html").on("change", bsReload);
+
+});
 gulp.task('serve', ['server']);
+
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//SECONDARY PROCESSES
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
+// minifyCSS
+//////////////////////////////
+
+gulp.task('minify-css', function() {
+  var minifyCSS     = require('gulp-minify-css');
+
+  return gulp.src(paths.css + '/**/*.css')
+    .pipe(minifyCSS({keepBreaks:true}))
+    .pipe(gulp.dest(paths.css))
+});

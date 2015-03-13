@@ -1,0 +1,108 @@
+////////////////////////
+// Layouts Partials
+//
+// Your SMACSS Layouts go here
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+////////////////////////
+ 
+ @import "s-header";
+ @import "s-footer";
+
+
+body{    
+
+
+   background:url(../images/bg-3.jpg) #333e48 repeat; 
+
+	#page-wrap{//radial-gradient(farthest-side at 60% 55%,blue,green,yellow,black);
+		background: radial-gradient(farthest-corner at 50% 5%, set-alpha($white, 0.15) -89%, set-alpha($coolblack, 0));
+		float:left;
+		width:100%;
+	}
+	.wvu-masthead-wrapper{
+		width:100%;
+		padding:0;
+		float:left;
+	  .wvu-masthead{
+		width:100%;
+		float:left;
+
+		.wvu-masthead-container{
+
+		}
+	  }//end /wvu-masthead
+	}//end .wvu-masthead-wrapper
+	#masthead-cpass{
+		width:100%;
+		float:left;
+		.container{
+			
+		}//end #college-masthead.container
+	}//end #college-masthead
+	header{
+		float:left;
+		width:100%;
+		.container{
+			a.site-logo{}
+			nav.nav.primary{}
+		}//end header.container
+	}//end header
+
+	section#prefix{
+		width:100%;
+		float:left;
+		.container{
+
+		}//end section#prefix.container
+	}//end section#prefix
+
+	section#core{
+		width:100%;
+		float:left;
+		.container{
+			#main{
+				article{
+					float:left;
+					max-width:100%;
+				}//end #main article
+			}//end #main
+			aside.sidebar{
+
+			}//end aside.sidebar
+		}//end section#core.container
+	}//end section#core	
+
+	section#postfix{
+		width:100%;
+		float:left;
+		.container{
+
+		}//end section#postfix .container
+	}//end section#postfix
+
+	footer{
+		width:100%;
+		float:left;
+		@include adjust-font-size-to($font-size-med);
+        @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
+		#college.footer{
+			width:100%;
+			float:left;
+			.container{
+				#footer_contact{}//end #footer_contact
+				#footer_feature{}//end #footer_feature
+			}//end #college.footer .container
+		}//end #colllege.footer
+
+		#wvu-footer{
+			width:100%;
+			float:left;
+			.container{
+				.wvu-credits{}//end .wvu-credits
+				.wvu-icons{}//end .wvu-icons
+
+			}//end #wvu.footer .container
+		}//end #wvu.footer
+		
+	}//end footer.footer
+}//end body

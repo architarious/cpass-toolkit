@@ -1,0 +1,270 @@
+//"gulp-flatten": "~0.0.4",
+//"gulp-imagemin": "~2.2.1",
+//"gulp-jshint": "~1.9.2",
+//"gulp-minify-css": "~1.0.0",
+//"jshint-stylish": "~1.0.1",
+//"imagemin-pngcrush": "~4.0.0" 
+//"bower": "~1.3.12",
+//"main-bower-files": "~2.5.0",
+//"gulp-filter": "~2.0.2", 
+//"gulp-concat": "~2.5.2",  
+//"gulp-uglify": "~1.1.0",
+
+
+    "chokidar": "^1.0.0-rc4",
+    "cssgrace": "^2.0.0",
+    "gulp-compass": "^2.0.3",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-ruby-sass": "^1.0.0-alpha.3",
+    "pixrem": "^1.2.0",
+
+
+
+//var jshint = require('gulp-jshint');
+//var stylish = require('jshint-stylish');
+//var minifyCSS = require('gulp-minify-css');
+//var uglify = require('gulp-uglify');
+//var flatten = require('gulp-flatten');
+//var imagemin = require('gulp-imagemin');
+//var pngcrush = require('imagemin-pngcrush');
+//var bower = require('bower');
+//var bowerFiles = require('main-bower-files');
+
+
+
+//////////////////////////////
+// Begin Gulp Tasks
+//////////////////////////////
+gulp.task('lint', function () {
+  return gulp.src([
+      './app/javascripts/app.js'
+    ])
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish))
+    .pipe(gulp.dest('./javascripts/'))
+});
+
+//////////////////////////////
+// Load stuff from bower
+//////////////////////////////
+gulp.task('bowerlibs', function() {
+
+  var jsFilter = gulpFilter('*.js')
+  var cssFilter = gulpFilter('*.css')
+  var fontFilter = gulpFilter(['*.eot', '*.woff', '*.svg', '*.ttf'])
+
+  return gulp.src(bowerFiles())
+
+  // grab vendor js files from bower_components, minify and push in /public
+  .pipe(jsFilter)
+  .pipe(gulp.dest( paths.js + '/lib'))
+  .pipe(uglify())
+  .pipe(rename({ suffix: ".min" }))
+  .pipe(gulp.dest(paths.js + '/lib'))
+  .pipe(jsFilter.restore())
+
+  // grab vendor css files from bower_components, minify and push in /public
+  .pipe(cssFilter)
+  .pipe(gulp.dest( paths.css))
+  .pipe(minifyCSS())
+  .pipe(rename({
+        suffix: ".min"
+    }))
+  .pipe(gulp.dest( paths.css))
+  .pipe(cssFilter.restore())
+
+  // grab vendor font files from bower_components and push in /public 
+  .pipe(fontFilter)
+  .pipe(flatten())
+  .pipe(gulp.dest(paths.fonts))
+
+});
+
+////////////////////////////
+// FILE COMPRESSION - minifycss
+/////////////////////////////
+gulp.task('minifycss', function(){
+  gulp.src( paths.css + '/*.css')
+  //  .pipe(minifyCSS({keepBreaks:true}))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest('./stylesheets/'))
+
+});
+
+////////////////////////////
+// FILE COMPRESSION - uglify
+/////////////////////////////
+gulp.task('uglify', function() {
+  gulp.src(paths.js + '/**/*.js')
+    //.pipe(uglify())
+    .pipe(gulp.dest('./javascripts/'))
+    
+});
+
+////////////////////////////
+// FILE COMPRESSION - imagemin
+/////////////////////////////
+gulp.task('imagemin', function () {
+    return gulp.src(paths.img + '/*')
+      //  .pipe(imagemin({
+      //      progressive: true,
+      //      svgoPlugins: [{removeViewBox: false}],
+      //      use: [pngcrush()]
+      //  }))
+        .pipe(gulp.dest('./images/'));
+});
+
+////////////////////////////
+// FILE COMPRESSION 
+/////////////////////////////
+
+gulp.task('compress', ['minifycss', 'uglify', 'imagemin']);
+
+
+////////////////////////////
+// move-css
+/////////////////////////////
+gulp.task('move-css', function(){
+  gulp.src( paths.css + '/*.css')
+    //.pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest('./stylesheets/'))
+
+});
+
+////////////////////////////
+// move-js
+/////////////////////////////
+gulp.task('move-js', function() {
+  gulp.src(paths.js + '/**/*.js')
+    .pipe(gulp.dest('./javascripts/'))
+    
+});
+
+////////////////////////////
+// move-img
+/////////////////////////////
+gulp.task('move-img', function () {
+    return gulp.src(paths.img + '/*')
+        .pipe(gulp.dest('./images/'));
+});
+
+
+
+//////////////////////////////
+// Compass Task
+//////////////////////////////
+gulp.task('compass', function () {
+var shell = require('gulp-shell');
+
+  return gulp.src(paths.sass + '/**/*')
+    .pipe(shell([
+      'bundle exec compass watch --time'
+    ]));
+});
+
+//////////////////////////////
+// autoprefixer Task
+//////////////////////////////
+gulp.task('autoprefixer', function () {
+    return gulp.src(paths.css +'**/*.css')
+        .pipe(autoprefixer({
+            browsers: ["last 3 versions", "> 1%", "Explorer 7", "BlackBerry 10", "Android 4"],
+            cascade: true
+        }))
+        .pipe(gulp.dest('./'));
+});
+
+
+
+
+
+
+
+
+
+gulp.task('compass2', function() {
+  gulp.src(paths.sass + '/**/*.scss')
+    .pipe(compass({ 
+      config_file: './config.rb',
+      css: paths.css,
+      sass: paths.sass
+    }))
+    .pipe(gulp.dest(paths.css));
+});
+
+
+
+gulp.task('styles', function() {
+  gulp.src(paths.sass + '/**/*.scss')
+    .pipe(compass({ 
+      config_file: './config.rb',
+      css: paths.css,
+      sass: paths.sass
+    }))
+    .pipe(autoprefixer({ 
+      browsers: ['ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4', 'last 4 versions', 'safari 5'],
+      cascade: true,
+      remove: false
+    }))
+    .pipe( gulp.dest(paths.css) )
+});
+
+
+
+
+//////////////////////////////
+// watch
+//////////////////////////////
+gulp.task('watch', ['browserSync'], function () {
+  //gulp.watch(paths.js + '/**/*.js', ['lint', 'move-js'])
+  //gulp.watch(paths.img + '*', ['move-img'])
+  gulp.watch(paths.css + '/*.css').on("change", browserSync.reload);
+  gulp.watch(paths.img + '*').on("change", browserSync.reload);
+
+});
+
+
+// gulp-compass
+//////////////////////////////
+
+var compass = require('gulp-compass');
+gulp.task('preStyles', function() {
+  gulp.src(rootSCSS + '/**/*.scss')
+    .pipe(compass({ 
+      config_file: './config.rb',
+      css: rootCSS,
+      sass: rootSCSS,
+      //require: ['breakpoint', 'singularitygs', 'toolkit', 'modular-scale', 'color-schemer', 'sassy-buttons', 'compass-normalize', 'bootstrap-sass'],
+      //logging: true,
+      sourcemap: true,
+      bundle_exec: true
+    }))
+    //.pipe(changed(rootCSS));
+    //.pipe(gulp.dest(paths.css));
+    //.pipe(bsReload({stream:true})); //un-comment if not using gulp server
+});
+
+gulp.task('clearJunk', function(){
+    var rimraf = require('gulp-rimraf');
+  return gulp.src(rootCSS + '**/*.css', {read:false})        
+    .pipe(rimraf({force:true}));
+});
+
+
+
+
+
+
+
+// gulp-ruby-sass
+//////////////////////////////
+var sass        = require('gulp-ruby-sass');
+
+gulp.task('grsass', function () {
+    return sass(paths.scss, {
+          compass: true,
+          sourcemap: true
+        })
+        .on('error', function (err) { console.log(err.message); })
+        .pipe(gulp.dest(paths.css));
+});
