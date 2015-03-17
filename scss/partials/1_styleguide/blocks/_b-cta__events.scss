@@ -55,7 +55,8 @@
       	.b-wvuCalendar__event_day{
       		display: block; 
       		@include adjust-font-size-to($font-size-large-2);
-      		@include rhythm(0, 0, $ms-4n, 0, $font-size-large-2);
+      		@include adjust-leading-to($ms-1);
+      		@include rhythm(0, 0, $ms-4n, 0, $font-size-small-2);
       		@include breakpoint($bp-mobile1-1){
       		  font-family:$BlkCn;
       		  font-weight:800;
@@ -106,7 +107,7 @@
   		}
   		.b-wvuCalendar__event_day{
   			display:inline;
-  			@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-small-2);   
+  			@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-large-2);   
   		}
   	}
 
@@ -119,7 +120,8 @@
   }//end data-eq-state="small"
   &[data-eq-state="medium"]{
   	.b-wvuCalendar .b-wvuCalendar__event{
-  		max-width:30%;  
+  		min-width:29%;
+      max-width:30%;  
   	}
 
   	.b-wvuCalendar .eventInfo{
@@ -130,6 +132,7 @@
 
   &[data-eq-state="large"]{
   	.b-wvuCalendar .b-wvuCalendar__event{
+      min-width:15%;
   		max-width:30%;  
   	}
 
@@ -142,6 +145,7 @@
   &[data-eq-state="x-large"]{
     
   	.b-wvuCalendar .b-wvuCalendar__event{
+      min-width:15%;
   		max-width:40%;  
   	}
 

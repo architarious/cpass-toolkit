@@ -13571,6 +13571,8 @@ nav .b-social a:hover {
   font-size: 2rem;
   line-height: 40px;
   line-height: 2.50275rem;
+  line-height: 25px;
+  line-height: 1.56421875rem;
   margin-top: 0px;
   margin-top: 0rem;
   padding-top: 0px;
@@ -13671,18 +13673,21 @@ nav .b-social a:hover {
   padding-left: 0;
 }
 .b-cta__events[data-eq-state="medium"] .b-wvuCalendar .b-wvuCalendar__event {
+  min-width: 29%;
   max-width: 30%;
 }
 .b-cta__events[data-eq-state="medium"] .b-wvuCalendar .eventInfo {
   max-width: 70%;
 }
 .b-cta__events[data-eq-state="large"] .b-wvuCalendar .b-wvuCalendar__event {
+  min-width: 15%;
   max-width: 30%;
 }
 .b-cta__events[data-eq-state="large"] .b-wvuCalendar .eventInfo {
   max-width: 70%;
 }
 .b-cta__events[data-eq-state="x-large"] .b-wvuCalendar .b-wvuCalendar__event {
+  min-width: 15%;
   max-width: 40%;
 }
 .b-cta__events[data-eq-state="x-large"] .b-wvuCalendar .eventInfo {
@@ -13737,8 +13742,8 @@ nav .b-social a:hover {
   line-height: 1.251375rem;
   margin-top: 0px;
   margin-top: 0rem;
-  padding-top: 40px;
-  padding-top: 2.53095912rem;
+  padding-top: 10px;
+  padding-top: 0.59747839rem;
   padding-bottom: 10px;
   padding-bottom: 0.59747839rem;
   margin-bottom: 0px;
@@ -15227,6 +15232,7 @@ nav #nav-primary.collapse.in .navbar--more a::after {
     margin-left: 0;
     margin-right: 0;
     clear: none;
+    clear: both;
   }
 }
 @media (min-width: 48rem) and (max-width: 60rem) {

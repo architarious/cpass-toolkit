@@ -53,7 +53,7 @@
       .nav-list li a{ }
       .b-cta__about{@include grid-span(3,1);}
       .b-cta__events{@include grid-span(3,4);}
-      .b-cta__news{@include grid-span(6,1); }
+      .b-cta__news{@include grid-span(6,1); clear:both; }
     }//end $bp-mobile-2
 
     @include breakpoint($bp-tablet-1 $bp-desktop1-1){

@@ -14,7 +14,7 @@
 				background:none;
 				width:100%;  
 				@include adjust-font-size-to($font-size-med);  
-				@include rhythm(0, $ms-3, $ms-3n, 0, $font-size-med);
+				@include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-med);
 				
 
 				&:hover,&:focus{
