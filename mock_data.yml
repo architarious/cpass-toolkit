@@ -10,28 +10,33 @@ browsersync-data: |
   head.appendChild(script);
 
 shared_themes:
-  layouts__masthead--v1: "code"
-  layouts__footer__contact--v1: "code"
-  layouts__footer__credits--v1: "code"
-  layouts__footer__icons--v1: "code"
-  layouts__browser-update-org--v1: "code"
-  patterns__wvu-masthead: "patterns"
-  patterns__wvu-masthead__logo: "patterns"  
-  patterns__wvu-masthead__logo: "cpass-toolkit"
-  patterns__wvu-masthead__search-bar: "patterns"
-  components__s-header__cpass: "cpass-toolkit"
-  components__s-footer__cpass: "cpass-toolkit"
-  components__s-footer__wvu: "cpass-toolkit"
-  components__m-cta: "cpass-toolkit"
-  components__m-links: "cpass-toolkit"
-  components__b-cta__about: "cpass-toolkit"
-  components__b-cta__events: "cpass-toolkit"
-  components__b-cta__news: "cpass-toolkit"
-  components__b-social: "cpass-toolkit"
-  components__b-links__academics: "cpass-toolkit"
-  components__b-links__students: "cpass-toolkit"
-  components__b-links__alumni: "cpass-toolkit"
-  components__b-links__community: "cpass-toolkit"
+  "Code":
+    "layouts/masthead--v1" : "code"
+    "layouts/footer__contact--v1" : "code"
+    "layouts/footer__credits--v1" : "code"
+    "layouts/footer__icons--v1" : "code"
+    "layouts/browser-update-org--v1" : "code"
+
+  "patterns":
+    "patterns/wvu-masthead" : "patterns"
+    "patterns/wvu-masthead__logo" : "patterns"
+    "patterns/wvu-masthead__search-bar" : "patterns"
+
+  "CPASS: CPASS Toolkit":
+    "patterns/wvu-masthead__logo" : "cpass-toolkit"
+    "components/s-header__cpass" : "cpass-toolkit"
+    "components/s-footer__cpass" : "cpass-toolkit"
+    "components/s-footer__wvu" : "cpass-toolkit"
+    "components/m-cta" : "cpass-toolkit"
+    "components/m-links" : "cpass-toolkit"
+    "components/b-cta__about" : "cpass-toolkit"
+    "components/b-cta__events" : "cpass-toolkit"
+    "components/b-cta__news" : "cpass-toolkit"
+    "components/b-social" : "cpass-toolkit"
+    "components/b-links__academics" : "cpass-toolkit"
+    "components/b-links__students" : "cpass-toolkit"
+    "components/b-links__alumni" : "cpass-toolkit"
+    "components/b-links__community" : "cpass-toolkit"
   
 
 

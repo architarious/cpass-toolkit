@@ -55,8 +55,7 @@
       	.b-wvuCalendar__event_day{
       		display: block; 
       		@include adjust-font-size-to($font-size-large-2);
-      		@include adjust-leading-to(1);
-      		@include rhythm(0, 0, $ms-4n, 0, $font-size-small-2);
+      		@include rhythm(0, 0, $ms-4n, 0, $font-size-large-2);
       		@include breakpoint($bp-mobile1-1){
       		  font-family:$BlkCn;
       		  font-weight:800;

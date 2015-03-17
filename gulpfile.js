@@ -91,7 +91,7 @@ gulp.task('styles', ['compass', 'postCSS']);
 gulp.task('server', ['browserSync'], function(){
   gulp.watch(rootSCSS + '/**/*.scss', [ 'postCSS']);
   gulp.watch(paths.img + '*').on("change", bsReload);
-  gulp.watch("./views/*.html").on("change", bsReload);
+  gulp.watch("./views/**/*.html").on("change", bsReload);
 
 });
 gulp.task('serve', ['server']);
