@@ -10,39 +10,47 @@
     	@include rhythm($ms-1n, 0, 0, 0, $font-size-med);
     }
     .b-search{
-    	@include rhythm($ms-2, 0, 0, 0, $font-size-med);
+    	@include rhythm($ms-0, 0, 0, 0, $font-size-med);
+    }
+    .b-mastLinks{
+    	@include rhythm($ms-5n, 0, 0, 0, $font-size-small-2);
     }
 
 
    @include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
       @include grid-mobile1;
       .b-logo--wrapper{@include grid-span(4,1); clear:both;}
+      .b-mastLinks{@include grid-span(4,1); }
       .b-social{@include grid-span(4,1); }
       .b-search{display:none;}
     }
     @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
       @include grid-mobile2;
       .b-logo--wrapper{@include grid-span(6,1); clear:both;}
-      .b-social{@include grid-span(6,1); }
+      .b-mastLinks{@include grid-span(3,1); }
+      .b-social{@include grid-span(3,1); }
       .b-search{display:none;}
     }
     @include breakpoint($bp-tablet-1 $bp-desktop1-1){
       @include grid-tablet;
       .b-logo--wrapper{@include grid-span(5,1); clear:left; }
-      .b-social{@include grid-span(3,6); clear:right;}
-      .b-search{@include grid-span(3,6); }
+      .b-mastLinks{@include grid-span(2,5); }
+      .b-social{@include grid-span(2,7); }
+      .b-search{@include grid-span(3,6); clear:right;}
     }
     @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
       @include grid-desktop1;
       .b-logo--wrapper{@include grid-span(8,1); clear:left; }
-      .b-social{@include grid-span(4,9); clear:right;}
-      .b-search{@include grid-span(4,9); }
+      .b-mastLinks{@include grid-span(3,8); }
+      .b-social{@include grid-span(2,11); }
+      .b-search{@include grid-span(4,9); clear:right;}
     }
     @include breakpoint($bp-desktop2-1){
       @include grid-desktop2;
-      .b-logo--wrapper{@include grid-span(12,1); clear:left;}
-      .b-social{@include grid-span(4,13); clear:right;}
-      .b-search{@include grid-span(4,13); }
+      .b-logo--wrapper{@include grid-span(10,1); clear:left;}
+      .b-mastLinks{@include grid-span(3,12); }
+      .b-social{@include grid-span(3,14); }
+      .b-search{@include grid-span(6,11); clear:right;}
     }
 
 	/*.logo-container{

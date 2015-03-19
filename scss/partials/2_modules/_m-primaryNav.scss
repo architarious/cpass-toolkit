@@ -118,6 +118,13 @@ nav{
 		@include trailing-border(2px, $ms-5n);
 		padding-bottom:0;
 		box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
+		@include breakpoint($bp-tablet-1){
+			background:none;
+			border:0;
+			margin:0;
+			padding:0;
+			box-shadow:none;
+		}
 
 		.navbar-nav{
 			border:0;
@@ -165,6 +172,16 @@ nav{
 			@include navigation-list;
 			li{
 				width: auto;
+				color:$white;
+				border:0;
+				padding:0;
+				margin:0;
+				a{
+					color:$white;
+					border:0;
+					padding:0;
+					margin:0;
+				}
 			}
 		  }
 		}//end navbar-nav

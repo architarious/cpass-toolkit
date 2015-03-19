@@ -1,0 +1,21 @@
+.b-mastLinks{
+	ul{ list-style:none; padding:0; margin:0;}
+	li{ 
+		display:inline; 
+		float:left;
+		margin-right:ms(-3);
+		&:last-child{ margin-right:0;}
+	}
+	a{ 
+		color:$white;
+		@extend .font-Bd;
+		@include adjust-font-size-to($font-size-small-2);
+	 }
+	.b-mastLinks__WVU{}
+	.b-mastLinks__jobs{}
+	.b-mastLinks__about{}
+
+	&[data-eq-state="small"]{}
+	&[data-eq-state="medium"]{}
+	&[data-eq-state="large"]{}
+}

@@ -39,6 +39,7 @@ shared_themes:
     "components/b-links__alumni" : "cpass-toolkit"
     "components/b-links__community" : "cpass-toolkit"
     "components/b-logo" : "cpass-toolkit"
+    "components/b-mastLinks" : "cpass-toolkit"
 
 
 

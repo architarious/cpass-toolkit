@@ -6,7 +6,7 @@ requirejs.config({
     //config is relative to the baseUrl, and
     //never includes a ".js" extension since
     //the paths config could be for a directory.
-  
+
 
     paths: {
         'page' : '../page',
@@ -21,22 +21,22 @@ requirejs.config({
         ],
 
 
-        // path to folder with individual bootstrap files 
-        'bootstrap': 'vendor/bootstrap', 
+        // path to folder with individual bootstrap files
+        'bootstrap': 'vendor/bootstrap',
 
-        'bigTitles' : '../app/bigTitles', 
+        'bigTitles' : '../app/bigTitles',
         'dropdown' : '../app/dropdown',
         'eq' : 'vendor/eq.min',
         'jquery-smoothScroll': 'vendor/jquery.smooth-scroll.min',
         'jquery-perfect-scrollbar': 'vendor/perfect-scrollbar.min',
-        //'smoothScroll' : '../app/smoothScroll', 
+        //'smoothScroll' : '../app/smoothScroll',
         //'utils' : '../app/utils',
         //'jquery-mobile' : 'jquery-mobile/jquery.mobile.custom.min',
     },
       shim: {
 
         'overthrow-sidescroller': {},
-        'bootstrap/affix':      { deps: ['jquery'], exports: '$.fn.affix' }, 
+        'bootstrap/affix':      { deps: ['jquery'], exports: '$.fn.affix' },
         'bootstrap/alert':      { deps: ['jquery'], exports: '$.fn.alert' },
         'bootstrap/button':     { deps: ['jquery'], exports: '$.fn.button' },
         'bootstrap/carousel':   { deps: ['jquery'], exports: '$.fn.carousel' },
@@ -60,17 +60,17 @@ requirejs.config({
 });
 
 requirejs(['page/default']);
-   
+
 // Start the main app logic.
 //requirejs(['jquery.min','app/affix','app/alert','app/button','app/carousel','app/collapse','app/dropdown','app/tab','app/transition','app/scrollspy','app/tooltip','app/modal','app/popover' ],
 //function   ($,        affix,         alert,        button,      carousel,      collapse,      dropdown,      tab,      transition,      scrollspy,      tooltip,      modal,      popover) {
     //jQuery, canvas and the app/sub module are all
     //loaded and can be used here now.
 
-   
+
   //      $('.collapse').collapse(); //bootstrap solution for navigation "navbar"
         //hamburger();  uncomment for mobile nav (if not using bootstrap)
     //    alert("hello world");
-     
-  
+
+
 //});

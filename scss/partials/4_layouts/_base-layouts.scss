@@ -46,5 +46,28 @@ body{
 		#s-footer__cpass--wrapper{}
 		#s-footer__wvu--wrapper{}
 	}//end #footer
+
+	.container{
+		width:84.715%;
+		@include breakpoint($bp-mobile1-1){
+			width:92%;
+		}
+		@include breakpoint($bp-tablet-1){
+			min-width:ms(16);
+			width:95%;
+		}
+		@include breakpoint($bp-desktop1-1){
+			min-width:ms(17);
+			width:84.715%;
+		}
+		@include breakpoint($bp-desktop2-1){
+			width:84.715%;
+			min-width:ms(18);
+		}
+		@include breakpoint($bp-desktop2-5){
+			width:84.715%;
+			max-width:ms(19);
+		}
+	}//end .container
 	
 }//end body
