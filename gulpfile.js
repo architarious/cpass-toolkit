@@ -40,7 +40,8 @@ var rootCSS     = paths.css,
     rootSCSS    = paths.sass,
     rootFonts   = paths.fonts,
     rootImages  = paths.images,
-    rootJS      = paths.js;
+    rootJS      = paths.js,
+    rootHTML    = './views/**/*.html';
 
 var tempCSS     = paths.css + '/temp';
 
@@ -53,7 +54,10 @@ var shell       = require('gulp-shell');
 
 gulp.task('compass', shell.task([
       'compass compile --time'
-]));
+   ],{
+    ignoreErrors: true
+   }
+));
 
 
 // PostCSS
@@ -109,7 +113,22 @@ gulp.task('serve', ['server']);
 gulp.task('minify-css', function() {
   var minifyCSS     = require('gulp-minify-css');
 
-  return gulp.src(paths.css + '/**/*.css')
+  return gulp.src(paths.css + '/**/*.css', 'views')
     .pipe(minifyCSS({keepBreaks:true}))
     .pipe(gulp.dest(paths.css))
 });
+
+
+// check for Unused CSS
+//////////////////////////////
+
+gulp.task('unusedCSS'),function(){
+  var checkCSS = require( 'gulp-check-unused-css' );
+
+  return gulp.src( [rootCSS + '**/*.css', rootHTML] )
+    .pipe( checkCSS({
+        //ignore: [ 'special-js-class', /^vendor-/ ],
+        //globals: [ 'bootstrap@3.2.0' ]
+    }));
+}
+    

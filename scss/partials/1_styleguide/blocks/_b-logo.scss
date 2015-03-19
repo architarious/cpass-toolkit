@@ -1,0 +1,43 @@
+.b-logo--wrapper{}
+
+.b-logo{
+	.wvu-masthead__logo{
+		background-size:271px;
+		br{ display:none; }	
+	}
+	.wvu-masthead__title{
+		@extend .font-Roman;
+		@include adjust-font-size-to($font-size-med);
+		@include adjust-leading-to($ms-0);
+	}
+
+	&[data-eq-state="x-small"]{
+	  .wvu-masthead__logo{ background-size:contain;}			
+	}//end x-small
+	&[data-eq-state="small"]{
+		.wvu-masthead__logo{background-size:271px; }
+	}//end small
+	&[data-eq-state="medium"]{
+		.wvu-masthead__logo{background-size:300px; br{ display:block;} }
+	}//end medium
+	&[data-eq-state="large"]{
+		.wvu-masthead__logo{background-size:326px; br{ display:block;} }
+		.wvu-masthead__title{
+
+			@include adjust-font-size-to($font-size-med + 2.335);
+			@include adjust-leading-to($ms-0 + 0.07);
+			margin-top:0.146em;
+			font-weight:100;
+		}
+	}//end large
+	&[data-eq-state="x-large"]{
+		.wvu-masthead__logo{background-size:358px; br{ display:none;} }
+		.wvu-masthead__title{
+
+			@include adjust-font-size-to($font-size-med + 2.918);
+			@include adjust-leading-to($ms-0 + 0.09);
+			margin-top:0.236em;
+			font-weight:100;
+		}
+	}//end x-large
+}// end .b-logo

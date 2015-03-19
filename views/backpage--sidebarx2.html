@@ -6,15 +6,19 @@ layout: default
 
 <section id="core">
  <div class="container">
+  <aside class="sidebar sidebar--left" role="complementary">
+   <r:editable_region name="l-sidebar" />
+  </aside> <!-- /.sidebar -->
+
   <main class="main" role="main">
     <article>
      <r:editable_region name="main" />
     </article>
   </main><!-- /.main -->
 
- <aside class="sidebar" role="complementary">
-  <r:editable_region name="sidebar" />
- </aside> <!-- /.sidebar -->
+  <aside class="sidebar sidebar--right" role="complementary">
+   <r:editable_region name="sidebar" />
+  </aside> <!-- /.sidebar -->
 
  </div>
 </section><!--/#core-->

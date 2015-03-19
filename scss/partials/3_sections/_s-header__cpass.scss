@@ -1,12 +1,51 @@
 #s-header__cpass{
-	@include adjust-font-size-to($font-size-small-2);
-    @include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-small-2);
 	min-height:1em;
 	width:100%;
 	float:left;
 
+    .b-logo--wrapper{}
+    .b-social{
+    	margin:0 auto;
+    	min-width:190px;
+    	@include rhythm($ms-1n, 0, 0, 0, $font-size-med);
+    }
+    .b-search{
+    	@include rhythm($ms-2, 0, 0, 0, $font-size-med);
+    }
 
-	.logo-container{
+
+   @include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
+      @include grid-mobile1;
+      .b-logo--wrapper{@include grid-span(4,1); clear:both;}
+      .b-social{@include grid-span(4,1); }
+      .b-search{display:none;}
+    }
+    @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
+      @include grid-mobile2;
+      .b-logo--wrapper{@include grid-span(6,1); clear:both;}
+      .b-social{@include grid-span(6,1); }
+      .b-search{display:none;}
+    }
+    @include breakpoint($bp-tablet-1 $bp-desktop1-1){
+      @include grid-tablet;
+      .b-logo--wrapper{@include grid-span(5,1); clear:left; }
+      .b-social{@include grid-span(3,6); clear:right;}
+      .b-search{@include grid-span(3,6); }
+    }
+    @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
+      @include grid-desktop1;
+      .b-logo--wrapper{@include grid-span(8,1); clear:left; }
+      .b-social{@include grid-span(4,9); clear:right;}
+      .b-search{@include grid-span(4,9); }
+    }
+    @include breakpoint($bp-desktop2-1){
+      @include grid-desktop2;
+      .b-logo--wrapper{@include grid-span(12,1); clear:left;}
+      .b-social{@include grid-span(4,13); clear:right;}
+      .b-search{@include grid-span(4,13); }
+    }
+
+	/*.logo-container{
 		a.logo-cpass{
 		font-family:$Roman;
 		text-transform: uppercase;
@@ -34,7 +73,9 @@
 			float:left;
 		  }
 	    }//.logo-cpass
-	}//.logo-container
+	}//.logo-container*/
+
+
 	.short-menu-container{
 		display:none;
 

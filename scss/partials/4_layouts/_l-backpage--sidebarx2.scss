@@ -1,0 +1,64 @@
+////////////////////////
+// Layouts Partials
+//
+// Your SMACSS Layouts go here
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+////////////////////////
+ 
+ @import "s-header";
+ @import "s-footer";
+
+
+body.template-backpage--sidebarx2{    
+
+
+	#header{
+		#s-header__cpass{}
+		#s-header__site{}
+	}//end #header
+	#prefix{
+	}
+	#core{
+
+		@include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
+		   @include grid-mobile1;
+		   .container{ display:table; }
+		   .sidebar--left{display: table-footer-group;  @include grid-span(4,1); clear:both; float:none; } 
+		   .main{@include grid-span(4,1); clear:both;}
+		   .sidebar--right{ @include grid-span(4,1); }
+		 }
+		 @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
+		   @include grid-mobile2;
+		   .container{ display:table; }
+		   .sidebar--left{ display: table-footer-group; @include grid-span(6,1); clear:both;  float:none;}
+		   .main{@include grid-span(6,1); clear:both;}
+		   .sidebar--right{@include grid-span(6,1); }
+		 }
+		 @include breakpoint($bp-tablet-1 $bp-desktop1-1){
+		   @include grid-tablet;
+		   .sidebar--left{ @include grid-span(2,7);}
+		   .main{@include grid-span(6,1); clear:left;}
+		   .sidebar--right{@include grid-span(2,7); clear:right;}
+		 }
+		 @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
+		   @include grid-desktop1;
+		   .sidebar--left{@include grid-span(3,1); }
+		   .main{@include grid-span(6,4); }
+		   .sidebar--right{@include grid-span(3,10); }
+		 }
+		 @include breakpoint($bp-desktop2-1){
+		   @include grid-desktop2;
+		   .sidebar--left{@include grid-span(3,1); }
+		   .main{@include grid-span(9,4); }
+		   .sidebar--right{@include grid-span(4,13); }
+		 }
+	}// end #core
+	#postfix{
+	}
+	#footer{
+		#s-footer__site{}
+		#s-footer__cpass--wrapper{}
+		#s-footer__wvu--wrapper{}
+	}//end #footer
+	
+}//end body

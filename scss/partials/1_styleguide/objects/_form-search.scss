@@ -9,17 +9,17 @@
 	border-radius:3px;
 	font-size:$font-size-med;
 	background-color:$tertiary;
-    background-image:url(../images/noise.png) repeat;
-    padding:ms(-4);
-    @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
-    @include standard-box-shadow(tint($black, 15));
-    @include standard-transition(background-color);
-    @include standard-transition(box-shadow);
-    color:$white;
-    label{
-    	margin:0; padding:0;
-    	width:80%;
-    }
+  background-image:url(../images/noise.png) repeat;
+  padding:ms(-4);
+  @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
+  @include standard-box-shadow(tint($black, 15));
+  @include standard-transition(background-color);
+  @include standard-transition(box-shadow);
+  color:$white;
+  label{
+    margin:0; padding:0;
+    width:80%;
+  }
 }
 .form-search__submit{
   color:$white;

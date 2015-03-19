@@ -7,6 +7,7 @@
 
 p {
     @include adjust-font-size-to($font-size-med);
+    @include adjust-leading-to($ms-1);
     @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
 
     max-width: 50em;
@@ -15,8 +16,8 @@ p {
     color:$black;
 }
 p.kicker{
-    @include adjust-font-size-to($font-size-large);
-    @include rhythm($ms-2,0, 0, $ms-1, $font-size-large);
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-2,0, 0, $ms-1, $font-size-med-2);
 
     max-width: 40em;
     color:$vb-Charcoal;
@@ -35,8 +36,7 @@ em, i, cite, q{
 }
 
 strong, b, p strong{
-    font-family: $Bd;
-    font-weight: 500;
+    @extend .font-Bd;
 }
 
 
@@ -64,8 +64,7 @@ p{
       font-style: italic;
     }
     strong, b, p strong{
-      font-family: $font-paragraph;
-      font-weight: 400;
+      @extend .font-Bd;
     }
 
     a, a:visited, a:active{
@@ -97,22 +96,21 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, blockq
 ////////////////////////////////////////////
 
 h1 {
-    color: tint($primary, 10);
-    text-align:center;
-    max-width: 20em;
-    text-transform: uppercase;
+    color: lighten($primary, 3);
+    max-width: 25em;
     font-family:$BdCn;
     font-weight: 800;
-    @include adjust-font-size-to($font-size-xlarge);
-    @include rhythm($ms-2n, 0, 0, $ms-3n, $font-size-xlarge);
+    text-transform:none;
+    @include adjust-font-size-to($font-size-xlarge-2);
+    @include rhythm($ms-3, 0, 0, $ms-3n, $font-size-xlarge-2);
 }
 
 header h1 a{
     max-width: 100%;
     @include adjust-font-size-to($font-size-large);
-    @include rhythm(2.6180340, 1.618, 0, 2.0225425, $font-size-large);
-    
+    @include rhythm(2.6180340, 1.618, 0, 2.0225425, $font-size-large);    
 }
+
 h2 {
     border-bottom-color:$SecLightGold;    
     border-bottom-style:solid;    
@@ -120,55 +118,51 @@ h2 {
     font-weight: 200;
     color: $primary;
     border-top:0;
-    @include adjust-font-size-to($font-size-large);
-    @include rhythm($ms-4, 0, $ms-5n, $ms-1n, $font-size-large);
-    @include trailing-border(2px, $ms-4n);
+    @include adjust-font-size-to($font-size-xlarge);
+    @include rhythm($ms-4, 0, $ms-5n, $ms-1n, $font-size-xlarge);
+    @include trailing-border(ms(-8), $ms-4n);
     border-image:url(../images/patternBar.jpg) 1 0;
-    max-width: 20em;
+    max-width: 25em;
     a{
         color: shade($primary, 20);
         &:link , &:active{ color: shade($primary, 10); text-decoration:none; }
     }
 }
+h3, h4, h5, h6{
+    letter-spacing: ms(-17);
+    text-transform: none;
+    @extend .font-Bd;
+}
 h3 {
-    color: $SecDarkOrange;
-    text-transform: uppercase;
-    font-family: $Bd;
-    font-weight:500;
-    @include adjust-font-size-to($font-size-med-2);
-    @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-med-2);
+    color: $primary;
+    @include adjust-font-size-to($font-size-large-2);
+    @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-large-2);
     a{
-        color: tint($SecDarkOrange,20);
-        &:link , &:active{ color: tint($SecDarkOrange,20); }
-        &:hover {color: lighten($SecDarkOrange, 10);}
+        color: $tertiary;
+        &:link , &:active{ color: tint($tertiary,20); }
+        &:hover {color: lighten($tertiary, 10);}
     }
 }
 h4 {
-    @include adjust-font-size-to($font-size-med-2);
-    @include rhythm($ms-3, 0, 0, $ms-3n, $font-size-med-2);
-    font-family: $BlkCn;
-    font-weight: 900;
+    @include adjust-font-size-to($font-size-large);
+    @include rhythm($ms-3, 0, 0, $ms-3n, $font-size-large);
+    color: tint($primary, 15);
 }
 h5 {
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-2, 0, 0, $ms-3n, $font-size-med-2);
-    font-family: $LtCn;
-    font-weight:200;
-    //text-transform: uppercase;
+    color: tint($primary, 25);
 }
 h6 {
     @include adjust-font-size-to($font-size-med);
     @include rhythm($ms-1, 0, 0, $ms-5n, $font-size-med);
-    color:tint($primary, 25);
-    font-family: $Bd;
-    font-weight:500;
-    text-transform: uppercase;
+    color:tint($primary, 35);
 }
 h4, h5 {
-    color: $vb-Charcoal;
+    //color: $vb-Charcoal;
     a{
-        color: tint($black,20);
-        &:link , &:active{ color: tint($black,20); }
+        color: $tertiary;
+        &:link , &:active{ color: tint($tertiary,20); }
     }
 }
 
@@ -267,13 +261,13 @@ dl{
  dt{
     font-family:$BdCn;
     font-weight:800;
-    color:darken($primary,15);
+    color:$white;
     background:url(../images/noise.png) tint(lighten($primary,3),16);
     padding: 0 ms(-2);
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-1, $ms-5n, $ms-6n, $ms-3n, $font-size-med-2);
-    @include letterpress(0.3);
     @include standard-box-shadow();
+    text-shadow: 0 0.07em 0 rgba(255, 254, 251, 0.1);
     border: 1px solid tint($primary, 20);
     border-top: 1px solid tint(lighten($primary, 10), 10);
     border-bottom: 1px solid shade(darken($primary, 10), 10);
@@ -376,7 +370,7 @@ abbr[title] {
     border-bottom: 1px dotted;
 }
 b, strong {
-    font-weight: 700;
+    @extend .font-Bd;
 }
 cite{
     color:$gray;
@@ -439,6 +433,9 @@ textarea {
 abbr {
     cursor: help;
 }
+small{
+    @include adjust-font-size-to($font-size-small);
+}
 
 ///////////////////////////////////////////////////////////////////////////
 /////////////MISC SITE STUFF
@@ -484,8 +481,29 @@ abbr {
 }
 
 .sidebar, .sidebar p, aside, aside p{
-    @include adjust-font-size-to($font-size-small);
-    @include rhythm(1.25, 0.772, 0.618, 1, $font-size-small);
+    color:tint($black, 20);
+    @include adjust-font-size-to($font-size-small-2);
+    @include rhythm($ms-1, $ms-1n, $ms-2n, $ms-0, $font-size-small-2);
+    h1{
+        @include adjust-font-size-to($font-size-xlarge);
+        @include rhythm($ms-1, $ms-1n, $ms-2n, $ms-0, $font-size-xlarge);
+    }
+    h2{
+        @include adjust-font-size-to($font-size-large-2);
+        @include rhythm($ms-1, $ms-1n, $ms-2n, $ms-0, $font-size-large-2);
+    }
+    h3{
+        @include adjust-font-size-to($font-size-large);
+        @include rhythm($ms-1, 0, 0, $ms-1n, $font-size-large);
+    }
+    h4{
+        @include adjust-font-size-to($font-size-med-2);
+        @include rhythm($ms-1, 0, 0, $ms-2n, $font-size-med-2);
+    }
+    h5, h6{
+        @include adjust-font-size-to($font-size-med);
+        @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
+    }
 }
 ul li, .sidebar li, aside li {
     line-height: 18px;

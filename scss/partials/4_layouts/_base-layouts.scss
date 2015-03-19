@@ -7,102 +7,44 @@
  
  @import "s-header";
  @import "s-footer";
+ @import "l-backpage";
+ @import "l-backpage--sidebarx2";
 
 
 body{    
+   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAN0lEQVQIW2MUkZT/z4AF8LIzMDBikwRJfP6JRRImATIMRSeyBIokugRcEpsEWFJRQf4/yHJsAAAVuxUpz+378gAAAABJRU5ErkJggg==) repeat;
 
 
-   background:url(../images/bg-3.jpg) #333e48 repeat; 
-
-	#page-wrap{//radial-gradient(farthest-side at 60% 55%,blue,green,yellow,black);
-		background: radial-gradient(farthest-corner at 50% 5%, set-alpha($white, 0.15) -89%, set-alpha($coolblack, 0));
+	#page-wrap{		
+		background: radial-gradient(farthest-corner at 50% -98%, rgba(255, 254, 251, 0.15) 4%, rgba(0, 40, 85, 0.25) 67%, rgba(9, 11, 14, 0.65));
 		float:left;
 		width:100%;
 	}
-	.wvu-masthead-wrapper{
-		width:100%;
-		padding:0;
-		float:left;
-	  .wvu-masthead{
+
+	#header{
 		width:100%;
 		float:left;
-
-		.wvu-masthead-container{
-
-		}
-	  }//end /wvu-masthead
-	}//end .wvu-masthead-wrapper
-	#masthead-cpass{
+		#s-header__cpass{}
+		#s-header__site{}
+	}//end #header
+	#prefix{
 		width:100%;
 		float:left;
-		.container{
-			
-		}//end #college-masthead.container
-	}//end #college-masthead
-	header{
-		float:left;
-		width:100%;
-		.container{
-			a.site-logo{}
-			nav.nav.primary{}
-		}//end header.container
-	}//end header
-
-	section#prefix{
+	}
+	#core{
 		width:100%;
 		float:left;
-		.container{
-
-		}//end section#prefix.container
-	}//end section#prefix
-
-	section#core{
+	}
+	#postfix{
 		width:100%;
 		float:left;
-		.container{
-			#main{
-				article{
-					float:left;
-					max-width:100%;
-				}//end #main article
-			}//end #main
-			aside.sidebar{
-
-			}//end aside.sidebar
-		}//end section#core.container
-	}//end section#core	
-
-	section#postfix{
+	}
+	#footer{
 		width:100%;
 		float:left;
-		.container{
-
-		}//end section#postfix .container
-	}//end section#postfix
-
-	footer{
-		width:100%;
-		float:left;
-		@include adjust-font-size-to($font-size-med);
-        @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
-		#college.footer{
-			width:100%;
-			float:left;
-			.container{
-				#footer_contact{}//end #footer_contact
-				#footer_feature{}//end #footer_feature
-			}//end #college.footer .container
-		}//end #colllege.footer
-
-		#wvu-footer{
-			width:100%;
-			float:left;
-			.container{
-				.wvu-credits{}//end .wvu-credits
-				.wvu-icons{}//end .wvu-icons
-
-			}//end #wvu.footer .container
-		}//end #wvu.footer
-		
-	}//end footer.footer
+		#s-footer__site{}
+		#s-footer__cpass--wrapper{}
+		#s-footer__wvu--wrapper{}
+	}//end #footer
+	
 }//end body

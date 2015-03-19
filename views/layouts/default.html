@@ -6,16 +6,16 @@
     <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
     <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
     <meta name="description" content="<r:page:meta_description />" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-   
+
 
     <script type="text/javascript" src="http://fast.fonts.net/jsapi/e64c1663-a4f6-4eb4-af95-a29c7c6098b1.js"></script>
 
     <link href="//code.wvu.edu/stylesheets/global-stylesheet/4.0/stylesheets/global.css" rel="stylesheet">
 
-    <r:include_stylesheet name="styles" /> 
+    <r:include_stylesheet name="styles" />
 
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -25,13 +25,13 @@
   </head>
   <body class="template-<r:page:template:name /> page-<r:page:id />">
 
-  
-    <div class="cs-injection"></div>  
-    <div id="page-wrap">    
-    
-    
+
+    <div class="cs-injection"></div>
+    <div id="page-wrap">
+
+
     <r:partial name="s-header" />
-    
+
 
 
     <r:yield />
@@ -40,20 +40,20 @@
 
     <r:partial name="s-footer"/>
 
-    <r:partial name="layouts/browser-update-org--v1" theme="Code" />
+    <r:partial name="layouts/browser-update-org--v2" theme="Code" />
 
     <!-- Fix IE 8 and below so that media queries get supported -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    
-  
+
+
     <r:include_javascript name="lib/vendor/eq.min" />
     <script data-main="../javascripts/main" src="../javascripts/lib/require.min.js"></script>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54cba33a637679f0" async="async"></script>
-   
+
 
 
     </div> <!--end #page-wrap-->

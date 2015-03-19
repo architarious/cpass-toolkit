@@ -1,10 +1,12 @@
-header{
-	.site-logo{
-		display:none;
-		@include breakpoint($bp-tablet-1){
-			//display:block;
-		}
-	}
+.m-primaryNav{
+  .m-primaryNav__header{}
+  .m-primaryNav__navbar-nav{}
+  .m-primaryNav__search{
+  	@include breakpoint($bp-tablet-1){
+  		display:none;
+  	}
+  }
+  .m-primaryNav__more{}
 }
 
 /**************************************
