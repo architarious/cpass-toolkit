@@ -1,4 +1,4 @@
-require(['jquery', 'overthrow-sidescroller',  'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'jquery-perfect-scrollbar'], function($, carousel, dropdown){
+require(['jquery', 'overthrow-sidescroller',  'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'jquery-perfect-scrollbar'], function($, carousel, dropdown, smoothScroll){
 	$('.site-logo').css('display', 'block');
 	$('.site-logo').text('[changed by jQuery]');
 
@@ -16,12 +16,20 @@ require(['jquery', 'overthrow-sidescroller',  'bootstrap/collapse', 'bootstrap/c
 	  $('#mainCarousel').carousel('next');
 	});
 
-    $('#masthead-cpass a, #header a, a.footer--return').smoothScroll(
-    {
-    	easing: 'swing',
-    	speed: 'auto',
-    	autoCoefficient: 6
-    });
+  $('.m-primaryNav__more a').smoothScroll({
+		easing: 'swing',
+		speed: 'auto',
+		autoCoefficient: 6
+	});
+
+  $('a.b-footer__return').on('click', function(){
+		$.smoothScroll({
+	    	easing: 'swing',
+	    	speed: 'auto',
+	    	autoCoefficient: 6
+	  });
+		return false;
+	});
 
 		$(function(){
 
