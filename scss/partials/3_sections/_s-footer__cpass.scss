@@ -8,6 +8,8 @@
 
 
 #s-footer__cpass{
+  padding:0; margin:0;
+  @include rhythm($ms-0, 0, 0, $ms-0, $font-size-med);
 	ul{ padding:0; margin:0;}
 	//li{ padding:0; margin:0; list-style:none;}  
   @include adjust-font-size-to($base-font-size);

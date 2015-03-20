@@ -10,7 +10,7 @@
    clear: both; 
    background:none;
    box-shadow:none;
-   @include rhythm($ms-2n, 0, 0, 0, $font-size-med);
+   @include rhythm(0, $ms-3n, 0, 0, $font-size-med);
   }
 
   .form-search__label-text {
@@ -112,15 +112,15 @@ input[type="submit"] {
     background-position: 50% ms(-6);
     padding: ms(-6) ms(-6) 0 ms(-6);
    
-    &:after{
+    &::before{
 	  font-family: 'icomoon';
   	  content:"\e68f";
   	  @include adjust-font-size-to($font-size-large);
   	  @include standard-text-shadow($WVUBlue);
   	}
     &:hover {
-      background-color: $wvu-gold;
-      border-color: $wvu-gold;
+      background-color: $WVUGold;
+      border-color: tint($WVUGold, 2);
     }
 
      img { max-height: 20px; }
