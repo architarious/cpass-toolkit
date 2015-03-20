@@ -3,8 +3,19 @@
 	li{ 
 		display:inline; 
 		float:left;
-		margin-right:ms(-3);
-		&:last-child{ margin-right:0;}
+		padding: 0 ms(-3);
+		border-right:tint($coolblack,5) ms(-9) solid;
+		border-left:tint($coolblack, 10) ms(-11) solid;
+		&:last-child{ 
+			padding-right:0;
+			border-right:0;
+		}
+		&:first-child{
+			padding-left:0;
+			border-left:0;
+		}
+
+
 	}
 	a{ 
 		color:$white;
@@ -12,10 +23,27 @@
 		@include adjust-font-size-to($font-size-small-2);
 	 }
 	.b-mastLinks__WVU{}
+	.b-mastLinks__academics{}
 	.b-mastLinks__jobs{}
 	.b-mastLinks__about{}
 
-	&[data-eq-state="small"]{}
-	&[data-eq-state="medium"]{}
+	&[data-eq-state="small"]{
+		li:nth-child(3), li:nth-child(4){
+			display:none;
+		}
+		li:nth-child(2){
+			border-right:0;
+			padding-right:0;
+		}
+	}
+	&[data-eq-state="medium"]{
+		li:nth-child(4){
+			display:none;
+		}
+		li:nth-child(3){
+			border-right:0;
+			padding-right:0;
+		}
+	}
 	&[data-eq-state="large"]{}
 }

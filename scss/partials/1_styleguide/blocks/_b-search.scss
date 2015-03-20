@@ -6,25 +6,30 @@
 		outline:0;
 	}
 	
-.form-search {
- clear: both; 
- background:none;
- box-shadow:none;
- @include rhythm($ms-1n, 0, 0, 0, $font-size-med);
-}
-
-.form-search__label-text {
-  position: absolute; top: -99999em; 
-}
-
-.form-search__search-type {
-	@include adjust-font-size-to($font-size-med);
-	@include rhythm(0, $ms-2n, 0, 0, $font-size-med);
-	@extend .font-LtCn;
-	color:shade($MidGrey,10);
-  label {
-    position: absolute; top: -99999em; left:11%;
+  .form-search {
+   clear: both; 
+   background:none;
+   box-shadow:none;
+   @include rhythm($ms-2n, 0, 0, 0, $font-size-med);
   }
+
+  .form-search__label-text {
+    position: absolute; top: -99999em; 
+  }
+
+  .form-search__search-type {
+	@include rhythm(0, $ms-2n, 0, 0, $font-size-small-2);
+    label {
+    	@include adjust-font-size-to($font-size-small-2);
+    	
+    	@extend .font-Roman;
+    	color:$white;
+    	margin-right:ms(-2);
+    	margin-left:ms(-6);
+    	width:auto;
+    	float:left;
+    	margin-top:-2px;
+    }
   input[type="radio"] {
       background-color: $coolblack2;
       border-radius: ms(-1);
@@ -33,10 +38,11 @@
       cursor: pointer;
       display: inline-block;
       height: ms(0);
-      margin-right: ms(-3);
       position: relative;
       width: ms(0);
       -webkit-appearance: none;
+      margin:0;
+      float:left;
       *:focus{
       	outline:0;
       }
@@ -66,8 +72,8 @@
        *:focus{
        	outline:0;
        }           
-  }
-}//end wvu-search__search-type
+    }//end type="radio"
+  }//end wvu-search__search-type
 
 .wvu-search__search-bar { padding-top: 2.1em; font-size: 0.8em;
   input[type="checkbox"], input[type="radio"] { margin-right: 0; }
@@ -119,5 +125,25 @@ input[type="submit"] {
 
      img { max-height: 20px; }
   }//end .form-search__submit
-}
+}//end type="submit"
+
+&[data-eq-state="small"]{
+		li:nth-child(3), li:nth-child(4){
+			display:none;
+		}
+		li:nth-child(2){
+			border-right:0;
+			padding-right:0;
+		}
+	}
+	&[data-eq-state="medium"]{
+		li:nth-child(4){
+			display:none;
+		}
+		li:nth-child(3){
+			border-right:0;
+			padding-right:0;
+		}
+	}
+	&[data-eq-state="large"]{}
 }//end .b-search

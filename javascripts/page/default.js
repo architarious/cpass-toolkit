@@ -69,35 +69,12 @@ require(['jquery', 'overthrow-sidescroller',  'bootstrap/collapse', 'bootstrap/c
 
 
 	resizeSegmentTitles("h1.title");
-   	//$('.collapse').collapse(); //bootstrap solution for navigation "navbar"$('.site-logo').bigText($('.site-logo'));
 
 
 
 
 
-    /* these former utilities have been replaced by addthis
-       for reasons regarding it's simplicity and it's availability of analytics
-    //bookmarker();
-    //tweet();
-    //facebook_share();
-    //popup();
-    //$('.fb__share').onClick( fbs_click() );
-    */
 
-    /* these jquery-mobile methods have been removed and replaced with
-	   overshot-js
-	$('#mainCarousel').swiperight(function(){
-	  $(this).carousel('prev');
-	});
-	$('#mainCarousel').swipeleft(function(){
-	  $(this).carousel('next');
-	});
-	*/
-
-	/* this custom smoothscroll function has been replaced by jquery.smooth-scroll
-	   due to it's ability to target individual links
-	   smoothScroll();
-	*/
 
 	$('#postfix--thumbs').perfectScrollbar({
 		suppressScrollY: true,
@@ -106,7 +83,10 @@ require(['jquery', 'overthrow-sidescroller',  'bootstrap/collapse', 'bootstrap/c
 	});
 
 	overthrow.sidescroller(
-   document.querySelectorAll( ".overthrow-enabled .sidescroll-nextprev" ), {disableNav: true, fixedItemWidth: true});
+   document.querySelectorAll( ".overthrow-enabled .sidescroll-nextprev" ), {
+		disableNav: true,
+		fixedItemWidth: true
+		});
 
 
 });//end requireJS

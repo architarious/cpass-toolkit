@@ -4,7 +4,56 @@
   .main{
   	width:100%;
   }
-  .sidebar{}
+  .sidebar, aside{
+    $primary: lighten($DarkGrey, 10);
+    $black: tint($black, 20);
+  	h2, h3, h4, h5, h6{
+  		color:$primary;
+  	}
+  	ul{
+  		padding-left:ms(1);
+  		& > ul{
+  			padding-left:ms(0);
+  		}
+  		& > ul > ul{
+  			padding-left:ms(0);
+  		}
+  	}
+  	p, li{
+  		color:$black;
+  		@include adjust-font-size-to($font-size-small-2);
+  	}
+    h1{
+        @include adjust-font-size-to($font-size-large-2);
+        @include rhythm($ms-1, $ms-1n, $ms-2n, $ms-0, $font-size-large-2);
+        color: lighten($primary, 3);
+    }
+    h2{
+        @include adjust-font-size-to($font-size-large);
+        @include rhythm($ms-1, $ms-1n, $ms-2n, $ms-0, $font-size-large);
+        color: $primary;
+    }
+    h3{
+        @include adjust-font-size-to($font-size-med-2);
+        @include rhythm($ms-1, 0, 0, $ms-1n, $font-size-med-2);
+        color:$primary;
+    }
+    h4{
+        @include adjust-font-size-to($font-size-med);
+        @include rhythm($ms-1, 0, 0, $ms-2n, $font-size-med);
+        color: lighten($primary, 10);
+    }
+    h5{
+    	color: lighten($primary, 15);
+    }
+    h6{
+    	color: lighten($primary, 25);
+    }
+    h5, h6{
+        @include adjust-font-size-to($font-size-med);
+        @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
+    }
+}
 
 
  

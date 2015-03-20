@@ -12,7 +12,7 @@ requirejs.config({
         'page' : '../page',
         'app' : '../app',
 
-        'overthrow-sidescroller' : 'overthrow-sidescroller.all.min',
+
 
         'jquery' :[
             '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min',
@@ -23,10 +23,9 @@ requirejs.config({
 
         // path to folder with individual bootstrap files
         'bootstrap': 'vendor/bootstrap',
-
+        'overthrow-sidescroller' : 'overthrow-sidescroller.all.min',
         'bigTitles' : '../app/bigTitles',
         'dropdown' : '../app/dropdown',
-        'eq' : 'vendor/eq.min',
         'jquery-smoothScroll': 'vendor/jquery.smooth-scroll.min',
         'jquery-perfect-scrollbar': 'vendor/perfect-scrollbar.min',
         //'smoothScroll' : '../app/smoothScroll',
@@ -51,7 +50,6 @@ requirejs.config({
         'bigTitles' :           { deps: ['jquery'], exports: '$.fn.bigTitles'},
         'jquery-smoothScroll':  { deps: ['jquery']},
         'jquery-perfect-scrollbar':{deps: ['jquery']},
-        'eq' :                  { deps: ['jquery']},
         //'smoothScroll' :        { deps: ['jquery'], exports: '$.fn.smoothScroll'},
         //'utils' :               { deps: ['jquery'], exports: '$.fn.utils'},
         //'jquery-mobile' :       { deps: ['jquery'], exports: '$.fn.utils'},

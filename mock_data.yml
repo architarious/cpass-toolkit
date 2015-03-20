@@ -29,6 +29,7 @@ shared_themes:
     "components/s-footer__wvu" : "cpass-toolkit"
     "components/m-cta" : "cpass-toolkit"
     "components/m-links" : "cpass-toolkit"
+    "components/m-footer__wvu__icons" : "cpass-toolkit"
     "components/b-cta__about" : "cpass-toolkit"
     "components/b-cta__events" : "cpass-toolkit"
     "components/b-cta__news" : "cpass-toolkit"
@@ -62,7 +63,7 @@ editable_region:
     <p><%= Faker::Lorem.paragraph(3, true, 5) %></p>
     <h5><%= Faker::Lorem.sentence(7) %></h5>
     <p><%= Faker::Lorem.paragraph(12, true, 5) %></p>
-    <h6><%= Faker::Lorem.sentence(7) %></h5>
+    <h6><%= Faker::Lorem.sentence(7) %></h6>
     <p><%= Faker::Lorem.paragraph(3, true, 5) %></p>
     <h5><%= Faker::Lorem.sentence(8) %></h5>
     <p><%= Faker::Lorem.paragraph(2, true, 5) %></p>
@@ -94,6 +95,24 @@ editable_region:
     <p><%= Faker::Lorem.paragraph(6, true, 3) %></p>
     <h3><%= Faker::Lorem.sentence(5) %></h3>
     <p><%= Faker::Lorem.paragraph(14, true, 5) %></p>
+    <h4><%= Faker::Lorem.sentence(10) %></h4>
+    <p><%= Faker::Lorem.paragraph(3, true, 5) %></p>
+    <h5><%= Faker::Lorem.sentence(7) %></h5>
+    <p><%= Faker::Lorem.paragraph(12, true, 5) %></p>
+    <h6><%= Faker::Lorem.sentence(7) %></h6>
+    <p><%= Faker::Lorem.paragraph(3, true, 5) %></p>
+    <ul>
+    <li class="active"><a href="#"><%= Faker::Lorem.sentence(6) %></a></li>
+    <li><a href="#"><%= Faker::Lorem.sentence(3) %></a></li>
+    <li><a href="#"><%= Faker::Lorem.sentence(8) %></a>
+    <ul>
+    <li class="active"><a href="#"><%= Faker::Lorem.sentence(2) %></a></li>
+    <li><a href="#"><%= Faker::Lorem.sentence(10) %></a></li>
+    <li><a href="#"><%= Faker::Lorem.sentence(8) %></a></li>
+    </ul></li>
+    <li><a href="#"><%= Faker::Lorem.sentence(4) %></a></li>
+    <li><a href="#"><%= Faker::Lorem.sentence(5) %></a></li>
+    </ul>
   l-sidebar: |
     <h2><%= Faker::Lorem.sentence(3) %></h2>
     <p><%= Faker::Lorem.paragraph(9, true, 3) %></p>
