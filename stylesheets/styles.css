@@ -10874,7 +10874,7 @@ div.message .close {
   border-radius: 1px;
   -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
   transition: background-color 0.2s linear, opacity 0.2s linear;
-  bottom: 6px;
+  bottom: 2px;
   /* there must be 'bottom' for ps-scrollbar-x-rail */
   height: 8px;
 }
@@ -10995,6 +10995,54 @@ div.message .close {
 }
 .at4-share-outer-right #at4-share #at4-scc {
   display: none !important;
+}
+
+.obj-roundedPhoto {
+  border-radius: 150px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  border: 5.76923077px solid #fffefb;
+  background: #fffefb;
+  position: relative;
+  -webkit-border-image: url(../images/noise.png);
+  -o-border-image: url(../images/noise.png);
+  border-image: url(../images/noise.png);
+  -webkit-box-shadow: 0 18.75px 30px -13.04347826px #a5a5a3;
+  box-shadow: 0 18.75px 30px -13.04347826px #a5a5a3;
+}
+.obj-roundedPhoto img {
+  max-width: 150%;
+  height: auto;
+  margin: 0 0 0 -75%;
+  position: absolute;
+  left: 50%;
+}
+
+#header .obj-roundedPhoto, #prefix .obj-roundedPhoto {
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  border: 2.88461538px solid #fffefb;
+  background: #fffefb;
+  position: relative;
+  -webkit-border-image: url(../images/noise.png);
+  -o-border-image: url(../images/noise.png);
+  border-image: url(../images/noise.png);
+  -webkit-box-shadow: 0 10px 15px -6px black;
+  box-shadow: 0 10px 15px -6px black;
+}
+#header .obj-roundedPhoto img, #prefix .obj-roundedPhoto img {
+  max-width: 150%;
+  height: auto;
+  margin: 0 0 0 -75%;
+  position: absolute;
+  left: 50%;
 }
 
 /*------------------------------------*\
@@ -13735,6 +13783,7 @@ nav .b-social a:hover {
 .b-featuredLink {
   background: url(../images/noise.png) repeat #fffefb;
   padding: 3px;
+  margin-top: 6px;
   position: relative;
   float: left;
 }
@@ -13747,8 +13796,8 @@ nav .b-social a:hover {
   text-align: center;
   margin: 0 auto;
   border: 0;
-  -webkit-box-shadow: 0 2px 2px 0px #14191f;
-  box-shadow: 0 2px 2px 0px #14191f;
+  -webkit-box-shadow: 0 2px 6px -2px #14191f;
+  box-shadow: 0 2px 6px -2px #14191f;
   background: url(../images/noise.png) repeat #005eb8;
   color: #fffefb;
   padding: 10px;
@@ -13782,11 +13831,10 @@ nav .b-social a:hover {
   padding-bottom: 0.2953245rem;
   margin-bottom: 0px;
   margin-bottom: 0rem;
-  -webkit-box-shadow: 0;
-  box-shadow: 0;
   position: absolute;
-  top: 5px;
+  top: -6px;
   left: -5px;
+  text-transform: uppercase;
 }
 .b-featuredLink h3:before {
   content: '';
@@ -13805,8 +13853,8 @@ nav .b-social a:hover {
   -webkit-transform-origin: bottom;
   -ms-transform-origin: bottom;
   transform-origin: bottom;
-  -webkit-box-shadow: 2px 3px 1px 0px #14191f;
-  box-shadow: 2px 3px 1px 0px #14191f;
+  -webkit-box-shadow: 4px 3px 4px -3px #14191f;
+  box-shadow: 4px 3px 4px -3px #14191f;
   -webkit-transition-property: background, -webkit-box-shadow, color;
   transition-property: background, box-shadow, color;
   -webkit-transition-duration: 0.35s;
@@ -13834,10 +13882,6 @@ nav .b-social a:hover {
 }
 .b-featuredLink h3:active:before {
   background: url(../images/noise.png) repeat #004b93;
-}
-.b-featuredLink h3:after {
-  -webkit-box-shadow: 0;
-  box-shadow: 0;
 }
 .b-featuredLink span.outer {
   overflow: hidden;
@@ -14752,8 +14796,8 @@ nav .b-social a:hover {
     text-align: center;
     margin: 0 auto;
     border: 0;
-    -webkit-box-shadow: 0 2px 2px 0px #14191f;
-    box-shadow: 0 2px 2px 0px #14191f;
+    -webkit-box-shadow: 0 2px 6px -2px #14191f;
+    box-shadow: 0 2px 6px -2px #14191f;
     background: url(../images/noise.png) repeat #fffefb;
     color: #002855;
     padding: 10px;
@@ -14797,8 +14841,8 @@ nav .b-social a:hover {
     -webkit-transform-origin: bottom;
     -ms-transform-origin: bottom;
     transform-origin: bottom;
-    -webkit-box-shadow: 2px 3px 1px 0px #14191f;
-    box-shadow: 2px 3px 1px 0px #14191f;
+    -webkit-box-shadow: 4px 3px 4px -3px #14191f;
+    box-shadow: 4px 3px 4px -3px #14191f;
     -webkit-transition-property: background, -webkit-box-shadow, color;
     transition-property: background, box-shadow, color;
     -webkit-transition-duration: 0.35s;
@@ -15142,6 +15186,9 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   margin-bottom: 20px;
   margin-bottom: 1.251375rem;
 }
+.m-scroller--wrapper *:focus {
+  border: 0;
+}
 
 .m-scroller__thumbs--wrapper {
   margin-top: 0px;
@@ -15162,7 +15209,7 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   width: 100%;
   position: absolute;
   overflow: hidden !important;
-  height: 160px !important;
+  height: 166px !important;
   margin-top: 5px;
   margin-top: 0.2953245rem;
   padding-top: 0px;
@@ -15232,13 +15279,21 @@ nav #nav-primary.collapse.in .navbar--more a::after {
   -webkit-box-shadow: rgba(44, 42, 41, 0.5) 10px 0px 7px -7px;
   box-shadow: #2C2A29 10px 0px 7px -7px;
   box-shadow: rgba(44, 42, 41, 0.5) 10px 0px 7px -7px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev:hover {
   background-position: 12px -352px;
 }
 .sidescroll-nextprev .sidescroll-nextprev-links a.sidescroll-prev.disabled {
-  opacity: 1;
-  filter: alpha(opacity=100);
+  opacity: 0;
+  filter: alpha(opacity=0);
   background: url(../images/postfix-arrows.png) no-repeat 12px 72px, #ede7dc url(../images/noise.png) repeat;
   background-position: 12px 72px;
   -webkit-box-shadow: #2c2a29 6px 0px 9px -8px;

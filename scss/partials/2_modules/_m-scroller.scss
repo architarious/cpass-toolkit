@@ -4,6 +4,10 @@
 	min-height:162px;
 	position:relative;
 	@include rhythm($ms-1, 0, 0, 1, $font-size-med);
+
+	*:focus{
+		border:0;
+	}
 }
 
 .m-scroller__thumbs--wrapper{
@@ -21,7 +25,7 @@
 	position:absolute;
 
 	overflow:hidden !important;
-	height:160px !important;
+	height:166px !important;
 
 	@include rhythm($ms-6n, 0, $ms-1n, 0, $font-size-med);
 
@@ -81,9 +85,11 @@
 	  	border-radius: 0 70% 70%  0;
 	  	border-right: tint($secondary, 20) 1px solid;	  	
 	  	box-shadow: set-alpha($black,0.5) 10px 0px 7px -7px;
+	  	opacity:1;
+	  	@include standard-transition(opacity);
 	  	&:hover{ background-position:12px -352px;}
 	  	&.disabled{
-	  	opacity:1;
+	  	opacity:0;
 	  	background:url(../images/postfix-arrows.png) no-repeat 12px 72px, $secondary url(../images/noise.png) repeat;
 	  	background-position:12px 72px;		  	
 	  	box-shadow: $black 6px 0px 9px -8px;

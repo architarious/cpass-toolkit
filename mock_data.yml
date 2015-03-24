@@ -92,6 +92,7 @@ editable_region:
     <p><%= Faker::Lorem.paragraph(3, true, 5) %></p>
   sidebar: |
     <h2><%= Faker::Lorem.sentence(5) %></h2>
+    <span class="obj-roundedPhoto"><img src="../images/stocks/profile/roch.jpg"/></span>
     <p><%= Faker::Lorem.paragraph(6, true, 3) %></p>
     <h3><%= Faker::Lorem.sentence(5) %></h3>
     <p><%= Faker::Lorem.paragraph(14, true, 5) %></p>
@@ -149,6 +150,7 @@ site_menu: |
     <li class="apply"><a href="#">Apply Now</a></li>
     <!--<li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>-->
   </ul>
+  <span class="obj-roundedPhoto"><img src="../images/stocks/profile/jack.png"/></span>
 
 sub_menu: |
   <ul>

@@ -1,0 +1,7 @@
+.obj-roundedPhoto{
+	@include roundedPhoto(300px, $white);
+}   
+
+#header, #prefix{
+	.obj-roundedPhoto{@include roundedPhoto(150px, $coolblack);}
+}

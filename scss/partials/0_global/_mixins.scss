@@ -734,7 +734,7 @@ $parallax-ios         : true !default;
     text-align : center;
     margin : 0 auto;
     border:0;
-    box-shadow: 0 ms(-8) ms(-8) 0px $shadowColor;
+    box-shadow: 0 ms(-8) ms(-4) ms(-8)*(-1) $shadowColor;
     background: url(../images/noise.png) repeat $bgColor;
     color:$textColor;
     padding:ms(-2);
@@ -763,7 +763,7 @@ $parallax-ios         : true !default;
     z-index: -1;
     transform: skewX(-33.75deg);
     transform-origin: bottom;
-    box-shadow: ms(-8) ms(-7) ms(-10) 0px $shadowColor;
+    box-shadow: ms(-6) ms(-7) ms(-6) ms(-7)*(-1) $shadowColor;
 
     transition-property: background, box-shadow, color;
     transition-duration: 0.35s;
@@ -792,7 +792,7 @@ $parallax-ios         : true !default;
 //page width bg image
 //
 //
-//USAGE: @include flag($primary, $white, $black);
+//USAGE: @include bgImage( background: url );
 //Dependencies: compass and modular scale
 ///////////////////////////////////
 
@@ -835,3 +835,45 @@ $parallax-ios         : true !default;
 
      }//end after
 }//end bgImage
+
+///////////////////////////////////
+//Rounded photo
+//
+//
+//USAGE: @include roundedPhoto(width, shadowcolor, bordercolor);
+//Dependencies:  modular scale, a 
+
+@mixin roundedPhoto($width: ms(9), $bgColor: $white, $color: $white){
+  border-radius: $width/2;
+  width:$width;
+  height:$width;
+  overflow:hidden;
+  display:block;
+  margin:0 auto;
+  border: ($width/ms(5))+px solid $color;
+  background:$color;
+  position:relative;  
+  border-image:url(../images/noise.png);
+  @if $bgColor == $white{
+      box-shadow:0 $width/16 $width/10 $width/(-23) shade($white, 35);
+  } @if $bgColor == $coolblack{
+      box-shadow:0 $width/15 $width/10 $width/(-25) darken($coolblack, 40);
+  } @if $bgColor == $black{
+      box-shadow:0 $width/15 $width/10 $width/(-25) darken($black, 30);
+  } @if $bgColor == $WVUBlue{
+      box-shadow:0 $width/15 $width/10 $width/(-25) darken($WVUBlue, 40);
+  } @if $bgColor == $WVUGold{
+      box-shadow:0 $width/15 $width/10 $width/(-25) shade($WVUGold, 20);
+  }
+
+  img{
+    max-width:150%;
+    height:auto;
+    margin: 0 0 0 -75%;
+    position:absolute;
+    left:50%;
+  }
+
+}//end roundedPhoto
+
+  

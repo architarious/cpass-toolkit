@@ -59,7 +59,7 @@
 
   >.ps-scrollbar-x-rail {
     @include scrollbar-rail-default;
-    bottom: ms(-4); /* there must be 'bottom' for ps-scrollbar-x-rail */
+    bottom: ms(-8); /* there must be 'bottom' for ps-scrollbar-x-rail */
     height: ms(-3);
 
     >.ps-scrollbar-x {

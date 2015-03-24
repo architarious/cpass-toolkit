@@ -1,6 +1,7 @@
 .b-featuredLink{
    background:url(../images/noise.png) repeat $white;
    padding: ms(-7);
+   margin-top:ms(-4);
    position:relative;
    float:left;
    focus{
@@ -10,11 +11,12 @@
 	h3{
 	 @include flag;
 	 @include rhythm(0, $ms-6n, $ms-6n, 0, $font-size-med);
-	 box-shadow:0;
-	 &:after{box-shadow:0;}
+	 //box-shadow:0;
+	 //&:after{box-shadow:0;}
 	 position: absolute;
-	 top:ms(-5);
+	 top:-(ms(-4));
 	 left:-(ms(-5));
+	 text-transform:uppercase;
 	}
 	img{ }
 	span.outer{ 
