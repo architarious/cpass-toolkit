@@ -15,52 +15,59 @@
   	.container{width:100%; max-width:100%; padding:0; margin:0;}
   	.m-primaryNav__more{ display:none;}
   	.m-primaryNav__navbar-nav a{
-  		color:$white;
-  		background:$tertiary url(../images/noise.png) repeat;
+        $bgColor: $tertiary;
+        $shadowColor: $coolblack;
+        $textColor: $white;
+
+  		color:$textColor;
+  		background:$bgColor url(../images/noise.png) repeat;
   		padding:ms(-2);
-  		text-shadow: 0 ms(-9) ms(-10) darken($tertiary, 10);
+  		text-shadow: 0 ms(-9) ms(-10) darken($bgColor, 10);
+  		box-shadow: 0 ms(-8) 0px 0px $shadowColor;
 	  	@include adjust-font-size-to($font-size-med);
 		@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
-		border-right:ms(-10) solid darken($tertiary, 5);
-		border-left: ms(-11) solid lighten($tertiary, 5);
-		font-family:$Bd;
-		font-weight:500;
+		border-right:ms(-10) solid darken($bgColor, 5);
+		border-left: ms(-11) solid lighten($bgColor, 5);
+		font-family:$BdCn;
+		font-weight:800;
 		min-height:1em;
 		min-width:1em;
-		float:left;		       
+		float:left;	
+
+		transition-property: background, box-shadow, color;
+		transition-duration: 0.35s;
+		transition-timing-function: ease-in;	
+
+		 &:hover,&:focus{
+		     color: lighten($textColor,10);
+		     background:  url(../images/noise.png) repeat lighten($bgColor, 10);
+		     box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
+		     &:before{          
+		     background: url(../images/noise.png) repeat lighten($bgColor, 10);
+		     box-shadow: ms(-8) 0 0px 0px set-alpha($shadowColor, 0.5);
+		     }
+		   }//end hover
+		 &:active{
+		  background: url(../images/noise.png) repeat shade($bgColor, 20);
+		  &:before{
+		    background: url(../images/noise.png) repeat shade($bgColor, 20);
+		  }
+		}//end active       
   	}
 
   	.m-primaryNav__navbar-nav li.apply a{
-  		
-  		color:$tertiary;
-  		background:$white;
-  		text-shadow:0 ms(-9) ms(-10) darken($white, 4);
-  		position:relative;
-  		box-shadow:0 2px 2px 1px $coolblack2;
-  		&:after{
-  			content:"";
-  			width: 0;
-  			height: 0;
-  			border-top: 0 solid transparent;
-  			border-bottom: 46px solid transparent;
-  			border-left: 25px solid $white;
-  			position: absolute;
-  			top: 0;
-  			right: -25px;
-  			box-shadow:0 2px 2px 1px $coolblack2;
-  	    }
 
-  	    &:hover{
-  	    	background:$WVUGold;
-  	    	text-shadow:0 ms(-9) ms(-10) tint($WVUGold, 4);
-  	    	color:$white;
-  	    	box-shadow:0 4px 2px 1px $coolblack2;
-  	    }
-  	    &:hover:after{
-  	    	border-left:$WVUGold 25px solid;
-  	    	box-shadow:0 4px 2px 1px $coolblack2;
-  	    }
+  		@include flag( $white, $WVUBlue, $coolblack);
+  		&:after{
+  			font-family:'icomoon';
+  			content:"\e64a";;
+  			-webkit-font-smoothing: antialiased;
+  			-moz-osx-font-smoothing: grayscale;
+  			padding-left:ms(-2);
+  			line-height:ms(0);
+  		}
   		
+  	
   	}//end m-primaryNav__navbar-nav li.apply a
 
   	

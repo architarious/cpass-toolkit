@@ -7,6 +7,14 @@
 	border-top:ms(-9) solid lighten($secondary, 3);
 	border-bottom:ms(-6) solid $vb-LightBlue;
 
+
+	.b-featuredLink{
+		background:$secondary url(../images/noise.png) repeat;
+		span.inner{
+			background:$secondary url(../images/noise.png) repeat;
+		}
+	}
+
 	
 
 

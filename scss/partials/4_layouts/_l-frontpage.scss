@@ -5,10 +5,10 @@
 // Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
 ////////////////////////
  
-body.template-backpage{   
+body.template-frontpage{   
   
    #page-wrap{
-   	    @include bgImage( url(../images/bgImage-future.png));
+   	    @include bgImage;
     } 
   
 

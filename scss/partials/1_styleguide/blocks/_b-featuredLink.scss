@@ -1,0 +1,64 @@
+.b-featuredLink{
+   background:url(../images/noise.png) repeat $white;
+   padding: ms(-7);
+   position:relative;
+   float:left;
+   focus{
+   	border:none;
+   }
+
+	h3{
+	 @include flag;
+	 @include rhythm(0, $ms-6n, $ms-6n, 0, $font-size-med);
+	 box-shadow:0;
+	 &:after{box-shadow:0;}
+	 position: absolute;
+	 top:ms(-5);
+	 left:-(ms(-5));
+	}
+	img{ }
+	span.outer{ 
+		overflow:hidden;
+		height:ms(6);
+		width:ms(4);
+		bottom:0;
+		right:0;
+		position:absolute;
+
+	}
+
+	span.inner{
+	  position:absolute;
+	  bottom:0;
+	  right:-(ms(3));
+	  @include adjust-font-size-to($font-size-med);
+	  background: url(../images/noise.png) repeat $white;
+	  height:ms(6);
+	  width:ms(5);
+	  transform:skewX(-32deg);
+	  &:before{
+	  	position:absolute;
+	  	bottom: ms(-6);
+	  	right: ms(2);
+	  	transform:skewX(32deg);
+	  }
+	  &.icon-file-pdf{
+	  	color:darken($SecDarkOrange, 10);
+	  }
+	  &.icon-file-word{
+	  	color:$SecBlue;
+	  }
+	  &.icon-file-excel{
+	  	color:saturate($SecGreen,20);
+	  }
+	  &.icon-file-powerpoint{
+	  	color:$SecOrange;
+	  }
+	  &.icon-file-zip{
+	  	color:$WarmGrey1;
+	  }
+	  &.icon-youtube2{
+	  	color:$SecDarkOrange;
+	  }
+	}
+}
