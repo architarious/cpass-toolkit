@@ -47,7 +47,7 @@
   
   span{ visibility: hidden;}
   text-shadow: 0 ms(-2) ms(-1) darken($vb-DarkNavy, 18);
-  box-shadow: 0 ms(-2) ms(-1) darken($vb-DarkNavy, 18);
+  box-shadow: 0 ms(-4) ms(-3) darken($vb-DarkNavy, 18);
   &:hover, &:focus{
     border-radius:10%;
     border-color:$quadrary;

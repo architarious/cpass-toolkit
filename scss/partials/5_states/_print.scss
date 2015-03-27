@@ -1,0 +1,80 @@
+@media print{
+	body{background:#fff;  -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+	#page-wrap{	
+		background:#fff;
+	}
+
+	#header{
+		display:block;
+		#s-header__cpass{
+			background:$WVUBlue;
+			box-shadow: 0 0 0 10000px $WVUBlue inset;
+			.b-logo{
+				float:left;
+				background:$WVUBlue;
+				width:100%;
+				display:block;
+				box-shadow: 10000px 10000px 10000px 10000px $WVUBlue inset;
+				content:'cpass';
+				color:#fff;
+			}
+
+			.m-mastUtils{
+				display:none;
+			}
+		}
+		#s-header__site{
+			background:#fff;
+			.site-logo{
+				color:$WVUBlue;
+				display:block;
+			}
+			#nav-primary{
+				display:none;
+			}
+		}
+	}//end #header
+	#prefix{
+		background:#fff;
+		.page-name{
+			color:$WarmGrey1;
+		}
+		.breadcrumbs{
+			color:$black;
+		}
+		nav{
+			display:none;
+		}
+	}
+	#core{
+		background:#fff;
+		nav{
+			display:none;
+		}
+	}
+	#postfix{
+		display:none;
+	}
+	#footer{
+		#s-footer__site{
+			background:$vb-PaleGrey;
+			.b-contact__info{
+				color:$black;
+				a{color:$WVUBlue;}
+			}
+			.b-contact__links{
+				display:none;
+			}
+		}
+		.s-footer__cpass--wrapper{
+			display:none;
+		}
+		.s-footer__wvu--wrapper{
+			background:$WVUBlue;
+			ul{display:none;}			
+		}
+		.b-footer__return{
+			display:none;
+		}
+	}//end #footer
+}

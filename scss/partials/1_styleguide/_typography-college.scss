@@ -128,35 +128,43 @@ h2 {
         &:link , &:active{ color: shade($primary, 10); text-decoration:none; }
     }
 }
-h3, h4, h5, h6{
+h4, h5, h6{
     letter-spacing: ms(-17);
     text-transform: none;
     @extend .font-Bd;
 }
 h3 {
     color: $primary;
+    border:0;
+    
     @include adjust-font-size-to($font-size-large-2);
     @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-large-2);
+    @include trailing-border(ms(-9), $ms-4n);
+    border-bottom-style:dotted;
+    @extend .font-Bd;
+    text-transform: none;
+    border-bottom-color:tint($WarmGrey3,45);
+    max-width:33em;
     a{
-        color: $tertiary;
-        &:link , &:active{ color: tint($tertiary,20); }
-        &:hover {color: lighten($tertiary, 10);}
+        color: lighten($primary,10);
+        &:link , &:active{ color: tint($primary,20); }
+        &:hover {color: lighten($primary, 15);}
     }
 }
 h4 {
     @include adjust-font-size-to($font-size-large);
     @include rhythm($ms-3, 0, 0, $ms-3n, $font-size-large);
-    color: tint($primary, 15);
+    color: tint($primary, 0);
 }
 h5 {
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-2, 0, 0, $ms-3n, $font-size-med-2);
-    color: tint($primary, 25);
+    color: tint($primary, 45);
 }
 h6 {
-    @include adjust-font-size-to($font-size-med);
-    @include rhythm($ms-1, 0, 0, $ms-5n, $font-size-med);
-    color:tint($primary, 35);
+    @include adjust-font-size-to($font-size-small-2);
+    @include rhythm($ms-1, 0, 0, $ms-5n, $font-size-small-2);
+    color:$black;
 }
 h3, h4, h5, h6{
     //color: $vb-Charcoal;
@@ -230,6 +238,9 @@ ul, ol, dl {
     @include adjust-font-size-to($font-size-med);
     @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
     padding-left:ms(2);
+}
+dl{
+    padding-left:0;
 }
 ul {
     list-style-type: disc;

@@ -3,7 +3,188 @@
 
   .main{
   	width:100%;
-  }
+
+    article{
+          @include breakpoint($bp-mobile1-1){
+                h1{
+                  @include adjust-font-size-to($font-size-large-2);
+                      @include rhythm($ms-3, 0, 0, $ms-1n, $font-size-large-2);
+                }
+                h2{
+                  @include adjust-font-size-to($font-size-large);
+                    @include rhythm($ms-4, 0, $ms-7n, $ms-1n, $font-size-large);
+                }
+                h3{
+                  @include adjust-font-size-to($font-size-med-2);
+                    @include rhythm($ms-5, 0, 0, $ms-1n, $font-size-med-2);
+                }
+                h4{
+                  @include adjust-font-size-to($font-size-med);
+                    @include rhythm($ms-4, 0, 0, $ms-3n, $font-size-med);
+                }
+                h5 {
+                  @include adjust-font-size-to($font-size-med);
+                  @include rhythm($ms-3, 0, 0, $ms-3n,$font-size-med);
+                }
+                h6 {
+                  @include adjust-font-size-to($font-size-small-2);
+                  @include rhythm($ms-2, 0, 0, $ms-5n, $font-size-small-2);
+                }
+          }//end $bp-mobile2-1
+
+          @include breakpoint($bp-mobile2-1){
+                h1{
+                  @include adjust-font-size-to($font-size-xlarge);
+                      @include rhythm($ms-2, 0, 0, $ms-1n, $font-size-xlarge);
+                }
+                h2{
+                  @include adjust-font-size-to($font-size-large);
+                    @include rhythm($ms-6, 0, $ms-7n, $ms-1n, $font-size-large);
+                }
+                h3{
+                  @include adjust-font-size-to($font-size-med-2);
+                    @include rhythm($ms-5, 0, 0, $ms-1n, $font-size-med-2);
+                }
+                h4{
+                  @include adjust-font-size-to($font-size-med);
+                    @include rhythm($ms-4, 0, 0, $ms-3n, $font-size-med);
+                }
+                h5 {
+                  @include adjust-font-size-to($font-size-med);
+                  @include rhythm($ms-3, 0, 0, $ms-3n,$font-size-med);
+                }
+                h6 {
+                  @include adjust-font-size-to($font-size-small-2);
+                  @include rhythm($ms-2, 0, 0, $ms-5n, $font-size-small-2);
+                }
+          }//end $bp-mobile2-1
+
+          @include breakpoint($bp-tablet-1){
+            h1{
+              @include adjust-font-size-to($font-size-xlarge-2);
+                  @include rhythm($ms-3, 0, 0, $ms-1n, $font-size-xlarge-2);
+            }
+            h2{
+              @include adjust-font-size-to($font-size-large-2);
+                @include rhythm($ms-6, 0, $ms-7n, $ms-1n, $font-size-large-2);
+            }
+            h3{
+              @include adjust-font-size-to($font-size-med-2);
+                @include rhythm($ms-5, 0, 0, $ms-1n, $font-size-med-2);
+                 border-bottom-color:tint($WarmGrey3,75);
+            }
+            h4{
+              @include adjust-font-size-to($font-size-med);
+                @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-med);
+            }
+            h5 {
+              @include adjust-font-size-to($font-size-med);
+              @include rhythm($ms-3, 0, 0, $ms-1n,$font-size-med);
+            }
+            h6 {
+              @include adjust-font-size-to($font-size-small-2);
+              @include rhythm($ms-2, 0, 0, $ms-1n, $font-size-small-2);
+               color:tint($black,30);
+               padding: 0 ms(1);
+               background:shade($white, $ms-4);
+               @include adjust-leading-to($ms-2);
+            }
+
+          }//end $bp-tablet1-1
+
+          @include breakpoint($bp-desktop1-1){
+            p{
+              @include adjust-font-size-to($font-size-med-2);
+                  @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med-2);
+                  color:tint($black, 2.918);
+                  &.kicker{
+                    @include adjust-font-size-to($font-size-large);
+                    @include rhythm($ms-2,0, 0, $ms-1, $font-size-large);
+                    color:$WarmGrey1;
+                  }
+            }
+            h1{
+              @include adjust-font-size-to($font-size-xlarge-2);
+                  @include rhythm($ms-3, 0, 0, $ms-3, $font-size-xlarge-2);
+            }
+            h2{
+              @include adjust-font-size-to($font-size-xlarge);
+                @include rhythm($ms-6, 0, $ms-5n, $ms-1n, $font-size-xlarge);
+            }
+            h3{
+              @include adjust-font-size-to($font-size-large);
+                @include rhythm($ms-5, 0, 0, $ms-1n, $font-size-large-2);
+                @include trailing-border(ms(-9), $ms-3n);
+                border-style:dotted;
+            }
+            h4{
+              @include adjust-font-size-to($font-size-med-2);
+                @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-med-2);
+            }
+            h5{
+              @include adjust-font-size-to($font-size-med-2);
+              @include rhythm($ms-3, 0, 0, $ms-1n,$font-size-med-2);
+            }
+            h6{
+              @include adjust-font-size-to($font-size-med);
+              @include rhythm($ms-2, 0, 0, $ms-1n, $font-size-med);
+              font-family:$BdCn;
+              font-weight: 800;
+              padding: 0 ms(2);
+              background:shade($white, $ms-5);
+              @include adjust-leading-to($ms-2);
+            }
+            img{
+              float:left;
+              padding: ms(0) ms(0) 0 0;
+
+            }
+            
+          
+          }//end $bp-dekstop1-1
+
+          @include breakpoint($bp-desktop2-1){
+            p{
+                  color:tint($black, 4.722);
+
+                  &.kicker{
+                    @include adjust-font-size-to($font-size-large-2);
+                  @include rhythm($ms-2,0, 0, $ms-1, $font-size-large-2);
+                  color:$WarmGrey1;
+                  }
+            }
+            h1{
+              @include adjust-font-size-to($font-size-xxlarge);
+                  @include rhythm($ms-4, 0, 0, $ms-3, $font-size-xxlarge);
+            }
+            h2{
+              @include adjust-font-size-to($font-size-xlarge);
+                @include rhythm($ms-6, 0, $ms-5n, $ms-1n, $font-size-xlarge);
+            }
+            h3{
+              @include adjust-font-size-to($font-size-large-2);
+                @include rhythm($ms-5, 0, 0, $ms-1n, $font-size-large-2);
+                @include trailing-border(ms(-9), $ms-2n);
+                border-style:dotted;
+            }
+            h4{
+              @include adjust-font-size-to($font-size-large);
+                @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-large);
+            }
+            h5{
+              @include adjust-font-size-to($font-size-med-2);
+              @include rhythm($ms-3, 0, 0, $ms-1n,$font-size-med-2);
+            }
+            h6{
+              @include adjust-font-size-to($font-size-med);
+              @include rhythm($ms-2, 0, 0, $ms-1n, $font-size-med);
+
+              background:shade($white, $ms-8);
+              @include adjust-leading-to($ms-2);
+            }
+          }//end $bp-desktop2-1
+      }//end article
+  }//end .main
   .sidebar, aside{
     $primary: lighten($DarkGrey, 10);
     $black: tint($black, 20);

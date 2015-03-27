@@ -71,7 +71,7 @@
       .nav-list li a{ @include adjust-font-size-to($font-size-small-2);}
       .b-cta__about{
         @include grid-span(3,1);
-        .dropdown-menu a{@include adjust-font-size-to($font-size-small-2); font-family:$BdCn; font-weight:800;}
+        .dropdown-menu a{@include adjust-font-size-to($font-size-small-2);}
       }
       .b-cta__events{@include grid-span(3,4);}
       .b-cta__news{ @include grid-span(6,7);}
@@ -96,7 +96,7 @@
       .b-cta__news{@include grid-span(7,10);}
       }//end $bp-desktop-2
 
-      @include breakpoint($bp-mobile1-1){.dropdown-menu a{@include adjust-font-size-to($font-size-small-2); font-family:$BdCn; font-weight:800;}}
+     
   }//end .m-cta mobile styling
 
   .b-social{

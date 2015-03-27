@@ -1,4 +1,4 @@
-#footer__site{
+#s-footer__site{
     font-size:$base-font-size;
     @include rhythm(1, 0, 0, 1, $font-size-med);
 
@@ -28,7 +28,9 @@
     @include breakpoint($bp-tablet-1 $bp-desktop1-1){
       @include grid-tablet;
       .b-contact{}
-      .b-contact__info{@include grid-span(3,1);}
+      .b-contact__info{
+        @include grid-span(3,1);
+      }
       .b-contact__links{@include grid-span(2,4);}
       #b-footer__site_feature{@include grid-span(3,6);}
     }//end $bp-tablet
@@ -44,7 +46,7 @@
     @include breakpoint($bp-desktop1-4 $bp-desktop2-1){
       @include grid-desktop1;
       .b-contact{}
-      .b-contact__info{@include grid-span(5,1);}
+      .b-contact__info{  @include grid-span(5,1);  }
       .b-contact__links{@include grid-span(3,6);}
       #b-footer__site_feature{@include grid-span(4,9);}
     }//end $bp-desktop-1
@@ -60,7 +62,18 @@
     @include breakpoint($bp-desktop2-6){
       @include grid-desktop2;
       .b-contact{}
-      .b-contact__info{@include grid-span(7,1);}
+      .b-contact__info{
+        @include grid-span(7,1);
+
+        @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
+        p{
+          @include adjust-font-size-to($font-size-med);
+          a.title{
+            @include adjust-font-size-to($font-size-med-2);
+          }
+        }
+
+      }
       .b-contact__links{@include grid-span(3,11);}
       #b-footer__site_feature{@include grid-span(3,14);}
       }//end $bp-desktop-2

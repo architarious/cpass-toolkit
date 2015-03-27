@@ -34,7 +34,7 @@
       .b-logo--wrapper{@include grid-span(6,1); clear:both;}
       .m-mastUtils{@include grid-span(6,1);}
       .b-mastLinks{width:50%; padding-right:ms(-3); float:left;}
-      .b-social{width:40%; padding-left:ms(-3); float:right; margin-bottom:ms(-4);}
+      .b-social{width:41%; padding-left:ms(-3); float:right; padding-bottom:ms(-3);}
       //.b-mastLinks{@include grid-span(3,1); }
       //.b-social{@include grid-span(3,1); }
       .b-search{display:none;}
@@ -47,7 +47,7 @@
       //.b-social{@include grid-span(2,7); }
       //.b-search{@include grid-span(3,6); clear:right;}
       .b-mastLinks{width:53%; float:left;}
-      .b-social{width:47%;  float:right; margin-bottom:ms(-3); }
+      .b-social{width:47%;  float:right; padding-bottom:ms(-3); }
     }
     @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
       @include grid-desktop1;
@@ -56,8 +56,8 @@
       //.b-mastLinks{@include grid-span(3,8); }
       //.b-social{@include grid-span(2,11); }
       //.b-search{@include grid-span(4,9); clear:right;}
-      .b-mastLinks{width:53%; float:left;}
-      .b-social{width:47%;  float:right; margin-bottom:ms(-2); }
+      .b-mastLinks{width:52%; float:left;}
+      .b-social{width:48%;  float:right; padding-bottom:ms(-2); }
     }
     @include breakpoint($bp-desktop2-1){
       @include grid-desktop2;
@@ -67,7 +67,7 @@
       //.b-social{@include grid-span(3,14); }
       //.b-search{@include grid-span(6,11); clear:right;}
       .b-mastLinks{width:53%; float:left;}
-      .b-social{width:47%;  float:right; margin-bottom:ms(-1); }
+      .b-social{width:47%;  float:right; padding-bottom:ms(-1); }
     }
 
 	/*.logo-container{

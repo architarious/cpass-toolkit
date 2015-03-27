@@ -10,16 +10,20 @@
   		text-transform:none;
   		@extend .font-LtCn;
       margin:0; padding:0;
+      border:0;
   		a{
         //@include add-noise;
   			color:$white;
         background-color: set-alpha($WVUBlue,0.3) ;
         width:100%;
         float:left;
+
         @include adjust-font-size-to($font-size-med);  
         @include rhythm($ms-5n, $ms-4n, $ms-4n, $ms-2n, $font-size-med);
         @include trailing-border(ms(-9), $ms-4n, $font-size-med, solid);
         border-color:set-alpha(lighten($WVUBlue,10),0.3);
+        border-top:0;
+        border-top-style: none;
   			&:hover, &:focus{
   				color:$WVUGold;
   			}

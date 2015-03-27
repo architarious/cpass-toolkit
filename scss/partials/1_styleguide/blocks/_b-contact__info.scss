@@ -13,14 +13,23 @@
 			border-bottom:0;
 			border-top:0;
 			background:transparent;
-			color:$SecLightGold;
+			color:lighten($quadrary, 10);
 		}
 
-		&:first-child{
-		  font-size:$font-size-med;
+		&.title{
+		  @include adjust-font-size-to($font-size-med);
+		  @extend .font-Bd;
+
 		}//end a:first-child
 	  }//end a
 	}//end p
+
+	&[data-eq-state="small"]{
+
+	}
+	&[data-eq-state="large"]{
+		.title br{display:none;}
+	}
 
 	
 
