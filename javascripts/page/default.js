@@ -1,4 +1,4 @@
-require(['jquery', 'overthrow-sidescroller',  'bootstrap/collapse', 'bootstrap/carousel', 'bootstrap/dropdown', 'bigTitles', 'jquery-smoothScroll', 'jquery-perfect-scrollbar'], function($, carousel, dropdown, smoothScroll){
+$(document).ready(function(){
 	$('.site-logo').css('display', 'block');
 	$('.site-logo').text('[changed by jQuery]');
 
@@ -111,7 +111,7 @@ require(['jquery', 'overthrow-sidescroller',  'bootstrap/collapse', 'bootstrap/c
 
 
 
-	resizeSegmentTitles("h1.title");
+	//resizeSegmentTitles("h1.title");
 
 
 
