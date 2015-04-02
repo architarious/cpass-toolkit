@@ -1,0 +1,70 @@
+#s-header__cpass--min{
+	min-height:1em;
+	width:100%;
+	float:left;
+
+	.b-logo--min{
+
+	}
+
+    .b-social{
+    	margin:0 auto;
+    	min-width:160px;
+    	max-width:205px;
+    	@include rhythm($ms-1, 0, 0, 0, $font-size-med);
+    	overflow:hidden;
+    }
+
+
+   @include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
+      @include grid-mobile1;
+      .b-logo--wrapper{@include grid-span(4,1); clear:both;}
+      .b-logo--min{margin:0 auto; max-width: 320px; width:100%;}
+      .m-mastUtils{display:none;}
+
+    }
+    @include breakpoint(($bp-mobile2-1+1rem) (($bp-tablet-1)-0.00001rem)){
+      @include grid-mobile2;
+      .b-logo--wrapper{@include grid-span(6,1); clear:both;}
+      .m-mastUtils{display:none;}
+      .b-logo--min{max-width:ms(12); margin:0 auto;}
+    }
+    @include breakpoint($bp-tablet-1 $bp-desktop1-1){
+      @include grid-tablet;
+      .b-logo--wrapper{@include grid-span(5,1); clear:left; }
+      .m-mastUtils{@include grid-span(3,6);}
+      .b-social{ float:right; }
+    }
+    @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
+      @include grid-desktop1;
+      .b-logo--wrapper{@include grid-span(9,1); clear:left; }
+      .m-mastUtils{@include grid-span(3,10);}
+      .b-social{ float:right; }
+      .b-social{ float:right; width:200px;}
+    }
+    @include breakpoint($bp-desktop2-1){
+      @include grid-desktop2;
+      .b-logo--wrapper{@include grid-span(12,1); clear:left;}
+      .m-mastUtils{@include grid-span(4,13);}
+      .b-social{ float:right; width:200px;}
+    }
+    @include breakpoint($bp-desktop2-4){
+      @include grid-desktop2;
+      .b-logo--wrapper{@include grid-span(12,1); clear:left;}
+      .m-mastUtils{@include grid-span(4,13);}
+      .b-social{ float:right; width:100%;max-width:351px;}
+    }
+
+	
+	.social-cpass{
+		display:none;
+
+
+		@include breakpoint($bp-mobile2-2-608){
+			display:block;
+			@include rhythm( $ms-3n, 0, 0, $ms-4n, $font-size-small-2);
+		}
+	}
+
+
+}//end #masthead_cpass

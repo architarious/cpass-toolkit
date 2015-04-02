@@ -1,0 +1,35 @@
+nav a{
+  &.b-siteLogo{
+	background:transparent;
+	color:$white;
+	@extend .font-BlkCn;
+	@include adjust-font-size-to($font-size-large-2);
+    @include rhythm(0, $ms-4n, $ms-6n, $ms-2n, $font-size-large-2);
+    @include trailing-border(ms(-7), $ms-2n, $font-size-large-2, solid);
+    border-bottom-color:$WVUGold;
+
+    &:hover, &:focus{
+    	background:transparent;
+    }
+    &:active{
+    	background:transparent;
+    }
+
+
+    &[data-eq-state="small"]{
+		@include adjust-font-size-to($font-size-med);
+	    @include rhythm(0, $ms-4n, $ms-6n, $ms-2n, $font-size-med);
+	    @include trailing-border(ms(-7), $ms-2n, $font-size-med, solid);
+	}
+	&[data-eq-state="medium"]{
+		@include adjust-font-size-to($font-size-med-2);
+	    @include rhythm(0, $ms-4n, $ms-6n, $ms-2n, $font-size-med-2);
+	    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+	}
+	&[data-eq-state="large"]{
+		@include adjust-font-size-to($font-size-large);
+	    @include rhythm(0, $ms-4n, $ms-6n, $ms-2n, $font-size-large);
+	    @include trailing-border(ms(-7), $ms-2n, $font-size-large, solid);	
+	}
+  }//end b-siteLogo
+}//end nav a

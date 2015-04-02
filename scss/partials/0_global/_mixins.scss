@@ -728,7 +728,7 @@ $parallax-ios         : true !default;
 //Dependencies: compass and modular scale
 ///////////////////////////////////
 
-@mixin flag($bgColor: $tertiary,  $textColor: $white,  $shadowColor: $coolblack){
+@mixin flag($bgColor: $tertiary,  $textColor: $white,  $shadowColor: $coolblack, $font-size:$font-size-med){
     position : relative;
     display : block;
     text-align : center;
@@ -737,13 +737,13 @@ $parallax-ios         : true !default;
     box-shadow: 0 ms(-8) ms(-4) ms(-8)*(-1) $shadowColor;
     background: url(../images/noise.png) repeat $bgColor;
     color:$textColor;
-    padding:ms(-2);
+    padding:$font-size*ms(-2);
     text-shadow: 0 ms(-9) ms(-10) shade($bgColor, 15);
     
     font-family:$BdCn;
     font-weight:800;
-    @include adjust-font-size-to($font-size-med);
-    @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
+    @include adjust-font-size-to($font-size);
+    @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size);
     z-index:2;
 
     transition-property: background, box-shadow;
