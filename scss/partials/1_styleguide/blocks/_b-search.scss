@@ -1,11 +1,11 @@
 .b-search{
-	*:focus{
-		outline:0;
-	}
-	input:focus{
-		outline:0;
-	}
-	
+  *:focus{
+    outline:0;
+  }
+  input:focus{
+    outline:0;
+  }
+  
   .form-search {
    clear: both; 
    background:none;
@@ -18,17 +18,17 @@
   }
 
   .form-search__search-type {
-	@include rhythm(0, $ms-2n, 0, 0, $font-size-small-2);
+  @include rhythm(0, $ms-2n, 0, 0, $font-size-small-2);
     label {
-    	@include adjust-font-size-to($font-size-small-2);
-    	
-    	@extend .font-Roman;
-    	color:$white;
-    	margin-right:ms(-2);
-    	margin-left:ms(-6);
-    	width:auto;
-    	float:left;
-    	margin-top:-2px;
+      @include adjust-font-size-to($font-size-small-2);
+      
+      @extend .font-Roman;
+      color:$white;
+      margin-right:ms(-2);
+      margin-left:ms(-6);
+      width:auto;
+      float:left;
+      margin-top:-2px;
     }
   input[type="radio"] {
       background-color: $coolblack2;
@@ -44,7 +44,7 @@
       margin:0;
       float:left;
       *:focus{
-      	outline:0;
+        outline:0;
       }
 
   }
@@ -60,7 +60,7 @@
       top: ms(-7);
       width: ms(-3);
       *:focus{
-      	outline:0;
+        outline:0;
       }
   }
   input[type="radio"]:checked:after {
@@ -70,7 +70,7 @@
                   0 1px 1px set-alpha($WVUGold, 0.8),
                   0 0 2px 2px hset-alpha($WVUGold, 0.4);
        *:focus{
-       	outline:0;
+        outline:0;
        }           
     }//end type="radio"
   }//end wvu-search__search-type
@@ -113,11 +113,11 @@ input[type="submit"] {
     padding: ms(-6) ms(-6) 0 ms(-6);
    
     &::before{
-	  font-family: 'icomoon';
-  	  content:"\e68f";
-  	  @include adjust-font-size-to($font-size-large);
-  	  @include standard-text-shadow($WVUBlue);
-  	}
+    font-family: 'icomoon';
+      content:"\e68f";
+      @include adjust-font-size-to($font-size-large);
+      @include standard-text-shadow($WVUBlue);
+    }
     &:hover {
       background-color: $WVUGold;
       border-color: tint($WVUGold, 2);
@@ -128,22 +128,49 @@ input[type="submit"] {
 }//end type="submit"
 
 &[data-eq-state="small"]{
-		li:nth-child(3), li:nth-child(4){
-			display:none;
-		}
-		li:nth-child(2){
-			border-right:0;
-			padding-right:0;
-		}
-	}
-	&[data-eq-state="medium"]{
-		li:nth-child(4){
-			display:none;
-		}
-		li:nth-child(3){
-			border-right:0;
-			padding-right:0;
-		}
-	}
-	&[data-eq-state="large"]{}
+    li:nth-child(3), li:nth-child(4){
+      display:none;
+    }
+    li:nth-child(2){
+      border-right:0;
+      padding-right:0;
+    }
+  }
+  &[data-eq-state="medium"]{
+    li:nth-child(4){
+      display:none;
+    }
+    li:nth-child(3){
+      border-right:0;
+      padding-right:0;
+    }
+  }
+  &[data-eq-state="large"]{}
 }//end .b-search
+
+
+.m-primaryNav__search .b-search{
+  .form-search__field{
+    color:$black;
+    border-bottom-color:shade($white, ms(0));
+  }
+   .form-search__search-type{
+      color:$black;
+      label{ color:tint($black, 30);}
+      input[type="radio"]{
+        background-color:tint($coolblack,40);
+        &:after{
+          background-color:tint($black, 60);
+        }//end :after
+        &:checked:after{
+          background-color:$SecLightGold;
+        }
+      }//end input[type="radio"]
+   }//end .form-search__search-type
+   input[type="submit"] {
+    &.form-search__submit {
+      color:$black;
+      background-color:$tertiary;
+    }
+  } 
+}

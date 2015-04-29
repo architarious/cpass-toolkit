@@ -731,13 +731,13 @@ $parallax-ios         : true !default;
 @mixin flag($bgColor: $tertiary,  $textColor: $white,  $shadowColor: $coolblack, $font-size:$font-size-med){
     position : relative;
     display : block;
-    text-align : center;
+    text-align : left;
     margin : 0 auto;
     border:0;
     box-shadow: 0 ms(-8) ms(-4) ms(-8)*(-1) $shadowColor;
     background: url(../images/noise.png) repeat $bgColor;
     color:$textColor;
-    padding:$font-size*ms(-2);
+    padding:0 ms(-2);
     text-shadow: 0 ms(-9) ms(-10) shade($bgColor, 15);
     
     font-family:$BdCn;

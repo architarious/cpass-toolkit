@@ -1,15 +1,40 @@
 .tabs {
 	overflow: hidden;
+	float:right;
 
 	ul {
 		display: table;
-		width: 100%;
+		width: 100%;		
+		margin:0;
+		padding:0;
 	}
 	
 	li {
 		display: table-cell;
 		text-align: center;
-		border-right: 1px solid $grey-light-3;
+		display:inline;
+		border-left: ms(-8) solid $white;
+		border-right: ms(-10) solid shade($white, 10);
+		border-top: ms(-8) solid lighten($white, 20);
+		background:shade($white, 4) url(../images/noise.png) repeat;
+		background: url(../images/noise.png) repeat, linear-gradient(shade($white,1) 80%, shade($white, 4));
+		box-shadow: 0px -12px 30px -14px shade($white, 30) inset;
+		margin-bottom:0;
+		margin-left:ms(-2);
+		padding-bottom:ms(-4);
+		border-top-left-radius:ms(-6);
+		border-top-right-radius:ms(-6);
+		&.open, &.active{
+			background:$white url(../images/noise.png) repeat;
+			box-shadow:none;
+			a{
+				color:$tertiary;
+			}
+		}
+		&:hover, &:focus{
+			background:$white url(../images/noise.png) repeat;
+			box-shadow:none;
+		}
 
 		&:last-child {
 			border-right: 0;
@@ -17,17 +42,69 @@
 	}
 
 	a {
-		display: block;
-		padding: $pad-half;
-		background: $grey;
-
-		&:hover, &:focus {
-			background: $grey-light-3;
+		color:$primary;
+		padding:ms(-3);
+		background:transparent;
+		@include adjust-font-size-to($font-size-med);
+		@include rhythm($ms-8n, $ms-6n, $ms-6n, 0, $font-size-med);
+		@extend .font-BdCn;
+		&:hover, &:focus{
+			background:transparent;
+			color:lighten($tertiary, 10);
 		}
-
-		&.active {
-			background: $grey-dark;
-			color: $white;
+		&.active, &:visited {
+			background: transparent;
+			color: darken($tertiary, 10);
 		}
 	}
+
+	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
+		@include grid-mobile1;
+		@include grid-span(4,1); clear:both;
+		ul{}
+		li{ 
+			display:block; 
+		   	background:transparent; 
+		   	border:0; 
+		   	border-bottom:ms(-9) solid desaturate($WVUBlue, 10);
+		   	box-shadow: 0 ms(-9) ms(-9) 0 darken($WVUBlue, 4);
+		   	color:$white;
+		   	@include grid-span(4,1); clear:both;
+		   	&:hover, &:focus{
+		   		background:transparent;
+		   		color:$SecLightGold;
+		   	}
+		   	&:last-child{
+		   		border-bottom:0;
+		   	}
+		   	&.open, &.active{
+		   		background:transparent;
+		   		color:$SecLightGold;
+		   	}
+		}//end li
+		a{
+		   color:$white;
+		   @include grid-span(4,1);
+		   &:hover, &:focus{
+		   	 background:transparent;
+		   	 color:$SecLightGold;
+		   }
+		   &:active{
+		   	 background:transparent;
+		   	 color:$WVUGold;
+		   }
+		}//end a	
+	}//end mobile breakpoints
+	@include breakpoint($bp-tablet-1 $bp-desktop1-1){
+		float:left;
+		li{
+			margin-left:0;
+			margin-right:ms(-2);
+		}
+	}//end tablet breakpoints
+	@include breakpoint($bp-desktop1-1 $bp-desktop2-2){
+		position:relative;
+
+	}
+
 }

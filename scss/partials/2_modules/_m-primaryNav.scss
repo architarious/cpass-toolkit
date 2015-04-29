@@ -2,7 +2,10 @@
   @include rhythm($ms-2n, 0, 0, $ms-2n, $font-size-med);
   .m-primaryNav__header{}
   .m-primaryNav__navbar-nav{ 
-
+  	float:right;
+  	ul{
+  		float:right;
+  	}
   }//end .m-primaryNav__navbar-nav  
   .m-primaryNav__search{
   	@include breakpoint($bp-tablet-1){
@@ -10,67 +13,99 @@
     }
   }//end .m-primaryNav__search
   
+  .container{
+  	min-width:0;
+  }
 
   @include breakpoint($bp-tablet-1){
-  	.container{width:100%; max-width:100%; padding:0; margin:0;}
+
+   #nav-primary.collapse, #nav-primary.collapse.in{
+  	.container{width:100%; max-width:100%; padding:0; margin:0; min-width:0;}
   	.m-primaryNav__more{ display:none;}
-  	.m-primaryNav__navbar-nav a{
-        $bgColor: $tertiary;
-        $shadowColor: $coolblack;
-        $textColor: $white;
-
-  		color:$textColor;
-  		background:$bgColor url(../images/noise.png) repeat;
-  		padding:ms(-2);
-  		text-shadow: 0 ms(-9) ms(-10) darken($bgColor, 10);
-  		box-shadow: 0 ms(-8) 0px 0px $shadowColor;
-	  	@include adjust-font-size-to($font-size-med);
-		@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
-		border-right:ms(-10) solid darken($bgColor, 5);
-		border-left: ms(-11) solid lighten($bgColor, 5);
-		font-family:$BdCn;
-		font-weight:800;
-		min-height:1em;
-		min-width:1em;
-		float:left;	
-
-		transition-property: background, box-shadow, color;
-		transition-duration: 0.35s;
-		transition-timing-function: ease-in;	
-
-		 &:hover,&:focus{
-		     color: lighten($textColor,10);
-		     background:  url(../images/noise.png) repeat lighten($bgColor, 10);
-		     box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
-		     &:before{          
-		     background: url(../images/noise.png) repeat lighten($bgColor, 10);
-		     box-shadow: ms(-8) 0 0px 0px set-alpha($shadowColor, 0.5);
-		     }
-		   }//end hover
-		 &:active{
-		  background: url(../images/noise.png) repeat shade($bgColor, 20);
-		  &:before{
-		    background: url(../images/noise.png) repeat shade($bgColor, 20);
-		  }
-		}//end active       
-  	}
-
-  	.m-primaryNav__navbar-nav li.apply a{
-
-  		@include flag( $white, $WVUBlue, $coolblack);
-  		&:after{
-  			font-family:'icomoon';
-  			content:"\e64a";;
-  			-webkit-font-smoothing: antialiased;
-  			-moz-osx-font-smoothing: grayscale;
-  			padding-left:ms(-2);
-  			line-height:ms(0);
+  	.m-primaryNav__navbar-nav{
+  		width:100%;
+  		float:left;
+  		$bgColor: $primary;
+  		$shadowColor: $coolblack;
+  		$textColor: $white;
+  		ul{
+  		  width:100%;
+  		  float:left;
+  		  border-bottom:ms(-9) solid $textColor;
   		}
-  		
-  	
-  	}//end m-primaryNav__navbar-nav li.apply a
+  		li{
+  			margin:0;
+  			border-right:ms(-10) solid darken($bgColor, 3);
+  			border-left: ms(-11) solid lighten($bgColor, 3);
+  			border-bottom:ms(-8) transparent solid;
+  			&:first-child{
+  				border-left:0;
+  			}
+  			&:last-child{
+  				border-right: 0;
+  			}
+  			&.active, &.open{
+  				box-shadow: 0 ms(-8) 0 0 $WVUGold;
+  			}
+
+  		}
+
+  		a{
+  		    
+
+  		  	color:$textColor;
+  		  	background:transparent;
+  		  	padding:ms(-2);
+  		  	text-shadow: 0 ms(-9) ms(-10) darken($bgColor, 10);
+  			@include adjust-font-size-to($font-size-med);
+  			@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
+  			
+  			font-family:$BdCn;
+  			font-weight:800;
+  			min-height:1em;
+  			min-width:1em;
+  			float:left;	
+
+  			transition-property: background, box-shadow, color, border-bottom;
+  			transition-duration: 0.35s;
+  			transition-timing-function: ease-in;	
+
+  			 &:hover,&:focus{
+  				color: lighten($textColor,10);
+  				background:  set-alpha($tertiary, 0.3);
+  				//box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
+  				&:before{          
+  				    background: url(../images/noise.png) repeat lighten($bgColor, 10);
+  				    box-shadow: ms(-8) 0 0px 0px set-alpha($shadowColor, 0.5);
+  				}
+  			}//end hover
+  			&:active{
+  				background: url(../images/noise.png) repeat shade($bgColor, 20);
+  				&:before{
+  				  background: url(../images/noise.png) repeat shade($bgColor, 20);
+  				}
+  			}//end active       
+  			
+  		}//end a
+
+  		li.apply a{
+
+  			@include flag( $white, $WVUBlue, $coolblack);
+  			&:after{
+  			  font-family:'icomoon';
+  			  content:"\e64a";;
+  			  -webkit-font-smoothing: antialiased;
+  			  -moz-osx-font-smoothing: grayscale;
+  			  padding-left:ms(-2);
+  			  line-height:ms(0);
+  			}
+  		}//end li.apply a
+
+  	}//end m-primaryNav__navbar-nav 
 
   	
+
+  	}//end .in
   }//end bp-tablet-1
 }//end .m-primaryNav
 
@@ -171,9 +206,11 @@ nav{
 	
 	}
 
+	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
+
 	#nav-primary.collapse.in{
 		
-		@extend .white-noise;
+		@include add-noise;
 		background-color:$white;
 		border-bottom:$vb-Gold solid;
 		border-top:0;
@@ -183,13 +220,7 @@ nav{
 		@include trailing-border(2px, $ms-5n);
 		padding-bottom:0;
 		box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
-		@include breakpoint($bp-tablet-1){
-			background:none;
-			border:0;
-			margin:0;
-			padding:0;
-			box-shadow:none;
-		}
+		
 
 		.navbar-nav{
 			border:0;
@@ -233,28 +264,11 @@ nav{
 				}
 			}//end li
 
-		  @include breakpoint($bp-tablet-1){
-			@include navigation-list;
-			li{
-				width: auto;
-				color:$white;
-				border:0;
-				padding:0;
-				margin:0;
-				a{
-					color:$white;
-					border:0;
-					padding:0;
-					margin:0;
-				}
-			}
-		  }
-		}//end navbar-nav
-
+         }//end navbar-nav
 	  .navbar--more a{
 		width:100%;
 		float:left;
-		@extend .white-noise;
+		@include add-noise;
 		background-color:$secondary;
 		color:$primary;
 		text-align:center;
@@ -282,9 +296,12 @@ nav{
 	  }//end navbar--more
 
 	}// end #nav-primary
-
+    }//end bp-mobile-1
 
 }
+
+
+
 
 /**************************************
 //////////////////////////////////////

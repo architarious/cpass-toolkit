@@ -150,7 +150,6 @@ site_menu: |
     <li class="apply"><a href="#">Apply Now</a></li>
     <!--<li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>-->
   </ul>
-  <span class="obj-roundedPhoto"><img src="../images/stocks/profile/jack.png"/></span>
 
 sub_menu: |
   <ul>
