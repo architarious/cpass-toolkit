@@ -1,0 +1,374 @@
+
+
+//////////////////////////////
+//////Content Architecture Overview
+//////////////////////////////
+
+
+ul#structure{
+	p{ max-width:38em;}
+	h3{
+	//font-weight: 700;
+	@include rem-selector(font-size, $modRatio);
+	@include rem-selector(line-height, 2*$modRatio);
+	//text-transform:none;
+	
+	}
+
+
+	blockquote{
+		font-family: Garamond, Georgia, "Times New Roman";
+		font-style: italic;
+		color:darken($SecLightBlue, 15);
+		padding:0;
+		border:none;
+		margin:0;
+	}
+
+
+ li.segWrap{ 
+ 	margin:0; padding:0;
+ 	ul.segment{
+ 		&#cpass li.title{ background: url(../images/cpass-m.jpg) #86beff center top no-repeat; }
+ 		&#whatspossible li.title{background: url(../images/possible.jpg) center -80px no-repeat;}
+ 		&#mentor li.title{background: url(../images/mentor.jpg) center -80px no-repeat;}
+ 		&#yourfuture li.title{background: url(../images/future.jpg) center center no-repeat;}
+ 		
+		li.title{
+			margin:0;
+
+			h2{
+				border:none;
+				margin: 11.089rem auto;
+				@include rem-selector(font-size, 3);
+				@include rem-selector(line-height, 3*$gRatio);
+				font-family: $BlkCd;
+				text-transform: uppercase;
+				font-weight: normal;
+				text-align:center;
+				
+
+				
+
+			}
+		}//end li.title
+		li.kicker{
+			margin:0;
+			border-top:0.2rem solid;
+			border-bottom: 0.2rem solid;
+			h3{
+				text-transform: uppercase;
+				font-family: $BlkCd;
+				@include rem-selector(font-size, 1.2*$gRatio);
+				@include rem-selector(line-height,$gRatio);
+				letter-spacing:0.06em;
+				
+			}
+			p{ 
+				@include rem-selector(font-size, 1);
+				@include rem-selector(line-height, 1*$gRatio);
+				font-family:$Bd;
+				//letter-spacing:0.08em;
+			}
+		}///end li.kicker
+		li.core{
+			margin:0;
+			h3{
+				@include rem-selector(font-size, 1.2);
+				@include rem-selector(line-height, 1.2*$gRatio);
+				font-weight: 800;
+				color:darken($vb-LightBlue, 0);
+				@include rem-selector(max-width, 50);
+				margin-left: -0.8em;
+				text-transform:none;				
+			}
+
+			p{
+
+			}
+			a{}
+
+			blockquote{
+				@include rem-selector(font-size, 1.3);
+				color:tint($vb-Charcoal, 20);
+				font-family:$BlkCd;
+
+				cite{
+					@include rem-selector(font-size, 1);
+				}
+			}
+
+			ul#drop{
+
+			  li{
+			  	@include rem-selector(max-width, 50);
+			  	border-bottom:2px solid shade($vb-DarkGrey,15);
+			  	@include box-shadow(tint($vb-DarkGrey, 5) 0 1px 0 0);
+
+			  	&:last-child{
+			  		border-bottom:0;
+			  		@include box-shadow(none);
+			  	}
+
+			  	h3:hover{ 
+			  		color:tint($vb-LightBlue, 30);
+			  		@include text-shadow(tint($vb-DarkGrey, 30) 0 1px 10px );
+			  	}
+				h3:after{ 
+					content:"Read More"; 
+					float:right;
+					background-color:shade($vb-DarkGrey, 20);
+					font-family:$LtCn;
+					color:$vb-Gold;
+					padding:6px;
+					text-transform:uppercase;
+					@include rem-selector(font-size, 0.758);
+					@include rem-selector(line-height, 1);
+					letter-spacing:0.1em;
+					text-align:center;
+					max-width:8em;
+					margin-top:3px;
+					
+
+					@include breakpoint($mobile2){
+						margin-top:-6px;
+						max-width:4em;
+						@include rem-selector(font-size, 0.818);
+					}
+
+
+				}
+				&.selected h3:after{ content:"Read Less";}
+
+				.details{
+				  display:none;
+				  p:first-child{margin-top:0;}
+
+				  a{
+				  	@include btn();
+				  	@include rem-selector(font-size, 0.84);
+				  	width:100%;
+				  	margin-bottom:$modRatio+em;
+				  	&:hover{
+				  		box-shadow:shade($vb-DarkGrey, 20);
+				  	}
+
+				  }
+				  }//end .details
+
+				&.selected .details{}
+
+				h4{
+					text-transform:uppercase;
+					font-family:$LtCn;
+					@include rem-selector(font-family, 1);
+
+				}
+
+				dl.feat_courses{
+					dt{
+						color:tint($vb-Charcoal, 70);
+						background:none;
+						border:0;
+						border-bottom:2px solid shade($vb-DarkGrey, 20);
+						@include box-shadow(tint($vb-DarkGrey, 5) 0 1px 0 0);
+						text-transform: capitalize;
+					}
+
+					dd{
+						color:$white;
+						border-color:tint($vb-DarkGrey, 20);
+						padding:1em;
+						@include rem-selector(font-size, 0.8);
+					}
+
+				}
+			  }//end li
+			}//end ul#drop
+			
+
+		}//end li.core
+		li.ender{
+			margin:0;
+			background: url(../images/noise.png) repeat shade($vb-Charcoal, 50);
+			//@include box-shadow($vb-Charcoal 0 6px 4px -2px inset);
+			color:$white;
+			border-bottom:2px solid $vb-DarkGrey;
+			h3{ 
+				color:shade($vb-Charcoal, 20);
+				@include text-shadow(lighten($vb-Charcoal, 18) 0px 1px 2px);
+				@include rem-selector(font-size, $gRatio);
+				font-family:$BdCn;
+				@include rem-selector(letter-spacing, 0.13);
+			}
+			h4{
+				color:$vb-DarkGrey;
+			}
+			ul li {				
+				width:100%;
+				strong{	}
+			}
+			p{ color:$vb-DarkGrey;}
+			a{ 
+				@include btn($black, shade($black, 10));
+				@include box-shadow($black, 0 1px, 0 2px);
+				
+				color:$white;
+				width:100%;
+				text-align:left;
+				&.tuition{
+				   @include btn($tertiary, shade($black, 10));
+				   color:$white;
+				}
+			}
+
+			blockquote{
+				color:$vb-Gold;
+				font-family:$BdCn;
+			}
+			cite{
+				color:$vb-LightBlue;
+				@include rem-selector(font-size, 1.2*$modRatio);
+				font-family:$Bd;
+			}
+		}//end li.ender
+	}//end ul.segment
+ 	&:nth-child(even){
+ 	  ul.segment{ 
+ 	  	.title, .kicker, .core, .ender{
+	  		border-top:2px solid tint($vb-LightBlue,20);
+	  		border-bottom:2px solid tint($vb-LightBlue,20);
+	  	}
+	  	.title{border-top:0;}
+		li.title{
+			background:  $vb-DarkGrey; color:$white;
+			h2{				
+				color:$white;				
+			}
+		}//end li.title
+		li.kicker{
+			background: url(../images/noise.png) repeat shade($vb-DarkGrey, 50);
+			border-color: tint($vb-LightBlue,20);
+			h3{
+				color:set-alpha(darken($vb-DarkGrey,80), 0.8);
+				@include text-shadow($vb-Charcoal 0px 1px 1px);
+				
+			}
+			p{ color:$white; }
+		}///end li.kicker
+		li.core{
+			background:  $vb-DarkGrey; color:$white;
+			h3{ color:$vb-LightBlue;}
+			p{color:$white;}
+			a{}
+			h4{
+				color:$vb-Gold;
+				@include rem-selector(letter-spacing, 0.13);
+				font-family:$BdCn;
+			}//end h4
+
+			blockquote{
+				color:$vb-Gold;
+				font-family:$LtCn;
+				@include rem-selector(font-size, 1);
+				@include rem-selector(line-height, $gRatio);				
+				border-bottom:2px solid shade($vb-DarkGrey, 10*$gRatio);
+				@include box-shadow(tint($vb-DarkGrey, 10*$modRatio) 0 1px 0 0);
+				padding-bottom:1em;
+
+			}
+
+
+			cite{
+				color:tint($vb-Charcoal, 60);
+				@include rem-selector(font-size, 1.1*$modRatio);
+				font-family:$Bd;
+
+				h3{
+					margin-left:0;
+					margin-bottom:0;
+				}
+
+			}
+		}//end li.core
+		li.ender{
+			background:shade($vb-DarkGrey, 40);
+			h3{ color:$vb-Gold;}
+			h4{ color:tint($vb-Gold,20); font-family: $BdCn; letter-spacing:0.05em;}
+			ul li {}
+			a{}
+			p{color:$white;}
+
+		}//end li.ender
+	 }// end ul.segment
+ 	}//end nth-child(even)
+	&:nth-child(odd){ 
+	  ul.segment{
+	  	.title, .kicker, .core, .ender{
+	  		border-top:2px solid $vb-Gold;
+	  		border-bottom:2px solid $vb-Gold;
+	  	}
+	  	.title{border-top:0;}
+		li.title{
+			background:  $white; color:$black;
+			h2{
+				color:$vb-DarkGrey;
+			}
+		}//end li.title
+		li.kicker{
+			background: url(../images/noise.png) repeat darken($vb-LightBlue,10);
+			border-color:$vb-Gold;
+
+			h3{
+				color:$white;
+				@include text-shadow( $cpass-DarkBlue 0 1px 2px);
+				text-transform: uppercase;
+				
+			}
+			p{ 
+				color:$white; 
+				@include text-shadow($cpass-DarkBlue 0 1px 1px);
+			 }
+		}///end li.kicker
+		li.core{
+			background:  $white; color:$black;
+			//background:$white url('../images/whitePattern.svg') no-repeat center top ;
+			h3{ color:$vb-FlatNavy;}
+			a{}
+		}//end li.core
+		li.ender{
+			h3{}
+		ul li {}
+			a{}
+		}//end li.ender
+
+		&#cpass{ 
+			li.title h2{  }
+			li.ender{
+				li{
+					border-bottom:1px solid $vb-Charcoal;
+					text-align: center;
+					float:left;
+					p{
+						color:$white;
+						@include rem-selector(margin-top, $gRatio);
+					}//end p
+					strong{ 
+						@include rem-selector(font-size, 3*$gRatio);
+						font-family:$BlkCd;
+						color:tint($vb-Gold,10);
+						@include text-shadow(tint($vb-Charcoal,40) 0 1px 3px);
+
+						span{
+							font-family:$LtCn;
+						}
+					}//end strong
+					&:last-child{ border-bottom:none;}
+				}//end li
+			}
+		}//end &#cpass
+	}//end :nth-child(odd)
+   
+  }//end ul.segment
+ }//end li.segWrap
+}//end ul#structure

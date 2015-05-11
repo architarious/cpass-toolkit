@@ -1,0 +1,70 @@
+@mixin b-featLinkList__main($bgColor: tint($secondary, 15),
+						$borderColor: $white,
+						$shadowColor: $coolblack,
+						$textColor: $black,
+						$linkColor: $tertiary){
+
+	width:50%;  
+	float:right;
+		ul{
+		  margin:0; padding:0;
+		  float:right;
+		}
+
+		li{
+			display:inline;
+			float:left;
+			list-style:none;
+			&:first-child a{
+			  background: url(../images/noise.png) repeat $borderColor;	
+			}
+		}//end li
+		a{
+			@include flag( $borderColor, $linkColor, darken($bgColor, 20));
+			@include adjust-font-size-to($font-size-med);
+			@include rhythm(0, $ms-5n, $ms-9n, 0, $font-size-med);
+			background:none;
+			margin-right:ms(-5);
+			padding-left:ms(1);
+			box-shadow: 0 0 0 0 transparent;
+			text-transform:uppercase;
+			&:hover, &:focus{
+				background: transparent;
+				box-shadow: 0 0 0 0 transparent;
+			}
+			&:active{
+				background: transparent;
+				box-shadow: 0 0 0 0 transparent;
+			}
+
+			
+
+  			
+			&.apply:after{
+			  color:$WVUGold;
+  			  font-family:'icomoon';
+  			  content:"\e64a";;
+  			  -webkit-font-smoothing: antialiased;
+  			  -moz-osx-font-smoothing: grayscale;
+  			  padding-left:ms(-2);
+  			  line-height:ms(0);
+  			}
+		}//end a
+
+		@include breakpoint($bp-mobile1-1 $bp-tablet-1){
+			width:100%;
+			float:left;
+		}//end mobile1 --> tablet
+		@include breakpoint($bp-tablet-1 $bp-desktop2-1){
+		  a{
+			@include adjust-font-size-to($font-size-small-2);
+			@include rhythm(0, $ms-5n, $ms-9n, 0, $font-size-small-2);
+		   }
+		}//end tablet --> desktop2-1
+		@include breakpoint($bp-desktop2-1){
+		  a{
+			@include adjust-font-size-to($font-size-med);
+			@include rhythm(0, $ms-5n, $ms-9n, 0, $font-size-med);
+		  }
+		}//end desktop2
+}//end @include featLinkList__main
