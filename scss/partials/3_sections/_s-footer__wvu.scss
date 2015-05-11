@@ -1,18 +1,21 @@
 .s-footer__wvu--wrapper{
 	width:100%;
 	float:left;
-	background:set-alpha(darken($black, 5), 0.55);
+	background:url("../images/noise--blue.jpg") repeat $WVUBlue;
 	margin-top:-3px;
+
+	a{
+		&:focus{outline:0;}
+	}
 	
 
   #s-footer__wvu{
-  	background: $WVUBlue;
-  	border-color:darken($primary,10);
-  	border-top-color:lighten($primary,6);
-  	box-shadow: 0 ms(-7) ms(-11) darken($primary, 10), 0 ms(-3) ms(-2) darken($black,10), 0 ms(-7) ms(-3) set-alpha(lighten($primary, 6), 0.5) inset;
-  	border-style: solid;
-  	border-width: ms(-11) 0 ms(-11) 0;
+  	box-shadow: 
+  	   0 ms(-7) ms(-11) darken($primary, 10), 
+  	   0 ms(-3) ms(-2) darken($black,10);
+  	border:0;
   	padding: 1rem 1.25% 0 1.25%;
+  	width:100%;
 
 	.container{
 	  margin: 0 auto;
@@ -87,8 +90,100 @@
 	   	  }//end a
 	   }//end wvu-social li
 
-	 }//end .wvu-links, .wvu-credits
+
+	
+
+	 }//end .wvu-icons, .wvu-credits
 	  
+
+	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
+		.wvu-icons{
+			width:100%;
+		}
+		.wvu-links{
+			&.top li{ 
+				float:left;
+				width:100%;
+				@include rhythm($ms-8n, 0, 0, $ms-2n, $font-size-med);				
+				padding-left:0;
+				padding-right:0;
+				&:first-child{
+					
+				}
+
+				a{
+					padding-left: ms(-1);
+					width:100%;
+					float:left;
+					background:shade($primary,35);
+					@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-med);	
+				}
+				
+			}
+			&.bottom{
+				text-align:center;
+			}
+
+			li{
+				border:0;
+				float:none;
+			}
+		}//end .wvu-links
+		.wvu-social{
+			margin:0 auto;
+			float:none;
+			width:102px;
+			@include rhythm($ms-2n, 0, 0, $ms-2n, $font-size-med);
+
+		}
+
+		.wvu-credits li{
+			float:left;
+			width:100%;
+			@include rhythm($ms-8n, 0, 0, $ms-2n, $font-size-med);				
+			padding-left:0;
+			padding-right:0;
+			&:first-child{
+				
+			}
+
+			a{
+				padding-left: ms(-1);
+				width:100%;
+				float:left;
+				background:shade($primary,10);
+				@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-med);	
+			}
+		}//end .wvu-credits li
+
+
+	}//end mobile breakpoints  
+
+	@include breakpoint($bp-tablet-1 $bp-desktop1-4){
+		.wvu-links{
+			&.bottom{
+				@include rhythm(0, 0, 0, $ms-2n, $font-size-small-2);
+				text-align:right;
+				li{
+					float:left;
+					width:33%;
+					border:0;
+					padding:0 ms(-7);
+
+					a{
+						width:100%;
+						float:left;
+						background:shade($primary, 25);
+						text-align:center;
+						border-top:1px solid transparent;
+						&:hover{
+							border-top-color:$WVUGold;
+						}
+					}
+				}
+			}
+		}
+	}
 
 	  
 	}// end .container

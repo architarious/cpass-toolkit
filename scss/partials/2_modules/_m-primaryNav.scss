@@ -1,3 +1,4 @@
+@mixin minNav(){
 .m-primaryNav{
   @include rhythm($ms-2n, 0, 0, $ms-2n, $font-size-med);
   .m-primaryNav__header{}
@@ -297,9 +298,463 @@ nav{
 
 	}// end #nav-primary
     }//end bp-mobile-1
+}//end @primaryNav
+}//end @include minNav
 
-}
+@mixin wrapperNav(){
+  .m-primaryNav{
+    $bgColor: $black;
+    $shadowColor: $coolblack;
+    $textColor: $white;	
+    $borderColor: $white;
+    $linkColor: $tertiary;
+    $hoverColor: lighten($tertiary, 10);
+    $activeColor: $WVUBlue;
 
+    outline:0;
+    *:focus{ outline:0;}
+
+    .m-primaryNav__header{}
+    .m-primaryNav__navbar-nav{ 
+    	float:right;
+    	ul{
+    		float:right;
+    	}
+    }//end .m-primaryNav__navbar-nav  
+    .m-primaryNav__search{
+    	@include breakpoint($bp-tablet-1){
+    		display:none;
+      }
+    }//end .m-primaryNav__search
+    
+   
+
+    /**************************************
+    //////////////////////////////////////
+    ////BOOTSTRAP MOBILE NAV OPTION///////
+    //////////////////////////////////////
+    ///More variables at 0_styleguide/bootstrap-variables.scss (line 327)//
+    **************************************/
+
+    nav{
+
+    	&.navbar-default{
+    		background:none;
+    		color:$black;
+    		border:0;
+    		box-shadow:none;
+    		border-raidus: 0;
+    		//@include standard-box-shadow();
+    		//@include standard-border-radius();
+    		.navbar-brand{
+    		@include breakpoint($bp-tablet-1){
+    			//display:none;
+    		 }//end breakpoint
+    		}//end .nave_site-logo
+    	}
+    	&.navbar{}
+    	.navbar-header{
+    		float:left;
+    		width:100%;
+
+    	  .navbar-toggle{
+    		border:0; margin:0;
+    		@include standard-transition;
+    		width:100%;		
+    		background:$vb-Gold url(../images/noise.png) repeat;
+    		box-shadow: tint($vb-Gold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
+    		color:shade($vb-Gold, 58);
+
+
+    		&:hover, &:focus{
+    			background:url(../images/noise.png) lighten($vb-Gold, 15) repeat;
+    		}
+    		&:active{
+    			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
+    		}
+    		&.collapsed{
+    			box-shadow: tint($vb-Gold, 20) 0 ms(-8) ms(-6) 0 inset, shade($black,30) 0 ms(-5) ms(-3) 0;
+    		}
+    		.navbar-toggle_title{
+    			text-align:left;
+    			margin-top:-0.24em;
+    			font-family:$BdCn;
+    			font-weight:800;
+    			@include adjust-font-size-to($font-size-med);
+    			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
+    			@include standard-text-shadow(tint($vb-Gold, 20));
+    			letter-spacing:ms(-10);
+    			float:left;	
+
+    			&::before{
+    				font-family: 'icomoon';
+    				content:"\e618";
+    				font-weight:100;
+    				line-height:1.2em;
+    				margin-top:-1px;
+    				float:left;
+    				color:shade($vb-Gold,30);
+    			}
+    		}
+    		.icon-bar{
+    			float:left;
+    			background-color:$WVUBlue;
+    			max-width:1em;
+    		}
+
+    	  }//end .navbar-toggle
+
+    	  .navbar-brand{
+    	  	background:none;
+    	  	color:$tertiary;
+    	  	@include letterpress();
+    	  	@include adjust-font-size-to($font-size-med);
+    		@include rhythm($ms-3n, $ms-2n, $ms-2n, $ms-3n, $font-size-med);
+    		font-family:$BdCn;
+    		font-weight:800;
+    		text-transform:uppercase;
+    		&:hover{
+    			color:$primary;
+    		}
+    		//@include vertical-align();
+    	  }
+
+    	}//end .navbar-header
+
+    	#nav-primary.collapse{
+    		padding:0;
+    	
+    	}
+    }//end nav
+
+
+
+
+
+
+
+     /**************************************
+    //////////////////////////////////////
+    ////Begin Mobile Styling//////////////
+    //////////////////////////////////////
+    **************************************/
+
+    	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
+
+    		@include rhythm($ms-2n, 0, 0, $ms-2n, $font-size-med);
+
+
+    	  #nav-primary.collapse.in{
+    		
+    		@include add-noise;
+    		background-color:$white;
+    		border-bottom:$vb-Gold solid;
+    		border-top:0;
+    		float:left;
+    		width:100%;
+    		margin-top:-5px;
+    		@include trailing-border(2px, $ms-5n);
+    		padding-bottom:0;
+    		box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
+    		
+      
+    		.navbar-nav{
+    			border:0;
+    			width:100%;
+    			margin: ms(-3) 0 0 0;
+    			ul{width:100%;}
+    			li{
+    				width:100%;
+    				float:left;
+    				border-bottom:shade($white, ms(-2)) solid;
+    				@include trailing-border(1px, $ms-7n);
+    				&:last-child{
+    					border-bottom:0;
+    					margin-bottom:0;
+    				}
+    				&:first-child{
+    					padding-top: 5px;
+    				}
+    				a{	
+    					background:none;
+    					@include standard-transition();
+    					@include adjust-font-size-to($font-size-med);
+    					@include rhythm($ms-4n, $ms-5n, $ms-6n, $ms-4n, $font-size-med);
+    					width:100%;
+
+    					color:$tertiary;
+    					font-family: $BdCn;
+    					font-weight:800;
+    					letter-spacing:ms(-10);
+
+    					&:hover, &:focus{
+    						color:tint($tertiary, 10);
+    						@include standard-text-shadow(shade($white, 14));
+    					}
+    					&:active{
+    						color:$primary;
+    					}
+     
+    					
+
+    				}
+    			}//end li
+
+             }//end navbar-nav
+    	  .navbar--more a{
+    		width:100%;
+    		float:left;
+    		@include add-noise;
+    		background-color:$secondary;  
+    		color:$primary;
+    		text-align:center;
+    		text-transform:uppercase;
+
+    		font-family:$BdCn;
+    		font-weight:800;
+    		letter-spacing:ms(-10);
+
+    		@include adjust-font-size-to($font-size-med);
+    		@include rhythm($ms-3n, $ms-7n, $ms-7n, 0, $font-size-med);
+    		@include standard-text-shadow(tint($secondary, 20));
+
+    		&:hover, &:focus{
+    			color:$tertiary;
+    		}
+
+    		&::after{
+    			font-family:'icomoon';
+    			content:'\e6c3';
+    			color:shade($secondary, 10);
+    			@include standard-text-shadow(tint($secondary, 40));
+    		}
+
+    	  }//end navbar--more
+
+    	}// end #nav-primary
+     }//end bp-mobile-1
+
+
+
+
+
+     /**************************************
+    //////////////////////////////////////
+    ////Begin Tablet Styling//////////////
+    //////////////////////////////////////
+    **************************************/
+
+    @include breakpoint($bp-tablet-1){
+     
+     
+     background: $bgColor;
+     box-shadow: 0 1px 3px 1px shade($bgColor, 15) inset, 0 1px 2px 1px lighten($coolblack, 10);
+     width:100%;
+     float:left;
+     @include adjust-font-size-to($font-size-large);
+     @include rhythm($ms-2n, 0, 0, 0, $font-size-large);
+
+     .navbar{
+     	 margin-bottom:0;
+     	 min-height: 1em;
+     }
+     .container{
+     	padding:0;
+     }
+
+     #nav-primary.collapse, #nav-primary.collapse.in{
+    	.m-primaryNav__more{ display:none;}
+    	.m-primaryNav__navbar-nav{
+    		width:100%;
+    		float:left;
+    		ul{
+    		  width:100%;
+    		  float:left;
+    		  margin-bottom:0;
+    		}
+    		li{
+    			margin:0;
+    			border-right:ms(-10) solid darken($bgColor, 3);
+    			border-left: ms(-11) solid lighten($bgColor, 3);
+    			float:left;
+    			&:first-child{
+    				border-left:0;
+    			}
+    			&:last-child{
+    				border-right: 0;
+    			}
+    			&.active, &.open{
+    				background:$textColor;
+    				border-right:ms(-10) solid shade($textColor, 10);
+    				border-left: ms(-11) solid tint($textColor, 10);  				
+    				margin-top:-(ms(-3));
+    				padding-top: ms(-3);	
+    				a{
+    					color:$activeColor;
+    					text-shadow: 0 ms(-9) ms(-10) shade($textColor, 20);
+    					&:hover, &:focus, &:active{
+    						background:none; color:$activeColor;
+    						text-shadow: 0 ms(-9) ms(-10) shade($textColor, 20);
+    						outline:0;
+
+    					}
+    					&.more{
+    						border-left:1px dashed darken($textColor, 2);
+    					}
+    				}
+    			}
+
+    		}
+
+    		a{
+    		    
+
+    		  	color:$textColor;
+    		  	background:transparent;
+    		  	padding:ms(-2);
+    		  	text-shadow: 0 ms(-9) ms(-10) darken($bgColor, 10);
+    			@include adjust-font-size-to($font-size-med);
+    			@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
+    			text-transform: uppercase;
+    			font-family:$BdCn;
+    			font-weight:800;
+    			min-height:1em;
+    			min-width:1em;
+    			float:left;	
+
+
+    			transition-property: background, box-shadow, color, border-bottom;
+    			transition-duration: 0.35s;
+    			transition-timing-function: ease-in;	
+
+    			 &:hover,&:focus{
+    				color: lighten($textColor,10);
+    				background:  set-alpha($tertiary, 0.3);
+    				//box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
+    				&:before{          
+    				    background: url(../images/noise.png) repeat lighten($bgColor, 10);
+    				    box-shadow:  0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
+    				    border-bottom:0;
+    				}
+    			}//end hover
+    			&:active{
+    				background: url(../images/noise.png) repeat shade($bgColor, 20);
+
+    				&:before{
+    				  background: url(../images/noise.png) repeat shade($bgColor, 20);
+    				  border-bottom:0;
+    				  box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
+    				}
+    			}//end active 
+
+    			&.more{
+    				padding:ms(-5);
+    				@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
+    				background:none;
+    				font-family: 'icomoon';
+    				speak: none; 
+    				font-style: normal;
+    				font-weight: bold;
+    				font-variant: normal;
+    				text-transform: none;
+    				line-height: 1;
+    				color:$vb-PaleGrey;
+    				text-decoration:none;
+    				border-left:1px dashed darken($bgColor, 3);
+
+    				/* Better Font Rendering =========== */
+    				-webkit-font-smoothing: antialiased;
+    				-moz-osx-font-smoothing: grayscale;
+
+    				&:before{
+    					content: "\e6c3";
+
+    				}
+
+    				&:hover:before, &:focus:before{
+    					background:$WVUGold;
+    					text-shadow: 0 ms(-9) ms(-10) darken($WVUGold, 10);
+    					border:0;
+    					box-shadow: 0 ms(-8) ms(-8) 0px set-alpha($shadowColor, 0.5);
+    					text-decoration:none;
+    				}
+
+    				&:active{
+    					text-decoration:none;
+    					&:before{
+    					  background: url(../images/noise.png) repeat lighten($WVUGold, 10);
+    					}
+    				}//end active 
+    			}//end &.more      
+    			
+    		}//end a
+
+    		
+
+
+    		li.apply a{
+
+    			@include flag( $white, $WVUBlue, $coolblack);
+    			&:after{
+    			  font-family:'icomoon';
+    			  content:"\e64a";;
+    			  -webkit-font-smoothing: antialiased;
+    			  -moz-osx-font-smoothing: grayscale;
+    			  padding-left:ms(-2);
+    			  line-height:ms(0);
+    			}
+    		}//end li.apply a
+
+    	}//end m-primaryNav__navbar-nav 
+
+    	
+
+    	}//end .in
+    }//end bp-tablet-1
+
+   /**************************************
+    //////////////////////////////////////
+    ////Begin Desktop1 Styling//////////////
+    //////////////////////////////////////
+    **************************************/
+  @include breakpoint($bp-desktop1-1){
+  	#nav-primary.collapse, #nav-primary.collapse.in{
+  	  .m-primaryNav__navbar-nav{
+  	  	a{
+  		  @include adjust-font-size-to($font-size-med-2);
+  		  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med-2);
+  		  &.more{
+  		  	@include rhythm( $ms-5n, $ms-2n, $ms-2n, 0, $font-size-med-2);
+  		  }
+  	    }
+  	  }//end m-primaryNav__navbar-nav 
+  	}//end #nav-primary
+  }// end bp-desktop1
+
+
+
+
+   /**************************************
+    //////////////////////////////////////
+    ////Begin Desktop2 Styling//////////////
+    //////////////////////////////////////
+    **************************************/
+  @include breakpoint($bp-desktop2-1){
+  	#nav-primary.collapse .m-primaryNav__navbar-nav a{
+  	  @include adjust-font-size-to($font-size-large);
+  	  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-large);
+  	  &.more{
+  	  	@include rhythm($ms-8n, $ms-2n, $ms-2n, 0, $font-size-large);
+  	  }
+  	}
+  }//end bp desktop2
+
+
+  }//end .m-primaryNav
+
+}//end @include wrapperNav
+
+@include wrapperNav;
 
 
 

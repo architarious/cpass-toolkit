@@ -80,13 +80,18 @@
         	display: block; 
         	a{
         	  background:transparent; padding:0; margin:0;
+            color:$quadrary;
         	  @include adjust-font-size-to($font-size-small-2);
         	  @include adjust-leading-to($ms-1n);
         	  @include rhythm($ms-4n, 0, 0, 0, $font-size-small-2);
 
         	  &:hover,&:focus{
-        	  	color:$quadrary;
+        	  	color:lighten($quadrary,10);
+              outline:0;
         	  }
+            &:visited, &:active{
+              color: darken($quadrary, 5);
+            }
         	  
         	}//end a
         }//end eventName

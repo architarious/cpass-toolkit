@@ -1,4 +1,4 @@
-.wvu-quicklinks {
+.wvu-quicklinks { width: 100%;
   ul {
     list-style-type: none;
     @include mq($bp-medium) {
@@ -8,11 +8,11 @@
     }
     li {
       padding-left: 1.5em;
-      background: url(../images/diagonal-gold.svg) no-repeat 0 7px;
+      background: url(../images/diagonal-gold.svg) no-repeat 0 0px;
       margin-left: 0;
       font-size: 1em;
       box-sizing: border-box;
-      background-size: 30px;
+      background-size: 20px;
       border-right: 5px solid $pms-432-c;
       border-bottom: 5px solid $pms-432-c;
       @include mq($bp-medium) {

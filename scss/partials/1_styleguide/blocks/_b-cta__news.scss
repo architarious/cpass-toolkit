@@ -15,12 +15,17 @@
 				width:100%;  
 				@include adjust-font-size-to($font-size-med);  
 				@include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-med);
+				color:$quadrary;
 				
 
 				&:hover,&:focus{
 					background:none;
-					color:$quadrary;
+					color:lighten($quadrary,10);
+					outline:0;
 				}//end hover
+				&:visited, &:active{
+					color: darken($quadrary, 5);
+				}
 			}//end a
 		}//end li
 	}//end ul

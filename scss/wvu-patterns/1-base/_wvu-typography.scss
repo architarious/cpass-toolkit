@@ -8,7 +8,7 @@ html { font-size: 16px; }
 
 h2, h3, h4, h5, h6 { color: $pms-432-c; clear: both; margin-bottom: 1em; }
 
-h1 { font-size: 3em; line-height: 1.08333333em; width: 100%; margin-top: 0; margin-bottom: 0.5em;
+h1 { font-size: 3em; line-height: 1.08333333em; width: 100%; margin-top: 0; margin-bottom: 0.5em; color: $pms-432-c;
   @include mq($bp-large) { font-size: 4em; }
 }
 
@@ -30,12 +30,21 @@ h1 { font-size: 3em; line-height: 1.08333333em; width: 100%; margin-top: 0; marg
   line-height: $shout-line-height; font-family: $shout; text-transform: uppercase; font-weight: normal;
 }
 
+@mixin subhead() {
+  line-height: $helvetica-neue-bold-line-height; font-family: $subhead; font-weight: normal; text-transform: none;
+}
+
+@mixin traditional-audience {
+  line-height: $traditional-audience-line-height; font-family: $traditional-audience; font-weight: normal; text-transform: none;
+}
+
 h2 { font-size: 2.4em; line-height: 1.08333333em; }
 
 p.lede { font-size: 2.4em; font-family: $helvetica-neue-light; line-height: 1.08333333em; }
 
 p + p.lede { margin-top: 1em; }
 
+p + h2, table + h2, blockquote + h2, fieldset + h2 { margin-top: 1em; }
 
 h3 { font-size: 1.75em; }
 h4 { font-size: 1.5em; }
@@ -43,17 +52,23 @@ h5 { font-size: 1.2em; }
 h3, h4, h5, h6 { margin-bottom: 18px; }
 h4, h5, h6 { color: $black; margin-bottom: 18px; }
 h3, h4, h5 { line-height: 1.15; }
-p { max-width: 75em; margin-bottom: 18px; }
-blockquote { font-size: .95em; line-height: 1.6; max-width: 60em; margin-bottom: 18px; border-left: 4px solid; padding-left: 10px; }
+p { max-width: 75em; }
+
+blockquote {
+  border-left: 2px solid $base-border-color;
+  color: $base-font-color;
+  margin: $base-spacing 0;
+  padding-left: $base-spacing / 2;
+}
+
 ul, ol { margin-bottom: 18px; }
-a { color: $base-link-color; text-decoration: underline;
-  &:visited { color: $visited-link-color; text-decoration: none; }
+a { color: $wvu-base-link-color; text-decoration: underline;
+  &:visited { color: $wvu-visited-link-color; text-decoration: none; }
   &:active { text-decoration: none; }
-  &:hover { color: $hover-link-color; text-decoration: underline; }
+  &:hover { color: $wvu-hover-link-color; text-decoration: underline; }
 } //a
 ul { list-style-type: disc; padding-left: 1.5em; }
 ul ul { list-style-type: circle; margin-bottom: 0; }
-.wvu-nav ul { list-style-type: none; margin-left: 0; padding-left: 0; float: left; }
 ul li, ol li { line-height: 1.4; margin: 10px 0; }
 ol { list-style-type: decimal; padding-left: 1.5em; }
 ol ol { list-style-type: lower-alpha; margin-bottom: 0; }
@@ -63,3 +78,36 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, blockq
 h6, .wvu-sidebar { font-size: 1em; line-height: 1.5; margin-bottom: 18px; }
 ul li, .wvu-sidebar li { line-height: 1.4; }
 em, i, cite, q { font-style: italic; }
+
+ul,
+ol {
+
+  &%default-ul {
+    list-style-type: disc;
+    margin-bottom: $base-spacing / 2;
+    padding-left: $base-spacing;
+  }
+
+  &%default-ol {
+    list-style-type: decimal;
+    margin-bottom: $base-spacing / 2;
+    padding-left: $base-spacing;
+  }
+}
+
+dl {
+  margin-bottom: $base-spacing / 2;
+
+  dt {
+    font-weight: bold;
+    margin-top: $base-spacing / 2;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+pre { background: #eee; margin: 0 0 0.5em 0; padding: 1em 0; font-size: 0.8em; 
+  @include mq($bp-medium) { font-size: 1em; }
+}

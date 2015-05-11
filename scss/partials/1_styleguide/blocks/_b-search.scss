@@ -87,7 +87,7 @@ input[type="search"] {
 }
 
 .form-search__search-type { clear: both; 
-  @include mq($bp-medium) { padding-top: 0; }
+  @include mq($bp-tablet-1) { padding-top: 0; }
   input {
     &:last-child { margin-left: 1em; }
   }

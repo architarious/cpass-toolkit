@@ -144,11 +144,11 @@ if_page_depth_gt: 1
 
 site_menu: |
   <ul>
-    <li><a href="#">Future Students</a></li>
-    <li class="active" ><a href="#">Current Students</a></li>
-    <li><a href="#">Alumni & Development</a></li>
-    <li class="apply"><a href="#">Apply Now</a></li>
-    <!--<li><a href="#"><%= Faker::Lorem.word.capitalize %></a></li>-->
+    <li><a href="#">Future Students</a><a href="#" class="more"></a></li>
+    <li><a class="active" href="#">Current Students</a><a href="#" class="more"></a></li>
+    <li><a href="#">Research</a></li>
+    <li><a href="#">Alumni</a><a href="#" class="more"></a></li>
+    <li><a href="#">Community</a><a href="#" class="more"></a></li>
   </ul>
 
 sub_menu: |

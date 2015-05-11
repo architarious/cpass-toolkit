@@ -10,13 +10,16 @@
     	max-width:170px;
     	@include rhythm($ms-1n, 0, 0, 0, $font-size-med);
     	overflow:hidden;
+    	a{
+    		&:after{display:none;}
+    	}
     }
     .b-search{
     	@include rhythm($ms-3n, 0, 0, 0, $font-size-med);
     	
     }
     .b-mastLinks{
-    	@include rhythm($ms-5n, 0, 0, 0, $font-size-small-2);
+    	@include rhythm($ms-1n, 0, 0, 0, $font-size-small-2);
     	overflow:hidden;
     }
 

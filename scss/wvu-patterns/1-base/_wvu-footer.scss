@@ -36,7 +36,7 @@
 } //.wvu-youtube
 
 // ~Tablet+
-@media (min-width: $grid-mq-tablet) {
+@media (min-width: $bp-tablet-1) {
   .wvu-footer { width: 100%; }
   .wvu-contact { width: 100%; float: left; }
   .wvu-credits, .wvu-icons { margin-left: 0; margin-right: 0; width: 50%; }

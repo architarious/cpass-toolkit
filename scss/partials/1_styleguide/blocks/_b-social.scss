@@ -5,16 +5,7 @@
 
 .b-social{
 
-  &:after{
-    content:"Connect with CPASS:";
-    text-transform:uppercase;
-    float:right;
-    @extend .font-LtCn;
-    color:$WarmGrey3;
-    @include adjust-font-size-to($font-size-small-2);
-    @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2); 
-    padding-right:ms(-4);
-  }
+ 
 
   a{
  
@@ -30,15 +21,14 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @include adjust-font-size-to($font-size-med); 
+  height: ms(2);
+  width: ms(2);
+  @include adjust-font-size-to($font-size-small); 
   transition-property: border-radius, border-color, color;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 
   float: right;
-  height: ms(3);
-  width: ms(3);
   overflow: hidden;
   color:$white;
   margin-right: ms(-4);
@@ -86,7 +76,10 @@
   }
   &.linkedin{
     @extend .icon-linkedin2;
-  }  
+  } 
+  &.email{
+    @extend .icon-envelope;
+  } 
 
 }//end a
 
@@ -112,7 +105,19 @@
     }
 
     &[data-eq-state="large"] a{
-      @include adjust-font-size-to($font-size-med); 
+      @include adjust-font-size-to($font-size-med);       
+      height: ms(3);
+      width: ms(3);
+      &:after{
+        content:"Connect with CPASS:";
+        text-transform:uppercase;
+        float:right;
+        @extend .font-LtCn;
+        color:$WarmGrey3;
+        @include adjust-font-size-to($font-size-small-2);
+        @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2); 
+        padding-right:ms(-4);
+      }
     }
 
     &[data-eq-state="small"]:after, &[data-eq-state="medium"]:after{
@@ -166,3 +171,35 @@ nav .b-social a{
     }
   }//end a
 }
+
+.b-social--share{
+  display:none;
+ @include breakpoint($bp-desktop1-1){
+  display:block;
+  position:fixed;
+  right:0;
+  max-width:ms(4);
+  width:6.18%;
+  top:61.8%;
+  background:set-alpha($black, 0.773) url(../images/noise.png) repeat;
+  border-radius: ms(-4);
+  border-top-right-radius:0;
+  border-bottom-right-radius:0;
+  text-align:center;
+  min-height: ms(9);
+  border:ms(-11) solid lighten($black,10);
+  border-right:0;
+
+  &:before{
+    content: "SHARE";
+    color:$WarmGrey3;
+    font-family:$LtCn;
+    font-weight:300;
+    @include adjust-font-size-to($font-size-small-2); 
+  }
+
+  a{
+    margin-top:ms(-4);
+  }
+ }//end bp-desktop1-1
+}//end .b-social--share

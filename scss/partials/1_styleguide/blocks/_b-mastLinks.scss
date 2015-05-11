@@ -14,6 +14,13 @@
 			padding-left:0;
 			border-left:0;
 		}
+		&:nth-child(3){
+			border-right:0;
+			padding-right:0;
+		}
+		&:nth-child(4){
+			display:none;
+		}
 
 
 	}
@@ -21,6 +28,10 @@
 		color:$white;
 		@extend .font-Bd;
 		@include adjust-font-size-to($font-size-small-2);
+		border-bottom: ms(-10) transparent solid;
+		&:hover, &:focus{
+			border-bottom: ms(-10) $WVUGold solid;
+		}
 	 }
 	.b-mastLinks__WVU{}
 	.b-mastLinks__academics{}
@@ -35,7 +46,7 @@
 			border-right:0;
 			padding-right:0;
 		}
-	}
+	}//end eq:small
 	&[data-eq-state="medium"]{
 		li:nth-child(4){
 			display:none;
@@ -44,6 +55,14 @@
 			border-right:0;
 			padding-right:0;
 		}
-	}
-	&[data-eq-state="large"]{}
+	}//end eq:medium
+	&[data-eq-state="large"]{
+		li:nth-child(4){
+			display:inline;
+	    }
+	    li:nth-child(3){
+			padding: 0 ms(-3);
+			border-right:tint($coolblack,5) ms(-9) solid;
+		}
+	}//end eq:large
 }

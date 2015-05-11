@@ -1,4 +1,5 @@
-.wvu-nav { margin-bottom: 0;
+.wvu-nav { width: 100%; }
+.wvu-nav__items, .wvu-nav ul { margin-bottom: 0;
   @include mq($bp-small) { padding: 0 20px; }
   @include mq($bp-xlarge) { padding: 0; }
   
@@ -8,6 +9,8 @@
       &:hover { background: $wvu-gold; color: $wvu-blue; }
     }
   }
+  
+  > li { border-right: 1px solid #444; }
   
   &.nav-collapse { clear: both; overflow: visible;
     li { 

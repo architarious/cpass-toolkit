@@ -811,19 +811,19 @@ $parallax-ios         : true !default;
     margin: 0 auto;
 
     @include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
-       min-width:252%;
+       //min-width:252%;
        min-height:100em;
      }
      @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
-       min-width:180%;
+       //min-width:180%;
        min-height:100em;
      }
      @include breakpoint($bp-tablet-1 $bp-desktop1-1){
-       min-width:125%;
+       //min-width:125%;
        min-height:100em;
      }
      @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
-       min-width:100%;
+       //min-width:100%;
        min-height:100em;
      }
      @include breakpoint($bp-desktop2-1){

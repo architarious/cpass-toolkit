@@ -9,10 +9,10 @@
 //@import 'wvu-patterns/2-modules/modules-dir';
 //@import 'wvu-patterns/3-layouts/layouts-dir';
 
-@import 'wvu-patterns/1-base/wvu-masthead';
-@include wvu-masthead-is-two-line-lockup(true);
-@include wvu-masthead-has-signature(true);
-@include wvu-masthead-background(white);
+@import 'wvu-patterns/0-plugins/wvu-utilities/media-queries';
+@import 'wvu-patterns/0-plugins/wvu-utilities/h5bp-helpers';
+@import 'wvu-patterns/1-base/breakpoints';
+
 
 
 //////////////////////////////
