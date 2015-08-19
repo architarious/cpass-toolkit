@@ -42,6 +42,7 @@ var rootCSS     = paths.css,
     rootImages  = paths.images,
     rootJS      = paths.js,
     rootHTML    = './views/**/*.html';
+    toolkitSCSS = '../cpass-toolkit/scss/';
 
 var tempCSS     = paths.css + '/temp';
 
@@ -94,6 +95,7 @@ gulp.task('styles', ['compass', 'postCSS']);
 //////////////////////////////
 gulp.task('server', ['browserSync'], function(){
   gulp.watch(rootSCSS + '/**/*.scss', [ 'postCSS']);
+  //gulp.watch(toolkitSCSS + '/**/*.scss', ['postCSS']);
   gulp.watch(paths.img + '*').on("change", bsReload);
   gulp.watch("./views/**/*.html").on("change", bsReload);
 

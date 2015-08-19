@@ -26,7 +26,8 @@
 			color: $textColor;
 			float:left;
 			position:relative;
-			padding-left: ms(1);
+			padding-left: ms(1);  
+			@extend .font-LtCn;
 			@include adjust-font-size-to($font-size-small);
 			@include rhythm($ms-5n, 0, 0, 0, $font-size-small);
 
@@ -86,6 +87,10 @@
 			@include breakpoint($bp-desktop2-1){
 			  @include rhythm(0, $ms-5n, 0, 0, $font-size-small-2);
 			  @include adjust-font-size-to($font-size-small-2);
+
+			  font-family:$Roman;
+			  font-weight:400;
+			  
 			  a{ @include adjust-font-size-to($font-size-small-2);}
 			  &:before{
 			  	margin-top:0;
