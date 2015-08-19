@@ -789,6 +789,53 @@ $parallax-ios         : true !default;
 
 
 ///////////////////////////////////
+//Right-Angled ending check
+//
+//
+//USAGE: @include check($primary);
+//Dependencies: compass, modular scale and breakpoint
+///////////////////////////////////
+@mixin check($bgColor: $WVUGold){  
+  float:left;
+  display:block;
+  position:relative;
+  z-index:2;
+
+
+    &:after{
+      content: '';
+      transform: skewX(-33.75deg);
+      transform-origin:bottom;
+      display:block;
+      z-index:-1;
+      position:absolute;
+      top:-4.8%;
+      right:-(ms(1));
+      height:109.657%;
+      width:ms(0);
+      background:$bgColor;
+
+      @include breakpoint($bp-mobile1-1){
+        width:ms(-3);
+        right:-(ms(0));
+      }
+
+      @include breakpoint($bp-desktop1-1){
+        width:ms(-2.5);
+        right:-(ms(0));
+      }
+
+      @include breakpoint($bp-desktop2-1){
+        width:ms(0);
+        right:-(ms(1));
+      }
+
+      }//end &:after
+       
+}//end mixin check
+
+
+///////////////////////////////////
 //page width bg image
 //
 //
