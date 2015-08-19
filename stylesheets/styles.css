@@ -7676,6 +7676,7 @@ body html {
 .font-Obl {
   font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
   font-weight: 400;
+  font-style: italic;
 }
 
 .font-LtCn, .b-social[data-eq-state="large"] a:after, .b-cta__about .nav-list li.dropdown .dropdown-menu li a, .b-cta__events .b-wvuCalendar li .eventTime, .b-cta__events[data-eq-state="small"] .b-wvuCalendar .b-wvuCalendar__event .b-wvuCalendar__event_month, .m-links .title, .m-links h3 {
@@ -7686,6 +7687,11 @@ body html {
 .font-Lt, .b-logo--min[data-eq-state="large"] .wvu-masthead__title, .b-logo--min[data-eq-state="x-large"] .wvu-masthead__title {
   font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
   font-weight: 200;
+}
+
+.font-Serif {
+  font-family: "Garamond", Georgia, "Times New Roman", Serif;
+  font-weight: 400;
 }
 
 p {
@@ -7709,7 +7715,7 @@ p {
   color: #2c2a29;
 }
 
-p.kicker {
+p.kicker, .kicker p {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 30px;
@@ -8832,7 +8838,7 @@ input[type="submit"].form-search__submit {
 }
 
 /*------------------------------------*\
-    Objects: generic items
+    CPASS toolkit: Objects: generic items
 \*------------------------------------*/
 @font-face {
   font-family: 'icomoon';
@@ -11481,8 +11487,57 @@ div.message .close {
   left: 50%;
 }
 
+.obj-preHeader {
+  color: #6e6259;
+  text-transform: uppercase;
+  float: left;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.obj-preHeader:after {
+  content: '';
+  -webkit-transform: skewX(-33.75deg);
+  -ms-transform: skewX(-33.75deg);
+  transform: skewX(-33.75deg);
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: -4.8%;
+  right: -20px;
+  height: 109.657%;
+  width: 16px;
+  background: #eaaa00;
+}
+@media (min-width: 0) {
+  .obj-preHeader:after {
+    width: 8px;
+    right: -16px;
+  }
+}
+@media (min-width: 60rem) {
+  .obj-preHeader:after {
+    width: 10px;
+    right: -16px;
+  }
+}
+@media (min-width: 78rem) {
+  .obj-preHeader:after {
+    width: 16px;
+    right: -20px;
+  }
+}
+
+.obj-postHeader {
+  color: #be3a34;
+  text-transform: uppercase;
+}
+
 /*------------------------------------*\
-    Blocks: items that are specific to theme styles
+    CPASS toolkit: Blocks: items that are specific to theme styles
 \*------------------------------------*/
 .b-social a {
   font-family: 'icomoon';
@@ -13973,17 +14028,17 @@ nav .b-social a:hover {
   color: #ffbd3d;
 }
 
-.b-featuredLink {
+.b-featuredLink, #core .main article .b-featuredLink, #core article.main .b-featuredLink, #core .sidebar .b-featuredLink, #core aside .b-featuredLink {
   background: url(../images/noise.png) repeat #fffefb;
   padding: 3px;
   margin-top: 6px;
   position: relative;
   float: left;
 }
-.b-featuredLink focus {
+.b-featuredLink focus, #core .main article .b-featuredLink focus, #core article.main .b-featuredLink focus, #core .sidebar .b-featuredLink focus, #core aside .b-featuredLink focus {
   border: none;
 }
-.b-featuredLink h3 {
+.b-featuredLink h3, #core .main article .b-featuredLink h3, #core article.main .b-featuredLink h3, #core .sidebar .b-featuredLink h3, #core aside .b-featuredLink h3 {
   position: relative;
   display: block;
   text-align: left;
@@ -14029,7 +14084,7 @@ nav .b-social a:hover {
   left: -5px;
   text-transform: uppercase;
 }
-.b-featuredLink h3:before {
+.b-featuredLink h3:before, #core .main article .b-featuredLink h3:before, #core article.main .b-featuredLink h3:before, #core .sidebar .b-featuredLink h3:before, #core aside .b-featuredLink h3:before {
   content: '';
   height: 100%;
   width: 100%;
@@ -14055,7 +14110,7 @@ nav .b-social a:hover {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-.b-featuredLink h3:hover, .b-featuredLink h3:focus {
+.b-featuredLink h3:hover, #core .main article .b-featuredLink h3:hover, #core article.main .b-featuredLink h3:hover, #core .sidebar .b-featuredLink h3:hover, #core aside .b-featuredLink h3:hover, .b-featuredLink h3:focus, #core .main article .b-featuredLink h3:focus, #core article.main .b-featuredLink h3:focus, #core .sidebar .b-featuredLink h3:focus, #core aside .b-featuredLink h3:focus {
   color: white;
   background: url(../images/noise.png) repeat #0078eb;
   -webkit-box-shadow: 0 2px 2px 0px #14191F;
@@ -14063,20 +14118,20 @@ nav .b-social a:hover {
   box-shadow: 0 2px 2px 0px #14191F;
   box-shadow: 0 2px 2px 0px rgba(20, 25, 31, 0.5);
 }
-.b-featuredLink h3:hover:before, .b-featuredLink h3:focus:before {
+.b-featuredLink h3:hover:before, #core .main article .b-featuredLink h3:hover:before, #core article.main .b-featuredLink h3:hover:before, #core .sidebar .b-featuredLink h3:hover:before, #core aside .b-featuredLink h3:hover:before, .b-featuredLink h3:focus:before, #core .main article .b-featuredLink h3:focus:before, #core article.main .b-featuredLink h3:focus:before, #core .sidebar .b-featuredLink h3:focus:before, #core aside .b-featuredLink h3:focus:before {
   background: url(../images/noise.png) repeat #0078eb;
   -webkit-box-shadow: 2px 3px 1px 0 #14191F;
   -webkit-box-shadow: 2px 3px 1px 0 rgba(20, 25, 31, 0.5);
   box-shadow: 2px 3px 1px 0 #14191F;
   box-shadow: 2px 3px 1px 0 rgba(20, 25, 31, 0.5);
 }
-.b-featuredLink h3:active {
+.b-featuredLink h3:active, #core .main article .b-featuredLink h3:active, #core article.main .b-featuredLink h3:active, #core .sidebar .b-featuredLink h3:active, #core aside .b-featuredLink h3:active {
   background: url(../images/noise.png) repeat #004b93;
 }
-.b-featuredLink h3:active:before {
+.b-featuredLink h3:active:before, #core .main article .b-featuredLink h3:active:before, #core article.main .b-featuredLink h3:active:before, #core .sidebar .b-featuredLink h3:active:before, #core aside .b-featuredLink h3:active:before {
   background: url(../images/noise.png) repeat #004b93;
 }
-.b-featuredLink span.outer {
+.b-featuredLink span.outer, #core .main article .b-featuredLink span.outer, #core article.main .b-featuredLink span.outer, #core .sidebar .b-featuredLink span.outer, #core aside .b-featuredLink span.outer {
   overflow: hidden;
   height: 68px;
   width: 42px;
@@ -14084,7 +14139,7 @@ nav .b-social a:hover {
   right: 0;
   position: absolute;
 }
-.b-featuredLink span.inner {
+.b-featuredLink span.inner, #core .main article .b-featuredLink span.inner, #core article.main .b-featuredLink span.inner, #core .sidebar .b-featuredLink span.inner, #core aside .b-featuredLink span.inner {
   position: absolute;
   bottom: 0;
   right: -32px;
@@ -14099,7 +14154,7 @@ nav .b-social a:hover {
   -ms-transform: skewX(-32deg);
   transform: skewX(-32deg);
 }
-.b-featuredLink span.inner:before {
+.b-featuredLink span.inner:before, #core .main article .b-featuredLink span.inner:before, #core article.main .b-featuredLink span.inner:before, #core .sidebar .b-featuredLink span.inner:before, #core aside .b-featuredLink span.inner:before {
   position: absolute;
   bottom: 4px;
   right: 26px;
@@ -14107,22 +14162,22 @@ nav .b-social a:hover {
   -ms-transform: skewX(32deg);
   transform: skewX(32deg);
 }
-.b-featuredLink span.inner.icon-file-pdf {
+.b-featuredLink span.inner.icon-file-pdf, #core .main article .b-featuredLink span.inner.icon-file-pdf, #core article.main .b-featuredLink span.inner.icon-file-pdf, #core .sidebar .b-featuredLink span.inner.icon-file-pdf, #core aside .b-featuredLink span.inner.icon-file-pdf {
   color: #962e29;
 }
-.b-featuredLink span.inner.icon-file-word {
+.b-featuredLink span.inner.icon-file-word, #core .main article .b-featuredLink span.inner.icon-file-word, #core article.main .b-featuredLink span.inner.icon-file-word, #core .sidebar .b-featuredLink span.inner.icon-file-word, #core aside .b-featuredLink span.inner.icon-file-word {
   color: #0033a0;
 }
-.b-featuredLink span.inner.icon-file-excel {
+.b-featuredLink span.inner.icon-file-excel, #core .main article .b-featuredLink span.inner.icon-file-excel, #core article.main .b-featuredLink span.inner.icon-file-excel, #core .sidebar .b-featuredLink span.inner.icon-file-excel, #core aside .b-featuredLink span.inner.icon-file-excel {
   color: #589e62;
 }
-.b-featuredLink span.inner.icon-file-powerpoint {
+.b-featuredLink span.inner.icon-file-powerpoint, #core .main article .b-featuredLink span.inner.icon-file-powerpoint, #core article.main .b-featuredLink span.inner.icon-file-powerpoint, #core .sidebar .b-featuredLink span.inner.icon-file-powerpoint, #core aside .b-featuredLink span.inner.icon-file-powerpoint {
   color: #e35205;
 }
-.b-featuredLink span.inner.icon-file-zip {
+.b-featuredLink span.inner.icon-file-zip, #core .main article .b-featuredLink span.inner.icon-file-zip, #core article.main .b-featuredLink span.inner.icon-file-zip, #core .sidebar .b-featuredLink span.inner.icon-file-zip, #core aside .b-featuredLink span.inner.icon-file-zip {
   color: #6e6259;
 }
-.b-featuredLink span.inner.icon-youtube2 {
+.b-featuredLink span.inner.icon-youtube2, #core .main article .b-featuredLink span.inner.icon-youtube2, #core article.main .b-featuredLink span.inner.icon-youtube2, #core .sidebar .b-featuredLink span.inner.icon-youtube2, #core aside .b-featuredLink span.inner.icon-youtube2 {
   color: #be3a34;
 }
 
@@ -14834,6 +14889,12 @@ nav a.b-siteLogo[data-eq-state="large"] {
   color: #eaaa00;
 }
 
+/*------------------------------------*\
+    THIS THEME: Objects: generic items
+\*------------------------------------*/
+/*------------------------------------*\
+    THIS THEME: Blocks: items that are specific to theme styles
+\*------------------------------------*/
 .m-auxiliaryNav {
   width: 100%;
   float: left;
@@ -14876,19 +14937,30 @@ nav a.b-siteLogo[data-eq-state="large"] {
   color: #2C2A29;
   float: left;
   position: relative;
-  padding-left: 28px;
+  padding-left: 20px;
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 20px;
+  line-height: 1.251375rem;
+  margin-top: 6px;
+  margin-top: 0.36915562rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
 }
 .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li:before {
   content: " ";
   position: absolute;
   left: 0;
   float: left;
-  margin: 5px;
-  margin-top: 0;
+  margin: 3px;
   margin-bottom: 0;
   background: #ded9d1;
-  width: 5px;
-  height: 1.25em;
+  width: 3px;
+  height: 1.618em;
   -webkit-transform: skewX(-33.75deg);
   -ms-transform: skewX(-33.75deg);
   transform: skewX(-33.75deg);
@@ -14918,8 +14990,8 @@ nav a.b-siteLogo[data-eq-state="large"] {
   background: transparent;
   color: #005eb8;
   text-decoration: underline;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 20px;
   line-height: 1.251375rem;
   margin-top: 6px;
@@ -14954,14 +15026,14 @@ nav a.b-siteLogo[data-eq-state="large"] {
     padding-bottom: 0rem;
     margin-bottom: 0px;
     margin-bottom: 0rem;
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 10px;
+    font-size: 0.625rem;
     line-height: 20px;
     line-height: 1.251375rem;
   }
   .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li a {
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 10px;
+    font-size: 0.625rem;
     line-height: 20px;
     line-height: 1.251375rem;
   }
@@ -14976,12 +15048,19 @@ nav a.b-siteLogo[data-eq-state="large"] {
     padding-bottom: 0rem;
     margin-bottom: 0px;
     margin-bottom: 0rem;
-  }
-  .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li a {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 20px;
     line-height: 1.251375rem;
+  }
+  .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li a {
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 20px;
+    line-height: 1.251375rem;
+  }
+  .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li:before {
+    margin-top: 0;
   }
 }
 .m-auxiliaryNav .m-auxiliaryNav__featLinkList {
@@ -16861,8 +16940,12 @@ nav a.b-siteLogo[data-eq-state="large"] {
 #core .main {
   width: 100%;
 }
+#core .main article .obj-titleWrapper, #core .main article .obj-contentWrapper, #core article.main .obj-titleWrapper, #core article.main .obj-contentWrapper {
+  width: 100%;
+  float: left;
+}
 @media (min-width: 0) {
-  #core .main article h1 {
+  #core .main article h1, #core article.main h1 {
     font-size: 32px;
     font-size: 2rem;
     line-height: 40px;
@@ -16876,7 +16959,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h2 {
+  #core .main article h2, #core article.main h2 {
     font-size: 26px;
     font-size: 1.625rem;
     line-height: 30px;
@@ -16890,7 +16973,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h3 {
+  #core .main article h3, #core article.main h3 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -16904,7 +16987,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h4 {
+  #core .main article h4, #core article.main h4 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -16918,7 +17001,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 10px;
     margin-bottom: 0.59747839rem;
   }
-  #core .main article h5 {
+  #core .main article h5, #core article.main h5 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -16932,7 +17015,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 10px;
     margin-bottom: 0.59747839rem;
   }
-  #core .main article h6 {
+  #core .main article h6, #core article.main h6 {
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 20px;
@@ -16948,7 +17031,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
   }
 }
 @media (min-width: 30rem) {
-  #core .main article h1 {
+  #core .main article h1, #core article.main h1 {
     font-size: 42px;
     font-size: 2.625rem;
     line-height: 50px;
@@ -16962,7 +17045,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h2 {
+  #core .main article h2, #core article.main h2 {
     font-size: 26px;
     font-size: 1.625rem;
     line-height: 30px;
@@ -16976,7 +17059,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h3 {
+  #core .main article h3, #core article.main h3 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -16990,7 +17073,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h4 {
+  #core .main article h4, #core article.main h4 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -17004,7 +17087,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 10px;
     margin-bottom: 0.59747839rem;
   }
-  #core .main article h5 {
+  #core .main article h5, #core article.main h5 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -17018,7 +17101,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 10px;
     margin-bottom: 0.59747839rem;
   }
-  #core .main article h6 {
+  #core .main article h6, #core article.main h6 {
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 20px;
@@ -17034,7 +17117,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
   }
 }
 @media (min-width: 48rem) {
-  #core .main article h1 {
+  #core .main article h1, #core article.main h1 {
     font-size: 52px;
     font-size: 3.25rem;
     line-height: 60px;
@@ -17048,7 +17131,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h2 {
+  #core .main article h2, #core article.main h2 {
     font-size: 32px;
     font-size: 2rem;
     line-height: 40px;
@@ -17062,7 +17145,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h3 {
+  #core .main article h3, #core article.main h3 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -17077,7 +17160,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 0.96674035rem;
     border-bottom-color: #efedeb;
   }
-  #core .main article h4 {
+  #core .main article h4, #core article.main h4 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -17091,7 +17174,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h5 {
+  #core .main article h5, #core article.main h5 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -17105,7 +17188,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h6 {
+  #core .main article h6, #core article.main h6 {
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 20px;
@@ -17126,7 +17209,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
   }
 }
 @media (min-width: 60rem) {
-  #core .main article p {
+  #core .main article p, #core article.main p {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -17141,7 +17224,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 0.59747839rem;
     color: #32302f;
   }
-  #core .main article p.kicker {
+  #core .main article p.kicker, #core article.main p.kicker {
     font-size: 26px;
     font-size: 1.625rem;
     line-height: 30px;
@@ -17156,7 +17239,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 1.56421875rem;
     color: #6e6259;
   }
-  #core .main article h1 {
+  #core .main article h1, #core article.main h1 {
     font-size: 52px;
     font-size: 3.25rem;
     line-height: 60px;
@@ -17170,7 +17253,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 40px;
     margin-bottom: 2.53095912rem;
   }
-  #core .main article h2 {
+  #core .main article h2, #core article.main h2 {
     font-size: 42px;
     font-size: 2.625rem;
     line-height: 50px;
@@ -17184,7 +17267,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h3 {
+  #core .main article h3, #core article.main h3 {
     font-size: 26px;
     font-size: 1.625rem;
     line-height: 30px;
@@ -17204,7 +17287,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     padding-bottom: 0.47247839rem;
     border-style: dotted;
   }
-  #core .main article h4 {
+  #core .main article h4, #core article.main h4 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -17218,7 +17301,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h5 {
+  #core .main article h5, #core article.main h5 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -17232,7 +17315,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h6 {
+  #core .main article h6, #core article.main h6 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -17252,16 +17335,19 @@ nav a.b-siteLogo[data-eq-state="large"] {
     line-height: 32px;
     line-height: 2.0247673rem;
   }
-  #core .main article img {
+  #core .main article img, #core article.main img {
     float: left;
     padding: 16px 16px 0 0;
   }
+  #core .main article .obj-roundedPhoto img, #core article.main .obj-roundedPhoto img {
+    padding: 0;
+  }
 }
 @media (min-width: 78rem) {
-  #core .main article p {
+  #core .main article p, #core article.main p {
     color: #353433;
   }
-  #core .main article p.kicker {
+  #core .main article p.kicker, #core article.main p.kicker {
     font-size: 32px;
     font-size: 2rem;
     line-height: 40px;
@@ -17276,7 +17362,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 1.56421875rem;
     color: #6e6259;
   }
-  #core .main article h1 {
+  #core .main article h1, #core article.main h1 {
     font-size: 68px;
     font-size: 4.25rem;
     line-height: 80px;
@@ -17290,7 +17376,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 40px;
     margin-bottom: 2.53095912rem;
   }
-  #core .main article h2 {
+  #core .main article h2, #core article.main h2 {
     font-size: 42px;
     font-size: 2.625rem;
     line-height: 50px;
@@ -17304,7 +17390,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h3 {
+  #core .main article h3, #core article.main h3 {
     font-size: 32px;
     font-size: 2rem;
     line-height: 40px;
@@ -17324,7 +17410,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     padding-bottom: 0.64839228rem;
     border-style: dotted;
   }
-  #core .main article h4 {
+  #core .main article h4, #core article.main h4 {
     font-size: 26px;
     font-size: 1.625rem;
     line-height: 30px;
@@ -17338,7 +17424,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h5 {
+  #core .main article h5, #core article.main h5 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -17352,7 +17438,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
     margin-bottom: 15px;
     margin-bottom: 0.96674035rem;
   }
-  #core .main article h6 {
+  #core .main article h6, #core article.main h6 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -17369,6 +17455,13 @@ nav a.b-siteLogo[data-eq-state="large"] {
     line-height: 32px;
     line-height: 2.0247673rem;
   }
+}
+#core .main article .b-featuredLink img, #core article.main .b-featuredLink img {
+  padding: 0;
+}
+#core .sidebar .obj-titleWrapper, #core .sidebar .obj-contentWrapper, #core aside .obj-titleWrapper, #core aside .obj-contentWrapper {
+  width: 100%;
+  float: left;
 }
 #core .sidebar h2, #core .sidebar h3, #core .sidebar h4, #core .sidebar h5, #core .sidebar h6, #core aside h2, #core aside h3, #core aside h4, #core aside h5, #core aside h6 {
   color: #485966;
@@ -17469,6 +17562,9 @@ nav a.b-siteLogo[data-eq-state="large"] {
   margin-bottom: 10px;
   margin-bottom: 0.59747839rem;
 }
+#core .sidebar .b-featuredLink img, #core aside .main article .b-featuredLink img, #core .main article aside .b-featuredLink img, #core aside article.main .b-featuredLink img, #core article.main aside .b-featuredLink img, #core aside .sidebar .b-featuredLink img, #core .sidebar aside .b-featuredLink img, #core aside .b-featuredLink img {
+  padding: 0;
+}
 
 #postfix {
   background: #ede7dc url(../images/noise.png) repeat;
@@ -17480,7 +17576,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
   border-top: 2px solid #f2eee6;
   border-bottom: 4px solid #2eb0e3;
 }
-#postfix .b-featuredLink {
+#postfix .b-featuredLink, #postfix #core .main article .b-featuredLink, #core .main article #postfix .b-featuredLink, #postfix #core article.main .b-featuredLink, #core article.main #postfix .b-featuredLink, #postfix #core .sidebar .b-featuredLink, #core .sidebar #postfix .b-featuredLink, #postfix #core aside .b-featuredLink, #core aside #postfix .b-featuredLink {
   background: #ede7dc url(../images/noise.png) repeat;
 }
 #postfix .b-featuredLink span.inner {

@@ -55,6 +55,7 @@ body{
 .font-Obl{
 	font-family:$Obl;
 	font-weight:400;
+	font-style: italic;
 }
 .font-LtCn{
 	font-family:$LtCn;
@@ -63,6 +64,11 @@ body{
 .font-Lt{
 	font-family:$Lt;
 	font-weight:200;
+}
+
+.font-Serif{
+	font-family:$font-secondary;
+	font-weight:400;
 }
 
 

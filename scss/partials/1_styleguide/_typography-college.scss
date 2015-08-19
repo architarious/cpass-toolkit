@@ -15,7 +15,7 @@ p {
     font-weight: 400;
     color:$black;
 }
-p.kicker{
+p.kicker, .kicker p{
     @include adjust-font-size-to($font-size-med-2);
     @include rhythm($ms-2,0, 0, $ms-1, $font-size-med-2);
 

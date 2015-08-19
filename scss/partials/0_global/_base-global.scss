@@ -31,18 +31,21 @@ $legacy-support-for-mozilla: false;
 // Vendor imports
 ////////////////////////
 
-@import 'vendor/eq';
-@import 'vendor/bootstrap-variables';
+@import '../../../../cpass-toolkit/scss/partials/0_global/vendor/eq';
+@import '../../../../cpass-toolkit/scss/partials/0_global/vendor/bootstrap-variables';
 
 
 ////////////////////////
 // Private Imports
 ////////////////////////
 
-@import 'variables';
-@import 'functions';
-@import 'mixins';
-@import 'extendables';
+@import '../../../../cpass-toolkit/scss/partials/0_global/variables';
+@import '../../../../cpass-toolkit/scss/partials/0_global/functions';
+@import '../../../../cpass-toolkit/scss/partials/0_global/mixins';
+@import '../../../../cpass-toolkit/scss/partials/0_global/extendables';
 
 
+////////////////////////
+// NON-TOOLKIT Imports
+////////////////////////
 

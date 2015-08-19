@@ -33,12 +33,10 @@
 //$quadrary: cs-quadrary();
 //@include cs-test($primary $secondary $tertiary $quadrary $white $black);
 ////////////////////////////////
-@import 'colors';
-@import 'fonts';
-@import 'typography-base';
-@import 'typography-college';
-@import 'typography-program';
-
+@import '../../../../cpass-toolkit/scss/partials/1_styleguide/colors';
+@import '../../../../cpass-toolkit/scss/partials/1_styleguide/fonts';
+@import '../../../../cpass-toolkit/scss/partials/1_styleguide/typography-base';
+@import '../../../../cpass-toolkit/scss/partials/1_styleguide/typography-college';
 
 
 /*-------------------------------------*\
@@ -55,51 +53,66 @@
 
 
 /*------------------------------------*\
-    Objects: generic items
+    CPASS toolkit: Objects: generic items
 \*------------------------------------*/
-@import "objects/icons";
-@import "objects/buttons";
-@import "objects/blocks";
-@import "objects/lists";
-@import "objects/tooltip";
-@import "objects/accordion";
-@import "objects/tabs";
-@import "objects/sections";
-@import "objects/article";
-@import "objects/comments";
-@import "objects/forms";
-@import "objects/messages";
-@import "objects/form-search";
-@import "objects/pagename";
-@import "objects/breadcrumbs";
-@import "objects/sidescroller";
-@import "objects/perfectScrollbar";
-@import "objects/addthis";
-@import "objects/obj-roundedPhoto";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/icons";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/buttons";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/blocks";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/lists";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/tooltip";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/accordion";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/tabs";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/sections";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/article";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/comments";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/forms";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/messages";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/form-search";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/pagename";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/breadcrumbs";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/sidescroller";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/perfectScrollbar";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/addthis";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/obj-roundedPhoto";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/obj-preHeader";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/obj-postHeader";
 
 
 /*------------------------------------*\
-    Blocks: items that are specific to theme styles
+    CPASS toolkit: Blocks: items that are specific to theme styles
 \*------------------------------------*/
-@import "blocks/b-social";
-@import "blocks/b-contact__info";
-@import "blocks/b-contact__links";
-@import "blocks/b-cta__about";
-@import "blocks/b-cta__events";
-@import "blocks/b-cta__news";
-@import "blocks/b-featuredLink";
-@import "blocks/b-featLinkList";
-@import "blocks/b-links__academics";
-@import "blocks/b-links__students";
-@import "blocks/b-links__alumni";
-@import "blocks/b-links__community";
-@import "blocks/b-logo";
-@import "blocks/b-logo--min";
-@import "blocks/b-mastLinks";
-@import "blocks/b-siteLogo";
-@import "blocks/b-search";
-@import "blocks/b-footer__site_feature";
-@import "blocks/b-footer__return";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-social";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-contact__info";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-contact__links";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-cta__about";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-cta__events";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-cta__news";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-featuredLink";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-featLinkList";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-links__academics";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-links__students";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-links__alumni";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-links__community";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-logo";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-logo--min";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-mastLinks";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-siteLogo";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-search";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-footer__site_feature";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-footer__return";
+
+/////////////////////////
+// NON-TOOLKIT STYLEGUIDE CHANGES
+/////////////////////////
+
+
+/*------------------------------------*\
+    THIS THEME: Objects: generic items
+\*------------------------------------*/
 
 
 
+
+/*------------------------------------*\
+    THIS THEME: Blocks: items that are specific to theme styles
+\*------------------------------------*/

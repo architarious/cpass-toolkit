@@ -5,12 +5,17 @@
 // Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
 ////////////////////////
 
-@import "m-auxiliaryNav";
-@import "m-contact";
-@import "m-cta";
-@import "m-links";
-@import "m-longNav";
-@import "m-mastUtils";
-@import "m-primaryNav";
-@import "m-scroller";
-@import "m-footer__wvu__icons";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-auxiliaryNav";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-contact";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-cta";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-links";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-longNav";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-mastUtils";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-primaryNav";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-scroller";
+@import "../../../../cpass-toolkit/scss/partials/2_modules/m-footer__wvu__icons";
+
+
+////////////////////////
+// NON-TOOLKIT MODULES
+////////////////////////

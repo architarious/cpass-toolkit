@@ -1,10 +1,10 @@
 #core{
 	background:url(../images/noise.png) repeat $white;
 
-  .main{
-  	width:100%;
+  .main{ width:100%;}
 
-    article{
+  .main article, article.main{
+    .obj-titleWrapper, .obj-contentWrapper{ width:100%; float:left;}
           @include breakpoint($bp-mobile1-1){
                 h1{
                   @include adjust-font-size-to($font-size-large-2);
@@ -137,8 +137,11 @@
             img{
               float:left;
               padding: ms(0) ms(0) 0 0;
-
             }
+            .obj-roundedPhoto img{
+              padding:0;
+            }
+
             
           
           }//end $bp-dekstop1-1
@@ -183,9 +186,14 @@
               @include adjust-leading-to($ms-2);
             }
           }//end $bp-desktop2-1
-      }//end article
+          .b-featuredLink{
+              @extend .b-featuredLink;
+              img{ padding:0;}
+            }
+      
   }//end .main
   .sidebar, aside{
+    .obj-titleWrapper, .obj-contentWrapper{ width:100%; float:left;}
     $primary: lighten($DarkGrey, 10);
     $black: tint($black, 20);
   	h2, h3, h4, h5, h6{
@@ -234,6 +242,10 @@
         @include adjust-font-size-to($font-size-med);
         @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
     }
+    .b-featuredLink{
+              @extend .b-featuredLink;
+              img{ padding:0;}
+            }
 }
 
 

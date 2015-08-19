@@ -5,15 +5,26 @@
 // Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
 ////////////////////////
  
- @import "s-header";
- @import "s-footer";
- @import "l-backpage";
- @import "l-backpage--sidebarx2";
- @import "l-frontpage";
+ @import "../../../../cpass-toolkit/scss/partials/4_layouts/s-header";
+ @import "../../../../cpass-toolkit/scss/partials/4_layouts/s-footer";
+ @import "../../../../cpass-toolkit/scss/partials/4_layouts/l-backpage";
+ @import "../../../../cpass-toolkit/scss/partials/4_layouts/l-backpage--sidebarx2";
+ @import "../../../../cpass-toolkit/scss/partials/4_layouts/l-frontpage";
+
+/////////////////////////
+// NON-TOOLKIT LAYOUTS
+/////////////////////////
 
 
 
 body{    
+   //pure WVUBlue striped pattern
+   //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAUUlEQVQYV2Nk0Aj9z4APMDExMHx9ycCIVyFUEQOnKB6FSIpAFmI3EU0RdoVYFGEqxKEIVSEeRQiFBBRBFGqF/weFEygI8AFGBnmH/4QUgQwAAHI4IMXLrAYzAAAAAElFTkSuQmCC");    
+
+   //darker WVUBlue striped pattern
+   //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARklEQVQYV2NkkLX+z0AIcEsxMBJUyC3FwPD1GQGFUEUgC3GbiKQIt0I0RdgVYlGEqRCHIlSFeBQhFBJQBFGoEfofFE6EAAC4Ah+W35ep8wAAAABJRU5ErkJggg==");
+
+   //darkest WVUBlue striped pattern
    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAN0lEQVQIW2MUkZT/z4AF8LIzMDBikwRJfP6JRRImATIMRSeyBIokugRcEpsEWFJRQf4/yHJsAAAVuxUpz+378gAAAABJRU5ErkJggg==) repeat;
 
 

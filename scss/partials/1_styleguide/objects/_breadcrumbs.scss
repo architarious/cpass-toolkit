@@ -26,18 +26,20 @@
 			color: $textColor;
 			float:left;
 			position:relative;
-			padding-left: 28px;
+			padding-left: ms(1);
+			@include adjust-font-size-to($font-size-small);
+			@include rhythm($ms-5n, 0, 0, 0, $font-size-small);
+
 			&:before{
 				content: " ";
 				position:absolute;
 				left:0;
 				float:left;
-				margin:ms(-5);
-				margin-top:0;
+				margin:ms(-7);
 				margin-bottom:0;
 				background:shade($bgColor, 7);
-				width:ms(-5);
-				height:1.25em;
+				width:ms(-7);
+				height:1.618em;
 				transform: skewX(-33.75deg);
 				transform-origin: bottom;
 				box-shadow: inset -1px 0 1px -1px darken(shade($bgColor, 10), 7), -1px 0 1px 0 lighten($bgColor, 3);
@@ -63,8 +65,8 @@
 				text-decoration: underline;
 
 				@extend .font-BdCn;
-				@include adjust-font-size-to($font-size-med);
-				@include rhythm($ms-5n, 0, 0, 0, $font-size-med);
+				@include adjust-font-size-to($font-size-small);
+				@include rhythm($ms-5n, 0, 0, 0, $font-size-small);
 				
 				&:hover{
 					color:lighten($linkColor,10);
@@ -77,13 +79,17 @@
 				float:left;
 			}
 			@include breakpoint($bp-tablet-1 $bp-desktop2-1){
-			   @include rhythm($ms-5n, 0, 0, 0, $font-size-small-2);
-			   @include adjust-font-size-to($font-size-small-2);
-			   a{ @include adjust-font-size-to($font-size-small-2);}
+			   @include rhythm($ms-5n, 0, 0, 0, $font-size-small);
+			   @include adjust-font-size-to($font-size-small);
+			   a{ @include adjust-font-size-to($font-size-small);}
 			}
 			@include breakpoint($bp-desktop2-1){
-			  @include rhythm(0, $ms-5n, 0, 0, $font-size-med);
-			  a{ @include adjust-font-size-to($font-size-med);}
+			  @include rhythm(0, $ms-5n, 0, 0, $font-size-small-2);
+			  @include adjust-font-size-to($font-size-small-2);
+			  a{ @include adjust-font-size-to($font-size-small-2);}
+			  &:before{
+			  	margin-top:0;
+			  }
 			}//end breakpoint desktop2-1
 		}//end li
 }//end @include fancyBreadCrumbs

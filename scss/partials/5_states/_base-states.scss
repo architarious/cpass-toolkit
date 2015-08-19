@@ -5,5 +5,9 @@
 // Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
 ////////////////////////
 
-@import 'print';
-@import 'breakpoints/legacy/base-legacy';
+@import '../../../../cpass-toolkit/scss/partials/5_states/print';
+@import '../../../../cpass-toolkit/scss/partials/5_states/breakpoints/legacy/base-legacy';
+
+/////////////////////////
+// NON-TOOLKIT STATES
+/////////////////////////

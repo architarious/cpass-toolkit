@@ -1,0 +1,41 @@
+.obj-preHeader{
+	color:$WarmGrey1;
+	text-transform:uppercase;
+	float:left;
+	display:block;
+	position:relative;
+	z-index:2;
+
+	//@include flag();
+
+		&:after{
+			content: '';
+			transform: skewX(-33.75deg);
+			transform-origin:bottom;
+			display:block;
+			z-index:-1;
+			position:absolute;
+			top:-4.8%;
+			right:-(ms(1));
+			height:109.657%;
+			width:ms(0);
+			background:$WVUGold;
+
+			@include breakpoint($bp-mobile1-1){
+				width:ms(-3);
+				right:-(ms(0));
+			}
+
+			@include breakpoint($bp-desktop1-1){
+				width:ms(-2.5);
+				right:-(ms(0));
+			}
+
+			@include breakpoint($bp-desktop2-1){
+				width:ms(0);
+				right:-(ms(1));
+			}
+
+	    }
+	     
+}
