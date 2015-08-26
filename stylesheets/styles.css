@@ -7658,7 +7658,7 @@ body html {
   font-weight: 900;
 }
 
-.font-BdCn, .tabs a, .b-cta__about[data-eq-state="small"] .nav-list li a, .b-cta__about[data-eq-state="medium"] .nav-list li a, .b-links__academics .b-academics__programs__c2 a, .b-links__academics .b-academics__programs__c3 a, .b-links__academics .b-academics__programs__c4 a, .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li a, .m-cta .title {
+.font-BdCn, .tabs a, .b-cta__about[data-eq-state="small"] .nav-list li a, .b-cta__about[data-eq-state="medium"] .nav-list li a, .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li a, .m-cta .title {
   font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
   font-weight: 800;
 }
@@ -7668,7 +7668,7 @@ body html {
   font-weight: 500;
 }
 
-.font-Roman, .b-cta__about .nav-list li.dropdown .dropdown-menu .dropdown-header, .b-links__alumni .nav-list li a, .b-logo .wvu-masthead__title, .b-logo--min .wvu-masthead__title, .b-search .form-search__search-type label, .m-links .nav-list li a, .s-footer__wvu--wrapper #s-footer__wvu .container .wvu-icons, .s-footer__wvu--wrapper #s-footer__wvu .container .wvu-credits {
+.font-Roman, .b-cta__about .nav-list li.dropdown .dropdown-menu .dropdown-header, .b-links__academics .b-academics__programs__c2 a, .b-links__academics .b-academics__programs__c3 a, .b-links__academics .b-academics__programs__c4 a, .b-links__alumni .nav-list li a, .b-logo .wvu-masthead__title, .b-logo--min .wvu-masthead__title, .b-search .form-search__search-type label, .m-links .nav-list li a, .s-footer__wvu--wrapper #s-footer__wvu .container .wvu-icons, .s-footer__wvu--wrapper #s-footer__wvu .container .wvu-credits {
   font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
   font-weight: 400;
 }
@@ -7679,7 +7679,7 @@ body html {
   font-style: italic;
 }
 
-.font-LtCn, .b-social[data-eq-state="large"] a:after, .b-cta__about .nav-list li.dropdown .dropdown-menu li a, .b-cta__events .b-wvuCalendar li .eventTime, .b-cta__events[data-eq-state="small"] .b-wvuCalendar .b-wvuCalendar__event .b-wvuCalendar__event_month, .m-links .title, .m-links h3 {
+.font-LtCn, .b-social[data-eq-state="large"] a:after, .b-cta__about .nav-list li.dropdown .dropdown-menu li a, .b-cta__events .b-wvuCalendar li .eventTime, .b-cta__events[data-eq-state="small"] .b-wvuCalendar .b-wvuCalendar__event .b-wvuCalendar__event_month, .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li, .m-links .title, .m-links h3 {
   font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
   font-weight: 300;
 }
@@ -8842,11 +8842,11 @@ input[type="submit"].form-search__submit {
 \*------------------------------------*/
 @font-face {
   font-family: 'icomoon';
-  src: url("../../public/fonts/icomoon.eot?-ssp9yv");
-  src: url("../../public/fonts/icomoon.eot?#iefix-ssp9yv") format("embedded-opentype"), url("../../public/fonts/icomoon.woff?-ssp9yv") format("woff"), url("../../public/fonts/icomoon.ttf?-ssp9yv") format("truetype"), url("../../public/fonts/icomoon.svg?-ssp9yv#icomoon") format("svg");
+  src: url("../../public/fonts/icomoon.eot?-7k71lm");
+  src: url("../../public/fonts/icomoon.eot?#iefix-7k71lm") format("embedded-opentype"), url("../../public/fonts/icomoon.woff?-7k71lm") format("woff"), url("../../public/fonts/icomoon.ttf?-7k71lm") format("truetype"), url("../../public/fonts/icomoon.svg?-7k71lm#icomoon") format("svg");
   /**this is for local development only===========================================*/
-  src: url("../public/fonts/icomoon.eot?-ssp9yv");
-  src: url("../public/fonts/icomoon.eot?#iefix-ssp9yv") format("embedded-opentype"), url("../public/fonts/icomoon.woff?-ssp9yv") format("woff"), url("../public/fonts/icomoon.ttf?-ssp9yv") format("truetype"), url("../public/fonts/icomoon.svg?-ssp9yv#icomoon") format("svg");
+  src: url("../public/fonts/icomoon.eot?-7k71lm");
+  src: url("../public/fonts/icomoon.eot?#iefix-7k71lm") format("embedded-opentype"), url("../public/fonts/icomoon.woff?-7k71lm") format("woff"), url("../public/fonts/icomoon.ttf?-7k71lm") format("truetype"), url("../public/fonts/icomoon.svg?-7k71lm#icomoon") format("svg");
   /*============================================================================*/
   font-weight: normal;
   font-style: normal;
@@ -9274,6 +9274,10 @@ input[type="submit"].form-search__submit {
 
 .icon-youtube3:before {
   content: "\e676";
+}
+
+.icon-flickr:before, .b-social a.flickr:before {
+  content: "\e6db";
 }
 
 .icon-skype:before {
@@ -11568,9 +11572,9 @@ div.message .close {
   margin-right: 6px;
   border-radius: 100%;
   border: 2px solid #fffefb;
-  text-shadow: 0 10px 12px #0d1012;
-  -webkit-box-shadow: 0 6px 8px #0d1012;
-  box-shadow: 0 6px 8px #0d1012;
+  text-shadow: 0 10px 12px #001022;
+  -webkit-box-shadow: 0 6px 8px #001022;
+  box-shadow: 0 6px 8px #001022;
 }
 .b-social a span {
   visibility: hidden;
@@ -11584,8 +11588,8 @@ div.message .close {
   color: #ffc656;
 }
 .b-social a:active {
-  border-color: #2eb0e3;
-  color: #2eb0e3;
+  border-color: #fdda24;
+  color: #fdda24;
 }
 .b-social a:active:before {
   color: #ffc656;
@@ -14228,14 +14232,14 @@ nav .b-social a:hover {
   cursor: pointer;
   border-radius: 0.182em;
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF080A0C', endColorstr='#FF000000');
-  background-color: #080a0c;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000B18', endColorstr='#FF000000');
+  background-color: #000b18;
   border: 0;
   color: #fffefb;
   text-shadow: black 0 -1px 0;
   background-image: url(../images/noise.png);
   padding: 0.47745751em 1em;
-  border: 0.07em solid #12171c;
+  border: 0.07em solid #001731;
   border-bottom: 0.07em solid black;
   -webkit-box-shadow: #000000 0 0.146em 0.07em 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0.146em 0.07em 0;
@@ -14253,6 +14257,7 @@ nav .b-social a:hover {
   transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
+  font-weight: 400;
   float: none;
   margin: 0 auto;
   padding: 10px;
@@ -14293,7 +14298,7 @@ nav .b-social a:hover {
   color: #e5e4e1;
 }
 .b-links__academics .b-academics__programs__c2 a:active, .b-links__academics .b-academics__programs__c3 a:active, .b-links__academics .b-academics__programs__c4 a:active {
-  background: #313c49;
+  background: #003b7e;
 }
 .b-links__academics .b-academics__programs__c2 a:visited, .b-links__academics .b-academics__programs__c3 a:visited, .b-links__academics .b-academics__programs__c4 a:visited {
   color: #ffcf70;
@@ -14406,6 +14411,7 @@ nav .b-social a:hover {
 }
 .b-logo[data-eq-state="small"] .wvu-masthead__logo {
   background-size: 271px;
+  padding-left: 46px;
 }
 .b-logo[data-eq-state="medium"] .wvu-masthead__logo {
   background-size: 300px;
@@ -14428,6 +14434,7 @@ nav .b-social a:hover {
   line-height: 1.33897125rem;
   margin-top: 0.146em;
   font-weight: 100;
+  margin-left: 3px;
 }
 .b-logo[data-eq-state="x-large"] .wvu-masthead__logo {
   background-size: 358px;
@@ -14444,6 +14451,7 @@ nav .b-social a:hover {
   line-height: 1.36399875rem;
   margin-top: 0.236em;
   font-weight: 100;
+  margin-left: 7px;
 }
 
 .b-logo--min .wvu-masthead__logo {
@@ -14534,8 +14542,8 @@ nav .b-social a:hover {
   display: inline;
   float: left;
   padding: 0 8px;
-  border-right: #1f242a 2px solid;
-  border-left: #2b2f35 1px solid;
+  border-right: #001c3b 2px solid;
+  border-left: #193d66 1px solid;
 }
 .b-mastLinks li:last-child {
   padding-right: 0;
@@ -14582,7 +14590,7 @@ nav .b-social a:hover {
 }
 .b-mastLinks[data-eq-state="large"] li:nth-child(3) {
   padding: 0 8px;
-  border-right: #1f242a 2px solid;
+  border-right: #001c3b 2px solid;
 }
 
 nav a.b-siteLogo {
@@ -14779,7 +14787,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
 .b-search .form-search__search-type {
   clear: both;
 }
-@media (min-width: 48rem) {
+@media (min-width: 768) {
   .b-search .form-search__search-type {
     padding-top: 0;
   }
@@ -15052,6 +15060,8 @@ nav a.b-siteLogo[data-eq-state="large"] {
     font-size: 0.75rem;
     line-height: 20px;
     line-height: 1.251375rem;
+    font-family: "Neue Helvetica W02", Arial, verdana, sans-serif;
+    font-weight: 400;
   }
   .m-auxiliaryNav .m-auxiliaryNav__breadcrumbs li a {
     font-size: 12px;
@@ -15350,6 +15360,9 @@ nav a.b-siteLogo[data-eq-state="large"] {
 .m-links h3 a:hover, .m-links h3 a:focus {
   color: #eaaa00;
 }
+.m-links .nav-list li {
+  margin-bottom: 2px !important;
+}
 .m-links .nav-list li a {
   font-family: "Neue Helvetica W01", Arial, verdana, sans-serif;
   font-weight: 800;
@@ -15363,14 +15376,14 @@ nav a.b-siteLogo[data-eq-state="large"] {
   cursor: pointer;
   border-radius: 0.182em;
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF080A0C', endColorstr='#FF000000');
-  background-color: #080a0c;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000B18', endColorstr='#FF000000');
+  background-color: #000b18;
   border: 0;
   color: #fffefb;
   text-shadow: black 0 -1px 0;
   background-image: url(../images/noise.png);
   padding: 0.47745751em 1em;
-  border: 0.07em solid #12171c;
+  border: 0.07em solid #001731;
   border-bottom: 0.07em solid black;
   -webkit-box-shadow: #000000 0 0.146em 0.07em 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0.146em 0.07em 0;
@@ -15442,7 +15455,7 @@ nav a.b-siteLogo[data-eq-state="large"] {
   color: #e5e4e1;
 }
 .m-links .nav-list li a:active {
-  background: #313c49;
+  background: #003b7e;
 }
 .m-links .nav-list li a:visited {
   color: #ffcf70;
@@ -18749,46 +18762,6 @@ body.template-backpage #page-wrap:after {
   }
 }
 
-body.template-frontpage #page-wrap:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  background: url(../images/bgImage-cpass.png) no-repeat top center;
-  background-size: 100% auto;
-  margin: 0 auto;
-}
-@media (min-width: 0) and (max-width: 31rem) {
-  body.template-frontpage #page-wrap:after {
-    min-height: 100em;
-  }
-}
-@media (min-width: 31rem) and (max-width: 48rem) {
-  body.template-frontpage #page-wrap:after {
-    min-height: 100em;
-  }
-}
-@media (min-width: 48rem) and (max-width: 60rem) {
-  body.template-frontpage #page-wrap:after {
-    min-height: 100em;
-  }
-}
-@media (min-width: 60rem) and (max-width: 78rem) {
-  body.template-frontpage #page-wrap:after {
-    min-height: 100em;
-  }
-}
-@media (min-width: 78rem) {
-  body.template-frontpage #page-wrap:after {
-    top: -20%;
-    width: 100%;
-    min-height: 100em;
-  }
-}
 @media (min-width: 0) and (max-width: 31rem) {
   body.template-frontpage #core .main {
     width: 100%;
@@ -18873,11 +18846,11 @@ body.template-frontpage #page-wrap:after {
 }
 
 body {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAN0lEQVQIW2MUkZT/z4AF8LIzMDBikwRJfP6JRRImATIMRSeyBIokugRcEpsEWFJRQf4/yHJsAAAVuxUpz+378gAAAABJRU5ErkJggg==) repeat;
+  background: #002855 url(../images/noise--blue.jpg) repeat;
 }
 body #page-wrap {
-  background: -webkit-radial-gradient(50% -98%, farthest-corner, rgba(255, 254, 251, 0.15) 4%, rgba(0, 40, 85, 0.25) 67%, rgba(9, 11, 14, 0.65));
-  background: radial-gradient(farthest-corner at 50% -98%, rgba(255, 254, 251, 0.15) 4%, rgba(0, 40, 85, 0.25) 67%, rgba(9, 11, 14, 0.65));
+  background: -webkit-radial-gradient(50% -155%, farthest-corner, rgba(85, 165, 255, 0.3) 0%, rgba(0, 40, 85, 0.25) 53%, rgba(0, 16, 34, 0.65)) 100%, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANklEQVQYV2NkwAekLP4z4pSXsvjP8OwEI3YFUEmQZkwFSJKYCtAkURVgkUQowCEJUYBHEqQAAKHyFlrcD+KgAAAAAElFTkSuQmCC) repeat;
+  background: radial-gradient(farthest-corner at 50% -155%, rgba(85, 165, 255, 0.3) 0%, rgba(0, 40, 85, 0.25) 53%, rgba(0, 16, 34, 0.65)) 100%, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANklEQVQYV2NkwAekLP4z4pSXsvjP8OwEI3YFUEmQZkwFSJKYCtAkURVgkUQowCEJUYBHEqQAAKHyFlrcD+KgAAAAAElFTkSuQmCC) repeat;
   float: left;
   width: 100%;
 }

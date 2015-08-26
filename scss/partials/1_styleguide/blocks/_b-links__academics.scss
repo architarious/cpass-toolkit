@@ -19,8 +19,9 @@
         padding: 0 ms(-4);
         width:10%;
         a{
-         @include btn( darken($coolblack,6), set-alpha(darken($coolblack, 20), 0.6)); 
-          @extend .font-BdCn;
+         @include btn( darken($primary,12), set-alpha(darken($coolblack, 20), 0.6)); 
+          @extend .font-Roman;
+          font-weight:400;
           float:none;
           margin:0 auto;
           padding:ms(-2);

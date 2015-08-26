@@ -31,8 +31,12 @@
   		}
   	}//end h3
 
+    .nav-list li{
+      margin-bottom:ms(-9) !important;
+    }
+
     .nav-list li a{
-      @include btn( darken($coolblack,6), set-alpha(darken($coolblack, 20), 0.6));     
+      @include btn( darken($primary,12), set-alpha(darken($coolblack, 10), 0.6));     
       @include adjust-font-size-to($font-size-small-2);  
       @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2);
       @include trailing-border(ms(-7), $ms-4n, $font-size-small-2, solid);

@@ -1,17 +1,17 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../../public/fonts/icomoon.eot?-ssp9yv');
-	src:url('../../public/fonts/icomoon.eot?#iefix-ssp9yv') format('embedded-opentype'),
-		url('../../public/fonts/icomoon.woff?-ssp9yv') format('woff'),
-		url('../../public/fonts/icomoon.ttf?-ssp9yv') format('truetype'),
-		url('../../public/fonts/icomoon.svg?-ssp9yv#icomoon') format('svg');
+	src:url('../../public/fonts/icomoon.eot?-7k71lm');
+	src:url('../../public/fonts/icomoon.eot?#iefix-7k71lm') format('embedded-opentype'),
+		url('../../public/fonts/icomoon.woff?-7k71lm') format('woff'),
+		url('../../public/fonts/icomoon.ttf?-7k71lm') format('truetype'),
+		url('../../public/fonts/icomoon.svg?-7k71lm#icomoon') format('svg');
 
    /**this is for local development only===========================================*/
-	src:url('../public/fonts/icomoon.eot?-ssp9yv');
-	src:url('../public/fonts/icomoon.eot?#iefix-ssp9yv') format('embedded-opentype'),
-		url('../public/fonts/icomoon.woff?-ssp9yv') format('woff'),
-		url('../public/fonts/icomoon.ttf?-ssp9yv') format('truetype'),
-		url('../public/fonts/icomoon.svg?-ssp9yv#icomoon') format('svg');
+	src:url('../public/fonts/icomoon.eot?-7k71lm');
+	src:url('../public/fonts/icomoon.eot?#iefix-7k71lm') format('embedded-opentype'),
+		url('../public/fonts/icomoon.woff?-7k71lm') format('woff'),
+		url('../public/fonts/icomoon.ttf?-7k71lm') format('truetype'),
+		url('../public/fonts/icomoon.svg?-7k71lm#icomoon') format('svg');
 	/*============================================================================*/
 
 	font-weight: normal;
@@ -339,6 +339,9 @@
 }
 .icon-youtube3:before {
 	content: "\e676";
+}
+.icon-flickr:before {
+	content: "\e6db";
 }
 .icon-skype:before {
 	content: "\e677";

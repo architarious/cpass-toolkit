@@ -19,17 +19,32 @@
 
 body{    
    //pure WVUBlue striped pattern
-   //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAUUlEQVQYV2Nk0Aj9z4APMDExMHx9ycCIVyFUEQOnKB6FSIpAFmI3EU0RdoVYFGEqxKEIVSEeRQiFBBRBFGqF/weFEygI8AFGBnmH/4QUgQwAAHI4IMXLrAYzAAAAAElFTkSuQmCC");    
-
+   //background: $WVUBlue url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAUUlEQVQYV2Nk0Aj9z4APMDExMHx9ycCIVyFUEQOnKB6FSIpAFmI3EU0RdoVYFGEqxKEIVSEeRQiFBBRBFGqF/weFEygI8AFGBnmH/4QUgQwAAHI4IMXLrAYzAAAAAElFTkSuQmCC");    
+   //  background: $WVUBlue;
+ 
    //darker WVUBlue striped pattern
    //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARklEQVQYV2NkkLX+z0AIcEsxMBJUyC3FwPD1GQGFUEUgC3GbiKQIt0I0RdgVYlGEqRCHIlSFeBQhFBJQBFGoEfofFE6EAAC4Ah+W35ep8wAAAABJRU5ErkJggg==");
 
    //darkest WVUBlue striped pattern
-   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAN0lEQVQIW2MUkZT/z4AF8LIzMDBikwRJfP6JRRImATIMRSeyBIokugRcEpsEWFJRQf4/yHJsAAAVuxUpz+378gAAAABJRU5ErkJggg==) repeat;
+   //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAN0lEQVQIW2MUkZT/z4AF8LIzMDBikwRJfP6JRRImATIMRSeyBIokugRcEpsEWFJRQf4/yHJsAAAVuxUpz+378gAAAABJRU5ErkJggg==) repeat;
+   
+   //WVUBlue noise + striped pattern
+   background:$WVUBlue url(../images/noise--blue.jpg) repeat;
 
 
 	#page-wrap{		
-		background: radial-gradient(farthest-corner at 50% -98%, rgba(255, 254, 251, 0.15) 4%, rgba(0, 40, 85, 0.25) 67%, rgba(9, 11, 14, 0.65));
+		//shadows for $DarkGrey -> $WVUBlue
+		// background: radial-gradient(farthest-corner at 50% -98%, 
+		// 	          rgba(255, 254, 251, 0.15) 4%, 
+		// 	          rgba(0, 40, 85, 0.25) 67%, 
+		// 	          rgba(9, 11, 14, 0.65));
+		//shadows for $WVUBlue (from sportsintegration.wvu.edu) + striped pattern
+		background: radial-gradient( farthest-corner at 50% -155%, 
+					set-alpha(lighten($WVUBlue, 50), 0.3) 0%, 
+					set-alpha($WVUBlue,0.25) 53%, 
+					set-alpha(darken($WVUBlue, 10), 0.65)) 100%,
+					url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANklEQVQYV2NkwAekLP4z4pSXsvjP8OwEI3YFUEmQZkwFSJKYCtAkURVgkUQowCEJUYBHEqQAAKHyFlrcD+KgAAAAAElFTkSuQmCC) repeat;
+		    		//url(../images/noise--blue--line.jpg) repeat;
 		float:left;
 		width:100%;
 	}

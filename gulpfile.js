@@ -42,7 +42,7 @@ var rootCSS     = paths.css,
     rootImages  = paths.images,
     rootJS      = paths.js,
     rootHTML    = './views/**/*.html';
-    toolkitSCSS = '../cpass-toolkit/scss/';
+    //toolkitSCSS = '../cpass-toolkit/scss/';
 
 var tempCSS     = paths.css + '/temp';
 

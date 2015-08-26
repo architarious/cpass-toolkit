@@ -36,8 +36,8 @@
   border:ms(-8) solid $white;
   
   span{ visibility: hidden;}
-  text-shadow: 0 ms(-2) ms(-1) darken($vb-DarkNavy, 18);
-  box-shadow: 0 ms(-4) ms(-3) darken($vb-DarkNavy, 18);
+  text-shadow: 0 ms(-2) ms(-1) darken($primary, 10);
+  box-shadow: 0 ms(-4) ms(-3) darken($primary, 10);
   &:hover, &:focus{
     border-radius:10%;
     border-color:$quadrary;
@@ -47,8 +47,8 @@
     }
   }
   &:active{
-    border-color:$vb-LightBlue;
-    color:$vb-LightBlue;
+    border-color:$SecLightGold;
+    color:$SecLightGold;
     &:before{
       color:$quadrary;
     }
@@ -80,6 +80,9 @@
   &.email{
     @extend .icon-envelope;
   } 
+  &.flickr{
+    @extend .icon-flickr;
+  }
 
 }//end a
 
