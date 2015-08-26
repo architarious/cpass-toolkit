@@ -6,6 +6,8 @@
         $coolblack: desaturate(shade($WVUBlue, 40),  80);  //#14191f
         $coolblack2: #090b0e; //rgb(9,11,14)
 
+      
+
     //NEUTRAL PALLETTE
         $DarkGrey: #333f48;
         $MidGrey: #adaaad;
@@ -87,4 +89,19 @@ $quadrary: #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25b
 //@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());
 
 //@include cs-test($primary $secondary $tertiary $quadrary);
+
+
+$primary--shadow: darken($primary, 7);
+$primary--light: tint($primary, 10);
+
+$secondary--shadow: darken($secondary, 7);
+$secondary--light: tint($secondary, 10);
+
+$tertiary--shadow: darken($tertiary, 7);
+$tertiary--light: tint($tertiary, 10);
+
+$quadrary--shadow: darken($quadrary, 7);
+$quadrary--light: tint($quadrary, 10);
+
+
 

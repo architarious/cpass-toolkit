@@ -36,8 +36,8 @@
   border:ms(-8) solid $white;
   
   span{ visibility: hidden;}
-  text-shadow: 0 ms(-2) ms(-1) darken($primary, 10);
-  box-shadow: 0 ms(-4) ms(-3) darken($primary, 10);
+  text-shadow: 0 ms(-2) ms(-1) darken($WVUBlue, 7);
+  box-shadow: 0 ms(-8)  ms(-5) ms(-7) darken($WVUBlue, 7);
   &:hover, &:focus{
     border-radius:10%;
     border-color:$quadrary;
@@ -193,6 +193,8 @@ nav .b-social a{
   border:ms(-11) solid lighten($black,10);
   border-right:0;
 
+
+
   &:before{
     content: "SHARE";
     color:$WarmGrey3;
@@ -203,6 +205,8 @@ nav .b-social a{
 
   a{
     margin-top:ms(-4);
+    text-shadow: 0 ms(-2) ms(-1) darken($black, 2);
+    box-shadow: 0 ms(-8)  ms(-5) ms(-7) darken($black, 2);
   }
  }//end bp-desktop1-1
 }//end .b-social--share

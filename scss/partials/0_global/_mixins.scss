@@ -728,7 +728,7 @@ $parallax-ios         : true !default;
 //Dependencies: compass and modular scale
 ///////////////////////////////////
 
-@mixin flag($bgColor: $tertiary,  $textColor: $white,  $shadowColor: $coolblack, $font-size:$font-size-med){
+@mixin flag($bgColor: $tertiary,  $textColor: $white,  $shadowColor: $primary--shadow, $font-size:$font-size-med){
     position : relative;
     display : block;
     text-align : left;

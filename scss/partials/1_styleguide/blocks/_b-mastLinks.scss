@@ -4,7 +4,7 @@
 		display:inline; 
 		float:left;
 		padding: 0 ms(-3);
-		border-right:darken($primary,5) ms(-9) solid;
+		border-right:darken($WVUBlue,7) ms(-9) solid;
 		border-left:tint($primary, 10) ms(-11) solid;
 		&:last-child{ 
 			padding-right:0;
@@ -62,7 +62,7 @@
 	    }
 	    li:nth-child(3){
 			padding: 0 ms(-3);
-			border-right:darken($primary,5) ms(-9) solid;
+			border-right:darken($WVUBlue,7) ms(-9) solid;
 		}
 	}//end eq:large
 }

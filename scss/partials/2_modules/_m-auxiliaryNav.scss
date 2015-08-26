@@ -1,7 +1,7 @@
 .m-auxiliaryNav{
 	$bgColor: tint($secondary, 15);
 	$borderColor: $white;
-	$shadowColor: $coolblack;
+	$shadowColor: darken($WVUBlue, 7 );
 	$textColor: $black;
 	$linkColor: $tertiary;
 
@@ -10,7 +10,7 @@
 	min-height:1em;
 	background:$bgColor url(../images/noise.png) repeat; 
 	border-color: $borderColor;
-	box-shadow: 0 ms(-7) ms(-5) ms(-5) $shadowColor;
+	box-shadow: 0 ms(-8) ms(-5) ms(-7) $shadowColor;
 
 	
 	@include leading-border(ms(-4), $ms-7n, $font-size-med, solid);
