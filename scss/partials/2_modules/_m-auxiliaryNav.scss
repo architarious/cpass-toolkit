@@ -46,7 +46,7 @@
 		}
 	}
 
-	@include breakpoint($bp-mobile2-2 $bp-tablet-1){
+	@include breakpoint($bp-mobile2-2 $bp-tablet-1-1){
 		.m-auxiliaryNav__featLinkList{
 		  a{ @include adjust-font-size-to($font-size-med); }	
 		}

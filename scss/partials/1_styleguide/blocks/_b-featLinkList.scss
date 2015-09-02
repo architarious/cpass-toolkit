@@ -51,11 +51,11 @@
   			}
 		}//end a
 
-		@include breakpoint($bp-mobile1-1 $bp-tablet-1){
+		@include breakpoint($bp-mobile1-1 $bp-tablet-1-1){
 			width:100%;
 			float:left;
 		}//end mobile1 --> tablet
-		@include breakpoint($bp-tablet-1 $bp-desktop2-1){
+		@include breakpoint($bp-tablet-1-1 $bp-desktop2-1){
 		  a{
 			@include adjust-font-size-to($font-size-small-2);
 			@include rhythm(0, $ms-5n, $ms-9n, 0, $font-size-small-2);

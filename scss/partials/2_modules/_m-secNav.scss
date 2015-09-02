@@ -1,0 +1,72 @@
+#m-secNav{
+  $bgColor: shade($white,2);
+  $bgColor--lvl2: shade($bgColor, 15);
+  $bgColor--lvl3: shade($bgColor, 30);
+  $textColor: $tertiary;
+  $textColor--lvl2: darken($textColor, 5);
+  $textColor--lvl3: darken($textColor, 10);
+
+  @include rhythm($ms-0, 0, 0, $ms-0, $font-size-med);
+  width:100%; float:left;
+
+  ul{
+    width:100%; float:left;
+    list-style-type: none; padding-left: 0;
+    @extend .font-LtCn;
+    @include breakpoint($bp-tablet-1) {
+      padding-left: ms(0);
+    }
+    li { 
+      margin: 0; width:100%; float:left;
+      border-color: darken($bgColor, 10);
+      border-style:solid;
+      @include trailing-border(ms(-11), 0);
+      &:last-child{ border:0;}
+      a { text-decoration: none; 
+        @include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med-2);
+        @include adjust-font-size-to($font-size-med-2);
+        @include adjust-leading-to($ms-1, $font-size-large);
+        background:url(../images/noise.png) repeat, linear-gradient(to right, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
+        color:$textColor;
+        text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
+        width:100%;
+        float:left;
+        padding-left: ms(0);
+
+        &:hover, &:focus{
+          background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, $white);
+          color:$bgColor;
+          text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
+        }
+      }//end a
+      
+    }//end li
+
+    ul { 
+      $bgColor: $bgColor--lvl2;
+      font-weight: normal; width:100%; padding-left:0;
+      
+        > li {
+          margin:0;width:100%;
+          a{
+            @extend .font-BdCn;
+            @include adjust-leading-to($ms-0, $font-size-med);
+            @include adjust-font-size-to($font-size-med);
+            width:100%;
+            padding-left:ms(2);
+            background:url(../images/noise.png) repeat, linear-gradient(to right, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
+            color:$textColor--lvl2;
+            text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
+            }//end a
+          
+        }//end li  
+      }//end ul
+  }//end ul
+  > ul {
+    @include breakpoint($bp-tablet-1) {
+      border-left: 1px solid #eee;
+    }//end ul
+  }//end ul
+}//end .m-subNav
+
+#core #m-secNav ul{ padding-left:0;}

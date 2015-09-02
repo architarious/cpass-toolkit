@@ -905,18 +905,23 @@ $parallax-ios         : true !default;
       box-shadow:0 $width/16 $width/10 $width/(-23) shade($white, 35);
   } @if $bgColor == $coolblack{
       box-shadow:0 $width/15 $width/10 $width/(-25) darken($coolblack, 40);
+      border-image:none;
   } @if $bgColor == $black{
       box-shadow:0 $width/15 $width/10 $width/(-25) darken($black, 30);
+      border-image:none;
   } @if $bgColor == $WVUBlue{
       box-shadow:0 $width/15 $width/10 $width/(-25) darken($WVUBlue, 40);
+      border-image:none;
   } @if $bgColor == $WVUGold{
       box-shadow:0 $width/15 $width/10 $width/(-25) shade($WVUGold, 20);
+      border-image:none;
   }
 
   img{
     max-width:150%;
+    width:100%;
     height:auto;
-    margin: 0 0 0 -75%;
+    margin: 0 0 0 -50%;
     position:absolute;
     left:50%;
   }

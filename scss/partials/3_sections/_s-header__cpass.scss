@@ -32,7 +32,7 @@
       //.b-social{@include grid-span(4,1); }
       .b-search, .b-mastLinks, .b-social{display:none;}
     }
-    @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
+    @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1-1){
       @include grid-mobile2;
       .b-logo--wrapper{@include grid-span(6,1); clear:both;}
       .m-mastUtils{@include grid-span(6,1);}
