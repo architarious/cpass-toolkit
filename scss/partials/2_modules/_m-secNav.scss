@@ -1,10 +1,13 @@
 #m-secNav{
   $bgColor: shade($white,2);
-  $bgColor--lvl2: shade($bgColor, 15);
-  $bgColor--lvl3: shade($bgColor, 30);
+  $bgColor--lvl2: shade($bgColor, 10);
+  $bgColor--lvl3: shade($bgColor, 20);
   $textColor: $tertiary;
   $textColor--lvl2: darken($textColor, 5);
   $textColor--lvl3: darken($textColor, 10);
+  $activeBG: $WVUGold;
+  $activeText: $WVUBlue;
+
 
   @include rhythm($ms-0, 0, 0, $ms-0, $font-size-med);
   width:100%; float:left;
@@ -21,7 +24,7 @@
       border-color: darken($bgColor, 10);
       border-style:solid;
       @include trailing-border(ms(-11), 0);
-      &:last-child{ border:0;}
+      &:last-child, &:last-child a.active{ border:0;}
       a { text-decoration: none; 
         @include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med-2);
         @include adjust-font-size-to($font-size-med-2);
@@ -32,24 +35,67 @@
         width:100%;
         float:left;
         padding-left: ms(0);
+        padding-right: ms(-2);
+
+        @include standard-transition(background, 0.5s);
+        @include standard-transition(color, 0.05s);
 
         &:hover, &:focus{
-          background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, $white);
+          background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
           color:$bgColor;
           text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
         }
+
+       &.active{
+         background: url(../images/noise.png) repeat $white;
+         border-color: darken($bgColor, 15);
+         border-style:solid;
+         @include trailing-border(ms(-11), 0);
+       }
       }//end a
+
+      &.open{
+
+        border-color: darken($bgColor, 15);
+        border-style:solid;
+        @include trailing-border(ms(-11), 0);
+
+        & > a{
+          background: url(../images/noise.png) repeat $white;
+          border-color: darken($bgColor, 15);
+          border-style:solid;
+          @include trailing-border(ms(-11), 0);
+        
+          &:hover, &:focus{
+            background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+            color:$bgColor;
+            text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
+            border-color: darken($textColor, 15);
+            border-style:solid;
+            @include trailing-border(ms(-11), 0);
+          }//end hover, focus
+        }//end > a
+
+        & > ul li:first-child a{
+          box-shadow: inset 0 ms(-8) ms(-7) ms(-8)*(-1) shade(darken($bgColor, 15), 50);
+        }      
+      }//end li.open
       
-    }//end li
+    
 
     ul { 
       $bgColor: $bgColor--lvl2;
+      $textColor: $textColor--lvl2;
       font-weight: normal; width:100%; padding-left:0;
       
         > li {
           margin:0;width:100%;
+          border-color: darken($bgColor, 15);
+          border-style:solid;
+          @include trailing-border(ms(-11), 0);
+
           a{
-            @extend .font-BdCn;
+            @extend .font-Roman;
             @include adjust-leading-to($ms-0, $font-size-med);
             @include adjust-font-size-to($font-size-med);
             width:100%;
@@ -57,14 +103,63 @@
             background:url(../images/noise.png) repeat, linear-gradient(to right, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
             color:$textColor--lvl2;
             text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
+
+            &:hover, &:focus{
+              background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+              color:$bgColor;
+              text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
+            }
+            &.active{
+              background:url(../images/noise.png) repeat, linear-gradient(to right, darken($activeBG, 20) -11%, $activeBG 3%, lighten($activeBG, 5) 10%, lighten($activeBG, 35));
+              color:$activeText;
+              text-shadow: darken($activeBG, 10) 0 ms(-10) ms(-11);
+            }//end .active
             }//end a
+
+            ul { 
+              $bgColor: $bgColor--lvl3;
+              $textColor: $textColor--lvl3;
+              font-weight: normal; width:100%; padding-left:0;
+              
+                > li {
+                  margin:0;width:100%;
+                  border-color: darken($bgColor, 15);
+                  border-style:solid;
+                  @include trailing-border(ms(-11), 0);
+
+                  a{
+                    @extend .font-Roman;
+                    @include adjust-leading-to($ms-0, $font-size-med);
+                    @include adjust-font-size-to($font-size-small-2);
+                    width:100%;
+                    padding-left:ms(4);
+                    background:url(../images/noise.png) repeat, linear-gradient(to right, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
+                    color:$textColor--lvl2;
+                    text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
+
+                    &:hover, &:focus{
+                      background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+                      color:$bgColor;
+                      text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
+                    }
+                    &.active{
+                      background:url(../images/noise.png) repeat, linear-gradient(to right, darken($activeBG, 20) -11%, $activeBG 3%, lighten($activeBG, 5) 10%, lighten($activeBG, 35));
+                      color:$activeText;
+                      text-shadow: darken($activeBG, 10) 0 ms(-10) ms(-11);
+                    }//end .active
+                    }//end a
+                  
+                }//end third-level li  
+              }//end third-level ul
           
-        }//end li  
-      }//end ul
-  }//end ul
+        }//end second-level li  
+      }//end second-level ul
+
+      }//end top-level li
+  }//end top-level ul
   > ul {
     @include breakpoint($bp-tablet-1) {
-      border-left: 1px solid #eee;
+      //border-left: 1px solid #eee;
     }//end ul
   }//end ul
 }//end .m-subNav
