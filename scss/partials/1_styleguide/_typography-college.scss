@@ -187,6 +187,7 @@ table{
         @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-large);
         font-family: $Lt;
         font-weight: 300;
+        text-align:center;
     }
     tbody, thead{
         tr{ 

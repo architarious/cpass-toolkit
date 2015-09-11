@@ -103,6 +103,10 @@
                     color:$WarmGrey1;
                   }
             }
+
+            li{
+              @include adjust-font-size-to($font-size-med-2);
+            }
             h1{
               @include adjust-font-size-to($font-size-xlarge-2);
                   @include rhythm($ms-3, 0, 0, $ms-3, $font-size-xlarge-2);
@@ -147,7 +151,7 @@
           }//end $bp-dekstop1-1
 
           @include breakpoint($bp-desktop2-1){
-            p{
+            p, li{
                   color:tint($black, 4.722);
 
                   &.kicker{

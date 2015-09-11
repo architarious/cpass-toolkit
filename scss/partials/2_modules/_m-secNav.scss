@@ -1,12 +1,12 @@
-#m-secNav{
-  $bgColor: shade($white,2);
+@mixin secNav($side:right, $bgColor: shade($white, 2), $textColor: $tertiary, $activeBG:$WVUGold, $activeText:$WVUBlue){
+
+  #m-secNav{
   $bgColor--lvl2: shade($bgColor, 10);
   $bgColor--lvl3: shade($bgColor, 20);
-  $textColor: $tertiary;
   $textColor--lvl2: darken($textColor, 5);
   $textColor--lvl3: darken($textColor, 10);
-  $activeBG: $WVUGold;
-  $activeText: $WVUBlue;
+
+
 
 
   @include rhythm($ms-0, 0, 0, $ms-0, $font-size-med);
@@ -15,10 +15,19 @@
   ul{
     width:100%; float:left;
     list-style-type: none; padding-left: 0;
-    @extend .font-LtCn;
+    font-family: $LtCn; font-weight:300;
     @include breakpoint($bp-tablet-1) {
-      padding-left: ms(0);
-    }
+      @if $side=='right'{
+        padding-left: ms(0);
+        padding-right:0;
+
+        ul{ padding-left: ms(-4); padding-right:0; }
+      }@else{
+        padding-right:ms(0); padding-left:0;
+        ul{ padding-right: ms(-4); padding-left:0;}
+      }
+      
+    }//end breakpoint
     li { 
       margin: 0; width:100%; float:left;
       border-color: darken($bgColor, 10);
@@ -29,7 +38,7 @@
         @include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med-2);
         @include adjust-font-size-to($font-size-med-2);
         @include adjust-leading-to($ms-1, $font-size-large);
-        background:url(../images/noise.png) repeat, linear-gradient(to right, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
+        background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
         color:$textColor;
         text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
         width:100%;
@@ -41,7 +50,7 @@
         @include standard-transition(color, 0.05s);
 
         &:hover, &:focus{
-          background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+          background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
           color:$bgColor;
           text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
         }
@@ -62,12 +71,9 @@
 
         & > a{
           background: url(../images/noise.png) repeat $white;
-          border-color: darken($bgColor, 15);
-          border-style:solid;
-          @include trailing-border(ms(-11), 0);
-        
+          border-bottom:0;
           &:hover, &:focus{
-            background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+            background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
             color:$bgColor;
             text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
             border-color: darken($textColor, 15);
@@ -86,7 +92,12 @@
     ul { 
       $bgColor: $bgColor--lvl2;
       $textColor: $textColor--lvl2;
-      font-weight: normal; width:100%; padding-left:0;
+      font-weight: normal; width:100%;
+      @if $side=='right'{
+         box-shadow: inset ms(-6) ms(-3) ms(5) ms(-11) shade($bgColor, 30);
+      }@else{
+         box-shadow: inset ms(-6)*(-1) ms(-3) ms(5) ms(-11) shade($bgColor, 30);
+      }
       
         > li {
           margin:0;width:100%;
@@ -95,22 +106,22 @@
           @include trailing-border(ms(-11), 0);
 
           a{
-            @extend .font-Roman;
+            font-family:$Roman; font-weight:400;
             @include adjust-leading-to($ms-0, $font-size-med);
             @include adjust-font-size-to($font-size-med);
             width:100%;
             padding-left:ms(2);
-            background:url(../images/noise.png) repeat, linear-gradient(to right, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
+            background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
             color:$textColor--lvl2;
             text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
 
             &:hover, &:focus{
-              background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+              background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
               color:$bgColor;
               text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
             }
             &.active{
-              background:url(../images/noise.png) repeat, linear-gradient(to right, darken($activeBG, 20) -11%, $activeBG 3%, lighten($activeBG, 5) 10%, lighten($activeBG, 35));
+              background:url(../images/noise.png) repeat, linear-gradient(to $side, darken($activeBG, 20) -11%, $activeBG 3%, lighten($activeBG, 5) 10%, lighten($activeBG, 35));
               color:$activeText;
               text-shadow: darken($activeBG, 10) 0 ms(-10) ms(-11);
             }//end .active
@@ -119,7 +130,13 @@
             ul { 
               $bgColor: $bgColor--lvl3;
               $textColor: $textColor--lvl3;
-              font-weight: normal; width:100%; padding-left:0;
+              font-weight: normal; width:100%; 
+              @if $side=='right'{
+                box-shadow: inset ms(-2) ms(-3) ms(4) ms(-11) shade($bgColor, 16), ms(-10)*(-1) 0 0 0 shade($bgColor, 18);
+              }@else{
+                box-shadow: inset ms(-2)*(-1) ms(-3) ms(4) ms(-11) shade($bgColor, 16), ms(-10) 0 0 0 shade($bgColor, 18);
+              }
+
               
                 > li {
                   margin:0;width:100%;
@@ -128,22 +145,22 @@
                   @include trailing-border(ms(-11), 0);
 
                   a{
-                    @extend .font-Roman;
+                    font-family:$Roman; font-weight:400;
                     @include adjust-leading-to($ms-0, $font-size-med);
                     @include adjust-font-size-to($font-size-small-2);
                     width:100%;
                     padding-left:ms(4);
-                    background:url(../images/noise.png) repeat, linear-gradient(to right, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
+                    background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
                     color:$textColor--lvl2;
                     text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
 
                     &:hover, &:focus{
-                      background:url(../images/noise.png) repeat, linear-gradient(to right, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+                      background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
                       color:$bgColor;
                       text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
                     }
                     &.active{
-                      background:url(../images/noise.png) repeat, linear-gradient(to right, darken($activeBG, 20) -11%, $activeBG 3%, lighten($activeBG, 5) 10%, lighten($activeBG, 35));
+                      background:url(../images/noise.png) repeat, linear-gradient(to $side, darken($activeBG, 20) -11%, $activeBG 3%, lighten($activeBG, 5) 10%, lighten($activeBG, 35));
                       color:$activeText;
                       text-shadow: darken($activeBG, 10) 0 ms(-10) ms(-11);
                     }//end .active
@@ -165,3 +182,7 @@
 }//end .m-subNav
 
 #core #m-secNav ul{ padding-left:0;}
+
+}//end mixin
+
+@include secNav(left);

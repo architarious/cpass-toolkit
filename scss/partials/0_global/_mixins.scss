@@ -133,7 +133,7 @@
 ///////////////////////////////////
 @mixin standard-transition($property:color, $duration:0.2s, $function:ease-in){
   transition-property: $property;
-  transition-duration: $duration;
+  transition-duration: $duration;  
   transition-timing-function: $function;
 
   //@include transition-property(background, box-shadow);

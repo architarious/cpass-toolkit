@@ -180,6 +180,7 @@ nav .b-social a{
  @include breakpoint($bp-desktop1-1){
   display:block;
   position:fixed;
+  z-index:10000;
   right:0;
   max-width:ms(4);
   width:6.18%;
@@ -206,7 +207,7 @@ nav .b-social a{
   a{
     margin-top:ms(-4);
     text-shadow: 0 ms(-2) ms(-1) darken($black, 2);
-    box-shadow: 0 ms(-8)  ms(-5) ms(-7) darken($black, 2);
+    box-shadow: 0 ms(-9)  ms(-11) ms(-11) lighten($black, 2);
   }
  }//end bp-desktop1-1
 }//end .b-social--share
