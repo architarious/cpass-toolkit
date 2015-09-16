@@ -375,6 +375,8 @@
 
 }//end btn
 
+
+
 ///////////////////////////////////
 ///Hide-Text Mixin
 //
@@ -728,7 +730,7 @@ $parallax-ios         : true !default;
 //Dependencies: compass and modular scale
 ///////////////////////////////////
 
-@mixin flag($bgColor: $tertiary,  $textColor: $white,  $shadowColor: $primary--shadow, $font-size:$font-size-med){
+@mixin flag($bgColor: $tertiary,  $textColor: $white,  $shadowColor: $primary--shadow, $font-size:$font-size-med, $fontWeight: $BdCn){
     position : relative;
     display : block;
     text-align : left;
@@ -739,10 +741,30 @@ $parallax-ios         : true !default;
     color:$textColor;
     padding:0 ms(-2);
     text-shadow: 0 ms(-9) ms(-10) shade($bgColor, 15);
-    
-    font-family:$BdCn;
-    font-weight:800;
+    @if $fontWeight == $BlkCn{ 
+      font-family:$BlkCn;
+      font-weight:900;
+    }@else if $fontWeight == $BdCn{
+      font-family:$BdCn;
+      font-weight:800;
+    }@else if $fontWeight == $Bd{
+      font-family:$Bd;
+      font-weight:500;
+    }@else if $fontWeight == $Roman{
+      font-family:$Roman;
+      font-weight:400;
+    }@else if $fontWeight == $LtCn{
+      font-family:$LtCn;
+      font-weight:300;
+    }@else if $fontWeight == $Lt{
+      font-family:$Lt;
+      font-weight:200;
+    }@else if $fontWeight == $BdCn{
+      font-family:$BdCn;
+      font-weight:800;
+    }
     @include adjust-font-size-to($font-size);
+    line-height: $font-size;
     @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size);
     z-index:2;
 

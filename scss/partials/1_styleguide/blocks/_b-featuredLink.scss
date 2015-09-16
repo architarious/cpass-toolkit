@@ -1,5 +1,11 @@
-.b-featuredLink{
-   background:url(../images/noise.png) repeat $white;
+@mixin b-featuredLink( 	$bgColor: $white, 
+						$flag--bgColor:$tertiary, 
+						$flag--textColor: $white, 						
+						$shadowColor: $primary--shadow, 
+						$fontSize: $font-size-med, 
+						$fontWeight: $BdCn){
+ .b-featuredLink{
+   background:url(../images/noise.png) repeat $bgColor;
    padding: ms(-7);
    margin-top:ms(-4);
    position:relative;
@@ -9,17 +15,18 @@
    }
 
 	h3{
-	 @include flag;
-	 @include rhythm(0, $ms-6n, $ms-6n, 0, $font-size-med);
+	 @include flag($flag--bgColor,  $flag--textColor, $primary--shadow, $fontSize, $fontWeight);
+	 @include rhythm(0, $ms-6n, $ms-6n, 0, $fontSize);
 	 //box-shadow:0;
 	 //&:after{box-shadow:0;}
+	 max-width:88%;
 	 position: absolute;
 	 top:-(ms(-4));
 	 left:-(ms(-5));
 	 text-transform:uppercase;
 	}
 	img{ }
-	span.outer{ 
+	.outer{ 
 		overflow:hidden;
 		height:ms(6);
 		width:ms(4);
@@ -29,12 +36,12 @@
 
 	}
 
-	span.inner{
+	.inner{
 	  position:absolute;
 	  bottom:0;
 	  right:-(ms(3));
 	  @include adjust-font-size-to($font-size-med);
-	  background: url(../images/noise.png) repeat $white;
+	  background: url(../images/noise.png) repeat $bgColor;
 	  height:ms(6);
 	  width:ms(5);
 	  transform:skewX(-32deg);
@@ -63,5 +70,128 @@
 	  	color:$SecDarkOrange;
 	  }
 	}
-}
+ }//end /b-featuredLink
+}//end mixin
+
+
+///////////////////////////////////
+///b-featuredLink--mini Mixin
+//
+//DESCRIPTION: For when you want your featuredLink to be more minimal
+//USAGE: @include b-featuredLink--mini(100px, $WVUBlue, $WVUGold);
+//DEPENDENCIES:  .b-featuredLink, ribbon mixin, modular scale 
+///////////////////////////////////
+@mixin b-featuredLink--mini($height:ms(7), 
+							$bgColor:$tertiary, 
+							$textColor: $white, 
+							$stripeColor: $WVUGold,
+							$shadowColor: $primary--shadow, 
+							$fontSize: $font-size-med-2,
+							$fontWeight: $BlkCn){
+
+  //@if $height > ms(7){ $fontSize: $fontSize*1.618}
+
+  background:url(../images/noise.png) repeat $bgColor;
+  width:100%;
+  float:left;
+  padding:0;
+  padding-right:$height/$ms-1;
+  height:$height;
+  box-shadow: 0 ms(-7) ms(-6) ms(-7)*(-1) $shadowColor;
+
+  transition-property: background, box-shadow;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in;
+
+  &:hover, &:focus{
+    background:url(../images/noise.png) repeat lighten($bgColor, 6);
+    box-shadow: 0 ms(-8) ms(-8) 0px set-alpha($shadowColor, 0.5);
+  }
+  &:active{
+    background:url(../images/noise.png) repeat darken($bgColor, 6);
+  }
+
+  h3{
+    margin-left: $height*1.618+ms(0);
+    padding-left: 0;
+    min-width:$height*1.618;
+    height:auto;
+    width:auto;
+    max-width:60%;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    color:$textColor;
+    text-shadow: 0 ms(-9) ms(-10) shade($bgColor, 15);
+    background:none;
+    box-shadow:none;
+    &:before{
+      content:none;
+    }
+    &:hover,&:focus,&:active{
+    	background:none; box-shadow:none;
+    	.outer .inner{ background:url(../images/noise.png) repeat lighten($stripeColor, 10);}
+    	&:before{
+    		background:none; box-shadow:none;
+    	}
+    }//end &:states
+
+    font-size: $fontSize;
+    line-height: $fontSize*1.25;
+    @if $fontWeight == $BlkCn{ 
+      font-family:$BlkCn;
+      font-weight:900;
+    }@else if $fontWeight == $BdCn{
+      font-family:$BdCn;
+      font-weight:800;
+    }@else if $fontWeight == $Bd{
+      font-family:$Bd;
+      font-weight:500;
+    }@else if $fontWeight == $Roman{
+      font-family:$Roman;
+      font-weight:400;
+    }@else if $fontWeight == $LtCn{
+      font-family:$LtCn;
+      font-weight:300;
+    }@else if $fontWeight == $Lt{
+      font-family:$Lt;
+      font-weight:200;
+    }@else if $fontWeight == $BdCn{
+      font-family:$BdCn;
+      font-weight:800;
+    }
+  }//end h3
+
+  img{
+    height:$height;
+    width:$height*1.618;
+    box-shadow: ms(-7) 0 ms(-11) ms(-11)*(-1) lighten($bgColor, 8);
+    border-right:ms(-11) solid darken($bgColor, 3);
+    //border-radius:100%;
+    max-width:$height*1.618;
+    float:left;
+    //border:ms(-9) solid $textColor;
+    position: relative; 
+    z-index:5;
+    //margin-top:-($height/$ms-7);
+  }
+  .outer{//display:none;
+    height: $height;
+    width: $height/$ms-1; //91px
+    right: 0;// 12px
+    .inner{
+      height: $height;
+      width: ms(3); //35px
+      right: $height/$ms-8;//12px;
+      background:url(../images/noise.png) repeat $stripeColor;
+      &:before{
+        color:$textColor;
+        right:-($height/$ms-5);//-26px
+      }//end &:before
+    }//end .inner
+  }//end .outer
+}//end b-featuredLink--mini
+
+
+@include b-featuredLink;
 
