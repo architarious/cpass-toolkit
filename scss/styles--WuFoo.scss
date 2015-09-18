@@ -1,0 +1,105 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+ Title : Example Custom CSS : DinoMaster!
+ URL : http://wufoo.com
+
+ Last Updated : April 1, 2011
+
+- - - - - - - - - - - - - - - - - - - - - 
+
+INSTRUCTIONS
+1. Copy / Paste all or portions of these
+CSS rules into "custom.css".
+
+2. Experiment and play.
+
+- - - - - - - - - - - - - - - - - - - - - */
+
+/* - - - Default - - - */
+
+@import "partials/0_global/base-global";
+@import 'partials/1_styleguide/colors';
+@import 'partials/1_styleguide/fonts';
+@import 'partials/1_styleguide/typography-base';
+@import 'partials/1_styleguide/typography-college';
+
+/* Logo */
+#logo a {background:none;}
+
+/* Backgrounds */
+html{background:none;}
+#logo{background:none;}
+#container{background:none;}
+.wufoo input.text, .wufoo textarea.textarea{background:#FFFFFF url(/images/fieldbg.gif) repeat-x top}
+.wufoo .focused{background:#FFF7C0}
+.wufoo .instruct{background-color:#F5F5F5}
+
+/* Borders */
+#container{border:0 solid #cccccc}
+.wufoo .info{border-bottom:1px dotted #CCCCCC;
+	@include rhythm(0, 0, 0, $ms-0, $font-size-med);
+	}//end .wuFoo .info
+.wufoo .instruct{border:1px solid #e6e6e6}
+
+/* Typography */
+.wufoo .info h2{
+	@include adjust-font-size-to($font-size-xlarge);
+	@include rhythm(0, $ms-4, $ms-5n, $ms-1n, $font-size-xlarge);
+	@include trailing-border(ms(-8), $ms-4n);
+	border-image:url(../images/patternBar.jpg) 1 0;
+}
+.wufoo .info div{
+	@include adjust-font-size-to($font-size-med);
+	@include adjust-leading-to($ms-1);
+	@include rhythm($ms-1, 0, 0, $ms-3n, $font-size-med);
+
+	max-width: 50em;
+	font-family: $font-paragraph;
+	font-weight: 400;
+	color:$black;
+}
+.wufoo .section h3{
+	 @include adjust-font-size-to($font-size-large-2);
+    @include rhythm(0, $ms-4, 0, $ms-1n, $font-size-large-2);
+    @include trailing-border(ms(-9), $ms-4n);
+    border-bottom-style:dotted;
+}
+.wufoo .section div{
+	@include adjust-font-size-to($font-size-med);
+}
+.wufoo label.desc, .wufoo legend.desc{
+	@include adjust-font-size-to($font-size-med-2);
+	color:$MidGrey;
+	@extend .font-Bd;
+}
+.wufoo li div, .wufoo li div label, .wufoo li span label{
+
+	color:$WarmGrey1;
+	@include adjust-font-size-to($font-size-small-2);
+
+}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{font-size:100%;font-family:inherit;color:#333333}
+.wufoo label.choice{color:#444444}
+.wufoo .instruct{font-size:80%;font-family:inherit;color:#444444
+} 
+.wufoo li span label{
+}
+
+
+/*text inputs */
+.wufoo input.text{
+	@include adjust-font-size-to($font-size-med);
+	border:0;
+	border-bottom:ms(-9) solid $MidGrey;
+	color:$WarmGrey2;
+	&:active, &:focus{
+		border:0;
+		border-bottom:ms(-9) solid $tertiary;
+		color:$WarmGrey1;
+		outline:none;
+	}
+}
+
+.wufoo .buttons input{
+	@include btn;
+}
