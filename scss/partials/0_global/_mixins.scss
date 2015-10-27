@@ -255,9 +255,12 @@
     }
 
     &:visited{
-      color:lighten($quadrary, 5);
+      color:mix($bg-color, $tx-color, 35);
       @include letterpress();
       text-decoration:none;
+      &:after{
+        color:mix($bg-color, $tx-color, 35);
+      }
     }
 
     &.disabled {
@@ -289,12 +292,12 @@
 
  @if $withCircle == 'true'{  
   &:after{
-    background-color: shade($bg-color, 2);
+    background-color: mix($shadow, $bg-color, 2);
     background-image: url(../images/noise.png);
     background-repeat: repeat;
 
     font-family:'icomoon';
-    color:$white;
+    color:$tx-color;
     content: $icon;
     text-align:center;
     @include standard-text-shadow(darken($bg-color, 20));
@@ -316,22 +319,24 @@
     margin-top: -($ms-2n+em);
 
     @include border-radius(50%);
-    @include box-shadow(darken($bg-color, 5) 0 $ms-8n+em 0 inset, lighten($bg-color, 5) 0 $ms-11n+em 0);
+    @include box-shadow(mix($shadow, $bg-color, 15) 0 $ms-8n+em 0 inset, lighten($bg-color, 5) 0 $ms-11n+em 0);
     @include standard-transition(background);
     @include standard-transition(box-shadow);
     }//end before
 
     &:hover:after, &:focus:after{
-      background-color:shade($bg-color, 40);
-      @include box-shadow(darken($bg-color, 60) 0 $ms-3n+em 0 inset, lighten($bg-color, 20) 0 $ms-11n+em 0);
-      text-shadow: darken($bg-color, 60) 0 $ms-7n+em $ms-7n+em;
+      background-color:mix($shadow, $bg-color, 15);
+      @include box-shadow(mix($shadow, $bg-color, 25) 0 $ms-3n+em 0 inset, lighten($bg-color, 20) 0 $ms-11n+em 0);
+      text-shadow: mix($shadow, $bg-color, 15) 0 $ms-7n+em $ms-7n+em;
+      color:$tx-color;
 
     }//end hover
 
     &:active:after{
       background-color:lighten($bg-color, 15);
-      @include box-shadow(darken($bg-color, 60) 0 $ms-11n+em 0 inset, lighten($bg-color, 20) 0 $ms-7n+em 0);
-      text-shadow: darken($bg-color, 60) 0 $ms-11n+em 0;
+      @include box-shadow(mix($shadow, $bg-color, 10) 0 $ms-11n+em 0 inset, lighten($bg-color, 20) 0 $ms-7n+em 0);
+      text-shadow: mix($shadow, $bg-color, 15) 0 $ms-11n+em 0;
+      color:$tx-color;
     }//end :active
 
     }@else{  
@@ -339,7 +344,7 @@
     &:after{
 
     font-family:'icomoon';
-    color:$white;
+    color:$tx-color;
     content: $icon;
     text-align:center;
     @include standard-text-shadow(darken($bg-color, 20));

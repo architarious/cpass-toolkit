@@ -15,7 +15,7 @@
 //  If you'd prefer a soft reset, uncomment `normalize`
 //////////////////////////////
 @import 'compass/reset';
-// @import 'normalize';
+@import 'normalize';
 
 
 ///////////////////////////////
@@ -44,9 +44,9 @@
 \*--------------------------------------*/
 @import '../../wvu-patterns/1-base/wvu-masthead';
 @import '../../wvu-patterns/1-base/wvu-footer';
-@include wvu-masthead-is-two-line-lockup(true);
-@include wvu-masthead-has-signature(true);
-@include wvu-masthead-background(white);
+@include wvu-masthead-is-two-line-lockup();
+@include wvu-masthead-has-signature();
+@include wvu-masthead-background();
 
 
 

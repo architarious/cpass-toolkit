@@ -1,12 +1,28 @@
+@mixin b-cta__news($background:$coolblack,
+                   $link-color:$white,
+                   $title-color:$white, 
+                   $shadow:$coolblack2 ){
+
 .b-cta__news{
+
+	.title{
+    color:$title-color;
+    border-color:mix($title-color, $background, 5);
+    border-image:none;
+    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
+    max-width:100%; 
+    }//end .title
+
 	ul{
 		li{
 			width:100%;
 			float:left;
 			@include rhythm(0, 0, $ms-8n, $ms-4n, $font-size-small-2);
 			@include trailing-border(ms(-7), $ms-2n, $font-size-med, solid);
-			border-color:darken($black, 20);
-			box-shadow:0 ms(-10) 0 0 set-alpha($black,0.75); 
+			border-color:$shadow;
+			box-shadow:0 ms(-10) 0 0 tint($background, 10);
 			&:last-child{border-bottom:0; box-shadow:none;} 
 
 
@@ -15,18 +31,47 @@
 				width:100%;  
 				@include adjust-font-size-to($font-size-med);  
 				@include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-med);
-				color:$quadrary;
+				color:$link-color;
+				position:relative;
+				padding-right:ms(2);
+				@include standard-transition(color);
+
+				&:after{
+						font-family:'icomoon';
+						color:mix($title-color, $background, 5);
+						content: "\e6bd";
+						font-weight:100;
+						line-height:$ms-2+$ms-8n+em;    
+						font-size:$ms-0+em;
+
+						width: $ms-2+$ms-8n+em;    
+						height: $ms-2+$ms-8n+em;
+						position: absolute;    
+						top: 56%;
+						right:0;
+						transform: translateY(-50%);
+					}//end :after
 				
 
 				&:hover,&:focus{
 					background:none;
-					color:lighten($quadrary,10);
+					color:lighten($link-color,10);
 					outline:0;
+					&:after{
+						color:lighten($link-color,10);
+					}
+
+					
 				}//end hover
 				&:visited, &:active{
-					color: darken($quadrary, 5);
+					color: darken($link-color, 5);
 				}
+
+
+
 			}//end a
 		}//end li
 	}//end ul
-}
+}//end .b-cta__news
+}//end mixin
+@include b-cta__news();

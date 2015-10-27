@@ -4,14 +4,10 @@
 // This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layouts, modules, and states partials.
 ////////////////////////
 
-//@import 'wvu-patterns/0-plugins/plugins-dir';
-//@import 'wvu-patterns/1-base/base-dir';
+@import 'wvu-patterns/0-plugins/plugins-dir';
+@import 'wvu-patterns/1-base/base-dir';
 //@import 'wvu-patterns/2-modules/modules-dir';
 //@import 'wvu-patterns/3-layouts/layouts-dir';
-
-@import 'wvu-patterns/0-plugins/wvu-utilities/media-queries';
-@import 'wvu-patterns/0-plugins/wvu-utilities/h5bp-helpers';
-@import 'wvu-patterns/1-base/breakpoints';
 
 
 

@@ -1,4 +1,23 @@
+@mixin b-cta__about($background:$coolblack,
+                    $background-btn:$black,                     
+                    $background-btn-active:$WVUGold, 
+                    $text-btn:$white, 
+                    $text-btn-active:$primary,
+                    $title-color:$white,
+                    $shadow:$coolblack2     ){
+
 .b-cta__about{
+
+  .title{
+    color:$title-color;
+    border-color:mix($title-color, $background, 5);
+    border-image:none;
+    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
+    max-width:100%; 
+  }
+
   .nav-list li{ 
     width:100%;
     float:left;
@@ -6,12 +25,12 @@
     a{
     width:100%;
     float:left;
-    @include btn_icon( $black, darken($black,10), $white, "\e6bd",  "true");
+    @include btn_icon( $background-btn, $shadow, $text-btn, "\e6bd",  "true");
     //@include add-noise;
     //background-color:$black;
     @include adjust-font-size-to($font-size-med);
     @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
-    @include trailing-border(ms(-7), $ms-2n, $font-size-med, solid);
+    @include trailing-border(ms(-10), $ms-2n, $font-size-med, solid);
     text-transform:none;
     font-family:$Bd;
     font-weight:500;
@@ -30,19 +49,19 @@
 
       }
       &.open .dropdown-toggle{
-        @include btn_icon( $quadrary, darken($quadrary,15), $black, "\e643",  "true");
+        @include btn_icon( $background-btn-active, $shadow, $text-btn-active, "\e643",  "true");
         @include adjust-font-size-to($font-size-med+ms(-8));
         @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
         text-transform:none;
         &:hover:after{
-            color:$white;
+            color:$text-btn;
             border:0;
-            text-shadow: 0 ms(-9) ms(-9) 0 darken($quadrary, 45);
+            text-shadow: 0 ms(-9) ms(-9) 0 darken($background-btn-active, 45);
         }
         &:after{   
           content: "\e644"; 
-          color:$black;
-          border:darken($quadrary, 8) ms(-11) solid;
+          color:$text-btn;
+          border:darken($background-btn-active, 8) ms(-11) solid;
 
         }//end :after
       }//end &.open .dropdown-toggle
@@ -50,14 +69,14 @@
           margin-top:-1px;
           padding:0 ms(-2);              
           @include add-noise;
-          background-color: set-alpha(darken($black,30), 0.95);
+          background-color: set-alpha(darken($background-btn,10), 0.95);
           width:100%;
           @include trailing-border(ms(-10), $ms-2n, $font-size-small-2, solid);
-          border-bottom-color:shade($black,10);
+          border-bottom-color:shade($background-btn,10);
           border-top-left-radius:0;
           border-top-right-radius:0;
-          box-shadow: 0 ms(-3) ms(-5) 0 shade($black,20) inset;
-          top:111%;
+          box-shadow: 0 ms(-3) ms(-5) 0 shade($background-btn,20) inset;
+          top:100%;
 
 
           li a{
@@ -71,7 +90,7 @@
           .dropdown-header{
             @include adjust-font-size-to($font-size-small);
             text-transform:uppercase;
-            color:$WarmGrey2;
+            color:$text-btn;
             float:left;
             @extend .font-Roman;
             white-space:normal;
@@ -105,3 +124,5 @@
     .dropdown-menu li a{} 
   }
 }//end b-cta__about
+}//end mixin
+@include b-cta__about();

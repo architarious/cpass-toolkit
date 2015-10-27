@@ -128,6 +128,17 @@ editable_region:
     <li><a href="#">PETE grad expands PE program at area elementary school</a></li><li><a href="#">SM students connect with the industry through Sport Governance class</a></li>
     <li><a href="#">ACE grad lands prestigious internship with USOC</a></li></ul>
 
+  wvu-hero-title-top: It Starts
+  wvu-hero-title-bottom: Now.
+  wvu-hero-text: |
+    <p>So let's go. Release the Mountaineer spirit inside of you. Reach the limits of what you can do and then keep on going.</p><a href="" class="button button--white">Learn More</a>
+  wvu-hero__text: So let&rsquo;s go. Release the Mountaineer spirit inside of you. Reach the limits of what you can do and then keep on going.
+  wvu-hero__button-text:
+    <a href="#" class="btn">Continue Reading</a>
+  wvu-hero__title-top: It Starts
+  wvu-hero__title-bottom: Now.
+  wvu-hero__photo: <img src="../images/kids-sitting-by-tulips.jpg" alt="it starts now"/>
+ 
 site_name: "CPASS toolkit"
 
 page:

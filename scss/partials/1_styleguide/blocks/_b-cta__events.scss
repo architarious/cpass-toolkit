@@ -1,8 +1,26 @@
+@mixin b-cta__events($background:$coolblack,
+                     $background-btn:$black, 
+                     $text-btn:$white, 
+                     $text-color:$WarmGrey3,
+                     $link-color:$white,
+                     $title-color:$white, 
+                     $shadow:$coolblack2 ){
+
 .b-cta__events{
 	.title{
+    color:$title-color;
+    border-color:mix($title-color, $background, 5);
+    border-image:none;
+    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
+    max-width:100%; 
+
+
 		.title__link{
 			float:right;
-			@include btn(set-alpha(darken($black, 10),0.5), darken($black, 20));
+			@include btn(mix($title-color, $background, 5), $shadow, $text-btn);
+      background-image:none;
 			@include adjust-font-size-to($font-size-small-2);  
 			@include rhythm($ms-7n, $ms-10n, $ms-10n, 0, $font-size-small-2);
 			@include breakpoint($bp-mobile1-1){
@@ -25,8 +43,8 @@
     	float:left;
     	@include rhythm(0, 0, $ms-8n, $ms-4n, $font-size-small-2);
     	@include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
-    	border-color:darken($black, 20);
-    	box-shadow:0 ms(-10) 0 0 set-alpha($black,0.75);
+    	border-color:$shadow;
+    	box-shadow:0 ms(-10) 0 0 tint($background, 10);
 
     	&:last-child{
     		border-bottom:0;
@@ -40,7 +58,7 @@
       	text-align: center; 
       	padding-bottom: ms(-4);
       	max-width:25%;  
-      	@include btn($black, darken($black, 20));
+      	@include btn($background-btn, $shadow, $text-btn);
       	@include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2);
       	}//end .b-wvuCalendar__event
 
@@ -73,24 +91,24 @@
         .eventTime { 
         	@extend .font-LtCn; 
         	@include adjust-font-size-to($font-size-med);
-        	text-shadow:0 $ms-10n $ms-11n darken($black, 20);
-        	color:$WarmGrey3;
+        	text-shadow:0 $ms-10n $ms-11n darken($background-btn, 20);
+        	color:$text-color;
         }
         .eventName { 
         	display: block; 
         	a{
         	  background:transparent; padding:0; margin:0;
-            color:$quadrary;
+            color:$link-color;
         	  @include adjust-font-size-to($font-size-small-2);
         	  @include adjust-leading-to($ms-1n);
         	  @include rhythm($ms-4n, 0, 0, 0, $font-size-small-2);
 
         	  &:hover,&:focus{
-        	  	color:lighten($quadrary,10);
+        	  	color:lighten($link-color,10);
               outline:0;
         	  }
             &:visited, &:active{
-              color: darken($quadrary, 5);
+              color: darken($link-color, 5);
             }
         	  
         	}//end a
@@ -106,7 +124,7 @@
   			@include adjust-font-size-to($font-size-large-2);
       		@include adjust-leading-to(1);
       		@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-small-2);  
-      		color:set-alpha($white,0.7);		
+      		color:set-alpha($text-btn,0.7);		
   		    display:inline;
   		    margin-right:ms(-4);
   		}
@@ -163,3 +181,5 @@
   }//end data-eq-state="medium"
 
 }//end .b-cta__events
+}//end mixin
+@include b-cta__events();

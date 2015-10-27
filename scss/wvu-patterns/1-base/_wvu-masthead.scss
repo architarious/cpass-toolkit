@@ -20,7 +20,7 @@ $flying-wv-w-signature-white-bg: 'https://patterns.wvu.edu/images/flying-wv-w-si
   gold-pattern
 */
 
-@mixin wvu-masthead-is-two-line-lockup($wvu-masthead-two-line-lockup: true) {
+@mixin wvu-masthead-is-two-line-lockup() {
   @if $wvu-masthead-two-line-lockup == true {
     .wvu-masthead__title { font-size: 0.6em; line-height: 1.08333333em; float: left; margin-top: 0.1em; 
       @include mq($bp-medium) {
@@ -35,7 +35,7 @@ $flying-wv-w-signature-white-bg: 'https://patterns.wvu.edu/images/flying-wv-w-si
   }
 }
 
-@mixin wvu-masthead-background($wvu-masthead-background: 'blue') {
+@mixin wvu-masthead-background() {
   @if $wvu-masthead-background == 'gold' {
     .wvu-masthead { background-color: $wvu-gold; color: $wvu-blue; background-image: none; }
     input[type="submit"] {
@@ -80,7 +80,7 @@ $flying-wv-w-signature-white-bg: 'https://patterns.wvu.edu/images/flying-wv-w-si
     }
   }
   @else if $wvu-masthead-background == 'blue-pattern' {
-    .wvu-masthead { background: url(https://patterns.wvu.edu/images/pattern-blue.jpg) no-repeat; background-size: cover; background-color: $wvu-blue; }
+    .wvu-masthead { background: url(https://patterns.wvu.edu/images/pattern-blue.jpg) no-repeat; background-size: cover; background-color: $wvu-blue; -webkit-font-smoothing: antialiased;}
   }
   @else if $wvu-masthead-background == 'gold-pattern' {
     .wvu-masthead { background: url(https://patterns.wvu.edu/images/pattern-gold.jpg) no-repeat; color: $wvu-blue; background-size: cover; }
@@ -104,7 +104,7 @@ $flying-wv-w-signature-white-bg: 'https://patterns.wvu.edu/images/flying-wv-w-si
     }
   }
   @else {
-    .wvu-masthead { background-color: $wvu-blue; color: white; }
+    .wvu-masthead { background-color: $wvu-blue; color: white; -webkit-font-smoothing: antialiased;}
     .wvu-masthead__logo { color: white;
       &:visited { color: white; }
     }
@@ -122,7 +122,7 @@ $flying-wv-w-signature-white-bg: 'https://patterns.wvu.edu/images/flying-wv-w-si
   }
 }
 
-@mixin wvu-masthead-has-signature($wvu-masthead-has-signature: true) {
+@mixin wvu-masthead-has-signature {
   @if $wvu-masthead-has-signature == true {
     .wvu-masthead__logo {
       background-repeat: no-repeat;
@@ -248,7 +248,7 @@ $flying-wv-w-signature-white-bg: 'https://patterns.wvu.edu/images/flying-wv-w-si
   @include mq($bp-xlarge) { padding: 0; }
 }
 
-.wvu-masthead__logo { font-family: $Roman; text-decoration: none; position: relative; padding: 1em 0 1.6em 2em; font-size: 1.2em; overflow: hidden; border: 0; background-color: transparent; width: 100%; background: url(../images/flying-wv.png) no-repeat top 1.2em left; background-size: 1.8em; float: left; color: white; 
+.wvu-masthead__logo { font-family: $helvetica-neue-roman; text-decoration: none; position: relative; padding: 1em 0 1.6em 2em; font-size: 1.2em; overflow: hidden; border: 0; background-color: transparent; width: 100%; background: url(../images/flying-wv.png) no-repeat top 1.2em left; background-size: 1.8em; float: left; color: white; 
   &:hover { color: #ddd; }
   @include mq($bp-micro) { font-size: 1.5em; }
   @include mq($bp-medium) { font-size: 1.75em; }
@@ -304,9 +304,9 @@ input[type="submit"] {
   &:hover { color: white; text-decoration: underline; }
 }
 
-//@include wvu-masthead-is-two-line-lockup();
-//@include wvu-masthead-background();
-//@include wvu-masthead-has-signature();
+@include wvu-masthead-is-two-line-lockup();
+@include wvu-masthead-background();
+@include wvu-masthead-has-signature();
 
 .wvu-masthead__logo--mini {
   background-size: 250px;

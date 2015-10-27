@@ -1,7 +1,10 @@
 #prefix{
 	 @include rhythm($ms-8n, 0, 0, $ms-2n, $font-size-small-2);
 
- &.home{}//end #pefix.home
+ &.home{
+ 	margin:0;
+ 	padding:0;
+ }//end #pefix.home
  &.dark{
  	.breadcrumbs a{	
  		color:$vb-Gold;	

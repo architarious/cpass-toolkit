@@ -1,5 +1,6 @@
 .wvu-hero__container { @include outer-container(); }
 
+
 @mixin has-small-hero {
   @if $has-small-photo == true {
     .wvu-hero__copy {

@@ -321,5 +321,15 @@
   }
 }
 
-
+.wvu-masthead--wvu-tech {
+  .wvu-masthead__logo--mini {
+    background-position: top 0.4em left;
+    @include mq($bp-medium) {
+      background-position: top 0.35em left;
+    }
+  }
+  .wvu-masthead__logo {
+    background-image: url(../images/flying-wv-w-signature--tech.png);
+  }
+}
 
