@@ -1,107 +1,130 @@
 @mixin m-hero($textColor1: $white,
 			  $textColor2: $WVUGold,
 			  $bgColor: $primary,
-			  $shadow: $coolblack
+			  $shadow: $coolblack,
+			  $btnColor: $tertiary
 			  ){
 
 	$wvu-hero-image-width: 1720px !default;
 	$wvu-hero-image-height: 580px !default;
-	$wvu-hero-container-padding: ms(5);
+	$wvu-hero__container-padding: ms(2);
 
   .wvu-hero {
   	position: relative;
     color: $textColor1;
     //background-color: $wvu-blue;
-    //background-image: url($wvu-hero-image);
-    background-position: 75% 50%;
+    background-image: url(../images/hero-bg.png);
+    background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     position: relative;  
     -webkit-font-smoothing: antialiased;
   
-    img { position: absolute; max-height: 100%; width: auto; max-width: 99999em;
-      @include breakpoint($bp-tablet-1) {
-        min-width: 100%; 
-        min-height: 100%; 
-        left: 50%; 
-        margin-left: -$wvu-hero-image-width / 2; 
-        max-height: 99999em;
-      }
-      @include breakpoint($bp-desktop2-4) {
-        left: auto;
-        margin-left: auto;
-        width: 100%;
-      }
-    }//end img
-  
-    a {
-      &:hover { text-shadow: none; }
-    }//end a
-  
-    h1, p { text-shadow: 1px 1px 1px $shadow; }
-  
-    h1 { 
-    	@extend .font-BlkCn; 
-    	color: $textColor1;
-    	.wvu-hero__title-bottom{
-    		color:$textColor2;
-    	}
-    }//end h1
-  
-    p { 
-    	color:$textColor1;
-    	margin-bottom: 2em; 
-    	@extend .font-Bd;
-    	max-width: 40em; 
-    }//end p
+   
+   
 
   }//end .wvu-hero
 
-  .wvu-hero__container { padding: 3em; 
-    @include breakpoint($bp-desktop2-1) {
-      padding: $wvu-hero-container-padding;
-    }
+  .wvu-hero__container { 
+  	padding-top: $wvu-hero__container-padding;
+  	padding-bottom:$wvu-hero__container-padding;
   }//end .wvu-hero__container
 
-  .wvu-hero__copy { margin-bottom: 3em; font-weight: bold;
-  	
-     	position:relative;
-     	z-index: 100;
-     @include breakpoint($bp-tablet-1) { 
-     	max-width: 40%; 
-     	position:relative;
-     	z-index: 100;
-     }
+  .wvu-hero__copy { 
+  	 position:relative;
+     z-index: 100;
+     max-width:100%;
+
+     //border-right: solid #e35205 3px; //for testing purposes only
+
+     @include breakpoint($bp-mobile2-4) { max-width: 60%; min-height: ms(13.5); }
+     @include breakpoint($bp-tablet-1) { max-width: 50%; }
+
+
+     a { color:$textColor2; text-decoration:underline;   	
+       &:hover { text-shadow: none; }
+     }//end a
+     
+     h1, p { text-shadow: 1px 0px 1px $shadow; }
+     
+     h1 { 
+     	text-transform:uppercase;
+     	font-family: $BlkCn; 
+     	font-weight: 900;
+     	color: $textColor1;
+     	.wvu-hero__title-bottom{
+     		color:$textColor2;
+     	}
+
+     	@include adjust-font-size-to($font-size-xlarge);
+     	@include adjust-leading-to(2);
+
+     	@include breakpoint($bp-mobile2-1){ @include adjust-font-size-to($font-size-xlarge-2);@include adjust-leading-to(2.5);}
+     	@include breakpoint($bp-tablet-1){ @include adjust-font-size-to($font-size-xxlarge); @include adjust-leading-to(3);}
+     	@include breakpoint($bp-desktop1-3){ @include adjust-font-size-to($font-size-xxlarge-2); @include adjust-leading-to(3.5);}
+     	@include breakpoint($bp-desktop2-4){ @include adjust-font-size-to($font-size-xxxlarge); @include adjust-leading-to(5);}
+     }//end h1
+     
+     p { 
+     	@include adjust-font-size-to($font-size-med-2);
+     	color:$textColor1;
+     	margin-bottom: 2em; 
+     	font-family: $Bd;
+     	font-weight:500;
+     	max-width: 40em; 
+     }//end p	
+     .wvu-hero__copy_btn a{
+     	@include btn_icon($btnColor, $shadow, $textColor1);
+     	text-decoration:none;
+     }//end .wvu-hero__copy_btn
   }//end .wvu-hero__text
 
-  .wvu-hero__photo { overflow: hidden; 
+  .wvu-hero__photo { 
+  	//default photo dimensions: 1720 x 580  see hero-template.psd or 
+
+  	overflow: hidden;
+    width: 100%;    
+    min-height: $wvu-hero__container-padding*3; 
+    height: $wvu-hero__container-padding*4; 
+    float: left;
+    z-index: 0;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+  	@include breakpoint($bp-mobile2-3){
+  		width:100%;
+  		height:100%;
+  	}
     img { 
-    	min-height: 0; 
-    	min-width: 0; 
-    	left: auto; 
-    	margin-left: auto; 
-    	position: relative; 
-    	margin-right: 0; max-width: 100%;
-
-
-    	   max-width: 100%;
+    	min-width: auto; 
+    	max-width:1000%;
         width:100%;
+        height:auto;
+        min-height:100%;
         position:absolute;
         z-index:0;
-        top:0;
-        left:0;
-      @include breakpoint($bp-tablet-1) {
-        max-width: 560px;
+        bottom:0;
+        right:0;
+      @include breakpoint($bp-mobile2-3) {
+      	min-height: 100%; 
+    	min-width: 100%; 
+    	max-width:1000%;
+        width:auto;
+        height:100%;
+        bottom:0;
+
+        right:-65%;
       }
-      @include breakpoint($bp-desktop1-1) {
-        max-width: 100%;
-        width:100%;
-        position:absolute;
-        z-index:0;
-        top:0;
-        left:0;
-      }
+      @include breakpoint($bp-mobile2-4){ right: -60%; }
+      @include breakpoint($bp-tablet-1){ right: -50%; }
+      @include breakpoint($bp-tablet-2){ right: -40%; }
+      @include breakpoint($bp-tablet-3){ right: -30%; }
+      @include breakpoint($bp-desktop1-1) {	right:-20%; }
+      @include breakpoint($bp-desktop1-3) {	right:-10%; }      
+      @include breakpoint($bp-desktop1-4) {	right:-5%; }
+      @include breakpoint($bp-desktop2-1) {	right: 0; }
+      
     }//end img
   }//end .wvu-hero__photo
 
@@ -130,7 +153,6 @@
   }
 }
 
-.m-hero--small{
-	@include m-hero
-	
+.m-hero{
+	@include m-hero	
 }//end m-hero--small
