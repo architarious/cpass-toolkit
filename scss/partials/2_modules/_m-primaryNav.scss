@@ -246,11 +246,12 @@ nav{
 					@include adjust-font-size-to($font-size-med);
 					@include rhythm($ms-4n, $ms-5n, $ms-6n, $ms-4n, $font-size-med);
 					width:100%;
-
+          float:left;
 					color:$tertiary;
 					font-family: $BdCn;
 					font-weight:800;
 					letter-spacing:ms(-10);
+         
 
 					&:hover, &:focus{
 						color:tint($tertiary, 10);
@@ -481,7 +482,7 @@ nav{
     					@include adjust-font-size-to($font-size-med);
     					@include rhythm($ms-4n, $ms-5n, $ms-6n, $ms-4n, $font-size-med);
     					width:100%;
-
+              float:left;
     					color:$tertiary;
     					font-family: $BdCn;
     					font-weight:800;
@@ -494,6 +495,7 @@ nav{
     					&:active{
     						color:$primary;
     					}
+              &.more{display:none;}
      
     					
 

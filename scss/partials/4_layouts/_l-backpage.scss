@@ -23,27 +23,32 @@ body.template-backpage{
 		@include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
 		   @include grid-mobile1;
 		   .main{@include grid-span(4,1); clear:both;}
+		   .sidebar-l{@include grid-span(4,1); clear:both;}
 		   .sidebar{@include grid-span(4,1); }
 		 }
 		 @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
 		   @include grid-mobile2;
 		   .main{@include grid-span(6,1); clear:both;}
-		   .sidebar{@include grid-span(6,1); }
+		   .sidebar-l{@include grid-span(3,1); clear:right;}
+		   .sidebar{@include grid-span(3,4); }
 		 }
 		 @include breakpoint($bp-tablet-1 $bp-desktop1-1){
 		   @include grid-tablet;
 		   .main{@include grid-span(5,1); }
-		   .sidebar{@include grid-span(3,6); }
+		   .sidebar-l{@include grid-span(3,6);}
+		   .sidebar{@include grid-span(3,6);  clear:right;}
 		 }
 		 @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
 		   @include grid-desktop1;
-		   .main{@include grid-span(8,1); }
-		   .sidebar{@include grid-span(4,9); }
+		   .main{@include grid-span(6,4); }
+		   .sidebar-l{@include grid-span(3,1);}
+		   .sidebar{@include grid-span(3,10); }
 		 }
 		 @include breakpoint($bp-desktop2-1){
 		   @include grid-desktop2;
-		   .main{@include grid-span(12,1); }
-		   .sidebar{@include grid-span(4,13); }
+		   .main{@include grid-span(10,4); }		   
+		   .sidebar-l{@include grid-span(3,1);}
+		   .sidebar{@include grid-span(3,14); }
 		 }
 	}// end #core
 	#postfix{
