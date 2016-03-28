@@ -10,7 +10,7 @@
 	}
 	
 	li {
-		display: table-cell;
+		float:left;
 		text-align: center;
 		display:inline;
 		border-left: ms(-8) solid $white;
@@ -42,6 +42,7 @@
 	}
 
 	a {
+        float:left;
 		color:$primary;
 		padding:ms(-3);
 		background:transparent;

@@ -16,7 +16,8 @@
 						$borderColor: $white,
 						$shadowColor: $coolblack,
 						$textColor: $black,
-						$linkColor: $tertiary){
+						$linkColor: $tertiary,
+                        $dividers: "bars"){
 	width:50%;
 	float:left;
 		ul{}
@@ -30,8 +31,20 @@
 			@extend .font-LtCn;
 			@include adjust-font-size-to($font-size-small);
 			@include rhythm($ms-5n, 0, 0, 0, $font-size-small);
-
-			&:before{
+            
+            @if $dividers == "arrows"{
+               @extend .font-Lt;  
+               padding-left: 0;
+               &:before{
+                  content: "\00BB";
+                  padding: 0 ms(-4);
+              }//end before
+              a{
+                @extend .font-Bd;  
+              }//end a             
+            }@else if $dividers == "bars"{
+                
+              &:before{
 				content: " ";
 				position:absolute;
 				left:0;
@@ -44,14 +57,16 @@
 				transform: skewX(-33.75deg);
 				transform-origin: bottom;
 				box-shadow: inset -1px 0 1px -1px darken(shade($bgColor, 10), 7), -1px 0 1px 0 lighten($bgColor, 3);
-
-			}
-			&:first-child{
-			  padding-left:0;
-			  &:before{
-				content: none; display:none;
-			  }	
-			}//end li:first-child
+			  }  
+              
+            }//end IF/ELSE
+            
+            &:first-child{
+			    padding-left:0;
+			    &:before{
+				  content: none; display:none;
+			    }	
+			  }//end li:first-child
 
 			&.active{
 				a{color:$WVUBlue;}

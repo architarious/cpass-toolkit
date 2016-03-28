@@ -2,6 +2,14 @@
 name: cpass-toolkit
 description: This is the CPASS-toolkit theme built using the Radius template language for CleanSlate. Originally authored by Cole Smith.
 
+# Default Templates
+# Specify which templates show up by default when creating a page
+default_templates:
+  content: backpage
+  blog: blog_index
+  article: blog_article
+  error: backpage
+
 # CSS
 css: 
   
