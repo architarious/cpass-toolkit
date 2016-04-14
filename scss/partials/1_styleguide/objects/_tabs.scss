@@ -10,18 +10,17 @@
 	}
 	
 	li {
-		float:left;
+        float:left;
+		display: table-cell;
 		text-align: center;
 		display:inline;
 		border-left: ms(-8) solid $white;
 		border-right: ms(-10) solid shade($white, 10);
 		border-top: ms(-8) solid lighten($white, 20);
-		background:shade($white, 4) url(../images/noise.png) repeat;
 		background: url(../images/noise.png) repeat, linear-gradient(shade($white,1) 80%, shade($white, 4));
 		box-shadow: 0px -12px 30px -14px shade($white, 30) inset;
 		margin-bottom:0;
 		margin-left:ms(-2);
-		padding-bottom:ms(-4);
 		border-top-left-radius:ms(-6);
 		border-top-right-radius:ms(-6);
 		&.open, &.active{
@@ -33,28 +32,27 @@
 		}
 		&:hover, &:focus{
 			background:$white url(../images/noise.png) repeat;
-			box-shadow:none;
+			box-shadow:none; 
 		}
 
 		&:last-child {
-			border-right: 0;
-		}
-	}
+			border-right: 0; 
+		}  
+	}  
 
 	a {
-        float:left;
 		color:$primary;
 		padding:ms(-3);
 		background:transparent;
 		@include adjust-font-size-to($font-size-med);
-		@include rhythm($ms-8n, $ms-6n, $ms-6n, 0, $font-size-med);
+		@include rhythm($ms-8n, $ms-4n, $ms-4n, 0, $font-size-med);
 		@extend .font-BdCn;
 		&:hover, &:focus{
 			background:transparent;
 			color:lighten($tertiary, 10);
 		}
-		&.active, &:visited {
-			background: transparent;
+		&.active, &:active, &:visited {
+			background: $white url(../images/noise.png) repeat;
 			color: darken($tertiary, 10);
 		}
 	}
@@ -90,10 +88,13 @@
 		   	 background:transparent;
 		   	 color:$SecLightGold;
 		   }
-		   &:active{
+		   &:active, &.active{
 		   	 background:transparent;
 		   	 color:$WVUGold;
 		   }
+           &:visited{
+              color:$white;
+           }
 		}//end a	
 	}//end mobile breakpoints
 	@include breakpoint($bp-tablet-1 $bp-desktop1-1){
