@@ -36,8 +36,8 @@
   border:ms(-8) solid $white;
   
   span{ visibility: hidden;}
-  text-shadow: 0 ms(-2) ms(-1) darken($WVUBlue, 7);
-  box-shadow: 0 ms(-8)  ms(-5) ms(-7) darken($WVUBlue, 7);
+  text-shadow: 0 ms(-2) ms(-1) darken($WVUBlue, 4);
+  box-shadow: 0 ms(-8)  ms(-5) ms(-7) darken($WVUBlue, 4);
   &:hover, &:focus{
     border-radius:10%;
     border-color:$quadrary;

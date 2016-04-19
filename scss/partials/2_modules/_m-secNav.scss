@@ -1,4 +1,9 @@
-@mixin secNav($side:right, $bgColor: shade($white, 2), $textColor: $tertiary, $activeBG:$WVUGold, $activeText:$WVUBlue){
+@mixin secNav(
+    $side:right, 
+    $bgColor: shade($white, 2), 
+    $textColor: $tertiary, 
+    $activeBG:$WVUGold, 
+    $activeText:$WVUBlue){
 
   #m-secNav{
   $bgColor--lvl2: shade($bgColor, 10);
@@ -15,7 +20,7 @@
   ul{
     width:100%; float:left;
     list-style-type: none; padding-left: 0;
-    font-family: $LtCn; font-weight:300;
+    font-family: $Lt; font-weight:200;
     @include breakpoint($bp-tablet-1) {
       @if $side=='right'{
         padding-left: ms(0);

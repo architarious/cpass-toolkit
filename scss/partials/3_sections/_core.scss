@@ -1,5 +1,6 @@
 #core{
 	background:url(../images/noise.png) repeat $white;
+	padding-bottom:ms(0);
 
   .main{ width:100%;}
 
@@ -146,8 +147,8 @@
               padding:0;
             }
 
-            
-          
+
+
           }//end $bp-dekstop1-1
 
           @include breakpoint($bp-desktop2-1){
@@ -194,7 +195,7 @@
               @extend .b-featuredLink;
               img{ padding:0;}
             }
-      
+
   }//end .main
   .sidebar, aside{
     .obj-titleWrapper, .obj-contentWrapper{ width:100%; float:left;}
@@ -253,7 +254,7 @@
 }
 
 
- 
+
 
 
 }//end #core

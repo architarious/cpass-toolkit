@@ -54,7 +54,7 @@ var tempCSS     = paths.css + '/temp';
 var shell       = require('gulp-shell');
 
 gulp.task('compass', shell.task([
-      'compass compile --time'
+      'bundle exec compass compile --time'
    ],{
     ignoreErrors: true
    }

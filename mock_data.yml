@@ -197,7 +197,7 @@ ancestor_menu: |
   <% pages = %w(Page1 Page2 Page3 Page4 Page5) %>
   <ul>
     <% pages.each do |page| %>
-      <li><%= page %></li>
+      <li><a href="#"><%= page %> <%= Faker::Lorem.word.capitalize %></a></li>
     <% end %>
   </ul>
 
