@@ -20,7 +20,7 @@
   ul{
     width:100%; float:left;
     list-style-type: none; padding-left: 0;
-    font-family: $Lt; font-weight:200;
+    font-family: $Roman; font-weight:400;
     @include breakpoint($bp-tablet-1) {
       @if $side=='right'{
         padding-left: ms(0);
@@ -40,9 +40,9 @@
       @include trailing-border(ms(-11), 0);
       &:last-child, &:last-child a.active{ border:0;}
       a { text-decoration: none; 
-        @include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med-2);
-        @include adjust-font-size-to($font-size-med-2);
-        @include adjust-leading-to($ms-1, $font-size-large);
+        @include rhythm(0, $ms-3n, $ms-4n, 0, $font-size-med);
+        @include adjust-font-size-to($font-size-med);
+        @include adjust-leading-to($ms-1, $font-size-med);
         background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($bgColor, 30) -11%, $bgColor 3%, tint($bgColor, 5) 10%, $white);
         color:$textColor;
         text-shadow: darken($bgColor, 10) 0 ms(-8) ms(-11);
@@ -65,6 +65,13 @@
          border-color: darken($bgColor, 15);
          border-style:solid;
          @include trailing-border(ms(-11), 0);
+          
+         &:hover, &:focus{
+          background:url(../images/noise.png) repeat, linear-gradient(to $side, shade($textColor, 30) -11%, $textColor 3%, tint($textColor, 5) 10%, tint($textColor, 50));
+          color:$bgColor;
+          text-shadow: darken($textColor, 10) 0 ms(-8) ms(-11);
+        }
+         
        }
       }//end a
 

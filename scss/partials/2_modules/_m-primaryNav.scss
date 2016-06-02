@@ -142,19 +142,19 @@ nav{
 		border:0; margin:0;
 		@include standard-transition;
 		width:100%;		
-		background:$vb-Gold url(../images/noise.png) repeat;
-		box-shadow: tint($vb-Gold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
-		color:shade($vb-Gold, 58);
+		background:$WVUGold url(../images/noise.png) repeat;
+		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
+		color:shade($WVUGold, 58);
 
 
 		&:hover, &:focus{
-			background:url(../images/noise.png) lighten($vb-Gold, 15) repeat;
+			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
 		}
 		&:active{
 			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
 		}
 		&.collapsed{
-			box-shadow: tint($vb-Gold, 20) 0 ms(-8) ms(-6) 0 inset, shade($black,30) 0 ms(-5) ms(-3) 0;
+			box-shadow: tint($WVUGold, 20) 0 ms(-8) ms(-6) 0 inset, shade($black,30) 0 ms(-5) ms(-3) 0;
 		}
 		.navbar-toggle_title{
 			text-align:left;
@@ -163,7 +163,7 @@ nav{
 			font-weight:800;
 			@include adjust-font-size-to($font-size-med);
 			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
-			@include standard-text-shadow(tint($vb-Gold, 20));
+			@include standard-text-shadow(tint($WVUGold, 20));
 			letter-spacing:ms(-10);
 			float:left;	
 
@@ -174,7 +174,7 @@ nav{
 				line-height:1.2em;
 				margin-top:-1px;
 				float:left;
-				color:shade($vb-Gold,30);
+				color:shade($WVUGold,30);
 			}
 		}
 		.icon-bar{
@@ -213,7 +213,7 @@ nav{
 		
 		@include add-noise;
 		background-color:$white;
-		border-bottom:$vb-Gold solid;
+		border-bottom:$WVUGold solid;
 		border-top:0;
 		float:left;
 		width:100%;
@@ -362,19 +362,19 @@ nav{
     		border:0; margin:0;
     		@include standard-transition;
     		width:100%;		
-    		background:$vb-Gold url(../images/noise.png) repeat;
-    		box-shadow: tint($vb-Gold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
-    		color:shade($vb-Gold, 58);
+    		background:$WVUGold url(../images/noise.png) repeat;
+    		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
+    		color:shade($WVUGold, 58);
 
 
     		&:hover, &:focus{
-    			background:url(../images/noise.png) lighten($vb-Gold, 15) repeat;
+    			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
     		}
     		&:active{
     			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
     		}
     		&.collapsed{
-    			box-shadow: tint($vb-Gold, 20) 0 ms(-8) ms(-6) 0 inset, shade($black,30) 0 ms(-5) ms(-3) 0;
+    			box-shadow: tint($WVUGold, 20) 0 ms(-8) ms(-6) 0 inset, shade($black,30) 0 ms(-5) ms(-3) 0;
     		}
     		.navbar-toggle_title{
     			text-align:left;
@@ -383,7 +383,7 @@ nav{
     			font-weight:800;
     			@include adjust-font-size-to($font-size-med);
     			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
-    			@include standard-text-shadow(tint($vb-Gold, 20));
+    			@include standard-text-shadow(tint($WVUGold, 20));
     			letter-spacing:ms(-10);
     			float:left;	
 
@@ -394,7 +394,7 @@ nav{
     				line-height:1.2em;
     				margin-top:-1px;
     				float:left;
-    				color:shade($vb-Gold,30);
+    				color:shade($WVUGold,30);
     			}
     		}
     		.icon-bar{
@@ -449,7 +449,7 @@ nav{
     		
     		@include add-noise;
     		background-color:$white;
-    		border-bottom:$vb-Gold solid;
+    		border-bottom:$WVUGold solid;
     		border-top:0;
     		float:left;
     		width:100%;
