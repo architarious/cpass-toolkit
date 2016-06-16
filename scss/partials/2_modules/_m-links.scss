@@ -3,7 +3,12 @@
   		color:$WarmGrey3;
   		border-bottom:0;
   		text-transform:uppercase;  		
-  		@extend .font-LtCn;
+  		@extend .font-Lt;
+      border-color:$WarmGrey1;
+      border-image:none;
+      @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+      @include adjust-font-size-to($font-size-med-2);
+      @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
   	}
   	h3{
   		color:$secondary;
@@ -56,4 +61,20 @@
       } 
 
     }
+
+    /////////////////////////////////////
+    //BEGIN ELEMENT QUERIES
+    /////////////////////////////////////
+    section{
+       &[data-eq-state="small"]{
+          .title{ 
+            @include adjust-font-size-to($font-size-med);            
+            @include rhythm($ms-1n, $ms-3n, 0, $ms-4n, $font-size-med-2);
+          }//end .title
+       }//end small eq
+       &[data-eq-state="medium"]{
+        
+       }//end medium eq
+       &[data-eq-state="large"]{}//end large eq
+    }//end section
 }//end .cpass-resources

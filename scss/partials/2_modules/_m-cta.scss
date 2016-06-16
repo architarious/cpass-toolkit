@@ -2,6 +2,11 @@
    .title{
     color:$white;
     @extend .font-BdCn;
+    border-color:$WarmGrey1;
+    border-image:none;
+    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-med-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
    }
     section{
     }//end section

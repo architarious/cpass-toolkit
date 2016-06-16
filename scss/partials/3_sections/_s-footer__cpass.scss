@@ -10,6 +10,7 @@
 #s-footer__cpass{
   padding:0; margin:0;
   @include rhythm($ms-0, 0, 0, $ms-0, $font-size-med);
+ 
 	ul{ padding:0; margin:0;}
 	//li{ padding:0; margin:0; list-style:none;}  
   @include adjust-font-size-to($base-font-size);
@@ -21,9 +22,7 @@
     border-color:$WarmGrey1;
     border-image:none;
     @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
-    @include adjust-font-size-to($font-size-med-2);
-    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
-    max-width:100%;     
+    max-width:100%; 
   }
 
   .b-social{ 
@@ -106,6 +105,7 @@
   }//end .b-social
 
   .m-links{
+
     //begin mobile styling
     @include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
       @include grid-mobile1;
@@ -154,7 +154,7 @@
       .b-links__alumni{@include grid-span(3,11); }
       .b-links__community{@include grid-span(3,14); }
        @include breakpoint($bp-desktop2-1 $bp-desktop2-3){
-         .title{ @include adjust-font-size-to($font-size-med);}
+         //
        }
       }//end $bp-desktop-2
 

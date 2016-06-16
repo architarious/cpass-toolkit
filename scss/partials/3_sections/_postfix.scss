@@ -4,8 +4,8 @@
 	float:left;
 	width:100%;
 	min-height:200px;
-	border-top:ms(-9) solid lighten($secondary, 3);
-	border-bottom:ms(-6) solid $vb-LightBlue;
+	border-top:ms(-9) solid tint($secondary, 6);
+	border-bottom:ms(-8) solid darken($secondary, 6);
 
 
 	.b-featuredLink{

@@ -162,6 +162,9 @@ nav .b-social a{
    text-shadow:0 1px 0 shade($black, 20); 
    float:left;
    content:"Connect with CPASS";
+   @include adjust-font-size-to($font-size-med);
+   @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med); 
+   padding-left:0.618em;
     }
   .b-social a{
     box-shadow: 0 ms(-6) ms(-4) set-alpha(darken($black,20), 0.6);
@@ -173,7 +176,7 @@ nav .b-social a{
       border-color:$quadrary;
     }
   }//end a
-}
+}//end b-social--wrapper
 
 .b-social--share{
   display:none;
