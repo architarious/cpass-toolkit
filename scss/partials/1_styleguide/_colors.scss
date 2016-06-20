@@ -84,7 +84,7 @@ $cs-colorblind:deuteranopia;
 $primary: $WVUBlue; //#00447c; //cs-primary(); //#19468d
 $secondary: #ede7dc; //cs-secondary(); $secondary: tint($pre-secondary, 85) ; // too light, darkening this up a bit. //#ede7dc
 $tertiary: $SecMiddleBlue; //#0079c1; //cs-tertiary(); //#0063ff got denied by UR
-$quadrary: #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25b
+$quadrary: $WVUGold; // #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25b
 
 //@include cs-test(cs-primary() cs-secondary() cs-tertiary() cs-quadrary());
 

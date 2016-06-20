@@ -1,0 +1,47 @@
+#b-footer__feature{
+	@include b-featuredLink( darken($primary, 15), $WVUGold, $primary ,shade($coolblack, 30));
+    .b-featuredLink{
+       //background: url(../images/noise--blue.png) $WVUBlue repeat;
+       box-shadow: 0 1px 1px 0 lighten($primary, 5);
+       background-image:none;
+	   .inner{
+        background-image:none;
+	   	color:$WVUGold;	
+        //background: url(../images/noise--blue.png) $WVUBlue repeat;	
+	   }
+    }//end b-featuredLink
+
+
+  &[data-eq-state="small"]{ //0px
+    .b-featuredLink{
+        h3{
+            @include adjust-font-size-to($font-size-med);
+            @extend .font-BdCn;
+        }//end h3
+    }//end b-featuredLink
+  }//end small
+  &[data-eq-state="medium"]{ //215px
+    .b-featuredLink{
+        h3{
+            @include adjust-font-size-to($font-size-med-2);
+            @extend .font-BdCn;
+        }//end h3
+    }//end b-featuredLink
+  }//end medium
+  &[data-eq-state="large"]{ //250px
+    .b-featuredLink{
+        h3{
+            @include adjust-font-size-to($font-size-large);
+            @extend .font-BlkCn;
+        }//end h3
+    }//end b-featuredLink
+  }//end large
+  &[data-eq-state="x-large"]{ //300px
+    .b-featuredLink{
+        h3{
+            @include adjust-font-size-to($font-size-large-2);
+            @extend .font-BlkCn;
+        }//end h3
+    }//end b-featuredLink
+  }//end x-large
+}//end b-footer__feature

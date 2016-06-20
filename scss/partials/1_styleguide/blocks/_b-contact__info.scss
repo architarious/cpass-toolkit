@@ -19,7 +19,7 @@
 		&.title{
 		  @include adjust-font-size-to($font-size-med);
 		  @extend .font-Bd;
-
+			padding-left:0;
 		}//end a:first-child
 	  }//end a
 	}//end p

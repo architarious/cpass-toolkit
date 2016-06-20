@@ -11,59 +11,57 @@
     @include breakpoint($bp-mobile1-1 $bp-mobile2-1){
       @include grid-mobile1;
       //.nav-list li a{ @include adjust-font-size-to($font-size-med);}
-      .b-contact{}
+      .m-contact{}
       .b-contact__info{ text-align:center;}
       .b-contact__links{}
-      #b-footer__site_feature{}
+      #b-footer__feature{}
     }
 
-    @include breakpoint($bp-mobile2-2-608 $bp-tablet-1){
+    @include breakpoint($bp-mobile2-1 $bp-tablet-1){
       @include grid-mobile2;
-      .b-contact{}
-      .b-contact__info{ @include grid-span(3,1);}
-      .b-contact__links{ @include grid-span(3,4);}
-      #b-footer__site_feature{}
+      .m-contact{}
+      .b-contact__info{ @include grid-span(6,1);}
+      .b-contact__links{ @include grid-span(3,1); clear:both;}
+      #b-footer__feature{ @include grid-span(3,4); }
     }//end $bp-mobile-2
 
     @include breakpoint($bp-tablet-1 $bp-desktop1-1){
       @include grid-tablet;
-      .b-contact{}
-      .b-contact__info{
-        @include grid-span(3,1);
-      }
-      .b-contact__links{@include grid-span(2,4);}
-      #b-footer__site_feature{@include grid-span(3,6);}
+      .m-contact{}
+      .b-contact__info{ @include grid-span(4,1); }
+      .b-contact__links{ @include grid-span(2,5); }
+      #b-footer__feature{ @include grid-span(2,7); }
     }//end $bp-tablet
 
-    @include breakpoint($bp-desktop1-1 $bp-desktop1-4){
+    @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
       @include grid-desktop1;
-      .b-contact{}
-      .b-contact__info{@include grid-span(4,1);}
-      .b-contact__links{@include grid-span(4,5);}
-      #b-footer__site_feature{@include grid-span(4,9);}
+      .m-contact{}
+      .b-contact__info{@include grid-span(6,1);}
+      .b-contact__links{@include grid-span(3,7);}
+      #b-footer__feature{@include grid-span(3,10);}
     }//end $bp-desktop-1
 
-    @include breakpoint($bp-desktop1-4 $bp-desktop2-1){
-      @include grid-desktop1;
-      .b-contact{}
-      .b-contact__info{  @include grid-span(5,1);  }
-      .b-contact__links{@include grid-span(3,6);}
-      #b-footer__site_feature{@include grid-span(4,9);}
-    }//end $bp-desktop-1
+   // @include breakpoint($bp-desktop1-4 $bp-desktop2-1){
+   //   @include grid-desktop1;
+   //   .m-contact{}
+   //   .b-contact__info{  @include grid-span(5,1);  }
+   //   .b-contact__links{@include grid-span(3,6);}
+   //   #b-footer__feature{@include grid-span(4,9);}
+   // }//end $bp-desktop-1
 
     @include breakpoint($bp-desktop2-1 $bp-desktop2-6){
       @include grid-desktop2;
-      .b-contact{}
-      .b-contact__info{@include grid-span(7,1);}
-      .b-contact__links{@include grid-span(4,8);}
-      #b-footer__site_feature{@include grid-span(5,12);}
+      .m-contact{}
+      .b-contact__info{@include grid-span(10,1);}
+      .b-contact__links{@include grid-span(3,11);}
+      #b-footer__feature{@include grid-span(3,14);}
       }//end $bp-desktop-2
 
     @include breakpoint($bp-desktop2-6){
       @include grid-desktop2;
-      .b-contact{}
+      .m-contact{}
       .b-contact__info{
-        @include grid-span(7,1);
+        @include grid-span(10,1);
 
         @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
         p{
@@ -75,7 +73,7 @@
 
       }
       .b-contact__links{@include grid-span(3,11);}
-      #b-footer__site_feature{@include grid-span(3,14);}
+      #b-footer__feature{@include grid-span(3,14);}
       }//end $bp-desktop-2
 
 

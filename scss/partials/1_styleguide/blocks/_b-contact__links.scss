@@ -27,4 +27,33 @@
 
     
   }
+
+  &[data-eq-state="small"]{ //0px
+    .nav-list li a{
+      @include adjust-font-size-to($font-size-small-2);
+      @extend .font-BdCn;
+    }//end a
+	}//end small
+  &[data-eq-state="medium"]{ //215px
+    .nav-list li a{
+      @include adjust-font-size-to($font-size-small-2);
+      margin: ms(-7) 0;
+      @extend .font-BdCn;
+    }//end a
+	}//end medium
+  &[data-eq-state="large"]{ //250px
+    .nav-list li a{
+      @include adjust-font-size-to($font-size-med);
+      margin: ms(-8) 0;
+      @extend .font-BlkCn;
+    }//end a
+	}//end large
+	&[data-eq-state="x-large"]{ //300px
+		.nav-list li a{
+      @include adjust-font-size-to($font-size-med-2);
+      margin: ms(-10) 0;
+      @extend .font-BlkCn;
+    }//end a
+	}//end x-large
+
 }//end #footer_contact-links

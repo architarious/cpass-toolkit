@@ -77,6 +77,10 @@
      .wvu-hero__copy_btn a{
      	@include btn_icon($btnColor, $shadow, $textColor1);
      	text-decoration:none;
+      padding-right:2.618em;
+      &:after{
+        right:0.618em;
+      }
      }//end .wvu-hero__copy_btn
   }//end .wvu-hero__text
 
@@ -95,7 +99,7 @@
   	@include breakpoint($bp-mobile2-3){
   		width:100%;
   		height:100%;
-  	}
+  	} 
     img { 
     	min-width: auto; 
     	max-width:1000%;
