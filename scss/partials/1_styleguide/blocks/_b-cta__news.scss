@@ -36,31 +36,32 @@
 				padding-right:ms(2);
 				@include standard-transition(color);
 
-				&:after{
-						font-family:'icomoon';
-						color:mix($title-color, $background, 5);
-						content: "\e6bd";
-						font-weight:100;
-						line-height:$ms-2+$ms-8n+em;    
-						font-size:$ms-0+em;
-
-						width: $ms-2+$ms-8n+em;    
-						height: $ms-2+$ms-8n+em;
-						position: absolute;    
-						top: 56%;
-						right:0;
-						transform: translateY(-50%);
-						padding-left:0.618em;
-					}//end :after
+				//&:after{
+				//		font-family:'icomoon';
+				//		color:mix($title-color, $background, 5);
+				//		content: "\e6bd";
+				//		font-weight:100;
+				//		line-height:$ms-2+$ms-8n+em;    
+				//		font-size:$ms-0+em;
+//
+				//		width: $ms-2+$ms-8n+em;    
+				//		height: $ms-2+$ms-8n+em;
+				//		position: absolute;    
+				//		top: 56%;
+				//		right:0;
+				//		transform: translateY(-50%);
+				//		padding-left:0.618em;
+				//	}//end :after
 				
 
 				&:hover,&:focus{
 					background:none;
-					color:lighten($link-color,10);
+					color:lighten($link-color,15);
+					text-decoration:underline;
 					outline:0;
-					&:after{
-						color:lighten($link-color,10);
-					}
+					//&:after{
+					//	color:lighten($link-color,10);
+					//}
 
 					
 				}//end hover
