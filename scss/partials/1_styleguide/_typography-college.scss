@@ -182,6 +182,8 @@ h3, h4, h5, h6{
 table{
     width:100%;
     color:$vb-Charcoal;
+    
+
     caption{
         @include adjust-font-size-to($font-size-large);
         @include rhythm($ms-1, 0, 0, $ms-3n, $font-size-large);
@@ -227,6 +229,10 @@ table{
             }
             
         }
+    }
+    @include breakpoint($bp-mobile1-1 $bp-desktop1-1){
+        overflow-x: auto;
+        display:block;
     }
 }
 /////////////////////////////////////////////

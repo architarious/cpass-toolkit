@@ -1,0 +1,61 @@
+@mixin obj-multiCol( 
+    $colWidth:auto,
+    $bgColor: $white,
+    $shadow: shade($bgColor, 8),
+	$light: tint($bgColor, 9)
+){
+   ul.obj-multiCol{
+      margin:0; padding:0; width:100%; float:left;
+      li{ 
+          margin:0; padding:0;
+          list-style:none; 
+          width:$colWidth; 
+          float:left;
+          padding-left: 0.618em;
+          padding-right: 0.618em;
+          border-left: ms(-10) solid $shadow;
+          border-right: ms(-10) solid $shadow;
+          box-shadow: 1px 0 0 0 solid $light, -1px 0 0 0 solid $light;
+
+          &:first-child{
+             padding-left:0; 
+             border-left:0; 
+             box-shadow:1px 0 0 0 solid $light;
+         }//end first-child 
+         &:last-child{
+             padding-right:0; 
+             border-right:0; 
+             box-shadow:-1px 0 0 0 solid $light;
+         }//end last-child     
+
+          @include breakpoint($bp-mobile1-1 $bp-tablet1-3){
+            width:100%;
+            border:0; padding:0;
+            border-bottom:ms(-10) solid $shadow;
+	        box-shadow: 0 -1px 0 0 solid $light;
+            &:last-child{
+                border-bottom:0;
+                box-shadow:0;
+            }
+         }//end breakpoint
+
+             
+      }//end li     
+   }//end .obj-multiCol
+}//end obj-multiCol
+
+.obj-multiCol--double{
+  @include obj-multiCol(50%);  
+}//end .obj-multiCol--double
+.obj-multiCol--triple{
+  @include obj-multiCol(33.3%);  
+}//end .obj-multiCol--triple
+.obj-multiCol--quad{
+  @include obj-multiCol(25%);  
+}//end .obj-multiCol--quad
+.obj-multiCol--quin{
+  @include obj-multiCol(20%);  
+}//end .obj-multiCol--quin
+.obj-multiCol--sept{
+  @include obj-multiCol(16%);  
+}//end .obj-multiCol--sept
