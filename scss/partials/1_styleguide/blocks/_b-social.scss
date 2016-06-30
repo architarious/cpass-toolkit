@@ -158,7 +158,7 @@ nav .b-social a{
   border-top: ms(-10) solid shade($coolblack,5);
 
   .b-social:after{ 
-   color:set-alpha($white, 0.30);
+   color:tint($black, 40);
    text-shadow:0 1px 0 shade($black, 20); 
    float:left;
    content:"Connect with CPASS";
@@ -170,8 +170,8 @@ nav .b-social a{
     box-shadow: 0 ms(-6) ms(-4) set-alpha(darken($black,20), 0.6);
     text-shadow: 0 ms(-6) ms(-4) set-alpha(darken($black,20), 0.6);
     float:left;
-    color:set-alpha($white, 0.30);
-    border-color:set-alpha($white, 0.10);
+    color:tint($black, 40);
+    border-color:tint($black, 40);
     &:hover,&:focus{
       border-color:$quadrary;
     }
