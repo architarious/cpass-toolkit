@@ -344,7 +344,8 @@ nav{
     		color:$black;
     		border:0;
     		box-shadow:none;
-    		border-raidus: 0;
+    		border-radius: 0;
+			margin-bottom:0;
     		//@include standard-box-shadow();
     		//@include standard-border-radius();
     		.navbar-brand{
@@ -365,7 +366,8 @@ nav{
     		background:$WVUGold url(../images/noise.png) repeat;
     		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
     		color:shade($WVUGold, 58);
-
+			border-radius:0;
+			@include rhythm(0, $ms-0, $ms-0, 0, $font-size-med);
 
     		&:hover, &:focus{
     			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
@@ -374,18 +376,18 @@ nav{
     			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
     		}
     		&.collapsed{
-    			box-shadow: tint($WVUGold, 20) 0 ms(-8) ms(-6) 0 inset, shade($black,30) 0 ms(-5) ms(-3) 0;
+    			box-shadow: tint($WVUGold, 20) 0 ms(-8) ms(-6) 0 inset; //shade($black,30) 0 ms(-5) ms(-3) 0;
     		}
     		.navbar-toggle_title{
-    			text-align:left;
+    			text-align:center;
     			margin-top:-0.24em;
     			font-family:$BdCn;
     			font-weight:800;
-    			@include adjust-font-size-to($font-size-med);
+    			@include adjust-font-size-to($font-size-med-2);
     			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
     			@include standard-text-shadow(tint($WVUGold, 20));
     			letter-spacing:ms(-10);
-    			float:left;	
+    			float:none;	
 
     			&::before{
     				font-family: 'icomoon';
@@ -393,7 +395,7 @@ nav{
     				font-weight:100;
     				line-height:1.2em;
     				margin-top:-1px;
-    				float:left;
+    				float:none;
     				color:shade($WVUGold,30);
     			}
     		}
@@ -442,7 +444,7 @@ nav{
 
     	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
 
-    		@include rhythm($ms-2n, 0, 0, $ms-2n, $font-size-med);
+    		@include rhythm($ms-2n, 0, 0, 0, $font-size-med);
 
 
     	  #nav-primary.collapse.in{
@@ -456,7 +458,7 @@ nav{
     		margin-top:-5px;
     		@include trailing-border(2px, $ms-5n);
     		padding-bottom:0;
-    		box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
+    		//box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
     		
       
     		.navbar-nav{
