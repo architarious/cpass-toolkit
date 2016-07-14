@@ -1,8 +1,8 @@
 .s-footer__cpass--wrapper{
 	float:left;
 	width:100%;
-	box-shadow:darken($coolblack,15) 0 ms(-5) ms(-2) 0 inset;
-	background:set-alpha(darken($black, 10), 0.65);
+	box-shadow:darken($black,5) 0 ms(-7) ms(-8) 0 inset;
+	background:$black;
   padding-bottom:ms(0);
 }
 
@@ -10,31 +10,31 @@
 #s-footer__cpass{
   padding:0; margin:0;
   @include rhythm($ms-0, 0, 0, $ms-0, $font-size-med);
- 
+
 	ul{ padding:0; margin:0;}
-	//li{ padding:0; margin:0; list-style:none;}  
+	//li{ padding:0; margin:0; list-style:none;}
   @include adjust-font-size-to($base-font-size);
   ul.dropdown-menu{
     padding:ms(-2);
   }
 
    .title{
-    border-color:$WarmGrey1;
-    border-image:none;
-    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
-    max-width:100%; 
+    //border-color:$WarmGrey1;
+    //border-image:none;
+    //@include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    max-width:100%;
   }
 
-  .b-social{ 
+  .b-social{
 
     padding-left:ms(2);
-   
+
   }//end .b-social
 
   .m-cta{
   }//end .m-cta
   .m-links{
-    
+
   }
 
   //begin mobile styling
@@ -94,7 +94,7 @@
       .b-cta__news{@include grid-span(7,10);}
       }//end $bp-desktop-2
 
-     
+
   }//end .m-cta mobile styling
 
   .b-social{
@@ -110,7 +110,6 @@
     @include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
       @include grid-mobile1;
       .nav-list li a{ }
-      .b-links__academics{@include grid-span(4,1); clear:both;}
       .b-links__students{@include grid-span(4,1); clear:both;}
       .b-links__alumni{@include grid-span(4,1); clear:both;}
       .b-links__community{@include grid-span(4,1); }
@@ -119,55 +118,48 @@
     @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
       @include grid-mobile2;
       .nav-list li a{ }
-      .b-links__academics{@include grid-span(6,1); clear:both;}
       .b-links__students{@include grid-span(6,1); clear:both;}
       .b-links__alumni{@include grid-span(6,1); clear:both;}
       .b-links__community{@include grid-span(6,1); }
     }//end $bp-mobile-2
 
     @include breakpoint($bp-tablet-1 $bp-desktop1-1){
-      @include grid-tablet;
+      @include grid-mobile2;
       .nav-list li a{ }
-      .b-links__academics{@include grid-span(4,1); }
-      .b-links__students{@include grid-span(4,5); }
-      .b-links__alumni{@include grid-span(4,1); clear:both; }
-      .b-links__community{@include grid-span(4,5); }
+      .b-links__students{@include grid-span(2,1); }
+      .b-links__alumni{@include grid-span(2,3); }
+      .b-links__community{@include grid-span(2,5); }
     }//end $bp-tablet
 
-    @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
+    @include breakpoint($bp-desktop1-1 ){
       @include grid-desktop1;
       .nav-list li a{ @include adjust-font-size-to($font-size-small-2);}
-      .b-links__academics{@include grid-span(6,1)}
-      .b-links__students{@include grid-span(6,7); }
-      .b-links__alumni{@include grid-span(6,1); clear:both;}
-      .b-links__community{@include grid-span(6,7); }
+      .b-links__students{@include grid-span(4,1); }
+      .b-links__alumni{@include grid-span(4,5);}
+      .b-links__community{@include grid-span(4,9); }
       @include breakpoint($bp-desktop1-2){
          .nav-list li a{ }
       }
     }//end $bp-desktop-1
 
-    @include breakpoint($bp-desktop2-1 $bp-desktop2-6){
-      @include grid-desktop2;
-      .nav-list li a{ @include adjust-font-size-to($font-size-small-2); }
-      .b-links__academics{@include grid-span(7,1); }
-      .b-links__students{@include grid-span(3,8); }
-      .b-links__alumni{@include grid-span(3,11); }
-      .b-links__community{@include grid-span(3,14); }
-       @include breakpoint($bp-desktop2-1 $bp-desktop2-3){
-         //
-       }
-      }//end $bp-desktop-2
+  //  @include breakpoint($bp-desktop2-1 $bp-desktop2-6){
+  //    @include grid-desktop2;
+  //    .nav-list li a{ @include adjust-font-size-to($font-size-small-2); }
+  //    .b-links__students{@include grid-span(5,1); }
+  //    .b-links__alumni{@include grid-span(5,6); }
+  //    .b-links__community{@include grid-span(5,11); }
+  //     @include breakpoint($bp-desktop2-1 $bp-desktop2-3){
+  //       //
+  //     }
+  //    }//end $bp-desktop-2
 
-    @include breakpoint($bp-desktop2-6){
-      @include grid-desktop2;
-      .nav-list li a{ @include adjust-font-size-to($font-size-small-2); }
-      .b-links__academics{@include grid-span(4,1); }
-      .b-links__students{@include grid-span(4,5); }
-      .b-links__alumni{@include grid-span(4,9); }
-      .b-links__community{@include grid-span(4,13); }
-      }//end $bp-desktop-2
+  //  @include breakpoint($bp-desktop2-6){
+  //    @include grid-desktop2;
+  //    .nav-list li a{ @include adjust-font-size-to($font-size-small-2); }
+  //    .b-links__academics{@include grid-span(4,1); }
+  //    .b-links__students{@include grid-span(4,5); }
+  //    .b-links__alumni{@include grid-span(4,9); }
+  //    .b-links__community{@include grid-span(4,13); }
+  //    }//end $bp-desktop-2
   }//end .m-cta mobile styling
 }//end #footer #cpass-footer
-
-
-

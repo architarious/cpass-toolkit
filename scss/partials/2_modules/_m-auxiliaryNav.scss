@@ -1,25 +1,25 @@
 .m-auxiliaryNav{
 	$bgColor: tint($secondary, 15);
 	$borderColor: $white;
-	$shadowColor: darken($WVUBlue, 7 );
+	$shadowColor: darken($WVUBlue, 4 );
 	$textColor: $black;
 	$linkColor: $tertiary;
 
 	width:100%;
 	float:left;
 	min-height:1em;
-	background:$bgColor url(../images/noise.png) repeat; 
+	background:$bgColor url(../images/noise.png) repeat;
 	border-color: $borderColor;
-	box-shadow: 0 ms(-8) ms(-5) ms(-7) $shadowColor;
+	box-shadow: 0 ms(-9) ms(-8) 0 $shadowColor;
 
-	
+
 	@include leading-border(ms(-4), $ms-7n, $font-size-med, solid);
 	@include trailing-border(ms(-5), $ms-7n, $font-size-med, solid);
 	@include adjust-font-size-to($font-size-med);
 	@include rhythm(0, $ms-7n, $ms-7n, 0, $font-size-med);
 
 
-    
+
 
 	.m-auxiliaryNav__breadcrumbs{
 		@include fancyBreadcrumbs;
@@ -37,7 +37,7 @@
 		.b-featLinkList{
 			float:left;
 		}
-		
+
 	}//end featLinkList
 	@include breakpoint($bp-mobile1-1 $bp-mobile1-3){
 		.m-auxiliaryNav__featLinkList{
@@ -48,7 +48,7 @@
 
 	@include breakpoint($bp-mobile2-2 $bp-tablet-1-1){
 		.m-auxiliaryNav__featLinkList{
-		  a{ @include adjust-font-size-to($font-size-med); }	
+		  a{ @include adjust-font-size-to($font-size-med); }
 		}
 	}
 
@@ -60,7 +60,7 @@
 	  	width:50%;
 	  	float:right;
 	  	@include rhythm(0, 0, 0, 0, $font-size-med);
-	  	
+
 	  	.b-featLinkList{
 	  		float:none;
 	  	}
@@ -68,7 +68,7 @@
 	}//end bp-tablet-1
 	@include breakpoint($bp-desktop2-1){
 		.m-auxiliaryNav__featLinkList{
-		  a{ @include adjust-font-size-to($font-size-med); }	
+		  a{ @include adjust-font-size-to($font-size-med); }
 		}
 	}//end bp-desktop2-1
 }//end m-auxiliaryNav

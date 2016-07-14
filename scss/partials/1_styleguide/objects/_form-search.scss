@@ -1,7 +1,7 @@
 .form-search__wrapper{
 	float:left;
 	width:100%;
-	min-height:1em;	
+	min-height:1em;
 
 }
 .form-search{
@@ -26,7 +26,7 @@
   float:left;
   background:none;
   margin-right: 5%;
-  width: 15%;	
+  width: 15%;
   border:0;
   margin:0;
   padding:0;
@@ -51,8 +51,7 @@
 	border-bottom:1px solid $vb-PaleGrey;
 	padding:0;
 	@include adjust-font-size-to($font-size-med);
-	font-family:$LtCn;
-	font-weight:300;
+	@extend .font-Lt;
 	border-radius:0;
 	box-shadow:none;
 

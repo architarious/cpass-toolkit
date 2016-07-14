@@ -1,9 +1,12 @@
-.b-logo--wrapper{}
+.b-logo--wrapper{
+	@include rhythm(0, $ms-1, $ms-1, 0, $font-size-med);
+}
 
 .b-logo{
+
 	.wvu-masthead__logo{
 		background-size:271px;
-		br{ display:none; }	
+		br{ display:none; }
 	}
 	.wvu-masthead__title{
 		@extend .font-Roman;
@@ -12,7 +15,7 @@
 	}
 
 	&[data-eq-state="x-small"]{
-	  .wvu-masthead__logo{ background-size:contain;}			
+	  .wvu-masthead__logo{ background-size:contain;}
 	}//end x-small
 	&[data-eq-state="small"]{
 		.wvu-masthead__logo{background-size:271px; padding-left:46px;}

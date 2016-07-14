@@ -2,18 +2,18 @@
 .m-primaryNav{
   @include rhythm($ms-2n, 0, 0, $ms-2n, $font-size-med);
   .m-primaryNav__header{}
-  .m-primaryNav__navbar-nav{ 
+  .m-primaryNav__navbar-nav{
   	float:right;
   	ul{
   		float:right;
   	}
-  }//end .m-primaryNav__navbar-nav  
+  }//end .m-primaryNav__navbar-nav
   .m-primaryNav__search{
   	@include breakpoint($bp-tablet-1){
   		display:none;
     }
   }//end .m-primaryNav__search
-  
+
   .container{
   	min-width:0;
   }
@@ -52,7 +52,7 @@
   		}
 
   		a{
-  		    
+
 
   		  	color:$textColor;
   		  	background:transparent;
@@ -60,22 +60,22 @@
   		  	text-shadow: 0 ms(-9) ms(-10) darken($bgColor, 10);
   			@include adjust-font-size-to($font-size-med);
   			@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
-  			
+
   			font-family:$BdCn;
   			font-weight:800;
   			min-height:1em;
   			min-width:1em;
-  			float:left;	
+  			float:left;
 
   			transition-property: background, box-shadow, color, border-bottom;
   			transition-duration: 0.35s;
-  			transition-timing-function: ease-in;	
+  			transition-timing-function: ease-in;
 
   			 &:hover,&:focus{
   				color: lighten($textColor,10);
   				background:  set-alpha($tertiary, 0.3);
   				//box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
-  				&:before{          
+  				&:before{
   				    background: url(../images/noise.png) repeat lighten($bgColor, 10);
   				    box-shadow: ms(-8) 0 0px 0px set-alpha($shadowColor, 0.5);
   				}
@@ -85,8 +85,8 @@
   				&:before{
   				  background: url(../images/noise.png) repeat shade($bgColor, 20);
   				}
-  			}//end active       
-  			
+  			}//end active
+
   		}//end a
 
   		li.apply a{
@@ -102,9 +102,9 @@
   			}
   		}//end li.apply a
 
-  	}//end m-primaryNav__navbar-nav 
+  	}//end m-primaryNav__navbar-nav
 
-  	
+
 
   	}//end .in
   }//end bp-tablet-1
@@ -141,7 +141,7 @@ nav{
 	  .navbar-toggle{
 		border:0; margin:0;
 		@include standard-transition;
-		width:100%;		
+		width:100%;
 		background:$WVUGold url(../images/noise.png) repeat;
 		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
 		color:shade($WVUGold, 58);
@@ -165,7 +165,7 @@ nav{
 			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
 			@include standard-text-shadow(tint($WVUGold, 20));
 			letter-spacing:ms(-10);
-			float:left;	
+			float:left;
 
 			&::before{
 				font-family: 'icomoon';
@@ -204,13 +204,13 @@ nav{
 
 	#nav-primary.collapse{
 		padding:0;
-	
+
 	}
 
 	@include breakpoint($bp-mobile1-1 $bp-tablet-1){
 
 	#nav-primary.collapse.in{
-		
+
 		@include add-noise;
 		background-color:$white;
 		border-bottom:$WVUGold solid;
@@ -221,7 +221,7 @@ nav{
 		@include trailing-border(2px, $ms-5n);
 		padding-bottom:0;
 		box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
-		
+
 
 		.navbar-nav{
 			border:0;
@@ -240,7 +240,7 @@ nav{
 				&:first-child{
 					padding-top: 5px;
 				}
-				a{	
+				a{
 					background:none;
 					@include standard-transition();
 					@include adjust-font-size-to($font-size-med);
@@ -251,7 +251,7 @@ nav{
 					font-family: $BdCn;
 					font-weight:800;
 					letter-spacing:ms(-10);
-         
+
 
 					&:hover, &:focus{
 						color:tint($tertiary, 10);
@@ -261,7 +261,7 @@ nav{
 						color:$primary;
 					}
 
-					
+
 
 				}
 			}//end li
@@ -306,7 +306,7 @@ nav{
   .m-primaryNav{
     $bgColor: $black;
     $shadowColor: $coolblack;
-    $textColor: $white;	
+    $textColor: $white;
     $borderColor: $white;
     $linkColor: $tertiary;
     $hoverColor: lighten($tertiary, 10);
@@ -316,19 +316,19 @@ nav{
     *:focus{ outline:0;}
 
     .m-primaryNav__header{}
-    .m-primaryNav__navbar-nav{ 
+    .m-primaryNav__navbar-nav{
     	float:right;
     	ul{
     		float:right;
     	}
-    }//end .m-primaryNav__navbar-nav  
+    }//end .m-primaryNav__navbar-nav
     .m-primaryNav__search{
     	@include breakpoint($bp-tablet-1){
     		display:none;
       }
     }//end .m-primaryNav__search
-    
-   
+
+
 
     /**************************************
     //////////////////////////////////////
@@ -362,7 +362,7 @@ nav{
     	  .navbar-toggle{
     		border:0; margin:0;
     		@include standard-transition;
-    		width:100%;		
+    		width:100%;
     		background:$WVUGold url(../images/noise.png) repeat;
     		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
     		color:shade($WVUGold, 58);
@@ -387,7 +387,7 @@ nav{
     			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
     			@include standard-text-shadow(tint($WVUGold, 20));
     			letter-spacing:ms(-10);
-    			float:none;	
+    			float:none;
 
     			&::before{
     				font-family: 'icomoon';
@@ -426,7 +426,7 @@ nav{
 
     	#nav-primary.collapse{
     		padding:0;
-    	
+
     	}
     }//end nav
 
@@ -448,7 +448,7 @@ nav{
 
 
     	  #nav-primary.collapse.in{
-    		
+
     		@include add-noise;
     		background-color:$white;
     		border-bottom:$WVUGold solid;
@@ -459,8 +459,8 @@ nav{
     		@include trailing-border(2px, $ms-5n);
     		padding-bottom:0;
     		//box-shadow: shade($black,30) 0 ms(-5) ms(-3) 0;
-    		
-      
+
+
     		.navbar-nav{
     			border:0;
     			width:100%;
@@ -478,7 +478,7 @@ nav{
     				&:first-child{
     					padding-top: 5px;
     				}
-    				a{	
+    				a{
     					background:none;
     					@include standard-transition();
     					@include adjust-font-size-to($font-size-med);
@@ -498,8 +498,8 @@ nav{
     						color:$primary;
     					}
               			&.more{display:none;}
-     
-    					
+
+
 
     				}
     			}//end li
@@ -509,7 +509,7 @@ nav{
     		width:100%;
     		float:left;
     		@include add-noise;
-    		background-color:$secondary;  
+    		background-color:$secondary;
     		color:$primary;
     		text-align:center;
     		text-transform:uppercase;
@@ -549,8 +549,8 @@ nav{
     **************************************/
 
     @include breakpoint($bp-tablet-1){
-     
-     
+
+
      background: $bgColor;
      box-shadow: 0 1px 3px 1px shade($bgColor, 15) inset, 0 1px 2px 1px lighten($coolblack, 10);
      width:100%;
@@ -590,9 +590,9 @@ nav{
     			&.active, &.open{
     				background:$textColor;
     				border-right:ms(-10) solid shade($textColor, 10);
-    				border-left: ms(-11) solid tint($textColor, 10);  				
+    				border-left: ms(-11) solid tint($textColor, 10);
     				margin-top:-(ms(-3));
-    				padding-top: ms(-3);	
+    				padding-top: ms(-3);
     				a{
     					color:$activeColor;
     					text-shadow: 0 ms(-9) ms(-10) shade($textColor, 20);
@@ -611,7 +611,7 @@ nav{
     		}
 
     		a{
-    		    
+
 
     		  	color:$textColor;
     		  	background:transparent;
@@ -619,23 +619,23 @@ nav{
     		  	text-shadow: 0 ms(-9) ms(-10) darken($bgColor, 10);
     			@include adjust-font-size-to($font-size-med);
     			@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
-    			text-transform: uppercase;
-    			font-family:$BdCn;
-    			font-weight:800;
+    			text-transform: none;
+    			font-family:$Roman;
+    			font-weight:400;
     			min-height:1em;
     			min-width:1em;
-    			float:left;	
+    			float:left;
 
 
     			transition-property: background, box-shadow, color, border-bottom;
     			transition-duration: 0.35s;
-    			transition-timing-function: ease-in;	
+    			transition-timing-function: ease-in;
 
     			 &:hover,&:focus{
     				color: lighten($textColor,10);
     				background:  set-alpha($tertiary, 0.3);
     				//box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
-    				&:before{          
+    				&:before{
     				    background: url(../images/noise.png) repeat lighten($bgColor, 10);
     				    box-shadow:  0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
     				    border-bottom:0;
@@ -649,14 +649,14 @@ nav{
     				  border-bottom:0;
     				  box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
     				}
-    			}//end active 
+    			}//end active
 
     			&.more{
     				padding:ms(-5);
     				@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
     				background:none;
     				font-family: 'icomoon';
-    				speak: none; 
+    				speak: none;
     				font-style: normal;
     				font-weight: bold;
     				font-variant: normal;
@@ -688,12 +688,12 @@ nav{
     					&:before{
     					  background: url(../images/noise.png) repeat lighten($WVUGold, 10);
     					}
-    				}//end active 
-    			}//end &.more      
-    			
+    				}//end active
+    			}//end &.more
+
     		}//end a
 
-    		
+
 
 
     		li.apply a{
@@ -709,9 +709,9 @@ nav{
     			}
     		}//end li.apply a
 
-    	}//end m-primaryNav__navbar-nav 
+    	}//end m-primaryNav__navbar-nav
 
-    	
+
 
     	}//end .in
     }//end bp-tablet-1
@@ -725,13 +725,13 @@ nav{
   	#nav-primary.collapse, #nav-primary.collapse.in{
   	  .m-primaryNav__navbar-nav{
   	  	a{
-  		  @include adjust-font-size-to($font-size-med-2);
-  		  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med-2);
+  		  @include adjust-font-size-to($font-size-med);
+  		  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
   		  &.more{
-  		  	@include rhythm( $ms-5n, $ms-2n, $ms-2n, 0, $font-size-med-2);
+  		  	@include rhythm( $ms-5n, $ms-2n, $ms-2n, 0, $font-size-med);
   		  }
   	    }
-  	  }//end m-primaryNav__navbar-nav 
+  	  }//end m-primaryNav__navbar-nav
   	}//end #nav-primary
   }// end bp-desktop1
 
@@ -745,10 +745,10 @@ nav{
     **************************************/
   @include breakpoint($bp-desktop2-1){
   	#nav-primary.collapse .m-primaryNav__navbar-nav a{
-  	  @include adjust-font-size-to($font-size-large);
-  	  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-large);
+  	  @include adjust-font-size-to($font-size-med-2);
+  	  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med-2);
   	  &.more{
-  	  	@include rhythm($ms-8n, $ms-2n, $ms-2n, 0, $font-size-large);
+  	  	@include rhythm($ms-8n, $ms-2n, $ms-2n, 0, $font-size-med-2);
   	  }
   	}
   }//end bp desktop2
@@ -768,31 +768,31 @@ nav{
 //////////////////////////////////////
 
 #hamburger{
-	
+
 	@include transition-property(border-bottom, border-top);
  	@include transition-duration(0.2s);
   	@include transition-timing-function(ease-in);
   	&:after{
   		//@extend .icon-th-list;
-  		background: transparent; 
-		border-bottom: 19px double shade($primary, 60); 
+  		background: transparent;
+		border-bottom: 19px double shade($primary, 60);
 		border-top: 6px solid shade($primary, 60);
 		height: 32px;
 		max-width:$space-quad;
 		}
 	&:hover{
-			border-bottom: 19px double shade($white, 10); 
+			border-bottom: 19px double shade($white, 10);
 			border-top: 6px solid shade($white, 10);
 		}
 	&.active{
-			border-bottom: 19px double shade($secondary, 10); 
+			border-bottom: 19px double shade($secondary, 10);
 			border-top: 6px solid shade($secondary, 10);
 	}
 
 	@include breakpoint($bp-tablet){
 		display:none;
-	}	
-				
+	}
+
 }//end hamburger
 
 #navWrapper{

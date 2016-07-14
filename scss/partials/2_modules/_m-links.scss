@@ -1,33 +1,32 @@
 .m-links{
   	.title{
-  		color:$WarmGrey3;
-  		border-bottom:0;
-  		text-transform:uppercase;  		
+  		color:$white;
+  		border-bottom:1px solid lighten($black, 5);
+  		text-transform:uppercase;
   		@extend .font-Lt;
-      border-color:$WarmGrey1;
       border-image:none;
-      @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+      //@include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
       @include adjust-font-size-to($font-size-med-2);
       @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
   	}
   	h3{
   		color:$secondary;
   		text-transform:none;
-  		@extend .font-LtCn;
+  		@extend .font-Bd;
       margin:0; padding: 0;
       border:0;
   		a{
         //@include add-noise;
   			color:$white;
-        background-color: set-alpha($WVUBlue,0.3) ;
+        //background-color: set-alpha($WVUBlue,0.3) ;
         width:100%;
         float:left;
         padding: 0 ms(-3);
 
-        @include adjust-font-size-to($font-size-med);  
+        @include adjust-font-size-to($font-size-med);
         @include rhythm($ms-5n, $ms-4n, $ms-4n, $ms-2n, $font-size-med);
-        @include trailing-border(ms(-9), $ms-4n, $font-size-med, solid);
-        border-color:set-alpha(lighten($WVUBlue,10),0.3);
+        //@include trailing-border(ms(-9), $ms-4n, $font-size-med, solid);
+        //border-color:set-alpha(lighten($WVUBlue,10),0.3);
         border-top:0;
         border-top-style: none;
   			&:hover, &:focus{
@@ -38,33 +37,38 @@
 
     .nav-list li{
       margin-bottom:ms(-9) !important;
-       &:last-child a{border-bottom:0;}
+       &:last-child a{
+         border-bottom:0;
+         box-shadow: none;
+       }
     }
 
     .nav-list li a{
-      @include btn( darken($primary,12), set-alpha(darken($coolblack, 10), 0.6));  
-      border-width:0;   
-      @include adjust-font-size-to($font-size-small-2);  
+      //@include btn( darken($primary,12), set-alpha(darken($coolblack, 10), 0.6));
+      border-width:0;
+      @include adjust-font-size-to($font-size-small-2);
       @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2);
-      @include trailing-border(ms(-9), 1, $font-size-small-2, solid);
+      //@include trailing-border(ms(-9), $ms-4n, $font-size-small-2, solid);
       @extend .font-Roman;
-      background:transparent;      
-      box-shadow: 0 1px 0 0 tint($coolblack, 15);
-    
-     
+      background:transparent;
+      padding-left: ms(-2);
+      @extend .font-Roman;
+      //box-shadow: 0 1px 0 0 tint($coolblack, 5);
+
+
 
       &:visited{
         color:$white;
       }
-      
+
       &:after{
         //color:$WarmGrey1;
       }
 
       @include breakpoint($bp-mobile1-1){
-        font-family:$LtCn;
-        font-weight:300;
-      } 
+        //font-family:$LtCn;
+        //font-weight:300;
+      }
 
     }
 
@@ -73,13 +77,13 @@
     /////////////////////////////////////
     section{
        &[data-eq-state="small"]{
-          .title{ 
-            @include adjust-font-size-to($font-size-med);            
+          .title{
+            @include adjust-font-size-to($font-size-med);
             @include rhythm($ms-1n, $ms-3n, 0, $ms-4n, $font-size-med-2);
           }//end .title
        }//end small eq
        &[data-eq-state="medium"]{
-        
+
        }//end medium eq
        &[data-eq-state="large"]{}//end large eq
     }//end section

@@ -1,6 +1,7 @@
 #s-footer__site{
     font-size:$base-font-size;
     @include rhythm(1, 0, 0, 1, $font-size-med);
+    width:100%; float:left;
 
     ul li{
       margin:0; padding:0;
@@ -78,6 +79,6 @@
 
 
 
- 
- 
+
+
 }//end #site-footer

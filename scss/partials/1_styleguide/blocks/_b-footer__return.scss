@@ -3,7 +3,7 @@
   float:left;
   color:tint($black, 40);
   text-shadow: 0 1px 0 darken($black, 10);
-  @extend .white-noise;
+  //@extend .white-noise;
   background-color:$black;
   text-transform:uppercase;
   font-family:$BdCn;
@@ -12,7 +12,7 @@
   @include adjust-font-size-to($font-size-med);
   @include rhythm(0, $ms-2n, $ms-4n, 0, $font-size-med);
   text-align:center;
-  box-shadow: $black 0 2px 3px inset;
+  box-shadow:darken($black,5) 0 ms(-7) ms(-8) 0 inset;
 
   &:hover,&:focus{
     color:lighten($WVUGold, 10);
