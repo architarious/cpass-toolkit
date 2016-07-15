@@ -1,6 +1,6 @@
 @mixin b-cta__news($background:$coolblack,
                    $link-color:$white,
-                   $title-color:$white, 
+                   $title-color:$white,
                    $shadow:$coolblack2 ){
 
 .b-cta__news{
@@ -9,10 +9,10 @@
     color:$title-color;
     border-color:mix($title-color, $background, 5);
     border-image:none;
-    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
-    @include adjust-font-size-to($font-size-med-2);
-    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
-    max-width:100%; 
+    //@include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-large-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-large-2);
+    max-width:100%;
     }//end .title
 
 	ul{
@@ -23,13 +23,13 @@
 			@include trailing-border(ms(-7), $ms-2n, $font-size-med, solid);
 			border-color:$shadow;
 			box-shadow:0 ms(-10) 0 0 tint($background, 10);
-			&:last-child{border-bottom:0; box-shadow:none;} 
+			&:last-child{border-bottom:0; box-shadow:none;}
 
 
 			a{
 				background:none;
-				width:100%;  
-				@include adjust-font-size-to($font-size-med);  
+				width:100%;
+				@include adjust-font-size-to($font-size-med);
 				@include rhythm(0, $ms-3n, $ms-3n, 0, $font-size-med);
 				color:$link-color;
 				position:relative;
@@ -41,18 +41,18 @@
 				//		color:mix($title-color, $background, 5);
 				//		content: "\e6bd";
 				//		font-weight:100;
-				//		line-height:$ms-2+$ms-8n+em;    
+				//		line-height:$ms-2+$ms-8n+em;
 				//		font-size:$ms-0+em;
 //
-				//		width: $ms-2+$ms-8n+em;    
+				//		width: $ms-2+$ms-8n+em;
 				//		height: $ms-2+$ms-8n+em;
-				//		position: absolute;    
+				//		position: absolute;
 				//		top: 56%;
 				//		right:0;
 				//		transform: translateY(-50%);
 				//		padding-left:0.618em;
 				//	}//end :after
-				
+
 
 				&:hover,&:focus{
 					background:none;
@@ -63,7 +63,7 @@
 					//	color:lighten($link-color,10);
 					//}
 
-					
+
 				}//end hover
 				&:visited, &:active{
 					color: darken($link-color, 5);

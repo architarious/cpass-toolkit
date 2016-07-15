@@ -1,15 +1,32 @@
-.m-cta{
+@mixin m-cta(
+  $bgColor: $white,
+  $titleColor: $black,
+  $linkColor: $tertiary,
+  $accentColor: $quadrary,
+  $shadow: shade($bgColor, 5),
+  $light: lighten($bgColor, 10)){
+
+
+  .m-cta{
    .title{
-    color:$white;
-    @extend .font-BdCn;
-    border-color:$WarmGrey1;
-    border-image:none;
-    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
-    @include adjust-font-size-to($font-size-med-2);
-    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
+    color:$titleColor;
+    @extend .font-Bd;
+    //border-color:$accentColor;
+    //border-image:none;
+    //@include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-large-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-large-2);
+    box-shadow:none;
+    border-bottom:0;
    }
     section{
     }//end section
-    
 
-}//end .cpass-cta
+    @include b-cta__about($bgColor, $titleColor, lighten($titleColor,10), $accentColor, $bgColor, $titleColor, $shadow);
+    @include b-cta__events($bgColor, $linkColor, $bgColor, $titleColor, $linkColor, $titleColor, $shadow);
+    @include b-cta__news($bgColor, $linkColor, $titleColor, $shadow);
+
+
+  }//end .m-cta
+
+}//end mixin

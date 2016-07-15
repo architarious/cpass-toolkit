@@ -1,7 +1,7 @@
 @mixin b-cta__about($background:$coolblack,
-                    $background-btn:$black,                     
-                    $background-btn-active:$WVUGold, 
-                    $text-btn:$white, 
+                    $background-btn:$black,
+                    $background-btn-active:$WVUGold,
+                    $text-btn:$white,
                     $text-btn-active:$primary,
                     $title-color:$white,
                     $shadow:$coolblack2     ){
@@ -12,13 +12,13 @@
     color:$title-color;
     border-color:mix($title-color, $background, 5);
     border-image:none;
-    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
-    @include adjust-font-size-to($font-size-med-2);
-    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
-    max-width:100%; 
+    //@include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-large-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-large-2);
+    max-width:100%;
   }
 
-  .nav-list li{ 
+  .nav-list li{
     width:100%;
     float:left;
 
@@ -34,11 +34,11 @@
     text-transform:none;
     font-family:$Bd;
     font-weight:500;
-    
+
    }//end a
 
    &.dropdown{
-    
+
 
      .dropdown-toggle{
        //@include btn_icon( $black, darken($black,15), $white, "\e643",  "true");
@@ -58,8 +58,8 @@
             border:0;
             text-shadow: 0 ms(-9) ms(-9) 0 darken($background-btn-active, 45);
         }
-        &:after{   
-          content: "\e644"; 
+        &:after{
+          content: "\e644";
           color:$text-btn;
           border:darken($background-btn-active, 8) ms(-11) solid;
 
@@ -67,7 +67,7 @@
       }//end &.open .dropdown-toggle
       .dropdown-menu{
           margin-top:-1px;
-          padding:0 ms(-2);              
+          padding:0 ms(-2);
           @include add-noise;
           background-color: set-alpha(darken($background-btn,10), 0.95);
           width:100%;
@@ -84,7 +84,7 @@
             @include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
             @include adjust-font-size-to($font-size-small-2);
             white-space:normal;
-            @extend .font-LtCn;  
+            @extend .font-LtCn;
           }//end .dropdown-menu li a
 
           .dropdown-header{
@@ -107,21 +107,21 @@
       @include adjust-font-size-to($font-size-small-2);
       @extend .font-BdCn;
     }
-    .dropdown-menu li a{} 
+    .dropdown-menu li a{}
   }
   &[data-eq-state="medium"]{
     .nav-list li a{
      @extend .font-BdCn;
     }
-    .dropdown-menu li a{} 
+    .dropdown-menu li a{}
   }
   &[data-eq-state="large"]{
     .nav-list li a{}
-    .dropdown-menu li a{} 
+    .dropdown-menu li a{}
   }
   &[data-eq-state="x-large"]{
     .nav-list li a{}
-    .dropdown-menu li a{} 
+    .dropdown-menu li a{}
   }
 }//end b-cta__about
 }//end mixin

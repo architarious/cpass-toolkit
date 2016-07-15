@@ -1,9 +1,9 @@
 @mixin b-cta__events($background:$coolblack,
-                     $background-btn:$black, 
-                     $text-btn:$white, 
+                     $background-btn:$black,
+                     $text-btn:$white,
                      $text-color:$WarmGrey3,
                      $link-color:$white,
-                     $title-color:$white, 
+                     $title-color:$white,
                      $shadow:$coolblack2 ){
 
 .b-cta__events{
@@ -11,34 +11,34 @@
     color:$title-color;
     border-color:mix($title-color, $background, 5);
     border-image:none;
-    @include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
-    @include adjust-font-size-to($font-size-med-2);
-    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-med-2);
-    max-width:100%; 
+    //@include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
+    @include adjust-font-size-to($font-size-large-2);
+    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-large-2);
+    max-width:100%;
 
 
 		.title__link{
 			float:right;
 			@include btn(mix($title-color, $background, 5), $shadow, $text-btn);
       background-image:none;
-			@include adjust-font-size-to($font-size-small-2);  
+			@include adjust-font-size-to($font-size-small-2);
 			@include rhythm($ms-7n, $ms-10n, $ms-10n, 0, $font-size-small-2);
 			@include breakpoint($bp-mobile1-1){
 			  font-family:$LtCn;
 			  font-weight:300;
-			} 
+			}
 
 		}
 	}
 
 
 
-  .b-wvuCalendar { 
+  .b-wvuCalendar {
   	padding-left: 0;
-    li{ 
+    li{
 
-    	margin-bottom: 0.5em; 
-    	display: inline-block; 
+    	margin-bottom: 0.5em;
+    	display: inline-block;
     	width: 100%;
     	float:left;
     	@include rhythm(0, 0, $ms-8n, $ms-4n, $font-size-small-2);
@@ -51,51 +51,51 @@
     		box-shadow:none;
     	}
 
-      
 
-      .b-wvuCalendar__event{      		
-      	float: left;  
-      	text-align: center; 
+
+      .b-wvuCalendar__event{
+      	float: left;
+      	text-align: center;
       	padding-bottom: ms(-4);
-      	max-width:25%;  
+      	max-width:25%;
       	@include btn($background-btn, $shadow, $text-btn);
       	@include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2);
       	}//end .b-wvuCalendar__event
 
       	.b-wvuCalendar__event_month{
-      		@include adjust-font-size-to($font-size-small-2);      		
+      		@include adjust-font-size-to($font-size-small-2);
       		text-transform: uppercase;
       		@include breakpoint($bp-mobile1-1){
       		  font-family:$LtCn;
       		  font-weight:300;
-      		} 
+      		}
       	}
       	.b-wvuCalendar__event_day{
-      		display: block; 
+      		display: block;
       		@include adjust-font-size-to($font-size-large-2);
       		@include adjust-leading-to($ms-1);
       		@include rhythm(0, 0, $ms-4n, 0, $font-size-small-2);
       		@include breakpoint($bp-mobile1-1){
       		  font-family:$BlkCn;
       		  font-weight:800;
-      		} 
+      		}
       	}
 
-      	.eventInfo { 
-      		float: left; 
+      	.eventInfo {
+      		float: left;
       		max-width:75%;
       		padding-left: ms(0);
       		@include rhythm(0, $ms-6n, $ms-6n, 0, $font-size-small-2);
       	}//end eventInfo
-        
-        .eventTime { 
-        	@extend .font-LtCn; 
+
+        .eventTime {
+        	@extend .font-LtCn;
         	@include adjust-font-size-to($font-size-med);
         	text-shadow:0 $ms-10n $ms-11n darken($background-btn, 20);
         	color:$text-color;
         }
-        .eventName { 
-        	display: block; 
+        .eventName {
+        	display: block;
         	a{
         	  background:transparent; padding:0; margin:0;
             color:$link-color;
@@ -110,7 +110,7 @@
             &:visited, &:active{
               color: darken($link-color, 5);
             }
-        	  
+
         	}//end a
         }//end eventName
     }//end li
@@ -118,19 +118,19 @@
 
   &[data-eq-state="small"]{
   	.b-wvuCalendar .b-wvuCalendar__event{
-  		min-width:100%;  
+  		min-width:100%;
   		.b-wvuCalendar__event_month{
   			@extend .font-LtCn;
   			@include adjust-font-size-to($font-size-large-2);
       		@include adjust-leading-to(1);
-      		@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-small-2);  
-      		color:set-alpha($text-btn,0.7);		
+      		@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-small-2);
+      		color:set-alpha($text-btn,0.7);
   		    display:inline;
   		    margin-right:ms(-4);
   		}
   		.b-wvuCalendar__event_day{
   			display:inline;
-  			@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-large-2);   
+  			@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-large-2);
   		}
   	}
 
@@ -144,7 +144,7 @@
   &[data-eq-state="medium"]{
   	.b-wvuCalendar .b-wvuCalendar__event{
   		min-width:29%;
-      max-width:30%;  
+      max-width:30%;
   	}
 
   	.b-wvuCalendar .eventInfo{
@@ -156,7 +156,7 @@
   &[data-eq-state="large"]{
   	.b-wvuCalendar .b-wvuCalendar__event{
       min-width:15%;
-  		max-width:30%;  
+  		max-width:30%;
   	}
 
   	.b-wvuCalendar .eventInfo{
@@ -166,10 +166,10 @@
   }//end data-eq-state="medium"
 
   &[data-eq-state="x-large"]{
-    
+
   	.b-wvuCalendar .b-wvuCalendar__event{
       min-width:15%;
-  		max-width:40%;  
+  		max-width:40%;
   	}
 
   	.b-wvuCalendar .eventInfo{
