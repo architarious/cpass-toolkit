@@ -66,8 +66,8 @@
       		@include adjust-font-size-to($font-size-small-2);
       		text-transform: uppercase;
       		@include breakpoint($bp-mobile1-1){
-      		  font-family:$LtCn;
-      		  font-weight:300;
+      		  font-family:$Lt;
+      		  font-weight:200;
       		}
       	}
       	.b-wvuCalendar__event_day{
@@ -89,7 +89,7 @@
       	}//end eventInfo
 
         .eventTime {
-        	@extend .font-LtCn;
+        	@extend .font-Lt;
         	@include adjust-font-size-to($font-size-med);
         	text-shadow:0 $ms-10n $ms-11n darken($background-btn, 20);
         	color:$text-color;
@@ -120,7 +120,7 @@
   	.b-wvuCalendar .b-wvuCalendar__event{
   		min-width:100%;
   		.b-wvuCalendar__event_month{
-  			@extend .font-LtCn;
+  			@extend .font-Lt;
   			@include adjust-font-size-to($font-size-large-2);
       		@include adjust-leading-to(1);
       		@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-small-2);

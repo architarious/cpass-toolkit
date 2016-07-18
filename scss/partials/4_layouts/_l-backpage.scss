@@ -4,13 +4,13 @@
 // Your SMACSS Layouts go here
 // Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
 ////////////////////////
- 
-body.template-backpage{   
-  
+
+body.template-backpage{
+
    #page-wrap{
-   	    @include bgImage( url(../images/bgImage-future.png));
-    } 
-  
+   	    //@include bgImage( url(../images/bgImage-future.png));
+    }
+
 
 	#header{
 		#s-header__cpass{}
@@ -46,7 +46,7 @@ body.template-backpage{
 		 }
 		 @include breakpoint($bp-desktop2-1){
 		   @include grid-desktop2;
-		   .main{@include grid-span(10,4); }		   
+		   .main{@include grid-span(10,4); }
 		   .sidebar-l{@include grid-span(3,1);}
 		   .sidebar{@include grid-span(3,14); }
 		 }
@@ -58,5 +58,5 @@ body.template-backpage{
 		#s-footer__cpass--wrapper{}
 		#s-footer__wvu--wrapper{}
 	}//end #footer
-	
+
 }//end body

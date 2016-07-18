@@ -20,7 +20,7 @@
 			width:100%;
 			float:left;
 			@include rhythm(0, 0, $ms-8n, $ms-4n, $font-size-small-2);
-			@include trailing-border(ms(-7), $ms-2n, $font-size-med, solid);
+			@include trailing-border(ms(-10), $ms-2n, $font-size-med, solid);
 			border-color:$shadow;
 			box-shadow:0 ms(-10) 0 0 tint($background, 10);
 			&:last-child{border-bottom:0; box-shadow:none;}
