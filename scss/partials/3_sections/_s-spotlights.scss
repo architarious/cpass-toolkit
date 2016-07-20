@@ -3,8 +3,8 @@
 		$textColor2: $WarmGrey3,
 		$bgColor: $black,
 		$btnColor: $tertiary,
-		$shadow: darken($bgColor, 3),
-		$light: lighten($bgColor, 3),
+    $shadow:shade($bgColor, 5),
+    $light: tint($bgColor, 10),
 		$btnText: $white){
 
 	//background: url(../images/noise.png) repeat $bgColor;

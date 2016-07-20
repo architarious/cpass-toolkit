@@ -37,65 +37,7 @@
 
   }
 
-  //begin mobile styling
-  .m-cta{
-    //begin mobile styling
-    @include breakpoint($bp-mobile1-1 $bp-mobile2-1+1rem){
-      @include grid-mobile1;
-      .nav-list li a{ }
-      .b-cta__about{@include grid-span(4,1); clear:both;}
-      .b-cta__events{@include grid-span(4,1); clear:both;}
-      .b-cta__news{@include grid-span(4,1); }
-    }
-
-    @include breakpoint(($bp-mobile2-1+1rem) $bp-tablet-1){
-      @include grid-mobile2;
-      .nav-list li a{ }
-      .b-cta__about{@include grid-span(3,1);}
-      .b-cta__events{@include grid-span(3,4);}
-      .b-cta__news{@include grid-span(6,1); clear:both; }
-    }//end $bp-mobile-2
-
-    @include breakpoint($bp-tablet-1 $bp-desktop1-1){
-      @include grid-tablet;
-      .nav-list li a{ }
-      .b-cta__about{@include grid-span(2,1);}
-      .b-cta__events{@include grid-span(2,3);}
-      .b-cta__news{ @include grid-span(4,5);}
-    }//end $bp-tablet
-
-    @include breakpoint($bp-desktop1-1 $bp-desktop2-1){
-      @include grid-desktop1;
-      .nav-list li a{ @include adjust-font-size-to($font-size-small-2);}
-      .b-cta__about{
-        @include grid-span(3,1);
-        .dropdown-menu a{@include adjust-font-size-to($font-size-small-2);}
-      }
-      .b-cta__events{@include grid-span(3,4);}
-      .b-cta__news{ @include grid-span(6,7);}
-      @include breakpoint($bp-desktop1-3){
-         .nav-list li a{ @include adjust-font-size-to($font-size-med);}
-      }
-    }//end $bp-desktop-1
-
-    @include breakpoint($bp-desktop2-1 $bp-desktop2-6){
-      @include grid-desktop2;
-      .nav-list li a{ }
-      .b-cta__about{@include grid-span(4,1);}
-      .b-cta__events{@include grid-span(4,5);}
-      .b-cta__news{@include grid-span(8,9);}
-      }//end $bp-desktop-2
-
-    @include breakpoint($bp-desktop2-6){
-      @include grid-desktop2;
-      .nav-list li a{ }
-      .b-cta__about{@include grid-span(3,1);}
-      .b-cta__events{@include grid-span(6,4);}
-      .b-cta__news{@include grid-span(7,10);}
-      }//end $bp-desktop-2
-
-
-  }//end .m-cta mobile styling
+  
 
   .b-social{
     @include breakpoint($bp-mobile1-1 $bp-mobile2-1){

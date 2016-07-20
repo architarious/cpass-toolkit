@@ -75,12 +75,12 @@ p{
         border-bottom-style:solid;
         border-bottom-color:tint($tertiary, 20);
         @include trailing-border(1px, $ms-7n/2);
-    
+
         @include standard-transition(background-color);
         @include standard-transition(border);
         &:hover{
             color:$black;
-            background-color:tint($secondary, 20); 
+            background-color:tint($secondary, 20);
             border-top: 2px solid tint($tertiary, 20);
             border-bottom: 0;
         }
@@ -108,12 +108,12 @@ h1 {
 header h1 a{
     max-width: 100%;
     @include adjust-font-size-to($font-size-large);
-    @include rhythm(2.6180340, 1.618, 0, 2.0225425, $font-size-large);    
+    @include rhythm(2.6180340, 1.618, 0, 2.0225425, $font-size-large);
 }
 
 h2 {
-    border-bottom-color:$SecLightGold;    
-    border-bottom-style:solid;    
+    border-bottom-color:$SecLightGold;
+    border-bottom-style:solid;
     font-family:$Lt;
     font-weight: 200;
     color: $primary;
@@ -136,7 +136,7 @@ h4, h5, h6{
 h3 {
     color: $primary;
     border:0;
-    
+
     @include adjust-font-size-to($font-size-large-2);
     @include rhythm($ms-4, 0, 0, $ms-1n, $font-size-large-2);
     @include trailing-border(ms(-9), $ms-4n);
@@ -182,7 +182,7 @@ h3, h4, h5, h6{
 table{
     width:100%;
     color:$vb-Charcoal;
-    
+
 
     caption{
         @include adjust-font-size-to($font-size-large);
@@ -192,10 +192,10 @@ table{
         text-align:center;
     }
     tbody, thead{
-        tr{ 
+        tr{
             &:nth-child(even){ background:tint($secondary, 60);}
             th{
-                
+
                 font-family:$BdCn;
                 font-weight:800;
                 color:darken($secondary,2);
@@ -227,7 +227,7 @@ table{
                   border-left: 0;
                 }
             }
-            
+
         }
     }
     @include breakpoint($bp-mobile1-1 $bp-desktop1-1){
@@ -255,7 +255,7 @@ ul {
     li{
         @include rhythm($ms-4n, 0, 0, $ms-4n, $font-size-med);
     }
-    
+
     ul {
       list-style-type: circle;
       margin-top:0;
@@ -294,22 +294,22 @@ dl{
     max-width:ms(16);
 
 
-  } 
+  }
   dd{
      @include adjust-font-size-to($font-size-med);
      @include rhythm($ms-1, $ms-5n, $ms-6n, $ms-3n, $font-size-med-2);
-    padding:ms(-2); 
-    border-color:tint($quadrary, 20); 
-    border-style:dashed; 
+    padding:ms(-2);
+    border-color:tint($quadrary, 20);
+    border-style:dashed;
     border-width:1px;
     border-left: ms(-2) $quadrary solid;
     max-width:ms(15);
     color:$black;
     &:nth-child(odd){}
   }
-  dl dt{ 
+  dl dt{
     @include rhythm(1, 0.618, 0.477, 0.7725, $font-size-small-2);
-    background-color: tint($primary, 60); 
+    background-color: tint($primary, 60);
     @include box-shadow(set-alpha($black, 0.1) 0 1px 1px, set-alpha($white, 0.2) 0 1px 1px inset);
     border-top: 1px solid tint($primary, 10);
     border-bottom: 1px solid shade(darken($primary, 20), 10);
@@ -344,9 +344,9 @@ blockquote {
     max-width: 50em;
     border-left: ms(-2) solid $quadrary;
     //@include rem-selector(padding, 2);
-    padding-left: ms(1); 
+    padding-left: ms(1);
     padding-right:0;
-    
+
     em, i{ font-family:$font-secondary;}
     strong, b{font-family: $font-secondary;}
 
@@ -357,7 +357,7 @@ blockquote {
         em, i{ font-family:$font-secondary;}
         strong, b{font-family: $font-secondary;}
     }
-    
+
 }//end blockquote
 
 acronym, abbr {
@@ -419,6 +419,7 @@ hr {
 img, object, iframe, embed {
     max-width: 100%;
 }
+figure{margin:0;}
 hr {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;

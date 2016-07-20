@@ -4,13 +4,14 @@
   $linkColor: $white,
   $linkColor--Hover: $quadrary,
   $shadow: shade($bgColor, 5),
-  $light: lighten($bgColor, 5)
+  $light: lighten($bgColor, 3)
 ){
 
 .m-links{
   	.title{
   		color:$titleColor;
-  		border-bottom:1px solid $light;
+  		border-bottom:1px solid $shadow;
+      box-shadow: 0 1px 0 0 $light;
   		text-transform:uppercase;
   		@extend .font-Lt;
       border-image:none;

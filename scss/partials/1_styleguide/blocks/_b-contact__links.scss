@@ -1,5 +1,11 @@
+@mixin b-contact__links(
+    $btnColor: $quadrary,
+    $shadow: $primary--shadow,
+    $btnText: $primary
+){
+
 .b-contact__links{
-  
+
   li{
     float:left;
     width:100%;
@@ -8,52 +14,55 @@
   ul li a{
     float:left;
     width:100%;
+    background-image:none !important;
+    &:after{ background-image:none !important;}
 
-    @include rhythm($ms-6n, 0, 0, $ms-6n, $font-size-small-2);
+    //@include rhythm($ms-8n, 0, 0, $ms-8n, $font-size-small-2);
     @include adjust-font-size-to($font-size-small-2);
     @include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
-    
-    &.contact{@include btn_icon($black, shade($coolblack, 30), $white, "\e60e"); }
-    &.request-info{@include btn_icon($black, shade($coolblack, 30), $white, "\e6aa");}
-    &.faculty{@include btn_icon($black, shade($coolblack, 30), $white, "\e651");}
-    &.feedback{@include btn_icon($black, shade($coolblack, 30), $white, "\e60a");}
-    &.btn-arrow{@include btn_icon($black, shade($coolblack, 30), $white);}
 
-    &.contact.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e60e", "false");}
-    &.request-info.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e6aa", "false");}
-    &.faculty.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e651","false");}
-    &.feedback.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e60a", "false");}
-    &.btn-arrow.min{@include btn_icon($black, shade($coolblack, 30), $white, "\e6bd", "false");}
+    &.contact{@include btn_icon($btnColor, $shadow, $btnText, "\e60e", "false"); }
+    &.request-info{@include btn_icon($btnColor, $shadow, $btnText, "\e6aa", "false");}
+    &.faculty{@include btn_icon($btnColor, $shadow, $btnText, "\e651", "false");}
+    &.feedback{@include btn_icon($btnColor, $shadow, $btnText, "\e60a", "false");}
+    &.btn-arrow{@include btn_icon($btnColor, $shadow, $btnText);}
 
-    
+    &.contact.min{@include btn_icon($btnColor, $shadow, $btnText, "\e60e", "false");}
+    &.request-info.min{@include btn_icon($btnColor, $shadow, $btnText, "\e6aa", "false");}
+    &.faculty.min{@include btn_icon($btnColor,$shadow, $btnText, "\e651","false");}
+    &.feedback.min{@include btn_icon($btnColor, $shadow, $btnText, "\e60a", "false");}
+    &.btn-arrow.min{@include btn_icon($btnColor, $shadow, $btnText, "\e6bd", "false");}
+
+
   }
 
   &[data-eq-state="small"]{ //0px
     .nav-list li a{
       @include adjust-font-size-to($font-size-small-2);
-      @extend .font-BdCn;
+      @extend .font-Bd;
     }//end a
 	}//end small
   &[data-eq-state="medium"]{ //215px
     .nav-list li a{
-      @include adjust-font-size-to($font-size-small-2);
-      margin: ms(-7) 0;
-      @extend .font-BdCn;
+      @include adjust-font-size-to($font-size-med);
+      //margin: ms(-7) 0;
+      @extend .font-Bd;
     }//end a
 	}//end medium
   &[data-eq-state="large"]{ //250px
     .nav-list li a{
       @include adjust-font-size-to($font-size-med);
-      margin: ms(-8) 0;
-      @extend .font-BlkCn;
+      //margin: ms(-8) 0;
+      @extend .font-Bd;
     }//end a
 	}//end large
 	&[data-eq-state="x-large"]{ //300px
 		.nav-list li a{
       @include adjust-font-size-to($font-size-med-2);
-      margin: ms(-10) 0;
+      //margin: ms(-10) 0;
       @extend .font-BlkCn;
     }//end a
 	}//end x-large
 
 }//end #footer_contact-links
+}@include b-contact__links

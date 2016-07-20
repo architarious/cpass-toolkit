@@ -4,7 +4,8 @@
                      $text-color:$WarmGrey3,
                      $link-color:$white,
                      $title-color:$white,
-                     $shadow:$coolblack2 ){
+                     $shadow:shade($background, 5),
+                     $light:tint($background, 10)){
 
 .b-cta__events{
 	.title{
@@ -12,8 +13,8 @@
     border-color:mix($title-color, $background, 5);
     border-image:none;
     //@include trailing-border(ms(-7), $ms-2n, $font-size-med-2, solid);
-    @include adjust-font-size-to($font-size-large-2);
-    @include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-large-2);
+    //@include adjust-font-size-to($font-size-large-2);
+    //@include rhythm($ms-1n, 0, 0, $ms-4n, $font-size-large-2);
     max-width:100%;
 
 
@@ -42,9 +43,9 @@
     	width: 100%;
     	float:left;
     	@include rhythm(0, 0, $ms-8n, $ms-4n, $font-size-small-2);
-    	@include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
+    	@include trailing-border(ms(-10), $ms-2n, $font-size-small-2, solid);
     	border-color:$shadow;
-    	box-shadow:0 ms(-10) 0 0 tint($background, 10);
+    	box-shadow:0 ms(-10) 0 0 $light;
 
     	&:last-child{
     		border-bottom:0;

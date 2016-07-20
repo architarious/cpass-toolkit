@@ -6,7 +6,7 @@
         $coolblack: desaturate(shade($WVUBlue, 40),  80);  //#14191f
         $coolblack2: #090b0e; //rgb(9,11,14)
 
-      
+
 
     //NEUTRAL PALLETTE
         $DarkGrey: #333f48;
@@ -14,7 +14,7 @@
         $WarmGrey1: #6e6259;
         $WarmGrey2: #968c83;
         $WarmGrey3: #bfb8af;
-	
+
 	//SECONDARY PALLETTE
 		$SecBlue:#0033a0;
 		$SecMiddleBlue: #005eb8;
@@ -23,9 +23,9 @@
         $SecGreen: #708573;
         $SecForest: #0d5257;
         $SecLightGold: #fdda24;
-        $SecLightOrange: #ed8b00;        
+        $SecLightOrange: #ed8b00;
         $SecOrange: #e35205;
-        $SecDarkOrange: #be3a34;        
+        $SecDarkOrange: #be3a34;
         $SecOlive: #9f7d23;
         $SecBrown: #4d3d2a;
 
@@ -48,7 +48,7 @@
     	$cpass-Blue:#005b92;
     	$cpass-DarkBlue:#274152;
 
-    //Discover Viewbook Colors    
+    //Discover Viewbook Colors
     	$vb-DarkNavy: $DarkGrey; //#333e48;
     	$vb-RichNavy: #00447c;
         $vb-FlatNavy: #19468d;
@@ -59,7 +59,7 @@
         $vb-PaleGrey: #f7f7f7;
 
 
-    $grey : lighten($black, 40);  
+    $grey : lighten($black, 40);
 	$grey-light : darken($white, 5);
 	$grey-light-2 : darken($white, 10);
 	$grey-light-3 : darken($white, 15);
@@ -69,11 +69,11 @@
 	$dim : rgba(0,0,0,0.5);
 	$error : #f00;
 	$valid : #089e00;
-	$warning : red; 
+	$warning : red;
 	$information : #000db5;
-  
- 
-$cs-primary: $WVUBlue;  
+
+
+$cs-primary: $WVUBlue;
 //$cs-secondary: $WVUBlue;
 $cs-scheme: complement;
 $cs-hue-offset: 70;
@@ -91,10 +91,10 @@ $quadrary: $WVUGold; // #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25
 //@include cs-test($primary $secondary $tertiary $quadrary);
 
 
-$primary--shadow: darken($primary, 7);
+$primary--shadow: darken($primary, 3);
 $primary--light: tint($primary, 10);
 
-$secondary--shadow: darken($secondary, 7);
+$secondary--shadow: shade($secondary, 5);
 $secondary--light: tint($secondary, 10);
 
 $tertiary--shadow: darken($tertiary, 7);
@@ -103,5 +103,10 @@ $tertiary--light: tint($tertiary, 10);
 $quadrary--shadow: darken($quadrary, 7);
 $quadrary--light: tint($quadrary, 10);
 
+$lbg: $white;
+$lbg--shadow: shade($lbg, 5);
+$lbg--light: tint($lbg, 10);
 
-
+$dbg: $black;
+$dbg--shadow: darken($lbg, 5);
+$dbg--light: tint($lbg, 10);

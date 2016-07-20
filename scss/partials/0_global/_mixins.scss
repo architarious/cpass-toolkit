@@ -12,7 +12,7 @@
 ///////////////////////////////////
 ///REM conversion mixins
 //
-//USAGE: $include rem-selector(font-size, 12); 
+//USAGE: $include rem-selector(font-size, 12);
 //USAGE: $include px2rem-selector(max-width, 600);
 //Dependencies: Set variable for $root-font-size
 ///////////////////////////////////
@@ -36,10 +36,10 @@
 ///SVG Backgrounds with PNG and Retina Fallback mixin
 //
 //USAGE: @include background-image('brandpattern');
-//Dependancies:  
+//Dependancies:
 // - images need to be saved in /images directory.
 // - files must be named similiarly.  Example:  brandpattern.svg, brandpattern.png, brandpatternRet.png
-// - for information on when/how to design for retina: http://isthisretina.com/ 
+// - for information on when/how to design for retina: http://isthisretina.com/
 ///////////////////////////////////
 //$image-path: '../images' !default;
 //$fallback-extension: 'png' !default;
@@ -60,9 +60,9 @@
 //}
 
 ///////////////////////////////////
-///ghostVerticalAlign: 
+///ghostVerticalAlign:
 //
-//USAGE: $include ghostVerticalAlign; 
+//USAGE: $include ghostVerticalAlign;
 //Dependencies: none
 ///////////////////////////////////
 
@@ -82,7 +82,7 @@
 ///BASE Animations and Keyframe Mixins
 //
 //Description: allows you to create name custom keyframes and then easily apply them with browser prefixes
-//USAGE: 
+//USAGE:
 //@include keyframes(slide-down) {
 //  0% { opacity: 1; }
 //  90% { opacity: 0; }
@@ -94,7 +94,7 @@
 //  background: black;
 //  @include animation('slide-down 5s 3');
 //}
-//References: http://www.w3schools.com/cssref/css3_pr_animation.asp 
+//References: http://www.w3schools.com/cssref/css3_pr_animation.asp
 //animation: name duration timing-function delay iteration-count direction fill-mode play-state;
 ///////////////////////////////////
 
@@ -104,13 +104,13 @@
   }
   @-moz-keyframes $animation-name {
     @content;
-  }  
+  }
   @-ms-keyframes $animation-name {
     @content;
   }
   @-o-keyframes $animation-name {
     @content;
-  }  
+  }
   @keyframes $animation-name {
     @content;
   }
@@ -121,19 +121,19 @@
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
 }
 
 ///////////////////////////////////
 ///Standard Transition
 //
 //DESCRIPTION: Used to apply consistent transitions, while reducing code needed to be written
-//DEFAULT: applies ease-in color transition of 0.2s by default. 
-//USAGE: @include standard-transition(); OR @include standard-transition(box-shadow, 0.3s, ease-out); 
+//DEFAULT: applies ease-in color transition of 0.2s by default.
+//USAGE: @include standard-transition(); OR @include standard-transition(box-shadow, 0.3s, ease-out);
 ///////////////////////////////////
 @mixin standard-transition($property:color, $duration:0.2s, $function:ease-in){
   transition-property: $property;
-  transition-duration: $duration;  
+  transition-duration: $duration;
   transition-timing-function: $function;
 
   //@include transition-property(background, box-shadow);
@@ -146,7 +146,7 @@
 //
 //DESCRIPTION: Used to apply white-noise bg
 //DEFAULT: same settings as buttons throughout site
-//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10);
 ///////////////////////////////////
 @mixin add-noise(){
   background:url("../images/noise.png") repeat;
@@ -156,7 +156,7 @@
 //
 //DESCRIPTION: Used to apply consistent box-shadows throughout site
 //DEFAULT: same settings as buttons throughout site
-//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10);
 ///////////////////////////////////
 @mixin standard-box-shadow($shadow:tint($black,15), $h:0, $v:$ms-8n+em, $blur:$ms-11n+em, $spread:0){
   box-shadow: $shadow $h $v $blur $spread;
@@ -167,7 +167,7 @@
 //
 //DESCRIPTION: Used to apply consistent box-shadows throughout site
 //DEFAULT: same settings as buttons throughout site
-//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10);
 ///////////////////////////////////
 @mixin standard-border-radius($radius: $ms-2+em){
   border-radius: $radius;
@@ -190,7 +190,7 @@
 //
 //DESCRIPTION: Used to apply consistent box-shadows throughout site
 //DEFAULT: same settings as buttons throughout site
-//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10); 
+//USAGE: @include standard-box-shadow(); OR @include standard-box-shadow(darken($black), 10);
 ///////////////////////////////////
 @mixin standard-text-shadow($shadow:tint($black,15), $h:0, $v:$ms-8n+em, $blur: $ms-11n+em, $spread:0){
   text-shadow: $h $v $blur $shadow ;
@@ -212,173 +212,6 @@
 @mixin letterpress-dark($opacity:0.1618){
   text-shadow:0 $ms-11n+em 0 set-alpha($black, $opacity) ;
 }
-
-
-///////////////////////////////////
-///Button Mixin
-//
-//USAGE: @include btn();  or @include btn($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
-//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
-///////////////////////////////////
-@mixin btn($bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white){
-    font-family: $BdCn;
-    font-weight:800;
-
-    @include breakpoint($bp-desktop1-1){
-      font-family: $BlkCn;  
-      font-weight:900; 
-    } 
- 
-    
-    letter-spacing:$ms-11n+em;
-    position:relative;
-    text-transform: uppercase;
-    line-height:1.618em;
-
-    @include sassy-button( "flat", $ms-7n+em, 1em, $bg-color, shade($bg-color, 20), $tx-color, inset);
-    background-image:url(../images/noise.png);
-    padding: $ms-3n+em 1em;
-    border:$ms-11n+em solid lighten($bg-color, 5);
-    border-bottom:$ms-11n+em solid darken($bg-color, 10); 
-    @include standard-box-shadow($shadow);
-    @include standard-transition(background-color);
-    @include standard-transition(box-shadow);
-
-    &:hover, &:focus{
-      @include box-shadow(tint($shadow,10) 0 $ms-11n+em $ms-8n+em);
-      color:shade($tx-color,10);
-    }
-
-    &:active{
-      background:lighten($bg-color, 20);
-      //@include box-shadow(tint($shadow,40) 0 $ms-6n+em $ms-4n+em);
-    }
-
-    &:visited{
-      color:mix($bg-color, $tx-color, 35);
-      @include letterpress();
-      text-decoration:none;
-      &:after{
-        color:mix($bg-color, $tx-color, 35);
-      }
-    }
-
-    &.disabled {
-    background: $grey-light-2;
-    color: $grey;
-     &:hover, &:focus, &:active{
-      background: $grey-light-2;
-     }
-     &:before{
-        background: $grey-light-3;
-         &:hover:before, &:focus:before, &:active:before{
-           background: $grey-light-3;
-         }
-     } 
-    }//end .disabled
-}//end btn_noArrow
-
-///////////////////////////////////
-///Button-icon Mixin_icon
-//
-//USAGE: @include btn_icon();  or @include btn($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
-//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
-///////////////////////////////////
-@mixin btn_icon( $bg-color:$tertiary, $shadow:tint($black, 15), $tx-color:$white, $icon:"\e6bd", $withCircle: "true"){
-    
-  @include btn($bg-color, $shadow, $tx-color);
-
-  padding-right: $ms-4+em;
-
- @if $withCircle == 'true'{  
-  &:after{
-    background-color: mix($shadow, $bg-color, 2);
-    background-image: url(../images/noise.png);
-    background-repeat: repeat;
-
-    font-family:'icomoon';
-    color:$tx-color;
-    content: $icon;
-    text-align:center;
-    @include standard-text-shadow(darken($bg-color, 20));
-    //text-shadow: darken($bg-color, 20) 0 $ms-8n+em 0;
-    font-weight:100;
-    line-height:$ms-2+$ms-8n+em;    
-    font-size:$ms-0+em;
-
-    
-
-    min-width: $ms-2+$ms-8n+em;
-    min-height: $ms-2+$ms-8n+em;
-    position: absolute;    
-    top: 75%;
-    right:5%;
-    transform: translateY(-50%);
-    //right: $ms-5n+em;
-    //top: $ms-1n+em;
-    margin-top: -($ms-2n+em);
-
-    @include border-radius(50%);
-    @include box-shadow(mix($shadow, $bg-color, 15) 0 $ms-8n+em 0 inset, lighten($bg-color, 5) 0 $ms-11n+em 0);
-    @include standard-transition(background);
-    @include standard-transition(box-shadow);
-    }//end before
-
-    &:hover:after, &:focus:after{
-      background-color:mix($shadow, $bg-color, 15);
-      @include box-shadow(mix($shadow, $bg-color, 25) 0 $ms-3n+em 0 inset, lighten($bg-color, 20) 0 $ms-11n+em 0);
-      text-shadow: mix($shadow, $bg-color, 15) 0 $ms-7n+em $ms-7n+em;
-      color:$tx-color;
-
-    }//end hover
-
-    &:active:after{
-      background-color:lighten($bg-color, 15);
-      @include box-shadow(mix($shadow, $bg-color, 10) 0 $ms-11n+em 0 inset, lighten($bg-color, 20) 0 $ms-7n+em 0);
-      text-shadow: mix($shadow, $bg-color, 15) 0 $ms-11n+em 0;
-      color:$tx-color;
-    }//end :active
-
-    }@else{  
-    
-    &:after{
-
-    font-family:'icomoon';
-    color:$tx-color;
-    content: $icon;
-    text-align:center;
-    @include standard-text-shadow(darken($bg-color, 20));
-    //text-shadow: darken($bg-color, 20) 0 $ms-8n+em 0;
-    font-weight:100;
-    line-height:$ms-2+$ms-8n+em;    
-    font-size:$ms-0+em;
-
-    width: $ms-2+$ms-8n+em;    
-    height: $ms-2+$ms-8n+em;
-    position: absolute;    
-    top: 75%;
-    right:5%;
-    transform: translateY(-50%);
-    margin-top: -($ms-2n+em);
-
-    @include standard-transition(background);
-    @include standard-transition(box-shadow);
-    }//end after
-
-    &:hover:after, &:focus:after{
-      text-shadow: darken($bg-color, 60) 0 $ms-7n+em $ms-7n+em;
-
-    }//end hover
-
-    &:active:after{
-      text-shadow: darken($bg-color, 60) 0 $ms-11n+em 0;
-    }//end :active
-
-  }//end if/else statement
-
-
-
-}//end btn
 
 
 
@@ -487,7 +320,7 @@
 //
 //DESCRIPTION: Creates a triangle on bottom of block to create the appareans of a wrap-around ribbon
 //USAGE: (for a left ribbon) @include ribbon( $primary, $padding-left, 0);
-//SOURCE:  http://codepen.io/ricardozea/pen/sdlvu 
+//SOURCE:  http://codepen.io/ricardozea/pen/sdlvu
 ///////////////////////////////////
 @mixin ribbon( $ribbon-color:black, $size-left:1em, $size-right:1em) {
   position:relative;
@@ -526,7 +359,7 @@
 ///Accessable Text-Contrast checker
 //
 //DESCRIPTION: That calculates if text needs to be light or dark depending on the background color passed.
-//             Color brightness is determined by the following formula: 
+//             Color brightness is determined by the following formula:
 //             ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
 //USAGE: set background-color, then @include text-contrast(#002820);
 //SOURCE:  http://codepen.io/davidhalford/pen/wlDxL
@@ -534,7 +367,7 @@
 @mixin text-contrast($n) {
   $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
   $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
-  
+
   @if abs($color-brightness) < ($light-color/2){
     color: white;
   }
@@ -555,31 +388,31 @@
 @mixin arrow($dir, $base-width, $length, $color) {
   width: 0; height: 0;
   border: ($base-width / 2) solid transparent;
-  
+
   @if $dir == top {
-    
+
     border-top: none;
     border-bottom-width: $length;
     border-bottom-color: $color;
-  
+
   } @else if $dir == right {
-    
+
     border-right: none;
     border-left-width: $length;
     border-left-color: $color;
-  
+
   } @else if $dir == bottom {
-    
+
     border-top-width: $length;
     border-bottom: none;
     border-top-color: $color;
-  
+
   } @else if $dir == left {
-  
+
     border-right-width: $length;
     border-left: none;
     border-right-color: $color;
-  
+
   }
 }
 
@@ -667,9 +500,9 @@ $parallax-ios         : true !default;
 
 ///////////////////////////////////
 ///scrollbar Mixin
-//WARNING: This mixin alone doesn't style scrollbars in all browsers, 
-//         it is intended to be used with jquery-custom-content-scroller.js: 
-//         http://manos.malihu.gr/jquery-custom-content-scroller 
+//WARNING: This mixin alone doesn't style scrollbars in all browsers,
+//         it is intended to be used with jquery-custom-content-scroller.js:
+//         http://manos.malihu.gr/jquery-custom-content-scroller
 //
 //USAGE: @include scrollbar();  or @include scrollbar($sliderButtonColor, $sliderTrackColor, $margin-top, $height);
 //Dependencies: compass and set variables for $black, $secondary
@@ -746,7 +579,7 @@ $parallax-ios         : true !default;
     color:$textColor;
     padding:0 ms(-2);
     text-shadow: 0 ms(-9) ms(-10) shade($bgColor, 15);
-    @if $fontWeight == $BlkCn{ 
+    @if $fontWeight == $BlkCn{
       font-family:$BlkCn;
       font-weight:900;
     }@else if $fontWeight == $BdCn{
@@ -779,7 +612,7 @@ $parallax-ios         : true !default;
 
      &:before {
     content: '';
-    height: 100%; 
+    height: 100%;
     width: 100%;
     background: url(../images/noise.png) repeat $bgColor;
     position: absolute;
@@ -801,7 +634,7 @@ $parallax-ios         : true !default;
         color: lighten($textColor,10);
         background:  url(../images/noise.png) repeat lighten($bgColor, 10);
         box-shadow: 0 ms(-8) ms(-8) 0px set-alpha($shadowColor, 0.5);
-        &:before{          
+        &:before{
         background: url(../images/noise.png) repeat lighten($bgColor, 10);
         box-shadow: ms(-8) ms(-7) ms(-10) 0 set-alpha($shadowColor, 0.5);
         }
@@ -822,7 +655,7 @@ $parallax-ios         : true !default;
 //USAGE: @include check($primary);
 //Dependencies: compass, modular scale and breakpoint
 ///////////////////////////////////
-@mixin check($bgColor: $WVUGold){  
+@mixin check($bgColor: $WVUGold){
   float:left;
   display:block;
   position:relative;
@@ -858,7 +691,7 @@ $parallax-ios         : true !default;
       }
 
       }//end &:after
-       
+
 }//end mixin check
 
 
@@ -915,7 +748,7 @@ $parallax-ios         : true !default;
 //
 //
 //USAGE: @include roundedPhoto(width, shadowcolor, bordercolor);
-//Dependencies:  modular scale, a 
+//Dependencies:  modular scale, a
 
 @mixin roundedPhoto($width: ms(9), $bgColor: $white, $color: $white){
   border-radius: $width/2;
@@ -926,7 +759,7 @@ $parallax-ios         : true !default;
   margin:0 auto;
   border: ($width/ms(5))+px solid $color;
   background:$color;
-  position:relative;  
+  position:relative;
   border-image:url(../images/noise.png);
   @if $bgColor == $white{
       box-shadow:0 $width/16 $width/10 $width/(-23) shade($white, 35);
@@ -954,5 +787,3 @@ $parallax-ios         : true !default;
   }
 
 }//end roundedPhoto
-
-  

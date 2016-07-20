@@ -1,3 +1,214 @@
+///////////////////////////////////
+///Button Mixin
+//
+//USAGE: @include btn();  or @include btn($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
+//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
+///////////////////////////////////
+@mixin btn($bg-color:$tertiary,
+           $shadow:$lbg--shadow,
+           $tx-color:$lbg){
+    font-family: $BdCn;
+    font-weight:800;
+
+    @include breakpoint($bp-desktop2-1){
+      font-family: $Bd;
+      font-weight:500;
+    }
+
+
+    //letter-spacing:$ms-11n+em;
+    position:relative;
+    //text-transform: uppercase;
+    //line-height:1.618em;
+		line-height: 1.15em;
+
+    @include sassy-button( "flat", $ms-7n+em, 1em, $bg-color, shade($bg-color, 20), $tx-color, inset);
+    background-image:url(../images/noise.png);
+    padding: $ms-1n+em $ms-1n+em $ms-2n+em $ms-1n+em;
+    border:$ms-11n+em solid lighten($bg-color, 5);
+    border-bottom:$ms-11n+em solid darken($bg-color, 10);
+    color: $tx-color;
+    @include standard-box-shadow($shadow);
+    @include standard-transition(background-color);
+    @include standard-transition(box-shadow);
+
+    &:hover, &:focus{
+      @include box-shadow(tint($shadow,10) 0 $ms-11n+em $ms-8n+em);
+      color:shade($tx-color,10);
+    }
+
+    &:active{
+      background:lighten($bg-color, 20);
+      //@include box-shadow(tint($shadow,40) 0 $ms-6n+em $ms-4n+em);
+    }
+
+    &:visited{
+      color:mix($bg-color, $tx-color, 35);
+      @include letterpress();
+      text-decoration:none;
+      &:after{
+        color:mix($bg-color, $tx-color, 35);
+      }
+    }
+
+    &.disabled {
+    background: $grey-light-2;
+    color: $grey;
+     &:hover, &:focus, &:active{
+      background: $grey-light-2;
+     }
+     &:before{
+        background: $grey-light-3;
+         &:hover:before, &:focus:before, &:active:before{
+           background: $grey-light-3;
+         }
+     }
+    }//end .disabled
+}//end btn_noArrow
+
+///////////////////////////////////
+///Button-icon Mixin_icon
+//
+//USAGE: @include btn_icon();  or @include btn($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
+//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
+///////////////////////////////////
+@mixin btn_icon( $bg-color:$tertiary,
+                 $shadow: $lbg--shadow,
+                 $tx-color:$lbg,
+								 $icon:"\e6bd",
+                 $withCircle: "true"){
+
+  @include btn($bg-color, $shadow, $tx-color);
+
+  padding-right: $ms-4+em;
+
+ @if $withCircle == 'true'{
+  &:after{
+    background-color: mix($shadow, $bg-color, 2);
+    background-image: url(../images/noise.png);
+    background-repeat: repeat;
+
+    font-family:'icomoon';
+    color:$tx-color;
+    content: $icon;
+    text-align:center;
+    @include standard-text-shadow(darken($bg-color, 20));
+    //text-shadow: darken($bg-color, 20) 0 $ms-8n+em 0;
+    font-weight:100;
+    line-height:$ms-2+$ms-8n+em;
+    font-size:$ms-0+em;
+
+
+
+    min-width: $ms-2+$ms-8n+em;
+    min-height: $ms-2+$ms-8n+em;
+    position: absolute;
+    top: 75%;
+    right:5%;
+    transform: translateY(-50%);
+    //right: $ms-5n+em;
+    //top: $ms-1n+em;
+    margin-top: -($ms-2n+em);
+
+    @include border-radius(50%);
+    @include box-shadow(mix($shadow, $bg-color, 15) 0 $ms-8n+em 0 inset, lighten($bg-color, 5) 0 $ms-11n+em 0);
+    @include standard-transition(background);
+    @include standard-transition(box-shadow);
+    }//end before
+
+    &:hover:after, &:focus:after{
+      background-color:mix($shadow, $bg-color, 15);
+      @include box-shadow(mix($shadow, $bg-color, 25) 0 $ms-3n+em 0 inset, lighten($bg-color, 20) 0 $ms-11n+em 0);
+      text-shadow: mix($shadow, $bg-color, 15) 0 $ms-7n+em $ms-7n+em;
+      color:$tx-color;
+
+    }//end hover
+
+    &:active:after{
+      background-color:lighten($bg-color, 15);
+      @include box-shadow(mix($shadow, $bg-color, 10) 0 $ms-11n+em 0 inset, lighten($bg-color, 20) 0 $ms-7n+em 0);
+      text-shadow: mix($shadow, $bg-color, 15) 0 $ms-11n+em 0;
+      color:$tx-color;
+    }//end :active
+
+    }@else{
+
+    &:after{
+
+    font-family:'icomoon';
+    color:$tx-color;
+    content: $icon;
+    text-align:center;
+    @include standard-text-shadow(darken($bg-color, 3));
+    //text-shadow: darken($bg-color, 20) 0 $ms-8n+em 0;
+    font-weight:100;
+    line-height:$ms-2+$ms-8n+em;
+    font-size:$ms-0+em;
+
+    width: $ms-2+$ms-8n+em;
+    height: $ms-2+$ms-8n+em;
+    position: absolute;
+    top: 75%;
+    right:5%;
+    transform: translateY(-50%);
+    margin-top: -($ms-2n+em);
+
+    @include standard-transition(background);
+    @include standard-transition(box-shadow);
+    }//end after
+
+    &:hover:after, &:focus:after{
+      text-shadow: darken($bg-color, 5) 0 $ms-7n+em $ms-7n+em;
+
+    }//end hover
+
+    &:active:after{
+      text-shadow: darken($bg-color, 5) 0 $ms-11n+em 0;
+    }//end :active
+
+  }//end if/else statement
+
+
+
+}//end btn
+
+///////////////////////////////////
+///Button Outline Mixin
+//
+//USAGE: @include btn_outline();  or @include btn($yourBackGroundColorHear, $yourShadowColor, $yourTextColorHear);
+//Dependencies: set variables for $tertiary, $black, $white and $BlkCn
+///////////////////////////////////
+
+
+@mixin btn_outline($bg-color:$lbg,
+           $shadow:$lbg--shadow,
+           $tx-color:$tertiary){
+
+  @include btn($bg-color, $shadow, $tx-color);
+	border:2px solid $tx-color;
+	background-color:$bg-color;
+	line-height:1em;
+
+	&:hover, &:focus{
+		background-color: $bg-color;
+		border-color: $tx-color
+	}
+
+	&:active{
+		background-color: $bg-color;
+		border-color: darken($tx-color, 10);
+		color:darken($tx-color, 10);
+		//@include box-shadow(tint($shadow,40) 0 $ms-6n+em $ms-4n+em);
+	}
+
+	&:visited{
+		color:mix($bg-color, $tx-color, 35);
+		@include letterpress();
+		text-decoration:none;
+	}
+
+
+}//end btn--outline
 /*------------------------------------*\
     $BUTTONS
 \*------------------------------------*/
@@ -6,6 +217,9 @@
 }
 .btn.icon {
 	@include btn_icon();
+}
+.btn--outline{
+	@include btn_outline();
 }
 
 .btn--small {
@@ -27,6 +241,7 @@
 		height:34px;
 	}
 }
+
 
 
 p a.btn_text {
@@ -82,7 +297,7 @@ p a.action{
 	@extend .btn--large;
 	@include adjust-font-size-to($font-size-large);
 	@include rhythm(0.0618, 0.618, 0.618, 0.0618, $font-size-large);
-	
+
 	&:hover{
 		@include adjust-font-size-to($font-size-large);
 		@include rhythm(0.0618, 0.618, 0.618, 0.0618, $font-size-large);

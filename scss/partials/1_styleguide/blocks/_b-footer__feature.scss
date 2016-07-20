@@ -1,14 +1,19 @@
 #b-footer__feature{
-	@include b-featuredLink( darken($primary, 15), $WVUGold, $primary ,shade($coolblack, 30));
+	//@include b-featuredLink( darken($primary, 15), $WVUGold, $primary ,shade($coolblack, 30));
+		@include b-featuredLink( $primary, $quadrary, $primary , $primary--shadow);
     .b-featuredLink{
        //background: url(../images/noise--blue.png) $WVUBlue repeat;
-       box-shadow: 0 1px 1px 0 lighten($primary, 5);
+       //box-shadow: 0 1px 1px 0 lighten($primary, 5);
        background-image:none;
 	   .inner{
         background-image:none;
-	   	color:$WVUGold;	
-        //background: url(../images/noise--blue.png) $WVUBlue repeat;	
-	   }
+	   	  color:$WVUGold;
+        //background: url(../images/noise--blue.png) $WVUBlue repeat;
+	   }//end inner
+		 h3{
+			 background-image:none;
+			 &:before{background-image:none;}
+		 }//end h3
     }//end b-featuredLink
 
 

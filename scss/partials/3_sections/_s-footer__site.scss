@@ -13,9 +13,9 @@
       @include grid-mobile1;
       //.nav-list li a{ @include adjust-font-size-to($font-size-med);}
       .m-contact{}
-      .b-contact__info{ text-align:center;}
-      .b-contact__links{}
-      #b-footer__feature{}
+      .b-contact__info{width:100%; float:left; text-align:center;}
+      .b-contact__links{width:100%; float:left;}
+      #b-footer__feature{ width:100%; float:left;@include rhythm(0, $ms-1, 0, 0, $font-size-med );}
     }
 
     @include breakpoint($bp-mobile2-1 $bp-tablet-1){
@@ -23,12 +23,14 @@
       .m-contact{}
       .b-contact__info{ @include grid-span(6,1);}
       .b-contact__links{ @include grid-span(3,1); clear:both;}
-      #b-footer__feature{ @include grid-span(3,4); }
+      #b-footer__feature{
+        @include grid-span(3,4);;
+      }
     }//end $bp-mobile-2
 
     @include breakpoint($bp-tablet-1 $bp-desktop1-1){
       @include grid-tablet;
-      .m-contact{}
+      .m-contact{} 
       .b-contact__info{ @include grid-span(4,1); }
       .b-contact__links{ @include grid-span(2,5); }
       #b-footer__feature{ @include grid-span(2,7); }
