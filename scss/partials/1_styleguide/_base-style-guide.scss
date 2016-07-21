@@ -77,11 +77,13 @@
 @import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/obj-preHeader";
 @import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/obj-postHeader";
 @import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/obj-multiCol";
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/objects/obj-slash";
 
 
-/*------------------------------------*\
+/*------------------------------------*\ 
     CPASS toolkit: Blocks: items that are specific to theme styles
 \*------------------------------------*/
+@import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-advert";
 @import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-social";
 @import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-contact__info";
 @import "../../../../cpass-toolkit/scss/partials/1_styleguide/blocks/b-contact__links";

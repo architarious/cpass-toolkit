@@ -1,0 +1,40 @@
+@mixin b-advert(
+  $bgColor: black,
+  $textColor: $white,
+  $slashColor: $WVUGold){
+  .b-advert{
+  	position:relative;
+  	float:left;
+  	overflow:hidden;
+  }//end b-advert
+  .b-advert__text{
+  	position:absolute; display:block; float:left;
+  	bottom:0; left:0; z-index: 10;
+  	border:0; margin:0;  	
+  	padding: ms(-6) ms(-2);
+  	width:100%;
+  	text-align:left; 
+  	text-shadow: 0 1px 1px $bgColor;
+  	text-transform:uppercase;
+  	color:$textColor;
+  	font-family: $BlkCn; font-weight:900;
+  	@include adjust-font-size-to($font-size-med);
+  	background: set-alpha($bgColor, 0.75);
+
+
+
+  	&:before{
+  		@include obj-slash();
+  		background-size: ms(3);
+  		height: ms(3);
+  		left: ms(-4)*(-1);
+  		top: ms(-3)*(-1);
+  		z-index:-10;
+  	}//end before
+  }//end b-advert
+  .b-advert__img{
+  	float:left;
+  	width:auto;
+  	height:100%;
+  }//end b-advert__img
+}@include b-advert();

@@ -1,7 +1,8 @@
 @mixin b-contact__links(
     $btnColor: $quadrary,
     $shadow: $primary--shadow,
-    $btnText: $primary
+    $btnText: $primary,
+    $light: $primary--light
 ){
 
 .b-contact__links{
@@ -9,23 +10,56 @@
   li{
     float:left;
     width:100%;
+    &:last-child a{ border-bottom:0; box-shadow: none;}
   }
 
   ul li a{
     float:left;
     width:100%;
     background-image:none !important;
-    &:after{ background-image:none !important;}
+
+    color:$btnColor;
+    @include adjust-font-size-to($font-size-med);
+    @include rhythm(0, $ms-5n, $ms-5n, 0, $font-size-med);
+    border-bottom: 1px solid $shadow;
+    box-shadow: 0 1px 0 0 $light;
+    &:hover, &:focus{
+      outline:0;
+      color:lighten($btnColor, 10);
+      text-docration: underline;
+    }
+    &:active{ color: darken($btnColor, 5);}
+    &:after{ 
+      background-image:none !important;
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      float:left;
+      margin-right: ms(-1);
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
     //@include rhythm($ms-8n, 0, 0, $ms-8n, $font-size-small-2);
-    @include adjust-font-size-to($font-size-small-2);
-    @include trailing-border(ms(-7), $ms-2n, $font-size-small-2, solid);
+    
+    &.contact:after{ content: '\e60e'; }
+    &.request-info:after{ content: '\e6aa'; }
+    &.faculty:after{ content: '\e651'; }
+    &.feedback:after{ content: '\e60a'; }
 
-    &.contact{@include btn_icon($btnColor, $shadow, $btnText, "\e60e", "false"); }
-    &.request-info{@include btn_icon($btnColor, $shadow, $btnText, "\e6aa", "false");}
-    &.faculty{@include btn_icon($btnColor, $shadow, $btnText, "\e651", "false");}
-    &.feedback{@include btn_icon($btnColor, $shadow, $btnText, "\e60a", "false");}
-    &.btn-arrow{@include btn_icon($btnColor, $shadow, $btnText);}
+
+
+
+    //&.contact{@include btn_icon($btnColor, $shadow, $btnText, "\e60e", "false"); }
+    //&.request-info{@include btn_icon($btnColor, $shadow, $btnText, "\e6aa", "false");}
+    //&.faculty{@include btn_icon($btnColor, $shadow, $btnText, "\e651", "false");}
+    //&.feedback{@include btn_icon($btnColor, $shadow, $btnText, "\e60a", "false");}
+    //&.btn-arrow{@include btn_icon($btnColor, $shadow, $btnText);}
 
     &.contact.min{@include btn_icon($btnColor, $shadow, $btnText, "\e60e", "false");}
     &.request-info.min{@include btn_icon($btnColor, $shadow, $btnText, "\e6aa", "false");}

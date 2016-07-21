@@ -107,9 +107,17 @@
 	  }//end bp-mobile2
 
 	  @include breakpoint($bp-tablet-1){
-		width:33.333%;
+		width:34.113%;
 		border-bottom:0;
-		&:first-child{box-shadow:none;}
+		&:first-child{
+			box-shadow:none;
+			width:32.930%; //125%;
+			padding-left:0;
+		}
+		&:last-child{
+			width:32.930%;//125%;
+			padding-right:0;
+		}
 		&:nth-child(2){
 		  border-right: $shadow 1px solid;
 		  border-left: $shadow 1px solid;

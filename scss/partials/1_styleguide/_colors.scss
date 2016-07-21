@@ -91,8 +91,8 @@ $quadrary: $WVUGold; // #ffc656; //tint(lighten(cs-quadrary(),10), 20); //#ffc25
 //@include cs-test($primary $secondary $tertiary $quadrary);
 
 
-$primary--shadow: darken($primary, 3);
-$primary--light: tint($primary, 10);
+$primary--shadow: darken($primary, 4);
+$primary--light: tint($primary, 5);
 
 $secondary--shadow: shade($secondary, 5);
 $secondary--light: tint($secondary, 10);
@@ -108,5 +108,5 @@ $lbg--shadow: shade($lbg, 5);
 $lbg--light: tint($lbg, 10);
 
 $dbg: $black;
-$dbg--shadow: darken($lbg, 5);
-$dbg--light: tint($lbg, 10);
+$dbg--shadow: shade($lbg, 5);
+$dbg--light: lighten($lbg, 3);

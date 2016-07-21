@@ -29,7 +29,7 @@ body{
    //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAN0lEQVQIW2MUkZT/z4AF8LIzMDBikwRJfP6JRRImATIMRSeyBIokugRcEpsEWFJRQf4/yHJsAAAVuxUpz+378gAAAABJRU5ErkJggg==) repeat;
    
    //WVUBlue noise + striped pattern
-   background:$WVUBlue url(../images/noise--blue.jpg) repeat;
+   background: $white;
 
 
 	#page-wrap{		
@@ -39,12 +39,7 @@ body{
 		// 	          rgba(0, 40, 85, 0.25) 67%, 
 		// 	          rgba(9, 11, 14, 0.65));
 		//shadows for $WVUBlue (from sportsintegration.wvu.edu) + striped pattern
-		background: radial-gradient( farthest-corner at 50% -155%, 
-					set-alpha(lighten($WVUBlue, 50), 0.3) 0%, 
-					set-alpha($WVUBlue,0.25) 53%, 
-					set-alpha(darken($WVUBlue, 10), 0.65)) 100%,
-					url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANklEQVQYV2NkwAekLP4z4pSXsvjP8OwEI3YFUEmQZkwFSJKYCtAkURVgkUQowCEJUYBHEqQAAKHyFlrcD+KgAAAAAElFTkSuQmCC) repeat;
-		    		//url(../images/noise--blue--line.jpg) repeat;
+		background:$WVUBlue url(../images/noise--blue.jpg) repeat;
 		float:left;
 		width:100%;
 	}

@@ -108,7 +108,11 @@ $(document).ready(function(){
 			}
 		});
 
-
+    $('.b-advert').each(function(){
+       var i = $(this).children("img").attr("alt");
+       $(this).prepend('<span class="b-advert__text">' + i + '</span>');
+       $(this).children("img").addClass("b-advert__img");
+    });
 
 
 	//resizeSegmentTitles("h1.title");

@@ -25,8 +25,8 @@
 			@include adjust-font-size-to($font-size-small-2);
 			@include rhythm($ms-7n, $ms-10n, $ms-10n, 0, $font-size-small-2);
 			@include breakpoint($bp-mobile1-1){
-			  font-family:$LtCn;
-			  font-weight:300;
+			  font-family:$Lt;
+			  font-weight:200;
 			}
 
 		}
@@ -43,9 +43,9 @@
     	width: 100%;
     	float:left;
     	@include rhythm(0, 0, $ms-8n, $ms-4n, $font-size-small-2);
-    	@include trailing-border(ms(-10), $ms-2n, $font-size-small-2, solid);
-    	border-color:$shadow;
-    	box-shadow:0 ms(-10) 0 0 $light;
+    	//@include trailing-border(ms(-10), $ms-2n, $font-size-small-2, solid);
+    	//border-color:$shadow;
+    	//box-shadow:0 ms(-10) 0 0 $light;
 
     	&:last-child{
     		border-bottom:0;
@@ -105,7 +105,8 @@
         	  @include rhythm($ms-4n, 0, 0, 0, $font-size-small-2);
 
         	  &:hover,&:focus{
-        	  	color:lighten($link-color,10);
+        	  	color:lighten($link-color,15);
+              text-decoration:underline;
               outline:0;
         	  }
             &:visited, &:active{
@@ -116,6 +117,45 @@
         }//end eventName
     }//end li
   }//end .b-wvuCalendar
+
+  .b-cta_events__calLink{
+    float:left; width:100%;
+    @include rhythm(0, $ms-2n, $ms-8n, 0, $font-size-med);
+    border-top: 1px solid $shadow;
+    box-shadow: inset 0 1px 0 0 $light;
+    color:$link-color;
+    &:hover,&:focus{
+      color:lighten($link-color,15);
+      text-decoration:underline;
+      outline:0;
+      &:hover:after{
+        color:lighten($link-color,15);
+      }
+    }//end hover
+    &:active{
+      color: darken($link-color, 5);
+    }//end active 
+
+    &:after{
+      content: '\e66a';
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      /* cta styling====================== */
+      color: shade($shadow, 5);
+      margin-left: 10px;
+      width: ms(1);
+      height: ms(1);
+      float: right;
+      text-align: center;
+    }//end after
+  }//end b-cta_events__calLink
 
   &[data-eq-state="small"]{
   	.b-wvuCalendar .b-wvuCalendar__event{
@@ -138,7 +178,6 @@
   	.b-wvuCalendar .eventInfo{
   		min-width:100%;
   		padding-left:0;
-
   	}
 
   }//end data-eq-state="small"
