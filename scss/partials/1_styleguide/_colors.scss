@@ -108,5 +108,5 @@ $lbg--shadow: shade($lbg, 5);
 $lbg--light: tint($lbg, 10);
 
 $dbg: $black;
-$dbg--shadow: shade($lbg, 5);
-$dbg--light: lighten($lbg, 3);
+$dbg--shadow: darken($dbg, 3);
+$dbg--light: tint($dbg, 4);

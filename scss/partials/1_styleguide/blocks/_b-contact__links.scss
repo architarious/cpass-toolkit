@@ -1,7 +1,7 @@
 @mixin b-contact__links(
     $btnColor: $quadrary,
     $shadow: $primary--shadow,
-    $btnText: $primary,
+    $btnText: $white,
     $light: $primary--light
 ){
 
@@ -18,7 +18,7 @@
     width:100%;
     background-image:none !important;
 
-    color:$btnColor;
+    color:$btnText;
     @include adjust-font-size-to($font-size-med);
     @include rhythm(0, $ms-5n, $ms-5n, 0, $font-size-med);
     border-bottom: 1px solid $shadow;
@@ -40,6 +40,7 @@
       line-height: 1;
       float:left;
       margin-right: ms(-1);
+      color:$btnColor;
       /* Better Font Rendering =========== */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -74,6 +75,7 @@
     .nav-list li a{
       @include adjust-font-size-to($font-size-small-2);
       @extend .font-Bd;
+      &:after{padding-top:ms(-7);}
     }//end a
 	}//end small
   &[data-eq-state="medium"]{ //215px
@@ -81,6 +83,7 @@
       @include adjust-font-size-to($font-size-med);
       //margin: ms(-7) 0;
       @extend .font-Bd;
+      &:after{padding-top:ms(-11);}
     }//end a
 	}//end medium
   &[data-eq-state="large"]{ //250px
@@ -88,6 +91,7 @@
       @include adjust-font-size-to($font-size-med);
       //margin: ms(-8) 0;
       @extend .font-Bd;
+      &:after{padding-top:ms(-9);}
     }//end a
 	}//end large
 	&[data-eq-state="x-large"]{ //300px
@@ -95,6 +99,7 @@
       @include adjust-font-size-to($font-size-med-2);
       //margin: ms(-10) 0;
       @extend .font-BlkCn;
+      &:after{padding-top:ms(-6);}
     }//end a
 	}//end x-large
 

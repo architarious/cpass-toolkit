@@ -2,7 +2,8 @@
 	width:100%;
 	float:left;
 	background:url("../images/noise--blue.jpg") repeat $WVUBlue;
-	margin-top:-3px;
+	border-top: 1px solid $primary--shadow; 
+	box-shadow: inset 0 1px 1px 0 $primary--light;
 
 	a{
 		&:focus{outline:0;}
