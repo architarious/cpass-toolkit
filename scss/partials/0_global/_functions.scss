@@ -10,4 +10,8 @@
 
 @function remCalc($target){
 	  @return $target/$root-font-size
-}         
+}  
+
+@function neg($target){
+	  @return $target*(-1)
+}       

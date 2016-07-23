@@ -12,12 +12,17 @@
   }
 }//end @include simpleBreadcrumbs
 
-@mixin fancyBreadcrumbs($bgColor: tint($secondary, 15),
-						$borderColor: $white,
-						$shadowColor: $coolblack,
-						$textColor: $black,
-						$linkColor: $tertiary,
-                        $dividers: "bars"){
+@mixin fancyBreadcrumbs(
+	$bgColor: $secondary,
+	$borderColor: $white,
+	$shadowColor: $secondary--shadow,
+	$lightColor: $secondary--light,
+	$textColor: $black,
+	$linkColor: $tertiary,
+	$hoverColor: $tertiary--light,
+	$activeColor: $tertiary--shadow,
+    $dividers: "bars"){
+
 	width:50%;
 	float:left;
 		ul{}
@@ -28,7 +33,7 @@
 			float:left;
 			position:relative;
 			padding-left: ms(1);  
-			@extend .font-LtCn;
+			@extend .font-Roman;
 			@include adjust-font-size-to($font-size-small);
 			@include rhythm($ms-5n, 0, 0, 0, $font-size-small);
             
@@ -41,22 +46,24 @@
               }//end before
               a{
                 @extend .font-Bd;  
-              }//end a             
+              }//end a              
             }@else if $dividers == "bars"{
                 
               &:before{
+              	$dividerBg: shade($bgColor, 10);
+              	$dividerBg--shadow: shade($shadowColor, 10);
 				content: " ";
 				position:absolute;
 				left:0;
 				float:left;
 				margin:ms(-7);
 				margin-bottom:0;
-				background:shade($bgColor, 7);
+				background:$dividerBg;
 				width:ms(-7);
 				height:1.618em;
 				transform: skewX(-33.75deg);
 				transform-origin: bottom;
-				box-shadow: inset -1px 0 1px -1px darken(shade($bgColor, 10), 7), -1px 0 1px 0 lighten($bgColor, 3);
+				box-shadow: inset -1px 0 1px -1px $dividerBg--shadow, -1px 0 1px 0 $lightColor;
 			  }  
               
             }//end IF/ELSE
@@ -69,7 +76,7 @@
 			  }//end li:first-child
 
 			&.active{
-				a{color:$WVUBlue;}
+				a{color:$activeColor;}
 			}
 			a{
 
@@ -80,13 +87,13 @@
 				color:$linkColor;
 				text-decoration: underline;
 
-				@extend .font-BdCn;
+				@extend .font-Bd;
 				@include adjust-font-size-to($font-size-small);
 				@include rhythm($ms-5n, 0, 0, 0, $font-size-small);
 				
 				&:hover{
-					color:lighten($linkColor,10);
-					box-shadow: 0 ms(-8) ms(-8) 0px set-alpha(darken($bgColor, 20), 0.5);
+					color:$hoverColor;
+					box-shadow: 0 ms(-8) ms(-8) 0px set-alpha($shadowColor, 0.5);
 				}
 			}
 

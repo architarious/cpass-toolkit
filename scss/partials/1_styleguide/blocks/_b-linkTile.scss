@@ -1,13 +1,14 @@
-@mixin b-advert(
+@mixin b-linkTile(
   $bgColor: black,
   $textColor: $white,
   $slashColor: $WVUGold){
-  .b-advert{
+  .b-linkTile{
   	position:relative;
   	float:left;
   	overflow:hidden;
-  }//end b-advert
-  .b-advert__text{
+  	display:block !important;
+  }//end b-linkTile
+  .b-linkTile__text{
   	position:absolute; display:block; float:left;
   	bottom:0; left:0; z-index: 10;
   	border:0; margin:0;  	
@@ -31,10 +32,10 @@
   		top: ms(-3)*(-1);
   		z-index:-10;
   	}//end before
-  }//end b-advert
-  .b-advert__img{
+  }//end b-linkTile
+  .b-linkTile__img{
   	float:left;
   	width:auto;
   	height:100%;
-  }//end b-advert__img
-}@include b-advert();
+  }//end b-linkTile__img
+}@include b-linkTile();

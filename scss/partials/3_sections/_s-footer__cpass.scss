@@ -1,8 +1,8 @@
 .s-footer__cpass--wrapper{
 	float:left;
 	width:100%;
-	box-shadow:darken($black,5) 0 ms(-7) ms(-8) 0 inset;
-	background:$black;
+	box-shadow:$dbg--shadow 0 1px 1px 0 inset;
+	background:$dbg;
   padding-bottom:ms(0);
 }
 

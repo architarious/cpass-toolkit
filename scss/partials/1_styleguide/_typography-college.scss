@@ -435,6 +435,8 @@ hr {
     @include rhythm(1.25, 0.772, 0.618, 1, $font-size-med);
     margin-left:0; margin-right:0;
     padding: 0;
+    border-top: 1px solid $lbg--shadow;
+    box-shadow: 0 1px 0 0 $lbg--light;
 }
 mark{
     background-color:lighten($SecLightGold, 15);

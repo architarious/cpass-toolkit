@@ -1,10 +1,10 @@
 .b-footer__return, .b-footer__return:active, .b-footer__return:visited{
   width:100%;
   float:left;
-  color:tint($black, 40);
-  text-shadow: 0 1px 0 darken($black, 10);
+  color:tint($dbg, 40);
+  text-shadow: 0 1px 0 $dbg--shadow;
   //@extend .white-noise;
-  background-color:$black;
+  background-color:$dbg;
   text-transform:uppercase;
   font-family:$BdCn;
   font-weight:800;
@@ -12,7 +12,7 @@
   @include adjust-font-size-to($font-size-med);
   @include rhythm(0, $ms-2n, $ms-4n, 0, $font-size-med);
   text-align:center;
-  box-shadow:darken($black,5) 0 ms(-7) ms(-8) 0 inset;
+  box-shadow:$dbg--shadow 0 1px 1px 0 inset;
 
   &:hover,&:focus{
     color:lighten($WVUGold, 10);

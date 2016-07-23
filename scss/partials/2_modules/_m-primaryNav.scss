@@ -302,15 +302,25 @@ nav{
 }//end @primaryNav
 }//end @include minNav
 
-@mixin wrapperNav(){
+@mixin wrapperNav(
+    $pc--bgColor: $dbg,     
+    $pc--shadow: $dbg--shadow,
+    $pc--light: $dbg--light,
+    $pc--textColor: $white,
+    $pc--hoverColor: $tertiary,
+    $pc--activeColor: $quadrary,
+    $pc--activeText: $primary,   
+    $mobile--bgColor: $lbg,
+    $mobile--shadow: $lbg--shadow,
+    $mobile--light: $lbg--light,
+    $mobile--btnColor: $WVUGold,
+    $mobile--linkColor: $tertiary,
+    $mobile--hoverColor: lighten($tertiary, 10),
+    $mobile--activeColor: $primary,
+    $mobile--textColor: $dbg,
+    $mobile--bgMore: $secondary){
   .m-primaryNav{
-    $bgColor: $black;
-    $shadowColor: $coolblack;
-    $textColor: $white;
-    $borderColor: $white;
-    $linkColor: $tertiary;
-    $hoverColor: lighten($tertiary, 10);
-    $activeColor: $WVUBlue;
+    
 
     outline:0;
     *:focus{ outline:0;}
@@ -341,7 +351,7 @@ nav{
 
     	&.navbar-default{
     		background:none;
-    		color:$black;
+    		color:$pc--bgColor;
     		border:0;
     		box-shadow:none;
     		border-radius: 0;
@@ -363,20 +373,20 @@ nav{
     		border:0; margin:0;
     		@include standard-transition;
     		width:100%;
-    		background:$WVUGold url(../images/noise.png) repeat;
-    		box-shadow: tint($WVUGold, 20) 0 1px 3px 0 inset, shade($white,30) 0 ms(-10) ms(-9) 0;
-    		color:shade($WVUGold, 58);
+    		background:$mobile--btnColor url(../images/noise.png) repeat;
+    		box-shadow: tint($mobile--btnColor, 20) 0 1px 3px 0 inset, $mobile--shadow 0 1px 1px 0;
+    		color:shade($mobile--btnColor, 58);
 			border-radius:0;
 			@include rhythm(0, $ms-0, $ms-0, 0, $font-size-med);
 
     		&:hover, &:focus{
-    			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
+    			background:url(../images/noise.png) lighten($mobile--btnColor, 15) repeat;
     		}
     		&:active{
-    			background:url(../images/noise.png) lighten($WVUGold, 15) repeat;
+    			background:url(../images/noise.png) lighten($mobile--btnColor, 15) repeat;
     		}
     		&.collapsed{
-    			box-shadow: tint($WVUGold, 20) 0 ms(-8) ms(-6) 0 inset; //shade($black,30) 0 ms(-5) ms(-3) 0;
+    			box-shadow: tint($mobile--btnColor, 20) 0 ms(-8) ms(-6) 0 inset; //shade($black,30) 0 ms(-5) ms(-3) 0;
     		}
     		.navbar-toggle_title{
     			text-align:center;
@@ -385,7 +395,7 @@ nav{
     			font-weight:800;
     			@include adjust-font-size-to($font-size-med-2);
     			@include rhythm($ms-3n, 0, 0, $ms-3n, $font-size-med);
-    			@include standard-text-shadow(tint($WVUGold, 20));
+    			@include standard-text-shadow(tint($mobile--btnColor, 20));
     			letter-spacing:ms(-10);
     			float:none;
 
@@ -396,31 +406,31 @@ nav{
     				line-height:1.2em;
     				margin-top:-1px;
     				float:none;
-    				color:shade($WVUGold,30);
+    				color:shade($mobile--btnColor,30);
     			}
     		}
-    		.icon-bar{
-    			float:left;
-    			background-color:$WVUBlue;
-    			max-width:1em;
-    		}
+    		//.icon-bar{
+    		//	float:left;
+    		//	background-color:$WVUBlue;
+    		//	max-width:1em;
+    		//}
 
     	  }//end .navbar-toggle
 
-    	  .navbar-brand{
-    	  	background:none;
-    	  	color:$tertiary;
-    	  	@include letterpress();
-    	  	@include adjust-font-size-to($font-size-med);
-    		@include rhythm($ms-3n, $ms-2n, $ms-2n, $ms-3n, $font-size-med);
-    		font-family:$BdCn;
-    		font-weight:800;
-    		text-transform:uppercase;
-    		&:hover{
-    			color:$primary;
-    		}
-    		//@include vertical-align();
-    	  }
+    	  //.navbar-brand{
+    	  //	background:none;
+    	  //	color:$tertiary;
+    	  //	@include letterpress();
+    	  //	@include adjust-font-size-to($font-size-med);
+    		//@include rhythm($ms-3n, $ms-2n, $ms-2n, $ms-3n, $font-size-med);
+    		//font-family:$BdCn;
+    		//font-weight:800;
+    		//text-transform:uppercase;
+    		//&:hover{
+    		//	color:$primary;
+    		//}
+    		////@include vertical-align();
+    	  //}
 
     	}//end .navbar-header
 
@@ -450,8 +460,8 @@ nav{
     	  #nav-primary.collapse.in{
 
     		@include add-noise;
-    		background-color:$white;
-    		border-bottom:$WVUGold solid;
+    		background-color:$mobile--bgColor;
+    		border-bottom:$mobile--btnColor solid;
     		border-top:0;
     		float:left;
     		width:100%;
@@ -469,8 +479,7 @@ nav{
     			li{
     				width:100%;
     				float:left;
-    				border-bottom:shade($white, ms(-2)) solid;
-    				@include trailing-border(1px, $ms-7n);
+    				border-bottom:$mobile--shadow 1px solid;
     				&:last-child{
     					border-bottom:0;
     					margin-bottom:0;
@@ -485,17 +494,17 @@ nav{
     					@include rhythm($ms-4n, $ms-5n, $ms-6n, $ms-4n, $font-size-med);
     					width:100%;
               			float:left;
-    					color:$tertiary;
-    					font-family: $BdCn;
-    					font-weight:800;
+    					color:$mobile--linkColor;
+    					font-family: $Bd;
+    					font-weight:500;
     					letter-spacing:ms(-10);
 
     					&:hover, &:focus{
-    						color:tint($tertiary, 10);
-    						@include standard-text-shadow(shade($white, 14));
+    						color:$mobile--hoverColor;
+    						text-shadow: 0 1px 1px $mobile--shadow;
     					}
     					&:active{
-    						color:$primary;
+    						color:$mobile--activeColor;
     					}
               			&.more{display:none;}
 
@@ -506,32 +515,34 @@ nav{
 
              }//end navbar-nav
     	  .navbar--more a{
-    		width:100%;
-    		float:left;
-    		@include add-noise;
-    		background-color:$secondary;
-    		color:$primary;
-    		text-align:center;
-    		text-transform:uppercase;
+          $bgMore--shadow: shade($mobile--bgMore, 5);
+          $bgMore--light: tint($mobile--bgMore, 10);
+    		  width:100%;
+    		  float:left;
+    		  @include add-noise;
+    		  background-color:$mobile--bgMore;
+    		  color:$mobile--linkColor;
+    		  text-align:center;
+    		  text-transform:uppercase;
+  
+      		font-family:$Roman;
+      		font-weight:400;
+      		letter-spacing:ms(-10);
 
-    		font-family:$BdCn;
-    		font-weight:800;
-    		letter-spacing:ms(-10);
-
-    		@include adjust-font-size-to($font-size-med);
-    		@include rhythm($ms-3n, $ms-7n, $ms-7n, 0, $font-size-med);
-    		@include standard-text-shadow(tint($secondary, 20));
-
-    		&:hover, &:focus{
-    			color:$tertiary;
-    		}
-
-    		&::after{
-    			font-family:'icomoon';
-    			content:'\e6c3';
-    			color:shade($secondary, 10);
-    			@include standard-text-shadow(tint($secondary, 40));
-    		}
+    		  @include adjust-font-size-to($font-size-med);
+    		  @include rhythm($ms-3n, $ms-7n, $ms-7n, 0, $font-size-med);
+    		  @include standard-text-shadow($bgMore--shadow);
+  
+      		&:hover, &:focus{
+      			color:$mobile--hoverColor; 
+      		}
+  
+      		&::after{
+      			font-family:'icomoon';
+      			content:'\e6c3';
+      		 	color:$bgMore--shadow;
+      	    @include standard-text-shadow($bgMore--light);
+    		  }
 
     	  }//end navbar--more
 
@@ -551,8 +562,8 @@ nav{
     @include breakpoint($bp-tablet-1){
 
 
-     background: $bgColor;
-     box-shadow: 0 1px 3px 1px shade($bgColor, 15) inset, 0 1px 2px 1px lighten($coolblack, 10);
+     background: $pc--bgColor;
+     box-shadow: 0 1px 1px 0 $pc--shadow inset;
      width:100%;
      float:left;
      @include adjust-font-size-to($font-size-large);
@@ -578,8 +589,8 @@ nav{
     		}
     		li{
     			margin:0;
-    			border-right:ms(-10) solid darken($bgColor, 3);
-    			border-left: ms(-11) solid lighten($bgColor, 3);
+    			border-right:1px solid $pc--shadow;
+    			border-left: 1px solid $pc--light;
     			float:left;
     			&:first-child{
     				border-left:0;
@@ -588,22 +599,22 @@ nav{
     				border-right: 0;
     			}
     			&.active, &.open{
-    				background:$textColor;
-    				border-right:ms(-10) solid shade($textColor, 10);
-    				border-left: ms(-11) solid tint($textColor, 10);
+    				background:$mobile--bgColor;
+    				border-right: 1px solid $mobile--shadow;
+    				border-left: 1px solid $mobile--light;
     				margin-top:-(ms(-3));
     				padding-top: ms(-3);
     				a{
-    					color:$activeColor;
-    					text-shadow: 0 ms(-9) ms(-10) shade($textColor, 20);
+    					color:$mobile--activeColor;
+    					text-shadow: 0 1px 1px $mobile--shadow;
     					&:hover, &:focus, &:active{
-    						background:none; color:$activeColor;
-    						text-shadow: 0 ms(-9) ms(-10) shade($textColor, 20);
+    						background:none; color:$mobile--hoverColor;
+    						text-shadow: 0 ms(-9) ms(-10) $mobile--shadow;
     						outline:0;
 
     					}
     					&.more{
-    						border-left:1px dashed darken($textColor, 2);
+    						border-left:1px dashed $mobile--shadow;
     					}
     				}
     			}
@@ -613,41 +624,41 @@ nav{
     		a{
 
 
-    		  	color:$textColor;
+    		  	color:$pc--textColor;
     		  	background:transparent;
     		  	padding:ms(-2);
-    		  	text-shadow: 0 ms(-9) ms(-10) darken($bgColor, 10);
-    			@include adjust-font-size-to($font-size-med);
-    			@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
-    			text-transform: none;
-    			font-family:$Roman;
-    			font-weight:400;
-    			min-height:1em;
-    			min-width:1em;
-    			float:left;
+    		  	text-shadow: 0 1px 1px $dbg--shadow;
+    			  @include adjust-font-size-to($font-size-med);
+    			  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med);
+    			  text-transform: none;
+    			  font-family:$Roman;
+    			  font-weight:400;
+    			  min-height:1em;
+    			  min-width:1em;
+    			  float:left;
 
 
-    			transition-property: background, box-shadow, color, border-bottom;
-    			transition-duration: 0.35s;
-    			transition-timing-function: ease-in;
+    			  transition-property: background, box-shadow, color, border-bottom;
+    			  transition-duration: 0.15s;
+    			  transition-timing-function: ease-in;
 
     			 &:hover,&:focus{
-    				color: lighten($textColor,10);
-    				background:  set-alpha($tertiary, 0.3);
+    				color: lighten($pc--textColor,10);
+    				background:  set-alpha($pc--hoverColor, 0.3);
     				//box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
     				&:before{
-    				    background: url(../images/noise.png) repeat lighten($bgColor, 10);
-    				    box-shadow:  0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
+    				    background: url(../images/noise.png) repeat lighten($pc--bgColor, 10);
+    				    box-shadow:  0 ms(-8) 0px 0px set-alpha($pc--shadow, 0.5);
     				    border-bottom:0;
     				}
     			}//end hover
     			&:active{
-    				background: url(../images/noise.png) repeat shade($bgColor, 20);
+    				background: url(../images/noise.png) repeat $pc--hoverColor;
 
     				&:before{
-    				  background: url(../images/noise.png) repeat shade($bgColor, 20);
+    				  background: url(../images/noise.png) repeat shade($pc--bgColor, 20);
     				  border-bottom:0;
-    				  box-shadow: 0 ms(-8) 0px 0px set-alpha($shadowColor, 0.5);
+    				  box-shadow: 0 ms(-8) 0px 0px set-alpha($pc--shadow, 0.5);
     				}
     			}//end active
 
@@ -662,9 +673,9 @@ nav{
     				font-variant: normal;
     				text-transform: none;
     				line-height: 1;
-    				color:$vb-PaleGrey;
+    				color:$mobile--shadow;
     				text-decoration:none;
-    				border-left:1px dashed darken($bgColor, 3);
+    				border-left:1px dashed $pc--shadow;
 
     				/* Better Font Rendering =========== */
     				-webkit-font-smoothing: antialiased;
@@ -676,17 +687,17 @@ nav{
     				}
 
     				&:hover:before, &:focus:before{
-    					background:$WVUGold;
-    					text-shadow: 0 ms(-9) ms(-10) darken($WVUGold, 10);
+    					background:$pc--activeColor;
+    					text-shadow: 0 ms(-9) ms(-10) darken($pc--activeColor,5);
     					border:0;
-    					box-shadow: 0 ms(-8) ms(-8) 0px set-alpha($shadowColor, 0.5);
+    					box-shadow: 0 1px 1px 0 $pc--shadow;
     					text-decoration:none;
     				}
 
     				&:active{
     					text-decoration:none;
     					&:before{
-    					  background: url(../images/noise.png) repeat lighten($WVUGold, 10);
+    					  background: url(../images/noise.png) repeat $pc--activeColor;
     					}
     				}//end active
     			}//end &.more
@@ -696,18 +707,17 @@ nav{
 
 
 
-    		li.apply a{
-
-    			@include flag( $white, $WVUBlue, $coolblack);
-    			&:after{
-    			  font-family:'icomoon';
-    			  content:"\e64a";;
-    			  -webkit-font-smoothing: antialiased;
-    			  -moz-osx-font-smoothing: grayscale;
-    			  padding-left:ms(-2);
-    			  line-height:ms(0);
-    			}
-    		}//end li.apply a
+    		//li.apply a{
+    		//	@include flag( $white, $WVUBlue, $coolblack);
+    		//	&:after{
+    		//	  font-family:'icomoon';
+    		//	  content:"\e64a";;
+    		//	  -webkit-font-smoothing: antialiased;
+    		//	  -moz-osx-font-smoothing: grayscale;
+    		//	  padding-left:ms(-2);
+    		//	  line-height:ms(0);
+    		//	}
+    		//}//end li.apply a
 
     	}//end m-primaryNav__navbar-nav
 
@@ -756,7 +766,7 @@ nav{
 
   }//end .m-primaryNav
 
-}//end @include wrapperNav
+}//end @mixin wrapperNav
 
 @include wrapperNav;
 

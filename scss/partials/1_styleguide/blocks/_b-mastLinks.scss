@@ -1,11 +1,18 @@
+@mixin b-mastLinks( 
+  $bgColor: $primary,
+  $linkColor: $white,
+  $accentColor: $quadrary,
+  $shadow: $primary--shadow,
+  $light: $primary--light){ 
+
 .b-mastLinks{
 	ul{ list-style:none; padding:0; margin:0;}
 	li{ 
 		display:inline; 
 		float:left;
 		padding: 0 ms(-3);
-		border-right:darken($WVUBlue,7) ms(-9) solid;
-		border-left:tint($primary, 10) ms(-11) solid;
+		border-right:$shadow 1px solid;
+		border-left:$light 1px solid;
 		&:last-child{ 
 			padding-right:0;
 			border-right:0;
@@ -25,12 +32,12 @@
 
 	}
 	a{ 
-		color:$white;
+		color:$linkColor;
 		@extend .font-Bd;
 		@include adjust-font-size-to($font-size-small-2);
 		border-bottom: ms(-10) transparent solid;
 		&:hover, &:focus{
-			border-bottom: ms(-10) $WVUGold solid;
+			border-bottom: ms(-10) $accentColor solid;
 		}
 	 }
 	.b-mastLinks__WVU{}
@@ -62,7 +69,8 @@
 	    }
 	    li:nth-child(3){
 			padding: 0 ms(-3);
-			border-right:darken($WVUBlue,7) ms(-9) solid;
+			border-right:$shadow 1px solid;
 		}
 	}//end eq:large
-}
+}//end b-mastLinks{}
+}@include b-mastLinks();

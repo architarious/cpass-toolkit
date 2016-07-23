@@ -1,11 +1,11 @@
 #postfix{
 	background:$secondary url(../images/noise.png) repeat;
-	box-shadow: darken($black,20) 0 ms(-6) ms(-3) 0, darken($secondary, 1) 0 ms(1) ms(-1) 0 inset;
+	//box-shadow: darken($black,20) 0 ms(-6) ms(-3) 0, darken($secondary, 1) 0 ms(1) ms(-1) 0 inset;
 	float:left;
 	width:100%;
 	min-height:200px;
-	border-top:ms(-9) solid tint($secondary, 6);
-	border-bottom:ms(-8) solid darken($secondary, 6);
+	border-top:1px solid $secondary--light;
+	border-bottom:1px solid $secondary--shadow;
 
 
 	.b-featuredLink{

@@ -1,7 +1,12 @@
-.component {
-  
-}
 
+@mixin b-social( 
+  $bgColor: $dbg,
+  $linkColor: $white,
+  $hoverColor: $quadrary,
+  $textColor:tint($dbg, 40),
+  $accentColor: $WarmGrey3,
+  $shadow: $primary--shadow,
+  $light: $primary--light){ 
 
 .b-social{
 
@@ -30,27 +35,27 @@
 
   float: right;
   overflow: hidden;
-  color:$white;
+  color:$linkColor;
   margin-right: ms(-4);
   border-radius:100%;
   border:ms(-8) solid $white;
   
   span{ visibility: hidden;}
-  text-shadow: 0 ms(-2) ms(-1) darken($WVUBlue, 4);
-  box-shadow: 0 ms(-8)  ms(-5) ms(-7) darken($WVUBlue, 4);
+  text-shadow: 0 1px 1px $shadow;
+  box-shadow: 0 1px 1px 0 $shadow;
   &:hover, &:focus{
     border-radius:10%;
-    border-color:$quadrary;
-    color:$quadrary;
+    border-color:$hoverColor;
+    color:$hoverColor;
     &:before{
-      color:$quadrary;
+      color:$hoverColor;
     }
   }
   &:active{
-    border-color:$SecLightGold;
-    color:$SecLightGold;
+    border-color:lighten($hoverColor,10);
+    color:lighten($hoverColor,10);
     &:before{
-      color:$quadrary;
+      color:lighten($hoverColor,10);
     }
   }
   &::before{
@@ -116,7 +121,7 @@
         text-transform:uppercase;
         float:right;
         @extend .font-LtCn;
-        color:$WarmGrey3;
+        color:$accentColor;
         @include adjust-font-size-to($font-size-small-2);
         @include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-small-2); 
         padding-right:ms(-4);
@@ -128,7 +133,8 @@
     }
 
 
-}
+}//end .b-social
+}@include b-social();
 
 
 nav .b-social a{
@@ -152,14 +158,14 @@ nav .b-social a{
 .b-social--wrapper{
   width:100%;
   height:ms(5);
-  background: $black;
+  background: $dbg;
   @include rhythm($ms-1n, $ms-3n, $ms-1n, $ms-1n, $font-size-med-2);
-  box-shadow: 0 ms(-8) ms(-4) 0 darken($black,20) inset, 0 ms(-8) ms(-5)  set-alpha(tint($coolblack,8), 0.65);
+  box-shadow: 0 1px  1px 0 $dbg--shadow inset;
   border-top: ms(-10) solid shade($coolblack,5);
 
   .b-social:after{ 
    color:tint($black, 40);
-   text-shadow:0 1px 0 shade($black, 20); 
+   text-shadow:0 1px 0 $dbg--shadow; 
    float:left;
    content:"Connect with CPASS";
    @include adjust-font-size-to($font-size-med);
@@ -188,20 +194,20 @@ nav .b-social a{
   max-width:ms(4);
   width:6.18%;
   top:61.8%;
-  background:set-alpha($black, 0.773) url(../images/noise.png) repeat;
+  background:set-alpha($dbg, 0.773) url(../images/noise.png) repeat;
   border-radius: ms(-4);
   border-top-right-radius:0;
   border-bottom-right-radius:0;
   text-align:center;
   min-height: ms(9);
-  border:ms(-11) solid lighten($black,10);
+  border:ms(-11) solid $dbg--light;
   border-right:0;
 
 
 
   &:before{
     content: "SHARE";
-    color:$WarmGrey3;
+    color:tint($dbg, 40);
     font-family:$LtCn;
     font-weight:300;
     @include adjust-font-size-to($font-size-small-2); 
@@ -209,8 +215,8 @@ nav .b-social a{
 
   a{
     margin-top:ms(-4);
-    text-shadow: 0 ms(-2) ms(-1) darken($black, 2);
-    box-shadow: 0 ms(-9)  ms(-11) ms(-11) lighten($black, 2);
+    text-shadow: 0 ms(-2) ms(-1) darken($dbg, 2);
+    box-shadow: 0 ms(-9)  ms(-11) ms(-11) lighten($dbg, 2);
   }
  }//end bp-desktop1-1
 }//end .b-social--share

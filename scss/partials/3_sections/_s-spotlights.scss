@@ -1,10 +1,10 @@
 @mixin s-spotlights(
 		$textColor1: $secondary,
 		$textColor2: $WarmGrey3,
-		$bgColor: $black,
+		$bgColor: $dbg,
 		$btnColor: $tertiary,
-    $shadow:shade($bgColor, 5),
-    $light: tint($bgColor, 10),
+        $shadow: $dbg--shadow,
+        $light: $dbg--light,
 		$btnText: $white){
 
 	//background: url(../images/noise.png) repeat $bgColor;

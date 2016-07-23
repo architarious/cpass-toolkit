@@ -1,5 +1,8 @@
 .m-contact{
+	float:left; width:100%;
 	.b-contact__info{}//end b-contact__info
     .b-contact__links{}//end b-contact__links
-    #b-footer__feature{}//end b-footer__feature
+    #b-footer__feature{
+    	margin-top: neg(ms(-3));
+    }//end b-footer__feature
 }

@@ -1,8 +1,12 @@
-@mixin b-featLinkList__main($bgColor: tint($secondary, 15),
-						$borderColor: $white,
-						$shadowColor: $coolblack,
-						$textColor: $black,
-						$linkColor: $tertiary){
+@mixin b-featLinkList__main(
+	$bgColor: $secondary,
+	$linkColor: $tertiary,
+	$accentColor: $quadrary,
+	$btnBgColor: $lbg,
+	$btnBgShadow: $lbg--shadow,
+	$btnBgLight: $lbg--light,
+	$shadow: $secondary--shadow,
+	$light: $secondary--light){
 
 	width:50%;  
 	float:right;
@@ -16,11 +20,11 @@
 			float:left;
 			list-style:none;
 			&:first-child a{
-			  background: url(../images/noise.png) repeat $borderColor;	
+			  background: url(../images/noise.png) repeat $btnBgColor;	
 			}
 		}//end li
 		a{
-			@include flag( $borderColor, $linkColor, darken($bgColor, 20));
+			@include flag( $btnBgColor, $linkColor, $shadow);
 			@include adjust-font-size-to($font-size-med);
 			@include rhythm(0, $ms-5n, $ms-9n, 0, $font-size-med);
 			background:none;
@@ -41,7 +45,7 @@
 
   			
 			&.apply:after{
-			  color:$WVUGold;
+			  color:$accentColor;
   			  font-family:'icomoon';
   			  content:"\e64a";;
   			  -webkit-font-smoothing: antialiased;
@@ -54,6 +58,9 @@
 		@include breakpoint($bp-mobile1-1 $bp-tablet-1-1){
 			width:100%;
 			float:left;
+			li:first-child a{
+				padding-left: ms(-4);
+			}
 		}//end mobile1 --> tablet
 		@include breakpoint($bp-tablet-1-1 $bp-desktop2-1){
 		  a{

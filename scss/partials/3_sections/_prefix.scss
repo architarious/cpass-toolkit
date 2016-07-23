@@ -1,17 +1,22 @@
 #prefix{
 	 @include rhythm($ms-8n, 0, 0, $ms-2n, $font-size-small-2);
 
+	 .s-prefix__content{
+	 	width:100%; 
+	 	float:left;
+	 }
+
  &.home{
  	margin:0;
  	padding:0;
  }//end #pefix.home
  &.dark{
- 	.breadcrumbs a{	
- 		color:$vb-Gold;	
- 		&:hover{
- 			color:tint($vb-Gold,30);
- 		}
- 	}
+ 	//.breadcrumbs a{	
+ 	//	color:$vb-Gold;	
+ 	//	&:hover{
+ 	//		color:tint($vb-Gold,30);
+ 	//	}
+ 	//}
  	//.util span{ color:shade($secondary,20); }
  	.btn{
  		@include standard-box-shadow(shade($black,10));

@@ -131,7 +131,7 @@
 //DEFAULT: applies ease-in color transition of 0.2s by default.
 //USAGE: @include standard-transition(); OR @include standard-transition(box-shadow, 0.3s, ease-out);
 ///////////////////////////////////
-@mixin standard-transition($property:color, $duration:0.2s, $function:ease-in){
+@mixin standard-transition($property:color, $duration:0.1s, $function:ease){
   transition-property: $property;
   transition-duration: $duration;
   transition-timing-function: $function;

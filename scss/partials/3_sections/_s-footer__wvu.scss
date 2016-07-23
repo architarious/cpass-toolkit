@@ -1,9 +1,22 @@
+
+@mixin s-footer__wvu(
+	$bgColor: $primary,
+	$linkColor: shade($white,10),
+	$pLinkColor: $WVUGold,
+	$textColor:$white,
+	$accentColor: lighten($primary, 7),
+	$shadow: $primary--shadow,
+	$light: $primary--light
+	){
+
+
+
 .s-footer__wvu--wrapper{
 	width:100%;
 	float:left;
-	background:url("../images/noise--blue.jpg") repeat $WVUBlue;
-	border-top: 1px solid $primary--shadow; 
-	box-shadow: inset 0 1px 1px 0 $primary--light;
+	background:url("../images/noise--blue.jpg") repeat $bgColor;
+	border-top: 1px solid $shadow; 
+	box-shadow: inset 0 1px 1px 0 $light;
 
 	a{
 		&:focus{outline:0;}
@@ -11,9 +24,6 @@
 	
 
   #s-footer__wvu{
-  	box-shadow: 
-  	   0 ms(-7) ms(-11) darken($primary, 10), 
-  	   0 ms(-3) ms(-2) darken($black,10);
   	border:0;
   	padding: 1rem 0 0 0;
   	width:100%;
@@ -29,20 +39,19 @@
 
 	 	p{
 	 		@include adjust-font-size-to($font-size-small-2);
-	 		color:$white;
+	 		color:$textColor;
 	 		float:left;
 	 		a{
-	 			color:$WVUGold;
+	 			color:$quadrary;
 	 		}
 	 	}
 	   
 	   a{
-	   	color:shade($white,10);
+	   	color:$linkColor;
 	   	text-decoration: none;
 	   	@include adjust-font-size-to($font-size-small-2);
 	   	padding:1px 4px;
-	   	border-bottom-style:solid;
-        border-bottom-color:lighten($primary, 7);
+        border-bottom-color:$accentColor;
         @include trailing-border(1px, $ms-7n/2);
         border-bottom-style:dotted;
 	   	@include standard-transition(background-color);
@@ -50,16 +59,16 @@
 
         &:hover, &:focus{
             color:$white;
-            background-color:tint($primary, 10); 
-            border-top: 1px solid tint($WVUGold, 20);
+            background-color: $light; 
+            border-top: 1px solid $pLinkColor;
             //border-bottom: 0;
         }
 	   }
 
 	    li{
 	  	padding: 0 ms(-3);
-	  	border-right: ms(-9) darken($primary, 3) solid;
-	  	border-left: ms(-11) lighten($primary, 3) solid;
+	  	border-right: 1px $shadow solid;
+	  	border-left: 1px $light solid;
 	  	margin:0;
 	  	float:left;
 	  	@include rhythm(0, 0, 0, $ms-3n, $font-size-small-2);
@@ -116,7 +125,7 @@
 					padding-left: ms(-1);
 					width:100%;
 					float:left;
-					background:shade($primary,35);
+					background:shade($bgColor,35);
 					@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-med);	
 				}
 				
@@ -152,7 +161,7 @@
 				padding-left: ms(-1);
 				width:100%;
 				float:left;
-				background:shade($primary,10);
+				background:$shadow;
 				@include rhythm(0, $ms-8n, $ms-8n, 0, $font-size-med);	
 			}
 		}//end .wvu-credits li
@@ -178,7 +187,7 @@
 						text-align:center;
 						border-top:1px solid transparent;
 						&:hover{
-							border-top-color:$WVUGold;
+							border-top-color:$pLinkColor;
 						}
 					}
 				}
@@ -191,3 +200,4 @@
   }//end #wvu-footer
 }//end .wvu-footer-wrapper
 
+}@include s-footer__wvu();

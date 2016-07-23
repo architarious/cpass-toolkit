@@ -108,10 +108,12 @@ $(document).ready(function(){
 			}
 		});
 
-    $('.b-advert').each(function(){
-       var i = $(this).children("img").attr("alt");
-       $(this).prepend('<span class="b-advert__text">' + i + '</span>');
-       $(this).children("img").addClass("b-advert__img");
+    $('.b-linkTile').each(function(){
+	  if( !$(this).children("span").hasClass(".b-linkTile__text")){
+         var i = $(this).children("img").attr("alt");
+         $(this).prepend('<span class="b-linkTile__text">' + i + '</span>');
+         $(this).children("img").addClass("b-linkTile__img");
+	  }
     });
 
 

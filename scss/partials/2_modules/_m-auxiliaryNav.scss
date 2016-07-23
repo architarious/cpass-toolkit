@@ -1,16 +1,27 @@
+@mixin m-auxiliaryNav(
+	$bgColor: $secondary,
+	$borderColor: $white,
+	$textColor: $black,
+	$linkColor: $tertiary,
+	$linkHover: $tertiary--light,
+	$linkActive: $tertiary--shadow,
+	$shadow: $secondary--shadow,
+	$light: $secondary--light){
+
+
 .m-auxiliaryNav{
-	$bgColor: tint($secondary, 15);
-	$borderColor: $white;
-	$shadowColor: darken($WVUBlue, 4 );
-	$textColor: $black;
-	$linkColor: $tertiary;
+	//$bgColor: tint($secondary, 15);
+	//$borderColor: $white;
+	//$shadowColor: darken($WVUBlue, 4 );
+	//$textColor: $black;
+	//$linkColor: $tertiary;
 
 	width:100%;
 	float:left;
 	min-height:1em;
 	background:$bgColor url(../images/noise.png) repeat;
 	border-color: $borderColor;
-	box-shadow: 0 ms(-9) ms(-8) 0 $shadowColor;
+	//box-shadow: 0 ms(-9) ms(-8) 0 $shadowColor;
 
 
 	@include leading-border(ms(-4), $ms-7n, $font-size-med, solid);
@@ -22,7 +33,7 @@
 
 
 	.m-auxiliaryNav__breadcrumbs{
-		@include fancyBreadcrumbs;
+		@include fancyBreadcrumbs($bgColor, $borderColor, $shadow, $light, $textColor, $linkColor, $linkHover, $linkActive);
 		width:100%;
 
 	}
@@ -71,4 +82,7 @@
 		  a{ @include adjust-font-size-to($font-size-med); }
 		}
 	}//end bp-desktop2-1
-}//end m-auxiliaryNav
+}//end .m-auxiliaryNav
+
+}//end mixin
+@include m-auxiliaryNav();
