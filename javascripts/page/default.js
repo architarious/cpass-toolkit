@@ -116,6 +116,14 @@ $(document).ready(function(){
 	  }
     });
 
+    $('.b-sidebarLink').each(function(){
+	  if( !$(this).children("img").hasClass(".b-sidebarLink__img")){
+         var i = $(this).children("img").attr("alt");
+         $(this).append('<span class="b-sidebarLink__copy">' + i + '</span>');
+         $(this).children("img").addClass("b-sidebarLink__img");
+	  }
+    });
+
 
 	//resizeSegmentTitles("h1.title");
 
