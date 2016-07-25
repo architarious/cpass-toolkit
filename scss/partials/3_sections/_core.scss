@@ -250,7 +250,9 @@
     .b-featuredLink{
               @extend .b-featuredLink;
               img{ padding:0;}
-            }
+    }
+    @include b-sidebarLink();
+    @include b-sidebarLink--list();
 }
 
 

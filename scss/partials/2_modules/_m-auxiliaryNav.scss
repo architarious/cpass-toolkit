@@ -53,6 +53,12 @@
 	@include breakpoint($bp-mobile1-1 $bp-mobile1-3){
 		.m-auxiliaryNav__featLinkList{
 			li a{ padding:0; padding-left:ms(-1);}
+			li:first-child a{padding: 0; padding-left:0; }
+		}
+	}
+	@include breakpoint($bp-mobile1-3 $bp-mobile2-2){
+		.m-auxiliaryNav__featLinkList{
+			li a{ padding:0; padding-left:ms(-1);}
 			li:first-child a{padding: 0; padding-left:ms(-1); }
 		}
 	}
@@ -60,6 +66,7 @@
 	@include breakpoint($bp-mobile2-2 $bp-tablet-1-1){
 		.m-auxiliaryNav__featLinkList{
 		  a{ @include adjust-font-size-to($font-size-med); }
+		  //li:first-child a{padding: 0; padding-left:ms(-1); }
 		}
 	}
 

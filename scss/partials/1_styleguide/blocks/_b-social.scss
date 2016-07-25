@@ -207,7 +207,7 @@ nav .b-social a{
 
   &:before{
     content: "SHARE";
-    color:tint($dbg, 40);
+    color: $WarmGrey3;
     font-family:$LtCn;
     font-weight:300;
     @include adjust-font-size-to($font-size-small-2); 

@@ -1,0 +1,55 @@
+@mixin b-sidebarLink(
+   $bgColor: $lbg,
+   $textColor: $tertiary,
+   $imgWidth: ms(7),
+   $shadow: $lbg--shadow,
+   $light: $lbg--light
+){
+	.b-sidebarLink{
+	   width:100%; float:left;
+	   position:relative;
+	   padding:0; margin:0;
+	}//end b-sidebarLink
+	.b-sidebarLink__img{
+	  width: $imgWidth; max-width:40%;
+	  height: $imgWidth;
+	  float:left;
+	  overflow: hidden;
+	  text-align:center;
+	  //position: absolute;	
+	  top:0; left:0;
+	}//end b-sidebarLink__photo
+	.b-sidebarLink__copy{
+	  width: auto; //max-width:60%;
+	  //float:left;
+	  margin:0; padding:0;
+	  @include adjust-font-size-to($font-size-med);
+	  @include adjust-leading-to(1);
+	  @extend .font-Bd;
+	  text-shadow: 0 1px 1px $shadow;
+	  //position:relative;
+	  top:0;  left: 0;
+	  padding-left: ms(-3);
+	}//end b-sidebarLink__copy
+}//end mixin b-sidebarLink
+
+@mixin b-sidebarLink--list(
+   $bgColor: $lbg,
+   $textColor: $tertiary,
+   $accentColor: $quadrary,
+   $shadow: $lbg--shadow,
+   $light: $lbg--light){
+
+	.b-sidebarLink--list{
+		width:100%; float:left; padding:0; margin:0;
+		ul{ width:100%; float:left; padding:0; margin:0;}
+		li{ 
+			width:100%; float:left;
+			list-style: none !important;
+			border-bottom: 1px solid $shadow;
+			box-shadow: 0 1px 0 0 $light;
+			&:last-child{ border-bottom:0; box-shadow: none;}
+			@include rhythm(0, $ms-4n, $ms-4n, 0, $font-size-med);
+		}//end li
+	}//end b-sidebarLink--list
+}//end mixin b-sidebarLink--list

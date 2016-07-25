@@ -49,4 +49,18 @@
         }//end h3
     }//end b-featuredLink
   }//end x-large
+  @include breakpoint($bp-mobile1-1 $bp-mobile2-1){
+    .b-featuredLink{
+      @include b-featuredLink--mini(
+        ms(7),
+        $quadrary,
+        $primary, 
+        $quadrary,
+        $primary--shadow,
+        $font-size-med-2,
+        $BlkCn
+        );
+    }//end b-featuredLink
+
+  }
 }//end b-footer__feature
