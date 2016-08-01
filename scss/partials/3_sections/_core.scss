@@ -255,7 +255,7 @@
     @include b-sidebarLink--list();
 }//end .sidebar , aside
 
-  .m-sidebarLinks{
+  .m-sidebar_links{
     @include b-sidebarLink();
     @include b-sidebarLink--list();
   }

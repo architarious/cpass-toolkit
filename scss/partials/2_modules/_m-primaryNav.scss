@@ -303,13 +303,13 @@ nav{
 }//end @include minNav
 
 @mixin wrapperNav(
-    $pc--bgColor: $dbg,     
+    $pc--bgColor: $dbg,
     $pc--shadow: $dbg--shadow,
     $pc--light: $dbg--light,
     $pc--textColor: $white,
     $pc--hoverColor: $tertiary,
     $pc--activeColor: $quadrary,
-    $pc--activeText: $primary,   
+    $pc--activeText: $primary,
     $mobile--bgColor: $lbg,
     $mobile--shadow: $lbg--shadow,
     $mobile--light: $lbg--light,
@@ -320,7 +320,7 @@ nav{
     $mobile--textColor: $dbg,
     $mobile--bgMore: $secondary){
   .m-primaryNav{
-    
+
 
     outline:0;
     *:focus{ outline:0;}
@@ -524,7 +524,7 @@ nav{
     		  color:$mobile--linkColor;
     		  text-align:center;
     		  text-transform:uppercase;
-  
+
       		font-family:$Roman;
       		font-weight:400;
       		letter-spacing:ms(-10);
@@ -532,11 +532,11 @@ nav{
     		  @include adjust-font-size-to($font-size-med);
     		  @include rhythm($ms-3n, $ms-7n, $ms-7n, 0, $font-size-med);
     		  @include standard-text-shadow($bgMore--shadow);
-  
+
       		&:hover, &:focus{
-      			color:$mobile--hoverColor; 
+      			color:$mobile--hoverColor;
       		}
-  
+
       		&::after{
       			font-family:'icomoon';
       			content:'\e6c3';
@@ -755,10 +755,10 @@ nav{
     **************************************/
   @include breakpoint($bp-desktop2-1){
   	#nav-primary.collapse .m-primaryNav__navbar-nav a{
-  	  @include adjust-font-size-to($font-size-med-2);
-  	  @include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med-2);
+  	  //@include adjust-font-size-to($font-size-med-2);
+  	  //@include rhythm(0, $ms-2n, $ms-2n, 0, $font-size-med-2);
   	  &.more{
-  	  	@include rhythm($ms-8n, $ms-2n, $ms-2n, 0, $font-size-med-2);
+  	  //	@include rhythm($ms-8n, $ms-2n, $ms-2n, 0, $font-size-med-2);
   	  }
   	}
   }//end bp desktop2

@@ -24,25 +24,31 @@
 		.wvu-masthead__logo{background-size:300px; br{ display:block;} }
 	}//end medium
 	&[data-eq-state="large"]{
-		.wvu-masthead__logo{background-size:326px; br{ display:block;} }
+		.wvu-masthead__logo{
+			background-size:300px;
+			//background-size:326px; 
+			br{ display:block;} }
 		.wvu-masthead__title{
 
-			@include adjust-font-size-to($font-size-med + 2.335);
-			@include adjust-leading-to($ms-0 + 0.07);
-			margin-top:0.146em;
-			font-weight:100;
-			margin-left: 3px;
+			//@include adjust-font-size-to($font-size-med + 2.335);
+			//@include adjust-leading-to($ms-0 + 0.07);
+			//margin-top:0.146em;
+			//font-weight:100;
+			//margin-left: 3px;
 		}
 	}//end large
 	&[data-eq-state="x-large"]{
-		.wvu-masthead__logo{background-size:358px; br{ display:none;} }
+		.wvu-masthead__logo{
+			background-size:300px;
+			//background-size:358px; 
+			br{ display:none;} }
 		.wvu-masthead__title{
 
-			@include adjust-font-size-to($font-size-med + 2.918);
-			@include adjust-leading-to($ms-0 + 0.09);
-			margin-top:0.236em;
-			font-weight:100;
-			margin-left:7px;
+			//@include adjust-font-size-to($font-size-med + 2.918);
+			//@include adjust-leading-to($ms-0 + 0.09);
+			//margin-top:0.236em;
+			//font-weight:100;
+			//margin-left:7px;
 		}
 	}//end x-large
 }// end .b-logo
